@@ -5,6 +5,7 @@
 #ifndef CPP_PRIMER_EX_2_42_H
 #define CPP_PRIMER_EX_2_42_H
 
+#include <cstdint>
 #include <string>
 
 struct SalesData

@@ -2,12 +2,13 @@
 // Created by kaiser on 18-11-20.
 //
 
+#include <cstdint>
 #include <iostream>
 
 int main()
 {
     //ex 1.9
-    std::int32_t sum = 0;
+    std::int32_t sum{};
 
     for (std::int32_t val{50}; val <= 100; ++val)
         sum += val;
