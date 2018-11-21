@@ -6,7 +6,7 @@
 
 int main()
 {
-    int sum = 0, val;
+    std::int32_t sum{}, val;
 
     while (std::cin >> val)
         sum += val;

@@ -7,7 +7,7 @@
 
 int main()
 {
-    int v1, v2;
+    std::int32_t v1, v2;
     std::cin >> v1 >> v2;
 
     if (v1 > v2)

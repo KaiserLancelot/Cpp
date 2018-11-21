@@ -10,8 +10,8 @@
 struct SalesData
 {
     std::string book_no_;
-    int units_sold_ = 0;
-    double revenue_ = 0;
+    std::int32_t units_sold_{};
+    double revenue_{};
 };
 
 #endif //CPP_PRIMER_EX_2_42_H

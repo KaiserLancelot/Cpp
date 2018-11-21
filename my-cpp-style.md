@@ -6,15 +6,15 @@
 
 字符仅使用char
 
-整型使用int和long long,不使用无符号类型, 需要时应该使用标准类型如size_t,ptrdiff_t.如果需要确定的大小,使用cstdint中定义的类型
+整型使用int32_t,int64_t等类型,不使用无符号类型, 需要时应该使用标准类型如size_t,ptrdiff_t.
 
 浮点数仅使用double
 
 如果需要初始化分别使用'\0',0,0.0
 
-### 2. 列表初始化
+### 2. 初始化
 
-如果没有std::initializer_list参数的构造函数,都使用T a = ...和T a(...)的形式初始化,后者在遇到Most vexing parse时使用列表初始化
+全部使用列表初始化且不使用等号,在有std::initializer_list参数的构造函数时,使用小括号
 
 ### 3. 命名
 

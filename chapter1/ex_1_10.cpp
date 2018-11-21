@@ -6,7 +6,7 @@
 
 int main()
 {
-    int val = 10;
+    std::int32_t val{10};
 
     while (val >= 0)
     {

@@ -6,11 +6,11 @@
 
 int main()
 {
-    int currVal = 0, val = 0;
+    std::int32_t currVal{}, val{};
 
     if (std::cin >> currVal)
     {
-        int cnt = 1;
+        std::int32_t cnt{1};
         while (std::cin >> val)
         {
             if (val == currVal)

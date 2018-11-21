@@ -6,7 +6,7 @@
 
 int main()
 {
-    int sum = 0, val = 50;
+    std::int32_t sum{}, val{50};
 
     while (val <= 100)
     {
