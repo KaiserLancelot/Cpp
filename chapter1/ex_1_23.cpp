@@ -10,7 +10,7 @@
 int main()
 {
     Sales_item item;
-    std::unordered_map <std::string, std::int32_t> data;
+    std::unordered_map<std::string, std::int32_t> data;
 
     while (std::cin >> item)
         ++data[item.isbn()];

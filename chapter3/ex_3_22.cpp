@@ -9,7 +9,7 @@
 
 int main()
 {
-    std::vector <std::string> text;
+    std::vector<std::string> text;
 
     for (auto it{std::begin(text)};
          it != std::end(text) && !std::empty(*it); ++it)

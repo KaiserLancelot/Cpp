@@ -9,7 +9,7 @@
 
 int main()
 {
-    std::vector <std::string> vs;
+    std::vector<std::string> vs;
     std::string word;
 
     while (std::cin >> word)

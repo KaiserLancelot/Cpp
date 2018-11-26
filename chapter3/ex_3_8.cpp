@@ -12,10 +12,7 @@ int main()
     //a
     decltype(std::size(s)) index1{};
     while (index1 < std::size(s))
-    {
-        s[index1] = 'X';
-        ++index1;
-    }
+        s[index1++] = 'X';
     std::cout << s << '\n';
 
     //b

@@ -8,7 +8,7 @@
 
 int main()
 {
-    std::vector <std::int32_t> vi;
+    std::vector<std::int32_t> vi;
     std::int32_t value;
 
     while (std::cin >> value)

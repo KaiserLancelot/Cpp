@@ -8,7 +8,7 @@
 
 int main()
 {
-    std::vector <std::string> vs;
+    std::vector<std::string> vs;
     std::string s;
 
     while (std::cin >> s)
