@@ -4,14 +4,14 @@
 
 #include <iostream>
 #include <cstdint>
-#include <string_view>
+#include <string>
 
 int main() {
     std::int32_t grade;
     std::cin >> grade;
 
     //a
-    std::string_view final_grade(
+    std::string final_grade(
             (grade > 90) ? "high pass" :
             (grade > 75) ? "pass" :
             (grade > 60) ? "low pass" : "fail");
