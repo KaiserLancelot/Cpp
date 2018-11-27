@@ -6,8 +6,7 @@
 #include <vector>
 #include <string>
 
-int main()
-{
+int main() {
     std::vector<std::string> vs;
     std::string s;
 

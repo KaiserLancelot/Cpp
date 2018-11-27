@@ -5,8 +5,7 @@
 #include <iostream>
 #include <string>
 
-int main()
-{
+int main() {
     std::string word1, word2;
     std::cin >> word1 >> word2;
 

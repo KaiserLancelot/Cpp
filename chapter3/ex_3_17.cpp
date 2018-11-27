@@ -7,16 +7,14 @@
 #include <vector>
 #include <cctype>
 
-int main()
-{
+int main() {
     std::vector<std::string> vs;
     std::string word;
 
     while (std::cin >> word)
         vs.push_back(word);
 
-    for (auto &element : vs)
-    {
+    for (auto &element : vs) {
         for (auto &c : element)
             c = static_cast<char>(std::toupper(c));
         std::cout << element << '\n';

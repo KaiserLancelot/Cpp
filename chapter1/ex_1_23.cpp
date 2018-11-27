@@ -7,8 +7,7 @@
 #include <iostream>
 #include <unordered_map>
 
-int main()
-{
+int main() {
     Sales_item item;
     std::unordered_map<std::string, std::int32_t> data;
 

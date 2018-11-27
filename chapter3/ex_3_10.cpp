@@ -6,13 +6,11 @@
 #include <string>
 #include <cctype>
 
-int main()
-{
+int main() {
     std::string s;
     std::getline(std::cin, s);
 
-    for (auto element : s)
-    {
+    for (auto element : s) {
         if (!std::ispunct(element))
             std::cout << element;
     }

@@ -5,12 +5,10 @@
 #include <cstdint>
 #include <iostream>
 
-int main()
-{
+int main() {
     std::int32_t val{10};
 
-    while (val >= 0)
-    {
+    while (val >= 0) {
         std::cout << val << ' ';
         --val;
     }

@@ -6,16 +6,14 @@
 #include <vector>
 #include <cstdint>
 
-int main()
-{
+int main() {
     std::vector<std::int32_t> vi;
     std::int32_t value;
 
     while (std::cin >> value)
         vi.push_back(value);
 
-    if (std::size(vi) == 1)
-    {
+    if (std::size(vi) == 1) {
         std::cout << "only one integer" << '\n';
         return -1;
     }

@@ -6,8 +6,7 @@
 #include <cstdint>
 #include <string_view>
 
-int main()
-{
+int main() {
     std::int32_t grade;
     std::cin >> grade;
 

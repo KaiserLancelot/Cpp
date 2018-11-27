@@ -8,8 +8,7 @@
 #include <cstdint>
 #include <string>
 
-struct SalesData
-{
+struct SalesData {
     std::string book_no_;
     std::int32_t units_sold_{};
     double revenue_{};

@@ -5,8 +5,7 @@
 #include <iostream>
 #include <string>
 
-int main()
-{
+int main() {
     //a
     std::string line;
     while (std::getline(std::cin, line))

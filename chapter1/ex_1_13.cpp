@@ -5,8 +5,7 @@
 #include <cstdint>
 #include <iostream>
 
-int main()
-{
+int main() {
     //ex 1.9
     std::int32_t sum{};
 

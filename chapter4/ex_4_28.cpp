@@ -5,8 +5,7 @@
 #include <iostream>
 #include <cstdint>
 
-int main()
-{
+int main() {
     std::cout << "nullptr_t\t" << sizeof(std::nullptr_t) << " bytes" << "\n\n";
 
     std::cout << "bool:\t\t" << sizeof(bool) << " bytes" << "\n\n";

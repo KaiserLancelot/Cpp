@@ -5,8 +5,7 @@
 #include <iostream>
 #include <string>
 
-int main()
-{
+int main() {
     std::string s("hello world");
 
     //a

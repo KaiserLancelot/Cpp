@@ -6,15 +6,13 @@
 #include <iostream>
 #include <string>
 
-struct SalesData
-{
+struct SalesData {
     std::string book_no_;
     std::int32_t units_sold_{};
     double revenue_{};
 };
 
-int main()
-{
+int main() {
     double price;
     SalesData sales_data;
     std::cin >> sales_data.book_no_ >> sales_data.units_sold_ >> price;

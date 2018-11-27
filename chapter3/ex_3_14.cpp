@@ -6,8 +6,7 @@
 #include <vector>
 #include <cstdint>
 
-int main()
-{
+int main() {
     std::vector<std::int32_t> vi;
     std::int32_t value;
 

@@ -5,8 +5,7 @@
 #include "Sales_item.h"
 #include <iostream>
 
-int main()
-{
+int main() {
     Sales_item item;
 
     while (std::cin >> item)

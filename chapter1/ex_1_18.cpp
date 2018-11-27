@@ -5,19 +5,15 @@
 #include <cstdint>
 #include <iostream>
 
-int main()
-{
+int main() {
     std::int32_t currVal{}, val{};
 
-    if (std::cin >> currVal)
-    {
+    if (std::cin >> currVal) {
         std::int32_t cnt{1};
-        while (std::cin >> val)
-        {
+        while (std::cin >> val) {
             if (val == currVal)
                 ++cnt;
-            else
-            {
+            else {
                 std::cout << currVal << " occurs "
                           << cnt << " times\n";
                 cnt = 1;

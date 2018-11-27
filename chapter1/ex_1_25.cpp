@@ -5,27 +5,21 @@
 #include "Sales_item.h"
 #include <iostream>
 
-int main()
-{
+int main() {
     Sales_item total;
 
-    if (std::cin >> total)
-    {
+    if (std::cin >> total) {
         Sales_item trans;
-        while (std::cin >> trans)
-        {
+        while (std::cin >> trans) {
             if (trans.isbn() == total.isbn())
                 total += trans;
-            else
-            {
+            else {
                 std::cout << total << '\n';
                 total = trans;
             }
         }
         std::cout << total << '\n';
-    }
-    else
-    {
+    } else {
         std::cerr << "No data?!" << '\n';
         return -1;
     }
