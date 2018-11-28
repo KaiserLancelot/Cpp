@@ -10,7 +10,7 @@
 int main() {
     std::string curr, pre;
     std::pair<std::string, std::int32_t> result;
-    std::int32_t count;
+    std::int32_t count{};
 
     while (std::cin >> curr) {
         if (curr == pre)
