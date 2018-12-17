@@ -2,21 +2,20 @@
 // Created by kaiser on 18-12-3.
 //
 
-#include "ex_8_8.h"
+#include "ex_8_06.h"
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
 
 int main(int argc, char *argv[]) {
-    if (argc != 3) {
+    if (argc != 2) {
         std::cerr << "error\n";
         return EXIT_FAILURE;
     }
 
     std::ifstream ifs{argv[1]};
-    std::ofstream ofs{argv[2], std::ofstream::app};
 
-    if (!ifs || !ofs) {
+    if (!ifs) {
         std::cerr << "can't open file\n";
         return EXIT_FAILURE;
     }
@@ -28,13 +27,13 @@ int main(int argc, char *argv[]) {
             if (total.Isbn() == trans.Isbn()) {
                 total.Combine(trans);
             } else {
-                ofs << total.book_no_ << " " << total.units_sold_
-                    << " " << total.revenue_ << '\n';
+                std::cout << total.book_no_ << " " << total.units_sold_
+                          << " " << total.revenue_ << '\n';
                 total = trans;
             }
         }
-        ofs << total.book_no_ << " " << total.units_sold_
-            << " " << total.revenue_ << '\n';
+        std::cout << total.book_no_ << " " << total.units_sold_
+                  << " " << total.revenue_ << '\n';
     } else {
         std::cerr << "no data\n";
         return EXIT_FAILURE;

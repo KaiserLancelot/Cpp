@@ -2,7 +2,7 @@
 // Created by kaiser on 18-11-29.
 //
 
-#include "ex_7_6.h"
+#include "ex_7_06.h"
 #include <iostream>
 #include <cstdlib>
 
