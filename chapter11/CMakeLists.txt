@@ -1,3 +1,18 @@
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
+
+file(COPY ${PROJECT_SOURCE_DIR}/data/given_to_transform DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${PROJECT_SOURCE_DIR}/data/word_transformation DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${PROJECT_SOURCE_DIR}/data/word_transformation_bad DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+add_executable(ex_11_03 ex_11_03.cpp)
+add_executable(ex_11_04 ex_11_04.cpp)
+add_executable(ex_11_12 ex_11_12.cpp)
+add_executable(ex_11_13 ex_11_13.cpp)
+add_executable(ex_11_20 ex_11_20.cpp)
+add_executable(ex_11_31 ex_11_31.cpp)
+add_executable(ex_11_32 ex_11_32.cpp)
+add_executable(ex_11_33 ex_11_33.cpp)
+add_executable(ex_11_36 ex_11_36.cpp)
+add_executable(ex_11_38 ex_11_38.cpp)
