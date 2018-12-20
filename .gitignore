@@ -32,4 +32,6 @@
 *.app
 
 # IDE files
-/.idea
+.idea
+cmake*
+build
