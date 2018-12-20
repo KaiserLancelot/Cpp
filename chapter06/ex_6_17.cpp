@@ -7,22 +7,22 @@
 #include <cctype>
 
 bool Fun1(const std::string &s) {
-    for (auto element : s) {
-        if (std::isupper(element))
-            return true;
-    }
-    return false;
+  for (auto element : s) {
+    if (std::isupper(element))
+      return true;
+  }
+  return false;
 }
 
 void Fun2(std::string &s) {
-    for (auto &element : s) {
-        element = static_cast<char>(std::tolower(element));
-    }
+  for (auto &element : s) {
+    element = static_cast<char>(std::tolower(element));
+  }
 }
 
 int main() {
-    std::string s("Hello World");
-    Fun2(s);
-    std::cout << s << '\n';
-    std::cout << std::boolalpha << Fun1(s) << '\n';
+  std::string s("Hello World");
+  Fun2(s);
+  std::cout << s << '\n';
+  std::cout << std::boolalpha << Fun1(s) << '\n';
 }

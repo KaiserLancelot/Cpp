@@ -9,15 +9,15 @@
 #include <iostream>
 
 bool CompareIsbn(const SalesData &lhs, const SalesData &rhs) {
-    return lhs.Isbn() < rhs.Isbn();
+  return lhs.Isbn() < rhs.Isbn();
 }
 
 int main() {
-    std::vector<SalesData> vector{
-            SalesData{"aa"}, SalesData{"aaaa"}, SalesData{"aaa"}, SalesData{"z"}};
-    std::sort(std::begin(vector), std::end(vector), CompareIsbn);
+  std::vector<SalesData> vector{
+      SalesData{"aa"}, SalesData{"aaaa"}, SalesData{"aaa"}, SalesData{"z"}};
+  std::sort(std::begin(vector), std::end(vector), CompareIsbn);
 
-    for (const auto &ele:vector) {
-        std::cout << ele.Isbn() << '\n';
-    }
+  for (const auto &ele:vector) {
+    std::cout << ele.Isbn() << '\n';
+  }
 }

@@ -7,12 +7,12 @@
 #include <cctype>
 
 int main() {
-    std::string s;
-    std::getline(std::cin, s);
+  std::string s;
+  std::getline(std::cin, s);
 
-    for (auto element : s) {
-        if (!std::ispunct(element))
-            std::cout << element;
-    }
-    std::cout << '\n';
+  for (auto element : s) {
+    if (!std::ispunct(element))
+      std::cout << element;
+  }
+  std::cout << '\n';
 }

@@ -6,9 +6,9 @@
 #include <string>
 
 int main(int argc, char *argv[]) {
-    if (argc != 3) {
-        std::cerr << "error\n";
-        return -1;
-    }
-    std::cout << std::string(argv[1]) + argv[2] << '\n';
+  if (argc != 3) {
+    std::cerr << "error\n";
+    return -1;
+  }
+  std::cout << std::string(argv[1]) + argv[2] << '\n';
 }

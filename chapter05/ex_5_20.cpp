@@ -6,16 +6,16 @@
 #include <string>
 
 int main() {
-    std::string curr, pre;
+  std::string curr, pre;
 
-    while (std::cin >> curr) {
-        if (curr == pre)
-            break;
-        pre = curr;
-    }
+  while (std::cin >> curr) {
+    if (curr == pre)
+      break;
+    pre = curr;
+  }
 
-    if (std::cin.eof())
-        std::cout << "No consecutively repeated strings\n";
-    else
-        std::cout << curr << '\n';
+  if (std::cin.eof())
+    std::cout << "No consecutively repeated strings\n";
+  else
+    std::cout << curr << '\n';
 }

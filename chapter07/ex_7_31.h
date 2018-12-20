@@ -8,11 +8,11 @@
 class Y;
 
 class X {
-    Y *py_;
+  Y *py_;
 };
 
 class Y {
-    X x_;
+  X x_;
 };
 
 #endif //CPP_PRIMER_EX_7_31_H

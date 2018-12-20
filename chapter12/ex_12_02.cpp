@@ -7,50 +7,50 @@
 #include <stdexcept>
 
 StrBlob::StrBlob()
-        : data_{std::make_shared<std::vector<std::string>>()} {}
+    : data_{std::make_shared < std::vector < std::string >> ()} {}
 
 StrBlob::StrBlob(std::initializer_list<std::string> il)
-        : data_{std::make_shared<std::vector<std::string>>(il)} {}
+    : data_{std::make_shared < std::vector < std::string >> (il)} {}
 
 StrBlob::size_type StrBlob::Size() const {
-    return std::size(*data_);
+  return std::size(*data_);
 }
 
 bool StrBlob::Empty() const {
-    return std::empty(*data_);
+  return std::empty(*data_);
 }
 
 void StrBlob::PushBack(const std::string &t) {
-    data_->push_back(t);
+  data_->push_back(t);
 }
 
 void StrBlob::PopBack() {
-    Check(0, "PopBack on empty StrBlob");
-    data_->pop_back();
+  Check(0, "PopBack on empty StrBlob");
+  data_->pop_back();
 }
 
 std::string &StrBlob::Front() {
-    Check(0, "Front on empty StrBlob");
-    return data_->front();
+  Check(0, "Front on empty StrBlob");
+  return data_->front();
 }
 
 std::string &StrBlob::Front() const {
-    Check(0, "Front on empty StrBlob");
-    return data_->front();
+  Check(0, "Front on empty StrBlob");
+  return data_->front();
 }
 
 std::string &StrBlob::Back() {
-    Check(0, "Back on empty StrBlob");
-    return data_->back();
+  Check(0, "Back on empty StrBlob");
+  return data_->back();
 }
 
 std::string &StrBlob::Back() const {
-    Check(0, "Back on empty StrBlob");
-    return data_->back();
+  Check(0, "Back on empty StrBlob");
+  return data_->back();
 }
 
 void StrBlob::Check(StrBlob::size_type i, const std::string &msg) const {
-    if (i >= Size()) {
-        throw std::out_of_range{msg};
-    }
+  if (i >= Size()) {
+    throw std::out_of_range{msg};
+  }
 }

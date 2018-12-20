@@ -6,8 +6,8 @@
 #include <iostream>
 
 int main() {
-    std::int32_t n;
-    std::cin >> n;
+  std::int32_t n;
+  std::cin >> n;
 
-    std::cout << Fact(n) << '\n';
+  std::cout << Fact(n) << '\n';
 }

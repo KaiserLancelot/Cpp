@@ -8,16 +8,16 @@
 
 void PrintVector(std::vector<std::int32_t>::const_iterator begin,
                  std::vector<std::int32_t>::const_iterator end) {
-    if (begin != end) {
-        std::cout << *begin++ << '\n';
+  if (begin != end) {
+    std::cout << *begin++ << '\n';
 #ifndef NDEBUG
-        std::cout << "size: " << ' ' << end - begin << '\n';
+    std::cout << "size: " << ' ' << end - begin << '\n';
 #endif
-        PrintVector(begin, end);
-    }
+    PrintVector(begin, end);
+  }
 }
 
 int main() {
-    std::vector<std::int32_t> vi{1, 2, 3};
-    PrintVector(std::begin(vi), std::end(vi));
+  std::vector<std::int32_t> vi{1, 2, 3};
+  PrintVector(std::begin(vi), std::end(vi));
 }

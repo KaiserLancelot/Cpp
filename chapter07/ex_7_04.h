@@ -8,8 +8,8 @@
 #include <string>
 
 struct Person {
-    std::string name_;
-    std::string address_;
+  std::string name_;
+  std::string address_;
 };
 
 #endif //CPP_PRIMER_EX_7_4_H

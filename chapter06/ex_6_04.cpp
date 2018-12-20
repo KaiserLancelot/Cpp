@@ -6,17 +6,17 @@
 #include <iostream>
 
 std::int32_t Fact(std::int32_t val) {
-    std::int32_t ret{1};
-    while (val > 1) {
-        ret *= val;
-        --val;
-    }
-    return ret;
+  std::int32_t ret{1};
+  while (val > 1) {
+    ret *= val;
+    --val;
+  }
+  return ret;
 }
 
 int main() {
-    std::int32_t n;
-    std::cin >> n;
+  std::int32_t n;
+  std::cin >> n;
 
-    std::cout << Fact(n) << '\n';
+  std::cout << Fact(n) << '\n';
 }

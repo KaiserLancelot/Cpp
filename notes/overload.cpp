@@ -6,14 +6,14 @@
 #include <iostream>
 
 void fun(void *) {
-    std::cout << "fun(void*)\n";
+  std::cout << "fun(void*)\n";
 }
 
 void fun(bool) {
-    std::cout << "fun(bool)\n";
+  std::cout << "fun(bool)\n";
 }
 
 int main() {
-    std::int32_t *p{nullptr};
-    fun(p); // fun(void*)
+  std::int32_t *p{nullptr};
+  fun(p); // fun(void*)
 }

@@ -10,13 +10,13 @@
 #include <iostream>
 
 int main() {
-    std::vector<std::string> vs{"a", "a", "b", "a"};
-    std::list<std::string> ls;
+  std::vector<std::string> vs{"a", "a", "b", "a"};
+  std::list<std::string> ls;
 
-    std::sort(std::begin(vs), std::end(vs));
-    std::unique_copy(std::begin(vs), std::end(vs), std::back_inserter(ls));
+  std::sort(std::begin(vs), std::end(vs));
+  std::unique_copy(std::begin(vs), std::end(vs), std::back_inserter(ls));
 
-    for (const auto &s:ls) {
-        std::cout << s << '\n';
-    }
+  for (const auto &s:ls) {
+    std::cout << s << '\n';
+  }
 }

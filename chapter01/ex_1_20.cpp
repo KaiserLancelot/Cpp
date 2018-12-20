@@ -6,8 +6,8 @@
 #include <iostream>
 
 int main() {
-    Sales_item item;
+  Sales_item item;
 
-    while (std::cin >> item)
-        std::cout << item << '\n';
+  while (std::cin >> item)
+    std::cout << item << '\n';
 }

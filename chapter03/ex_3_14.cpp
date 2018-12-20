@@ -7,9 +7,9 @@
 #include <cstdint>
 
 int main() {
-    std::vector<std::int32_t> vi;
-    std::int32_t value;
+  std::vector<std::int32_t> vi;
+  std::int32_t value;
 
-    while (std::cin >> value)
-        vi.push_back(value);
+  while (std::cin >> value)
+    vi.push_back(value);
 }

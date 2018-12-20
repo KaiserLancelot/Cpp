@@ -8,10 +8,10 @@
 #include <iostream>
 
 int main() {
-    std::vector<std::int32_t> vi(10, -1);
-    std::fill_n(std::begin(vi), 10, 0);
-    for (auto i:vi) {
-        std::cout << i << ' ';
-    }
-    std::cout << '\n';
+  std::vector<std::int32_t> vi(10, -1);
+  std::fill_n(std::begin(vi), 10, 0);
+  for (auto i:vi) {
+    std::cout << i << ' ';
+  }
+  std::cout << '\n';
 }

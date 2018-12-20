@@ -7,14 +7,14 @@
 #include <iostream>
 
 int main() {
-    std::string str;
-    std::deque<std::string> deque;
+  std::string str;
+  std::deque<std::string> deque;
 
-    while (std::cin >> str) {
-        deque.push_back(str);
-    }
+  while (std::cin >> str) {
+    deque.push_back(str);
+  }
 
-    for (auto iter{std::cbegin(deque)}; iter != std::cend(deque); ++iter) {
-        std::cout << *iter << '\n';
-    }
+  for (auto iter{std::cbegin(deque)}; iter != std::cend(deque); ++iter) {
+    std::cout << *iter << '\n';
+  }
 }

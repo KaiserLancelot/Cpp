@@ -8,15 +8,15 @@
 #include <cstdint>
 
 class NoDefault {
-public:
-    NoDefault(std::int32_t i);
+ public:
+  NoDefault(std::int32_t i);
 };
 
 class C {
-public:
-    C() : no_default_{1} {}
-private:
-    NoDefault no_default_;
+ public:
+  C() : no_default_{1} {}
+ private:
+  NoDefault no_default_;
 };
 
 #endif //CPP_PRIMER_EX_7_43_H

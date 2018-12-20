@@ -9,8 +9,8 @@
 #include <iterator>
 
 int main() {
-    std::vector<std::int32_t> vi(std::istream_iterator<std::int32_t>{std::cin}, {});
-    std::sort(std::begin(vi), std::end(vi));
-    std::copy(std::begin(vi), std::end(vi), std::ostream_iterator<std::int32_t>{std::cout, " "});
-    std::cout << '\n';
+  std::vector<std::int32_t> vi(std::istream_iterator < std::int32_t > {std::cin}, {});
+  std::sort(std::begin(vi), std::end(vi));
+  std::copy(std::begin(vi), std::end(vi), std::ostream_iterator < std::int32_t > {std::cout, " "});
+  std::cout << '\n';
 }

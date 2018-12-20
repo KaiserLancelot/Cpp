@@ -6,12 +6,12 @@
 #include <iostream>
 
 std::int32_t CountCalls() {
-    static std::int32_t count{};
-    return count++;
+  static std::int32_t count{};
+  return count++;
 }
 
 int main() {
-    for (std::int32_t i{0}; i < 10; ++i) {
-        std::cout << CountCalls() << '\n';
-    }
+  for (std::int32_t i{0}; i < 10; ++i) {
+    std::cout << CountCalls() << '\n';
+  }
 }

@@ -9,10 +9,10 @@
 #include <iostream>
 
 int main() {
-    std::ifstream ifs{"str"};
-    std::vector<std::string> vs(std::istream_iterator<std::string>{ifs}, {});
+  std::ifstream ifs{"str"};
+  std::vector<std::string> vs(std::istream_iterator < std::string > {ifs}, {});
 
-    for (const auto &s:vs) {
-        std::cout << s << '\n';
-    }
+  for (const auto &s:vs) {
+    std::cout << s << '\n';
+  }
 }

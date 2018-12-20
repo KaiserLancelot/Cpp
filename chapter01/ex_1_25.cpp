@@ -6,21 +6,21 @@
 #include <iostream>
 
 int main() {
-    Sales_item total;
+  Sales_item total;
 
-    if (std::cin >> total) {
-        Sales_item trans;
-        while (std::cin >> trans) {
-            if (trans.isbn() == total.isbn())
-                total += trans;
-            else {
-                std::cout << total << '\n';
-                total = trans;
-            }
-        }
+  if (std::cin >> total) {
+    Sales_item trans;
+    while (std::cin >> trans) {
+      if (trans.isbn() == total.isbn())
+        total += trans;
+      else {
         std::cout << total << '\n';
-    } else {
-        std::cerr << "No data?!" << '\n';
-        return -1;
+        total = trans;
+      }
     }
+    std::cout << total << '\n';
+  } else {
+    std::cerr << "No data?!" << '\n';
+    return -1;
+  }
 }

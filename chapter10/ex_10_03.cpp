@@ -8,6 +8,6 @@
 #include <iostream>
 
 int main() {
-    std::vector<std::int32_t> nums{1, 2, 3};
-    std::cout << std::accumulate(std::cbegin(nums), std::cend(nums), 0) << '\n';
+  std::vector<std::int32_t> nums{1, 2, 3};
+  std::cout << std::accumulate(std::cbegin(nums), std::cend(nums), 0) << '\n';
 }

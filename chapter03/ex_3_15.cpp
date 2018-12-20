@@ -7,9 +7,9 @@
 #include <string>
 
 int main() {
-    std::vector<std::string> vs;
-    std::string s;
+  std::vector<std::string> vs;
+  std::string s;
 
-    while (std::cin >> s)
-        vs.push_back(s);
+  while (std::cin >> s)
+    vs.push_back(s);
 }

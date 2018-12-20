@@ -7,24 +7,24 @@
 #include <cstdlib>
 
 int main() {
-    SalesData total(std::cin);
+  SalesData total(std::cin);
 
-    if (!total.Isbn().empty()) {
-        while (std::cin) {
-            SalesData trans(std::cin);
-            if (!std::cin)
-                break;
+  if (!total.Isbn().empty()) {
+    while (std::cin) {
+      SalesData trans(std::cin);
+      if (!std::cin)
+        break;
 
-            if (total.Isbn() == trans.Isbn()) {
-                total.Combine(trans);
-            } else {
-                Print(std::cout, total) << '\n';
-                total = trans;
-            }
-        }
+      if (total.Isbn() == trans.Isbn()) {
+        total.Combine(trans);
+      } else {
         Print(std::cout, total) << '\n';
-    } else {
-        std::cerr << "no data\n";
-        return EXIT_FAILURE;
+        total = trans;
+      }
     }
+    Print(std::cout, total) << '\n';
+  } else {
+    std::cerr << "no data\n";
+    return EXIT_FAILURE;
+  }
 }

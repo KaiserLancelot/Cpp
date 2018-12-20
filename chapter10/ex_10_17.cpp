@@ -9,12 +9,12 @@
 #include <iostream>
 
 int main() {
-    std::vector<SalesData> vector{
-            SalesData{"aa"}, SalesData{"aaaa"}, SalesData{"aaa"}, SalesData{"z"}};
-    std::sort(std::begin(vector), std::end(vector),
-              [](const auto &lhs, const auto &rhs) { return lhs.Isbn() < rhs.Isbn(); });
+  std::vector<SalesData> vector{
+      SalesData{"aa"}, SalesData{"aaaa"}, SalesData{"aaa"}, SalesData{"z"}};
+  std::sort(std::begin(vector), std::end(vector),
+            [](const auto &lhs, const auto &rhs) { return lhs.Isbn() < rhs.Isbn(); });
 
-    for (const auto &ele:vector) {
-        std::cout << ele.Isbn() << '\n';
-    }
+  for (const auto &ele:vector) {
+    std::cout << ele.Isbn() << '\n';
+  }
 }

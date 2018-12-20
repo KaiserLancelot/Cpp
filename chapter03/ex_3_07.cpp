@@ -6,8 +6,8 @@
 #include <string>
 
 int main() {
-    std::string s("hello world");
-    for (char &element : s)
-        element = 'X';
-    std::cout << s << '\n';
+  std::string s("hello world");
+  for (char &element : s)
+    element = 'X';
+  std::cout << s << '\n';
 }

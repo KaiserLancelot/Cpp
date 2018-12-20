@@ -9,9 +9,9 @@
 #include <string>
 
 struct SalesData {
-    std::string book_no_;
-    std::int32_t units_sold_{};
-    double revenue_{};
+  std::string book_no_;
+  std::int32_t units_sold_{};
+  double revenue_{};
 };
 
 #endif //CPP_PRIMER_EX_2_42_H

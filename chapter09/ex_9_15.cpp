@@ -7,7 +7,7 @@
 #include <cstdint>
 
 int main() {
-    std::vector<std::int32_t> vi1{1, 2, 3};
-    std::vector<std::int32_t> vi2{1, 2, 3, 4};
-    std::cout << (vi1 == vi2 ? "equal" : "not equal") << '\n';
+  std::vector<std::int32_t> vi1{1, 2, 3};
+  std::vector<std::int32_t> vi2{1, 2, 3, 4};
+  std::cout << (vi1 == vi2 ? "equal" : "not equal") << '\n';
 }

@@ -8,14 +8,14 @@
 #include <iostream>
 
 bool Predicate(const std::string &s) {
-    return std::size(s) >= 5;
+  return std::size(s) >= 5;
 }
 
 int main() {
-    std::vector<std::string> vs{"a", "as", "aasss", "aaaaassaa", "aaaaaabba", "aaa"};
-    auto end{std::partition(std::begin(vs), std::end(vs), Predicate)};
+  std::vector<std::string> vs{"a", "as", "aasss", "aaaaassaa", "aaaaaabba", "aaa"};
+  auto end{std::partition(std::begin(vs), std::end(vs), Predicate)};
 
-    for (auto begin{std::begin(vs)}; begin != end; ++begin) {
-        std::cout << *begin << '\n';
-    }
+  for (auto begin{std::begin(vs)}; begin != end; ++begin) {
+    std::cout << *begin << '\n';
+  }
 }
