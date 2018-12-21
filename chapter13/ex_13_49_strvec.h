@@ -1,21 +1,25 @@
 //
-// Created by kaiser on 18-12-20.
+// Created by kaiser on 18-12-21.
 //
 
-#ifndef CPP_PRIMER_EX_13_39_H
-#define CPP_PRIMER_EX_13_39_H
+#ifndef CPP_PRIMER_EX_13_49_STRVEC_H
+#define CPP_PRIMER_EX_13_49_STRVEC_H
 
 #include <string>
 #include <cstddef>
 #include <memory>
 #include <utility>
+#include <initializer_list>
 
 class StrVec {
+  friend void swap(StrVec &lhs, StrVec &rhs);
  public:
   using SizeType=std::size_t;
   StrVec() = default;
+  StrVec(std::initializer_list<std::string> il);
   StrVec(const StrVec &item);
-  StrVec &operator=(const StrVec &item);
+  StrVec(StrVec &&item) noexcept;
+  StrVec &operator=(StrVec item);
   ~StrVec();
   void PushBack(const std::string &s);
   SizeType Size() const;
@@ -39,4 +43,6 @@ class StrVec {
   inline static std::allocator<std::string> alloc_;
 };
 
-#endif //CPP_PRIMER_EX_13_39_H
+void swap(StrVec &lhs, StrVec &rhs);
+
+#endif //CPP_PRIMER_EX_13_49_STRVEC_H

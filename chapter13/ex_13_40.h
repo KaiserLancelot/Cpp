@@ -1,19 +1,21 @@
 //
-// Created by kaiser on 18-12-20.
+// Created by kaiser on 18-12-21.
 //
 
-#ifndef CPP_PRIMER_EX_13_39_H
-#define CPP_PRIMER_EX_13_39_H
+#ifndef CPP_PRIMER_EX_13_40_H
+#define CPP_PRIMER_EX_13_40_H
 
 #include <string>
 #include <cstddef>
 #include <memory>
 #include <utility>
+#include <initializer_list>
 
 class StrVec {
  public:
   using SizeType=std::size_t;
   StrVec() = default;
+  StrVec(std::initializer_list<std::string> il);
   StrVec(const StrVec &item);
   StrVec &operator=(const StrVec &item);
   ~StrVec();
@@ -39,4 +41,4 @@ class StrVec {
   inline static std::allocator<std::string> alloc_;
 };
 
-#endif //CPP_PRIMER_EX_13_39_H
+#endif //CPP_PRIMER_EX_13_40_H

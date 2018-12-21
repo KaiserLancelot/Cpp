@@ -2,8 +2,8 @@
 // Created by kaiser on 18-12-20.
 //
 
-#ifndef CPP_PRIMER_EX_13_20_H
-#define CPP_PRIMER_EX_13_20_H
+#ifndef CPP_PRIMER_EX_13_22_H
+#define CPP_PRIMER_EX_13_22_H
 
 #include <string>
 #include <cstdint>
@@ -29,4 +29,4 @@ class HasPtr {
   std::int32_t i_{};
 };
 
-#endif //CPP_PRIMER_EX_13_20_H
+#endif //CPP_PRIMER_EX_13_22_H

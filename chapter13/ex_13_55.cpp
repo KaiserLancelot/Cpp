@@ -1,21 +1,14 @@
 //
-// Created by kaiser on 18-12-20.
+// Created by kaiser on 18-12-22.
 //
 
-#include "ex_13_26.h"
+#include "ex_13_55.h"
 
 #include <stdexcept>
+#include <utility>
 
 StrBlob::StrBlob()
     : data_{std::make_shared<std::vector<std::string >>()} {}
-
-StrBlob::StrBlob(const StrBlob &item)
-    : data_{std::make_shared<std::vector<std::string>>(*item.data_)} {}
-
-StrBlob &StrBlob::operator=(const StrBlob &item) {
-  data_ = std::make_shared<std::vector<std::string>>(*item.data_);
-  return *this;
-}
 
 StrBlob::StrBlob(std::initializer_list<std::string> il)
     : data_{std::make_shared<std::vector<std::string >>(il)} {}
@@ -45,6 +38,10 @@ bool StrBlob::Empty() const {
 
 void StrBlob::PushBack(const std::string &t) {
   data_->push_back(t);
+}
+
+void StrBlob::PushBack(std::string &&t) {
+  data_->push_back(std::move(t));
 }
 
 void StrBlob::PopBack() {

@@ -1,9 +1,9 @@
 //
-// Created by kaiser on 18-12-20.
+// Created by kaiser on 18-12-22.
 //
 
-#ifndef CPP_PRIMER_EX_13_26_H
-#define CPP_PRIMER_EX_13_26_H
+#ifndef CPP_PRIMER_EX_13_55_H
+#define CPP_PRIMER_EX_13_55_H
 
 #include <vector>
 #include <string>
@@ -19,8 +19,6 @@ class StrBlob {
  public:
   using SizeType=std::vector<std::string>::size_type;
   StrBlob();
-  StrBlob(const StrBlob &item);
-  StrBlob &operator=(const StrBlob &item);
   StrBlob(std::initializer_list<std::string> il);
   StrBlobPtr begin();
   StrBlobPtr end();
@@ -29,6 +27,7 @@ class StrBlob {
   SizeType Size() const;
   bool Empty() const;
   void PushBack(const std::string &t);
+  void PushBack(std::string &&t);
   void PopBack();
   std::string &Front();
   const std::string &Front() const;
@@ -71,4 +70,4 @@ class ConstStrBlobPtr {
   size_type curr_{};
 };
 
-#endif //CPP_PRIMER_EX_13_26_H
+#endif //CPP_PRIMER_EX_13_55_H
