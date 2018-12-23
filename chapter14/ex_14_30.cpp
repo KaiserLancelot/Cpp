@@ -2,7 +2,6 @@
 // Created by kaiser on 18-12-23.
 //
 
-#include "ex_14_28.h"
 #include "ex_14_30.h"
 
 #include <stdexcept>
@@ -339,4 +338,22 @@ ConstStrBlobPtr operator+(std::size_t i, const ConstStrBlobPtr &item) {
   auto ret{item};
   ret += i;
   return ret;
+}
+
+std::string &StrBlobPtr::operator*() const {
+  auto p{Check(curr_, "dereference past end")};
+  return (*p)[curr_];
+}
+
+const std::string &ConstStrBlobPtr::operator*() const {
+  auto p{Check(curr_, "dereference past end")};
+  return (*p)[curr_];
+}
+
+std::string *StrBlobPtr::operator->() const {
+  return &operator*();
+}
+
+const std::string *ConstStrBlobPtr::operator->() const {
+  return &operator*();
 }
