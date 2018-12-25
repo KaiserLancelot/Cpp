@@ -1,14 +1,17 @@
 //
-// Created by kaiser on 18-12-24.
+// Created by kaiser on 18-12-25.
 //
 
-#ifndef CPP_PRIMER_EX_15_16_H
-#define CPP_PRIMER_EX_15_16_H
+#ifndef CPP_PRIMER_EX_15_28_H
+#define CPP_PRIMER_EX_15_28_H
 
 #include <cstdint>
 #include <string>
 #include <iostream>
-#include <cstddef>
+
+#include <cstdint>
+#include <string>
+#include <iostream>
 
 class Quote {
  public:
@@ -73,6 +76,4 @@ class LimitQuote : public DiscQuote {
   }
 };
 
-double PrintTotal(std::ostream &os, const Quote &item, std::size_t n);
-
-#endif //CPP_PRIMER_EX_15_16_H
+#endif //CPP_PRIMER_EX_15_28_H

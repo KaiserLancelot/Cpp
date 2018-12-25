@@ -8,6 +8,7 @@
 #include <cstdint>
 #include <string>
 #include <iostream>
+#include <cstddef>
 
 class Quote {
  public:
@@ -23,6 +24,6 @@ class Quote {
   std::string book_no_;
 };
 
-double PrintTotal(std::ostream &os, const Quote &item, std::int32_t n);
+double PrintTotal(std::ostream &os, const Quote &item, std::size_t n);
 
 #endif //CPP_PRIMER_EX_15_03_H

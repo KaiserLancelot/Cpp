@@ -1,9 +1,9 @@
 //
-// Created by kaiser on 18-12-24.
+// Created by kaiser on 18-12-25.
 //
 
-#ifndef CPP_PRIMER_EX_15_16_H
-#define CPP_PRIMER_EX_15_16_H
+#ifndef CPP_PRIMER_EX_15_30_QUOTE_H
+#define CPP_PRIMER_EX_15_30_QUOTE_H
 
 #include <cstdint>
 #include <string>
@@ -15,11 +15,21 @@ class Quote {
   Quote() = default;
   Quote(const std::string &book_no, double price)
       : price_{price}, book_no_{book_no} {}
+  Quote(const Quote &) = default;
+  Quote(Quote &&) noexcept = default;
+  Quote &operator=(const Quote &) = default;
+  Quote &operator=(Quote &&) noexcept = default;
   virtual ~Quote() = default;
   std::string Isbn() const { return book_no_; }
   virtual double NetPrice(std::int32_t n) const { return n * price_; }
   virtual void Debug() const {
     std::cout << book_no_ << ' ' << price_ << '\n';
+  }
+  virtual Quote *clone() const &{
+    return new Quote{*this};
+  }
+  virtual Quote *clone() &&{
+    return new Quote{std::move(*this)};
   }
  protected:
   double price_{};
@@ -43,7 +53,16 @@ class BulkQuote : public DiscQuote {
  public:
   BulkQuote(const std::string &book_no, double price, int32_t quantity, double discount)
       : DiscQuote(book_no, price, quantity, discount) {}
-
+  BulkQuote(const BulkQuote &item) = default;
+  BulkQuote(BulkQuote &&item) noexcept = default;
+  BulkQuote &operator=(const BulkQuote &item) = default;
+  BulkQuote &operator=(BulkQuote &&item) noexcept = default;
+  BulkQuote *clone() const & override {
+    return new BulkQuote{*this};
+  }
+  BulkQuote *clone() && override {
+    return new BulkQuote{std::move(*this)};
+  }
   double NetPrice(std::int32_t n) const override {
     if (n >= quantity_)
       return n * (1 - discount_) * price_;
@@ -75,4 +94,4 @@ class LimitQuote : public DiscQuote {
 
 double PrintTotal(std::ostream &os, const Quote &item, std::size_t n);
 
-#endif //CPP_PRIMER_EX_15_16_H
+#endif //CPP_PRIMER_EX_15_30_QUOTE_H

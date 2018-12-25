@@ -1,8 +1,8 @@
 //
-// Created by kaiser on 18-12-24.
+// Created by kaiser on 18-12-25.
 //
 
-#include "ex_15_16.h"
+#include "ex_15_30_quote.h"
 
 double PrintTotal(std::ostream &os, const Quote &item, std::size_t n) {
   double ret{item.NetPrice(n)};
@@ -10,4 +10,3 @@ double PrintTotal(std::ostream &os, const Quote &item, std::size_t n) {
      << " # sold: " << n << " total due: " << ret << '\n';
   return ret;
 }
-
