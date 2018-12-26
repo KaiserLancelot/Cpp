@@ -15,8 +15,8 @@ class StrBlob {
   using size_type=std::vector<std::string>::size_type;
   StrBlob();
   StrBlob(std::initializer_list<std::string> il);
-  size_type Size() const;
-  bool Empty() const;
+  size_type size() const;
+  bool empty() const;
   void PushBack(const std::string &t);
   void PopBack();
   std::string &Front();

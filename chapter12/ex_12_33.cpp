@@ -17,7 +17,7 @@ TextQuery::TextQuery(std::ifstream &input) {
 
     while (iss >> word) {
       if (!words_and_line_number_[word]) {
-        words_and_line_number_[word] = std::make_shared < std::set < LineNo >> ();
+        words_and_line_number_[word] = std::make_shared<std::set<LineNo>>();
       }
       words_and_line_number_[word]->insert(line_number);
     }
@@ -25,8 +25,8 @@ TextQuery::TextQuery(std::ifstream &input) {
   }
 }
 
-QueryResult TextQuery::Query(const std::string &s) {
-  static auto nodata{std::make_shared < std::set < LineNo >> ()};
+QueryResult TextQuery::Query(const std::string &s) const {
+  static auto nodata{std::make_shared<std::set<LineNo>>()};
 
   auto iter{words_and_line_number_.find(s)};
   if (iter == std::end(words_and_line_number_)) {
@@ -41,16 +41,16 @@ QueryResult::QueryResult(const std::string &word,
                          const std::shared_ptr<std::set<LineNo>> &line_number)
     : word_{word}, text_{text}, line_number_{line_number} {}
 
-QueryResult::ResultIterator QueryResult::Begin() const {
+QueryResult::ResultIterator QueryResult::begin() const {
   return std::begin(*line_number_);
 }
 
-QueryResult::ResultIterator QueryResult::End() const {
+QueryResult::ResultIterator QueryResult::end() const {
   return std::end(*line_number_);
 }
 
-std::shared_ptr<StrBlob> QueryResult::GetFile() const {
-  return std::make_shared<StrBlob>(text_);
+StrBlob QueryResult::GetFile() const {
+  return text_;
 }
 
 std::ostream &Print(std::ostream &os, QueryResult qr) {
@@ -59,6 +59,19 @@ std::ostream &Print(std::ostream &os, QueryResult qr) {
 
   for (auto i : *qr.line_number_) {
     os << "\t(line " << i << ") " << qr.text_.At(i - 1) << '\n';
+  }
+
+  return os;
+}
+
+std::ostream &Print(std::ostream &os, QueryResult qr, std::size_t begin, std::size_t end) {
+  os << qr.word_ << " occurs " << std::size(*qr.line_number_)
+     << (std::size(*qr.line_number_) > 1 ? " times" : " time") << '\n';
+
+  for (auto i : *qr.line_number_) {
+    if (i - 1 > begin && i - 1 < end) {
+      os << "\t(line " << i << ") " << qr.text_.At(i - 1) << '\n';
+    }
   }
 
   return os;

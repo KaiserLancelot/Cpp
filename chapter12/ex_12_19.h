@@ -20,8 +20,8 @@ class StrBlob {
   StrBlob(std::initializer_list<std::string> il);
   StrBlobPtr begin();
   StrBlobPtr end();
-  size_type Size() const;
-  bool Empty() const;
+  size_type size() const;
+  bool empty() const;
   void PushBack(const std::string &t);
   void PopBack();
   std::string &Front();

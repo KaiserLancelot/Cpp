@@ -20,11 +20,11 @@ StrBlobPtr StrBlob::end() {
   return StrBlobPtr{*this, std::size(*data_)};
 }
 
-StrBlob::size_type StrBlob::Size() const {
+StrBlob::size_type StrBlob::size() const {
   return std::size(*data_);
 }
 
-bool StrBlob::Empty() const {
+bool StrBlob::empty() const {
   return std::empty(*data_);
 }
 
