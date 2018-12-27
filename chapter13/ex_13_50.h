@@ -5,15 +5,16 @@
 #ifndef CPP_PRIMER_EX_13_50_H
 #define CPP_PRIMER_EX_13_50_H
 
-#include <string>
 #include <cstddef>
 #include <memory>
+#include <string>
 #include <utility>
 
 class String {
   friend void swap(String &lhs, String &rhs);
+
  public:
-  using SizeType=std::size_t;
+  using SizeType = std::size_t;
   String() = default;
   String(const char *str);
   String(const String &item);
@@ -31,10 +32,10 @@ class String {
   void Resize(SizeType size);
   void Resize(SizeType size, char value);
   const char *CStr() const;
+
  private:
   void CheckAlloc();
-  std::pair<char *, char *>
-  AllocCopy(const char *begin, const char *end);
+  std::pair<char *, char *> AllocCopy(const char *begin, const char *end);
   void Free();
   void Reallocate(SizeType new_cap);
 
@@ -47,4 +48,4 @@ class String {
 
 void swap(String &lhs, String &rhs);
 
-#endif //CPP_PRIMER_EX_13_50_H
+#endif  // CPP_PRIMER_EX_13_50_H

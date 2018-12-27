@@ -2,9 +2,9 @@
 // Created by kaiser on 18-12-5.
 //
 
-#include <iostream>
 #include <cstdint>
 #include <forward_list>
+#include <iostream>
 
 int main() {
   std::forward_list<std::int32_t> forward_list{1, 2, 3, 4, 5};
@@ -19,7 +19,7 @@ int main() {
     }
   }
 
-  for (auto ele:forward_list) {
+  for (auto ele : forward_list) {
     std::cout << ele << '\n';
   }
 }

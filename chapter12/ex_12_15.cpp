@@ -2,14 +2,15 @@
 // Created by kaiser on 18-12-19.
 //
 
-#include <iostream>
-#include <string>
-#include <memory>
 #include <cstdint>
+#include <iostream>
+#include <memory>
+#include <string>
 
 class Destination {
  public:
-  Destination(const std::string &ip, std::int32_t port) : ip_{ip}, port_{port} {}
+  Destination(const std::string &ip, std::int32_t port)
+      : ip_{ip}, port_{port} {}
   std::string ip_;
   std::int32_t port_;
 };
@@ -26,7 +27,8 @@ Connection Connect(Destination *dest) {
 }
 
 void Disconnect(Connection conn) {
-  std::cout << "connection close(" << conn.ip_ << ":" << conn.port_ << ")" << std::endl;
+  std::cout << "connection close(" << conn.ip_ << ":" << conn.port_ << ")"
+            << std::endl;
 }
 
 void f(Destination &d) {

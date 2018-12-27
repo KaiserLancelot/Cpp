@@ -3,13 +3,14 @@
 //
 
 #include <iostream>
-#include <vector>
 #include <string>
+#include <vector>
 
 int main() {
   std::vector<std::string> vs;
   std::string s;
 
-  while (std::cin >> s)
+  while (std::cin >> s) {
     vs.push_back(s);
+  }
 }

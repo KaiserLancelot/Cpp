@@ -2,8 +2,8 @@
 // Created by kaiser on 18-12-20.
 //
 
-#include <iostream>
 #include <cstdint>
+#include <iostream>
 
 class Numbered {
  public:
@@ -14,9 +14,7 @@ class Numbered {
   std::int32_t mysn_;
 };
 
-void f(Numbered s) {
-  std::cout << s.mysn_ << '\n';
-}
+void f(Numbered s) { std::cout << s.mysn_ << '\n'; }
 
 int main() {
   Numbered a, b = a, c = b;

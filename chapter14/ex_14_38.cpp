@@ -2,20 +2,18 @@
 // Created by kaiser on 18-12-23.
 //
 
+#include <algorithm>
+#include <cstdlib>
+#include <fstream>
 #include <iostream>
 #include <string>
-#include <fstream>
-#include <cstdlib>
 #include <vector>
-#include <algorithm>
 
 class Fun {
  public:
-  explicit Fun(std::size_t sz)
-      : sz_{sz} {}
-  bool operator()(const std::string &s) {
-    return std::size(s) == sz_;
-  }
+  explicit Fun(std::size_t sz) : sz_{sz} {}
+  bool operator()(const std::string &s) { return std::size(s) == sz_; }
+
  private:
   std::size_t sz_{};
 };

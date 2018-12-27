@@ -5,9 +5,9 @@
 #ifndef CPP_PRIMER_EX_15_30_H
 #define CPP_PRIMER_EX_15_30_H
 
-#include <set>
-#include <memory>
 #include <iostream>
+#include <memory>
+#include <set>
 
 #include "ex_15_30_quote.h"
 
@@ -20,6 +20,7 @@ class Basket {
     items_.insert(std::shared_ptr<Quote>{std::move(sale).clone()});
   }
   double TotalReceipt(std::ostream &os) const;
+
  private:
   static bool less(const std::shared_ptr<Quote> &lhs,
                    const std::shared_ptr<Quote> &rhs) {
@@ -28,4 +29,4 @@ class Basket {
   std::multiset<std::shared_ptr<Quote>, decltype(less) *> items_{less};
 };
 
-#endif //CPP_PRIMER_EX_15_30_H
+#endif  // CPP_PRIMER_EX_15_30_H

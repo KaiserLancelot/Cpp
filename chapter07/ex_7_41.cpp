@@ -7,7 +7,7 @@
 
 int main() {
   SalesData s1;
-  SalesData s2("CPP-Primer-5th");
-  SalesData s3("CPP-Primer-5th", 1, 2.5);
-  SalesData s4(std::cin);
+  SalesData s2{"CPP-Primer-5th"};
+  SalesData s3{"CPP-Primer-5th", 1, 2.5};
+  SalesData s4{std::cin};
 }

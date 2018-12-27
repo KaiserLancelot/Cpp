@@ -5,19 +5,18 @@
 #ifndef CPP_PRIMER_EX_13_53_H
 #define CPP_PRIMER_EX_13_53_H
 
-#include <string>
-#include <cstdint>
 #include <algorithm>
+#include <cstdint>
+#include <string>
 
 class HasPtr {
   friend void swap(HasPtr &lhs, HasPtr &rhs);
+
  public:
   explicit HasPtr(const std::string &s = std::string())
       : ps_{new std::string(s)} {}
-  HasPtr(const HasPtr &item)
-      : ps_{new std::string(*item.ps_)}, i_{item.i_} {}
-  HasPtr(HasPtr &&item) noexcept
-      : ps_{item.ps_}, i_{item.i_} {
+  HasPtr(const HasPtr &item) : ps_{new std::string(*item.ps_)}, i_{item.i_} {}
+  HasPtr(HasPtr &&item) noexcept : ps_{item.ps_}, i_{item.i_} {
     item.ps_ = nullptr;
   }
   HasPtr &operator=(const HasPtr &item) {
@@ -36,9 +35,8 @@ class HasPtr {
     }
     return *this;
   }
-  ~HasPtr() {
-    delete ps_;
-  }
+  ~HasPtr() { delete ps_; }
+
  private:
   std::string *ps_;
   std::int32_t i_{};
@@ -50,4 +48,4 @@ inline void swap(HasPtr &lhs, HasPtr &rhs) {
   swap(lhs.i_, rhs.i_);
 }
 
-#endif //CPP_PRIMER_EX_13_53_H
+#endif  // CPP_PRIMER_EX_13_53_H

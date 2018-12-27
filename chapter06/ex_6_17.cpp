@@ -2,14 +2,15 @@
 // Created by kaiser on 18-11-28.
 //
 
+#include <cctype>
 #include <iostream>
 #include <string>
-#include <cctype>
 
 bool Fun1(const std::string &s) {
   for (auto element : s) {
-    if (std::isupper(element))
+    if (std::isupper(element)) {
       return true;
+    }
   }
   return false;
 }

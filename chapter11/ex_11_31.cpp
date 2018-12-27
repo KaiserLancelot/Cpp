@@ -7,13 +7,8 @@
 
 int main() {
   std::multimap<std::string, std::string> authors{
-      {"a", "DMA"},
-      {"p", "LeetCode"},
-      {"p", "CLRS"},
-      {"w", "FTP"},
-      {"p", "CP5"},
-      {"w", "CPP-Concurrency"}
-  };
+      {"a", "DMA"}, {"p", "LeetCode"}, {"p", "CLRS"},
+      {"w", "FTP"}, {"p", "CP5"},      {"w", "CPP-Concurrency"}};
 
   std::string author("p");
 

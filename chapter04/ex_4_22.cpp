@@ -2,21 +2,21 @@
 // Created by kaiser on 18-11-26.
 //
 
-#include <iostream>
 #include <cstdint>
+#include <iostream>
 #include <string>
 
 int main() {
   std::int32_t grade;
   std::cin >> grade;
 
-  //a
+  // a
   std::string final_grade(
-      (grade > 90) ? "high pass" :
-      (grade > 75) ? "pass" :
-      (grade > 60) ? "low pass" : "fail");
+      (grade > 90)
+          ? "high pass"
+          : (grade > 75) ? "pass" : (grade > 60) ? "low pass" : "fail");
 
-  //b
+  // b
   if (grade > 90)
     final_grade = "high pass";
   else if (grade > 75)

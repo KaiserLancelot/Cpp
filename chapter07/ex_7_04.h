@@ -12,4 +12,4 @@ struct Person {
   std::string address_;
 };
 
-#endif //CPP_PRIMER_EX_7_4_H
+#endif  // CPP_PRIMER_EX_7_4_H

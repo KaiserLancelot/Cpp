@@ -4,6 +4,4 @@
 
 #include "ex_15_16.h"
 
-int main() {
-  DiscQuote disc;
-}
+int main() { DiscQuote disc; }

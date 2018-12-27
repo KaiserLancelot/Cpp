@@ -17,7 +17,7 @@ TextQuery::TextQuery(std::ifstream &input) {
 
     while (iss >> word) {
       if (!words_and_line_number_[word]) {
-        words_and_line_number_[word] = std::make_shared < std::set < LineNo >> ();
+        words_and_line_number_[word] = std::make_shared<std::set<LineNo>>();
       }
       words_and_line_number_[word]->insert(line_number);
     }
@@ -26,7 +26,7 @@ TextQuery::TextQuery(std::ifstream &input) {
 }
 
 QueryResult TextQuery::Query(const std::string &s) {
-  static auto nodata{std::make_shared < std::set < LineNo >> ()};
+  static auto nodata{std::make_shared<std::set<LineNo>>()};
 
   auto iter{words_and_line_number_.find(s)};
   if (iter == std::end(words_and_line_number_)) {
@@ -36,8 +36,7 @@ QueryResult TextQuery::Query(const std::string &s) {
   }
 }
 
-QueryResult::QueryResult(const std::string &word,
-                         const StrBlob &text,
+QueryResult::QueryResult(const std::string &word, const StrBlob &text,
                          const std::shared_ptr<std::set<LineNo>> &line_number)
     : word_{word}, text_{text}, line_number_{line_number} {}
 

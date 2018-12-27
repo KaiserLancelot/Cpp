@@ -2,12 +2,12 @@
 // Created by kaiser on 18-12-3.
 //
 
+#include <cstdlib>
+#include <fstream>
 #include <iostream>
 #include <sstream>
-#include <vector>
 #include <string>
-#include <fstream>
-#include <cstdlib>
+#include <vector>
 
 struct PersonInfo {
   std::string name;
@@ -30,15 +30,13 @@ int main() {
     record.clear();
     record.str(line);
     record >> info.name;
-    while (record >> word)
-      info.phones.push_back(word);
+    while (record >> word) info.phones.push_back(word);
     people.push_back(info);
   }
 
-  for (const auto &info:people) {
+  for (const auto &info : people) {
     std::cout << info.name << ' ';
-    for (const auto &phone:info.phones)
-      std::cout << phone << ' ';
+    for (const auto &phone : info.phones) std::cout << phone << ' ';
     std::cout << '\n';
   }
 }

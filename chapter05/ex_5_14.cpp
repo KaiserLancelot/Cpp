@@ -18,8 +18,9 @@ int main() {
     else
       count = 0;
 
-    if (count > result.second)
+    if (count > result.second) {
       result = {curr, count};
+    }
     pre = curr;
   }
 

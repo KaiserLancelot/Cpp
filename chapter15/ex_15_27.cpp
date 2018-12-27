@@ -4,6 +4,4 @@
 
 #include "ex_15_27.h"
 
-int main() {
-  BulkQuote bulk{"123", 2.6};
-}
+int main() { BulkQuote bulk{"123", 2.6}; }

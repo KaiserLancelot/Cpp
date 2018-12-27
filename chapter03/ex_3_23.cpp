@@ -2,10 +2,10 @@
 // Created by kaiser on 18-11-22.
 //
 
-#include <iostream>
-#include <vector>
 #include <cstdint>
+#include <iostream>
 #include <numeric>
+#include <vector>
 
 int main() {
   std::vector<std::int32_t> vi(10);

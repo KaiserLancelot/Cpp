@@ -3,15 +3,13 @@
 //
 
 #include "ex_14_22.h"
-SalesData::SalesData(const std::string &book_no)
-    : book_no_(book_no) {}
+SalesData::SalesData(const std::string &book_no) : book_no_(book_no) {}
 
-SalesData::SalesData(const std::string &book_no, std::int32_t units_sold, double revenue)
+SalesData::SalesData(const std::string &book_no, std::int32_t units_sold,
+                     double revenue)
     : book_no_(book_no), units_sold_{units_sold}, revenue_{revenue} {}
 
-SalesData::SalesData(std::istream &is) {
-  is >> *this;
-}
+SalesData::SalesData(std::istream &is) { is >> *this; }
 
 SalesData &SalesData::operator==(const std::string &s) {
   *this = SalesData{s};
@@ -24,17 +22,15 @@ SalesData &SalesData::operator+=(const SalesData &rhs) {
   return *this;
 }
 
-const std::string &SalesData::Isbn() const {
-  return book_no_;
-}
+const std::string &SalesData::Isbn() const { return book_no_; }
 
 double SalesData::AvgPrice() const {
   return units_sold_ ? revenue_ / units_sold_ : 0;
 }
 
 std::ostream &operator<<(std::ostream &os, const SalesData &item) {
-  os << item.book_no_ << ' ' << item.units_sold_ << ' ' <<
-     item.revenue_ << ' ' << item.AvgPrice();
+  os << item.book_no_ << ' ' << item.units_sold_ << ' ' << item.revenue_ << ' '
+     << item.AvgPrice();
   return os;
 }
 

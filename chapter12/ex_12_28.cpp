@@ -2,17 +2,17 @@
 // Created by kaiser on 18-12-19.
 //
 
-#include <iostream>
+#include <cstdint>
+#include <cstdlib>
 #include <fstream>
+#include <iostream>
+#include <map>
+#include <set>
 #include <sstream>
 #include <string>
 #include <vector>
-#include <cstdlib>
-#include <cstdint>
-#include <map>
-#include <set>
 
-using LineNo=std::vector<std::string>::size_type;
+using LineNo = std::vector<std::string>::size_type;
 
 std::ostream &Print(std::ostream &os, const std::string &word,
                     const std::vector<std::string> &text,
@@ -67,8 +67,7 @@ int main(int argc, char *argv[]) {
         iter != std::end(words_and_line_number)) {
       Print(std::cout, s, text, words_and_line_number[s]);
     } else {
-      Print(std::cout, s, text, std::set < LineNo > {});
+      Print(std::cout, s, text, std::set<LineNo>{});
     }
   }
-
 }

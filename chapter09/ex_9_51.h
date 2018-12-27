@@ -6,11 +6,12 @@
 #define CPP_PRIMER_EX_9_51_H
 
 #include <cstdint>
-#include <string>
 #include <iostream>
+#include <string>
 
 class Date {
   friend std::ostream &print(std::ostream &os, const Date &item);
+
  public:
   Date() = default;
   explicit Date(const std::string &s) {
@@ -47,6 +48,7 @@ class Date {
     year_ = std::stoi(s.substr(std::size(s) - 4));
     day_ = std::stoi(s.substr(s.find_first_of("0123456789")));
   }
+
  private:
   std::int32_t year_{};
   std::int32_t month_{};
@@ -58,4 +60,4 @@ inline std::ostream &print(std::ostream &os, const Date &item) {
   return os;
 }
 
-#endif //CPP_PRIMER_EX_9_51_H
+#endif  // CPP_PRIMER_EX_9_51_H

@@ -2,9 +2,9 @@
 // Created by kaiser on 18-12-25.
 //
 
-#include <vector>
 #include <iostream>
 #include <memory>
+#include <vector>
 
 #include "ex_15_30.h"
 

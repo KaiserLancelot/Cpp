@@ -2,11 +2,11 @@
 // Created by kaiser on 18-12-3.
 //
 
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <string>
 #include <cstdlib>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
 
 int main() {
   std::ifstream ifs{"book"};
@@ -19,8 +19,7 @@ int main() {
   std::string line;
   std::vector<std::string> vs;
 
-  while (std::getline(ifs, line))
-    vs.push_back(line);
+  while (std::getline(ifs, line)) vs.push_back(line);
 
   for (const auto &s : vs) {
     std::cout << s << '\n';

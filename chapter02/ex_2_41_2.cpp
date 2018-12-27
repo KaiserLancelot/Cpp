@@ -26,8 +26,8 @@ int main() {
     int total_cnt = sales_data1.units_sold_ + sales_data2.units_sold_;
     double total_revenue = sales_data1.revenue_ + sales_data2.revenue_;
 
-    std::cout << sales_data1.book_no_ << ' ' << total_cnt << ' ' <<
-              total_revenue << ' ';
+    std::cout << sales_data1.book_no_ << ' ' << total_cnt << ' '
+              << total_revenue << ' ';
     if (total_revenue != 0)
       std::cout << total_revenue / total_cnt << '\n';
     else

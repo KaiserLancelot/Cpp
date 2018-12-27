@@ -5,17 +5,18 @@
 #ifndef CPP_PRIMER_EX_14_16_STRING_H
 #define CPP_PRIMER_EX_14_16_STRING_H
 
-#include <string>
 #include <cstddef>
-#include <memory>
-#include <utility>
 #include <iostream>
+#include <memory>
+#include <string>
+#include <utility>
 
 class String {
   friend std::ostream &operator<<(std::ostream &os, const String &s);
   friend bool operator==(const String &lhs, const String &rhs);
+
  public:
-  using SizeType=std::size_t;
+  using SizeType = std::size_t;
   String() = default;
   String(const char *str);
   String(const String &item);
@@ -32,10 +33,10 @@ class String {
   void Resize(SizeType new_size);
   void Resize(SizeType new_size, char value);
   const char *CStr() const;
+
  private:
   void CheckAlloc();
-  std::pair<char *, char *>
-  AllocCopy(const char *begin, const char *end);
+  std::pair<char *, char *> AllocCopy(const char *begin, const char *end);
   void Free();
   void Reallocate(SizeType new_cap);
 
@@ -50,4 +51,4 @@ std::ostream &operator<<(std::ostream &os, const String &s);
 bool operator==(const String &lhs, const String &rhs);
 bool operator!=(const String &lhs, const String &rhs);
 
-#endif //CPP_PRIMER_EX_14_16_STRING_H
+#endif  // CPP_PRIMER_EX_14_16_STRING_H

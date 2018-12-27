@@ -8,8 +8,9 @@
 int main() {
   std::int32_t sum{}, val;
 
-  while (std::cin >> val)
+  while (std::cin >> val) {
     sum += val;
+  }
 
   std::cout << sum << '\n';
 }

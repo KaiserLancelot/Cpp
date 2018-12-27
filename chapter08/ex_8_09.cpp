@@ -3,13 +3,14 @@
 //
 
 #include <iostream>
-#include <string>
 #include <sstream>
+#include <string>
 
 std::istream &fun(std::istream &is) {
   std::string word;
-  while (is >> word)
+  while (is >> word) {
     std::cout << word << '\n';
+  }
   is.clear();
   return is;
 }

@@ -4,16 +4,12 @@
 
 #include "ex_13_44.h"
 
-#include <vector>
 #include <iostream>
+#include <vector>
 
-void foo(String x) {
-  std::cout << x.CStr() << '\n';
-}
+void foo(String x) { std::cout << x.CStr() << '\n'; }
 
-void bar(const String &x) {
-  std::cout << x.CStr() << '\n';
-}
+void bar(const String &x) { std::cout << x.CStr() << '\n'; }
 
 String baz() {
   String ret("world");

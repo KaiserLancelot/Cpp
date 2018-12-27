@@ -6,8 +6,7 @@
 #include <iostream>
 
 int main() {
-  std::int32_t a_count{}, e_count{},
-      i_count{}, o_count{}, u_count{};
+  std::int32_t a_count{}, e_count{}, i_count{}, o_count{}, u_count{};
   char ch;
 
   while (std::cin >> ch) {
@@ -22,6 +21,6 @@ int main() {
     else if (ch == 'u')
       ++u_count;
   }
-  std::cout << a_count << ' ' << e_count << ' '
-            << i_count << ' ' << o_count << ' ' << u_count << '\n';
+  std::cout << a_count << ' ' << e_count << ' ' << i_count << ' ' << o_count
+            << ' ' << u_count << '\n';
 }

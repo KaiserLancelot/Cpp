@@ -2,6 +2,4 @@
 // Created by kaiser on 18-11-20.
 //
 
-int main() {
-  return -1;
-}
+int main() { return -1; }

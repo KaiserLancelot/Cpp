@@ -36,8 +36,7 @@ QueryResult TextQuery::Query(const std::string &s) const {
   }
 }
 
-QueryResult::QueryResult(const std::string &word,
-                         const StrBlob &text,
+QueryResult::QueryResult(const std::string &word, const StrBlob &text,
                          const std::shared_ptr<std::set<LineNo>> &line_number)
     : word_{word}, text_{text}, line_number_{line_number} {}
 
@@ -49,9 +48,7 @@ QueryResult::ResultIterator QueryResult::end() const {
   return std::end(*line_number_);
 }
 
-StrBlob QueryResult::GetFile() const {
-  return text_;
-}
+StrBlob QueryResult::GetFile() const { return text_; }
 
 std::ostream &Print(std::ostream &os, QueryResult qr) {
   os << qr.word_ << " occurs " << std::size(*qr.line_number_)
@@ -64,7 +61,8 @@ std::ostream &Print(std::ostream &os, QueryResult qr) {
   return os;
 }
 
-std::ostream &Print(std::ostream &os, QueryResult qr, std::size_t begin, std::size_t end) {
+std::ostream &Print(std::ostream &os, QueryResult qr, std::size_t begin,
+                    std::size_t end) {
   os << qr.word_ << " occurs " << std::size(*qr.line_number_)
      << (std::size(*qr.line_number_) > 1 ? " times" : " time") << '\n';
 

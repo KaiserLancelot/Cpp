@@ -4,8 +4,8 @@
 
 #include "ex_14_26_string.h"
 
-#include <cstring>
 #include <algorithm>
+#include <cstring>
 
 String::String(const char *str) {
   auto new_data{AllocCopy(str, str + std::strlen(str))};
@@ -27,38 +27,24 @@ String &String::operator=(const String &item) {
   return *this;
 }
 
-String::~String() {
-  Free();
-}
+String::~String() { Free(); }
 
 void String::PushBack(char ch) {
   CheckAlloc();
   std::allocator_traits<decltype(alloc_)>::construct(alloc_, end_++, ch);
 }
 
-String::SizeType String::size() const {
-  return end_ - begin_;
-}
+String::SizeType String::size() const { return end_ - begin_; }
 
-String::SizeType String::Capacity() const {
-  return cap_ - begin_;
-}
+String::SizeType String::Capacity() const { return cap_ - begin_; }
 
-char *String::begin() {
-  return begin_;
-}
+char *String::begin() { return begin_; }
 
-char *String::end() {
-  return end_;
-}
+char *String::end() { return end_; }
 
-const char *String::begin() const {
-  return begin_;
-}
+const char *String::begin() const { return begin_; }
 
-const char *String::end() const {
-  return end_;
-}
+const char *String::end() const { return end_; }
 
 void String::Reserve(String::SizeType new_cap) {
   if (new_cap > Capacity()) {
@@ -66,9 +52,7 @@ void String::Reserve(String::SizeType new_cap) {
   }
 }
 
-void String::Resize(String::SizeType new_size) {
-  Resize(new_size, '\0');
-}
+void String::Resize(String::SizeType new_size) { Resize(new_size, '\0'); }
 
 void String::Resize(String::SizeType new_size, char value) {
   if (new_size > size()) {
@@ -93,7 +77,8 @@ void String::CheckAlloc() {
   }
 }
 
-std::pair<char *, char *> String::AllocCopy(const char *begin, const char *end) {
+std::pair<char *, char *> String::AllocCopy(const char *begin,
+                                            const char *end) {
   auto new_data{alloc_.allocate(end - begin)};
   return {new_data, std::uninitialized_copy(begin, end, new_data)};
 }
@@ -116,13 +101,9 @@ void String::Reallocate(String::SizeType new_cap) {
   cap_ = new_begin + new_cap;
 }
 
-char &String::operator[](SizeType index) {
-  return begin_[index];
-}
+char &String::operator[](SizeType index) { return begin_[index]; }
 
-const char &String::operator[](SizeType index) const {
-  return begin_[index];
-}
+const char &String::operator[](SizeType index) const { return begin_[index]; }
 
 std::ostream &operator<<(std::ostream &os, const String &s) {
   os << s.CStr();
@@ -137,22 +118,17 @@ bool operator==(const String &lhs, const String &rhs) {
   return std::equal(lhs.begin(), lhs.end(), rhs.begin());
 }
 
-bool operator!=(const String &lhs, const String &rhs) {
-  return !(lhs == rhs);
-}
+bool operator!=(const String &lhs, const String &rhs) { return !(lhs == rhs); }
 
 bool operator<(const String &lhs, const String &rhs) {
-  return std::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());
+  return std::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(),
+                                      rhs.end());
 }
 
 bool operator<=(const String &lhs, const String &rhs) {
   return (lhs < rhs) || (lhs == rhs);
 }
 
-bool operator>(const String &lhs, const String &rhs) {
-  return !(lhs <= rhs);
-}
+bool operator>(const String &lhs, const String &rhs) { return !(lhs <= rhs); }
 
-bool operator>=(const String &lhs, const String &rhs) {
-  return !(lhs < rhs);
-}
+bool operator>=(const String &lhs, const String &rhs) { return !(lhs < rhs); }

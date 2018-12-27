@@ -7,7 +7,7 @@
 #include <sstream>
 
 TextQuery::TextQuery(std::ifstream &input)
-    : text_{std::make_shared < std::vector < std::string >> ()} {
+    : text_{std::make_shared<std::vector<std::string>>()} {
   std::string line;
   LineNo line_number{1};
 
@@ -18,7 +18,7 @@ TextQuery::TextQuery(std::ifstream &input)
 
     while (iss >> word) {
       if (!words_and_line_number_[word]) {
-        words_and_line_number_[word] = std::make_shared < std::set < LineNo >> ();
+        words_and_line_number_[word] = std::make_shared<std::set<LineNo>>();
       }
       words_and_line_number_[word]->insert(line_number);
     }
@@ -27,7 +27,7 @@ TextQuery::TextQuery(std::ifstream &input)
 }
 
 QueryResult TextQuery::Query(const std::string &s) {
-  static auto nodata{std::make_shared < std::set < LineNo >> ()};
+  static auto nodata{std::make_shared<std::set<LineNo>>()};
 
   auto iter{words_and_line_number_.find(s)};
   if (iter == std::end(words_and_line_number_)) {

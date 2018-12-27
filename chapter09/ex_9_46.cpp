@@ -2,10 +2,11 @@
 // Created by kaiser on 18-12-5.
 //
 
-#include <string>
 #include <iostream>
+#include <string>
 
-std::string &Fun(std::string &name, const std::string &prefix, const std::string &suffix) {
+std::string &Fun(std::string &name, const std::string &prefix,
+                 const std::string &suffix) {
   name.insert(0, prefix);
   name.insert(std::size(name), suffix);
   return name;

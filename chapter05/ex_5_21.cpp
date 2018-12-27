@@ -2,16 +2,17 @@
 // Created by kaiser on 18-11-27.
 //
 
+#include <cctype>
 #include <iostream>
 #include <string>
-#include <cctype>
 
 int main() {
   std::string curr, pre;
 
   while (std::cin >> curr) {
-    if (std::isupper(curr.front()) && curr == pre)
+    if (std::isupper(curr.front()) && curr == pre) {
       break;
+    }
     pre = curr;
   }
 

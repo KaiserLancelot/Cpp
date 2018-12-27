@@ -6,8 +6,7 @@
 
 #include <stdexcept>
 
-StrBlob::StrBlob()
-    : data_{std::make_shared<std::vector<std::string >>()} {}
+StrBlob::StrBlob() : data_{std::make_shared<std::vector<std::string>>()} {}
 
 StrBlob::StrBlob(const StrBlob &item)
     : data_{std::make_shared<std::vector<std::string>>(*item.data_)} {}
@@ -18,34 +17,22 @@ StrBlob &StrBlob::operator=(const StrBlob &item) {
 }
 
 StrBlob::StrBlob(std::initializer_list<std::string> il)
-    : data_{std::make_shared<std::vector<std::string >>(il)} {}
+    : data_{std::make_shared<std::vector<std::string>>(il)} {}
 
-StrBlobPtr StrBlob::begin() {
-  return StrBlobPtr{*this};
-}
+StrBlobPtr StrBlob::begin() { return StrBlobPtr{*this}; }
 
-StrBlobPtr StrBlob::end() {
-  return StrBlobPtr{*this, std::size(*data_)};
-}
+StrBlobPtr StrBlob::end() { return StrBlobPtr{*this, std::size(*data_)}; }
 
-ConstStrBlobPtr StrBlob::begin() const {
-  return ConstStrBlobPtr{*this};
-}
+ConstStrBlobPtr StrBlob::begin() const { return ConstStrBlobPtr{*this}; }
 ConstStrBlobPtr StrBlob::end() const {
   return ConstStrBlobPtr{*this, std::size(*data_)};
 }
 
-StrBlob::SizeType StrBlob::Size() const {
-  return std::size(*data_);
-}
+StrBlob::SizeType StrBlob::Size() const { return std::size(*data_); }
 
-bool StrBlob::Empty() const {
-  return std::empty(*data_);
-}
+bool StrBlob::Empty() const { return std::empty(*data_); }
 
-void StrBlob::PushBack(const std::string &t) {
-  data_->push_back(t);
-}
+void StrBlob::PushBack(const std::string &t) { data_->push_back(t); }
 
 void StrBlob::PopBack() {
   Check(0, "PopBack on empty StrBlob");
@@ -72,9 +59,7 @@ const std::string &StrBlob::Back() const {
   return data_->back();
 }
 
-std::string &StrBlob::At(SizeType index) {
-  return data_->at(index);
-}
+std::string &StrBlob::At(SizeType index) { return data_->at(index); }
 
 const std::string &StrBlob::At(SizeType index) const {
   return data_->at(index);
@@ -86,8 +71,7 @@ void StrBlob::Check(StrBlob::SizeType i, const std::string &msg) const {
   }
 }
 
-StrBlobPtr::StrBlobPtr(StrBlob &a, size_type sz)
-    : wptr_{a.data_}, curr_{sz} {}
+StrBlobPtr::StrBlobPtr(StrBlob &a, size_type sz) : wptr_{a.data_}, curr_{sz} {}
 
 std::string &StrBlobPtr::Deref() const {
   auto p{Check(curr_, "dereference past end")};
@@ -104,7 +88,8 @@ bool StrBlobPtr::NotEqual(const StrBlobPtr &item) const {
   return curr_ != item.curr_;
 }
 
-std::shared_ptr<std::vector<std::string>> StrBlobPtr::Check(StrBlobPtr::size_type i, const std::string &msg) const {
+std::shared_ptr<std::vector<std::string>> StrBlobPtr::Check(
+    StrBlobPtr::size_type i, const std::string &msg) const {
   auto ret{wptr_.lock()};
   if (!ret) {
     throw std::runtime_error{"unbound StrBlobPtr"};
@@ -116,7 +101,8 @@ std::shared_ptr<std::vector<std::string>> StrBlobPtr::Check(StrBlobPtr::size_typ
   return ret;
 }
 
-ConstStrBlobPtr::ConstStrBlobPtr(const StrBlob &a, ConstStrBlobPtr::size_type sz)
+ConstStrBlobPtr::ConstStrBlobPtr(const StrBlob &a,
+                                 ConstStrBlobPtr::size_type sz)
     : wptr_{a.data_}, curr_{sz} {}
 
 std::string &ConstStrBlobPtr::Deref() const {
@@ -134,8 +120,8 @@ bool ConstStrBlobPtr::NotEqual(const ConstStrBlobPtr &item) const {
   return curr_ != item.curr_;
 }
 
-std::shared_ptr<std::vector<std::string>> ConstStrBlobPtr::Check(ConstStrBlobPtr::size_type i,
-                                                                 const std::string &msg) const {
+std::shared_ptr<std::vector<std::string>> ConstStrBlobPtr::Check(
+    ConstStrBlobPtr::size_type i, const std::string &msg) const {
   auto ret{wptr_.lock()};
   if (!ret) {
     throw std::runtime_error{"unbound ConstStrBlobPtr"};

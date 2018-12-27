@@ -8,8 +8,7 @@
 
 class ReadString {
  public:
-  explicit ReadString(std::istream &is)
-      : is_{is} {}
+  explicit ReadString(std::istream &is) : is_{is} {}
   std::string operator()() {
     std::string ret;
     if (std::getline(is_, ret)) {
@@ -18,6 +17,7 @@ class ReadString {
       return std::string();
     }
   }
+
  private:
   std::istream &is_;
 };
@@ -32,7 +32,7 @@ int main() {
     line = read_string();
   }
 
-  for (const auto &s:vs) {
+  for (const auto &s : vs) {
     std::cout << s << '\n';
   }
 }

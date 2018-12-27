@@ -5,16 +5,17 @@
 #ifndef CPP_PRIMER_EX_13_49_STRVEC_H
 #define CPP_PRIMER_EX_13_49_STRVEC_H
 
-#include <string>
 #include <cstddef>
-#include <memory>
-#include <utility>
 #include <initializer_list>
+#include <memory>
+#include <string>
+#include <utility>
 
 class StrVec {
   friend void swap(StrVec &lhs, StrVec &rhs);
+
  public:
-  using SizeType=std::size_t;
+  using SizeType = std::size_t;
   StrVec() = default;
   StrVec(std::initializer_list<std::string> il);
   StrVec(const StrVec &item);
@@ -29,10 +30,11 @@ class StrVec {
   void Reserve(SizeType new_cap);
   void Resize(SizeType size);
   void Resize(SizeType size, const std::string &value);
+
  private:
   void CheckAlloc();
-  std::pair<std::string *, std::string *>
-  AllocCopy(const std::string *begin, const std::string *end);
+  std::pair<std::string *, std::string *> AllocCopy(const std::string *begin,
+                                                    const std::string *end);
   void Free();
   void Reallocate(SizeType new_cap);
 
@@ -45,4 +47,4 @@ class StrVec {
 
 void swap(StrVec &lhs, StrVec &rhs);
 
-#endif //CPP_PRIMER_EX_13_49_STRVEC_H
+#endif  // CPP_PRIMER_EX_13_49_STRVEC_H

@@ -15,8 +15,9 @@ class NoDefault {
 class C {
  public:
   C() : no_default_{1} {}
+
  private:
   NoDefault no_default_;
 };
 
-#endif //CPP_PRIMER_EX_7_43_H
+#endif  // CPP_PRIMER_EX_7_43_H

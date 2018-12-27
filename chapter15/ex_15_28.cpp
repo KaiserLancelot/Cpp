@@ -4,8 +4,8 @@
 
 #include "ex_15_28.h"
 
-#include <vector>
 #include <iostream>
+#include <vector>
 
 int main() {
   std::vector<Quote> v;
@@ -16,7 +16,7 @@ int main() {
 
   double price{};
 
-  for (const auto &ele:v) {
+  for (const auto &ele : v) {
     price += ele.NetPrice(20);
   }
 

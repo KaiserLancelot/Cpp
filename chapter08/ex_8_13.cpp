@@ -2,22 +2,20 @@
 // Created by kaiser on 18-12-3.
 //
 
+#include <cctype>
+#include <cstdlib>
+#include <fstream>
 #include <iostream>
 #include <sstream>
-#include <vector>
 #include <string>
-#include <fstream>
-#include <cstdlib>
-#include <cctype>
+#include <vector>
 
 struct PersonInfo {
   std::string name;
   std::vector<std::string> phones;
 };
 
-bool valid(const std::string &str) {
-  return std::isdigit(str[0]);
-}
+bool valid(const std::string &str) { return std::isdigit(str[0]); }
 
 std::string format(const std::string &str) {
   return str.substr(0, 3) + "-" + str.substr(3, 3) + "-" + str.substr(6);
@@ -39,14 +37,15 @@ int main() {
     record.clear();
     record.str(line);
     record >> info.name;
-    while (record >> word)
+    while (record >> word) {
       info.phones.push_back(word);
+    }
     people.push_back(info);
   }
 
-  for (const auto &entry:people) {
+  for (const auto &entry : people) {
     std::ostringstream formatted, bad_nums;
-    for (const auto &nums:entry.phones) {
+    for (const auto &nums : entry.phones) {
       if (!valid(nums))
         bad_nums << " " << nums;
       else

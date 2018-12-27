@@ -7,8 +7,7 @@
 
 class ReadString {
  public:
-  explicit ReadString(std::istream &is)
-      : is_{is} {}
+  explicit ReadString(std::istream &is) : is_{is} {}
   std::string operator()() {
     std::string ret;
     if (std::getline(is_, ret)) {
@@ -17,6 +16,7 @@ class ReadString {
       return std::string();
     }
   }
+
  private:
   std::istream &is_;
 };

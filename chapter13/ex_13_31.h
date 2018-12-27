@@ -5,19 +5,19 @@
 #ifndef CPP_PRIMER_EX_13_31_H
 #define CPP_PRIMER_EX_13_31_H
 
-#include <string>
-#include <cstdint>
 #include <algorithm>
+#include <cstdint>
 #include <iostream>
+#include <string>
 
 class HasPtr {
   friend void swap(HasPtr &lhs, HasPtr &rhs);
   friend bool operator<(const HasPtr &lhs, const HasPtr &rhs);
+
  public:
   explicit HasPtr(const std::string &s = std::string())
       : ps_{new std::string(s)} {}
-  HasPtr(const HasPtr &item)
-      : ps_{new std::string(*item.ps_)}, i_{item.i_} {}
+  HasPtr(const HasPtr &item) : ps_{new std::string(*item.ps_)}, i_{item.i_} {}
   HasPtr &operator=(const HasPtr &item) {
     auto temp{new std::string(*item.ps_)};
     delete ps_;
@@ -25,9 +25,8 @@ class HasPtr {
     i_ = item.i_;
     return *this;
   }
-  ~HasPtr() {
-    delete ps_;
-  }
+  ~HasPtr() { delete ps_; }
+
  private:
   std::string *ps_;
   std::int32_t i_{};
@@ -44,4 +43,4 @@ inline bool operator<(const HasPtr &lhs, const HasPtr &rhs) {
   return *lhs.ps_ < *rhs.ps_;
 }
 
-#endif //CPP_PRIMER_EX_13_31_H
+#endif  // CPP_PRIMER_EX_13_31_H

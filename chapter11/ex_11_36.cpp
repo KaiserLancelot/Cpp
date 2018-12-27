@@ -2,12 +2,12 @@
 // Created by kaiser on 18-12-18.
 //
 
-#include <map>
-#include <fstream>
-#include <sstream>
-#include <iostream>
-#include <string>
 #include <cstdlib>
+#include <fstream>
+#include <iostream>
+#include <map>
+#include <sstream>
+#include <string>
 
 std::map<std::string, std::string> BuildMap(std::ifstream &map_file) {
   std::map<std::string, std::string> trans_map;
@@ -23,8 +23,8 @@ std::map<std::string, std::string> BuildMap(std::ifstream &map_file) {
   return trans_map;
 }
 
-const std::string Translation(const std::string &s,
-                              const std::map<std::string, std::string> &trans_map) {
+const std::string Translation(
+    const std::string &s, const std::map<std::string, std::string> &trans_map) {
   auto map_iter{trans_map.find(s)};
   if (map_iter != std::end(trans_map)) {
     return map_iter->second;

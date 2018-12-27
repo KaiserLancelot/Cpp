@@ -6,23 +6,16 @@
 
 #include <stdexcept>
 
-StrBlob::StrBlob()
-    : data_{std::make_shared < std::vector < std::string >> ()} {}
+StrBlob::StrBlob() : data_{std::make_shared<std::vector<std::string>>()} {}
 
 StrBlob::StrBlob(std::initializer_list<std::string> il)
-    : data_{std::make_shared < std::vector < std::string >> (il)} {}
+    : data_{std::make_shared<std::vector<std::string>>(il)} {}
 
-StrBlob::size_type StrBlob::size() const {
-  return std::size(*data_);
-}
+StrBlob::size_type StrBlob::size() const { return std::size(*data_); }
 
-bool StrBlob::empty() const {
-  return std::empty(*data_);
-}
+bool StrBlob::empty() const { return std::empty(*data_); }
 
-void StrBlob::PushBack(const std::string &t) {
-  data_->push_back(t);
-}
+void StrBlob::PushBack(const std::string &t) { data_->push_back(t); }
 
 void StrBlob::PopBack() {
   Check(0, "PopBack on empty StrBlob");

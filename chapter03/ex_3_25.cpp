@@ -10,7 +10,8 @@ int main() {
   std::int32_t grade;
 
   while (std::cin >> grade) {
-    if (grade <= 100 && grade >= 0)
+    if (grade <= 100 && grade >= 0) {
       ++*(std::begin(scores) + grade / 10);
+    }
   }
 }

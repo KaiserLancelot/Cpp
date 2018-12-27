@@ -3,9 +3,9 @@
 //
 
 #include "ex_8_06.h"
-#include <iostream>
-#include <fstream>
 #include <cstdlib>
+#include <fstream>
+#include <iostream>
 
 int main(int argc, char *argv[]) {
   if (argc != 2) {
@@ -27,13 +27,13 @@ int main(int argc, char *argv[]) {
       if (total.Isbn() == trans.Isbn()) {
         total.Combine(trans);
       } else {
-        std::cout << total.book_no_ << " " << total.units_sold_
-                  << " " << total.revenue_ << '\n';
+        std::cout << total.book_no_ << " " << total.units_sold_ << " "
+                  << total.revenue_ << '\n';
         total = trans;
       }
     }
-    std::cout << total.book_no_ << " " << total.units_sold_
-              << " " << total.revenue_ << '\n';
+    std::cout << total.book_no_ << " " << total.units_sold_ << " "
+              << total.revenue_ << '\n';
   } else {
     std::cerr << "no data\n";
     return EXIT_FAILURE;

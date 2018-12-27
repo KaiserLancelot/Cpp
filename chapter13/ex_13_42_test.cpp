@@ -4,9 +4,9 @@
 
 #include "ex_13_42.h"
 
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
-#include <cstdlib>
 #include <string>
 
 void RunQueries(std::ifstream &input) {

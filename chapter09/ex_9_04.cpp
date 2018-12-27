@@ -2,15 +2,14 @@
 // Created by kaiser on 18-12-5.
 //
 
-#include <vector>
 #include <cstdint>
 #include <iostream>
+#include <vector>
 
 bool Find(std::vector<std::int32_t>::const_iterator begin,
           std::vector<std::int32_t>::const_iterator end, std::int32_t value) {
   for (; begin != end; ++begin) {
-    if (*begin == value)
-      return true;
+    if (*begin == value) return true;
   }
   return false;
 }

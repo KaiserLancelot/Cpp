@@ -4,12 +4,11 @@
 
 #include <cstdint>
 #include <iostream>
-#include <vector>
 #include <string>
+#include <vector>
 
 int main() {
-  const std::vector<std::string> kScores{
-      "F", "D", "C", "B", "A", "A++"};
+  const std::vector<std::string> kScores{"F", "D", "C", "B", "A", "A++"};
   std::string letter_grade;
 
   std::int32_t grade;
@@ -20,8 +19,8 @@ int main() {
   else if (grade <= 100) {
     letter_grade = kScores[(grade - 50) / 10];
     if (grade != 100) {
-      (grade % 10 > 7) ? letter_grade += '+' :
-      (grade % 10 < 3) ? letter_grade += '-' : "";
+      (grade % 10 > 7) ? letter_grade += '+'
+                       : (grade % 10 < 3) ? letter_grade += '-' : "";
     }
   } else {
     std::cerr << "wrong grade\n";

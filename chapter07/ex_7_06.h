@@ -6,8 +6,8 @@
 #define CPP_PRIMER_EX_7_6_H
 
 #include <cstdint>
-#include <string>
 #include <iostream>
+#include <string>
 
 struct SalesData {
   SalesData &Combine(const SalesData &rhs) {
@@ -16,13 +16,9 @@ struct SalesData {
     return *this;
   }
 
-  const std::string &Isbn() const {
-    return book_no_;
-  }
+  const std::string &Isbn() const { return book_no_; }
 
-  double AvgPrice() const {
-    return units_sold_ ? revenue_ / units_sold_ : 0;
-  }
+  double AvgPrice() const { return units_sold_ ? revenue_ / units_sold_ : 0; }
 
   std::string book_no_;
   std::int32_t units_sold_{};
@@ -37,8 +33,8 @@ inline std::istream &Read(std::istream &is, SalesData &item) {
 }
 
 inline std::ostream &Print(std::ostream &os, const SalesData &item) {
-  os << item.book_no_ << ' ' << item.units_sold_ << ' ' <<
-     item.revenue_ << ' ' << item.AvgPrice();
+  os << item.book_no_ << ' ' << item.units_sold_ << ' ' << item.revenue_ << ' '
+     << item.AvgPrice();
   return os;
 }
 
@@ -48,4 +44,4 @@ inline SalesData Add(const SalesData &lhs, const SalesData &rhs) {
   return sum;
 }
 
-#endif //CPP_PRIMER_EX_7_6_H
+#endif  // CPP_PRIMER_EX_7_6_H

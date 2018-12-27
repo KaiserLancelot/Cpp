@@ -2,8 +2,8 @@
 // Created by kaiser on 18-12-17.
 //
 
-#include <iostream>
 #include <cstdint>
+#include <iostream>
 
 int main() {
   std::int32_t i{2};

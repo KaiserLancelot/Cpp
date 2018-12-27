@@ -2,17 +2,17 @@
 // Created by kaiser on 18-12-5.
 //
 
-#include <string>
-#include <vector>
 #include <iostream>
 #include <stack>
+#include <string>
+#include <vector>
 
 int main() {
   std::string expr("I am (Kaiser)");
 
   std::stack<char> stack;
   bool left{};
-  for (auto c:expr) {
+  for (auto c : expr) {
     stack.push(c);
     if (c == '(') {
       left = true;

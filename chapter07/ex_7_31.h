@@ -15,4 +15,4 @@ class Y {
   X x_;
 };
 
-#endif //CPP_PRIMER_EX_7_31_H
+#endif  // CPP_PRIMER_EX_7_31_H

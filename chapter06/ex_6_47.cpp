@@ -2,8 +2,8 @@
 // Created by kaiser on 18-11-28.
 //
 
-#include <iostream>
 #include <cstdint>
+#include <iostream>
 #include <vector>
 
 void PrintVector(std::vector<std::int32_t>::const_iterator begin,

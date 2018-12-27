@@ -2,12 +2,12 @@
 // Created by kaiser on 18-12-18.
 //
 
-#include <unordered_map>
-#include <fstream>
-#include <sstream>
-#include <iostream>
-#include <string>
 #include <cstdlib>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <unordered_map>
 
 std::unordered_map<std::string, std::string> BuildMap(std::ifstream &map_file) {
   std::unordered_map<std::string, std::string> trans_map;
@@ -23,8 +23,9 @@ std::unordered_map<std::string, std::string> BuildMap(std::ifstream &map_file) {
   return trans_map;
 }
 
-const std::string Translation(const std::string &s,
-                              const std::unordered_map<std::string, std::string> &trans_map) {
+const std::string Translation(
+    const std::string &s,
+    const std::unordered_map<std::string, std::string> &trans_map) {
   auto map_iter{trans_map.find(s)};
   if (map_iter != std::end(trans_map)) {
     return map_iter->second;

@@ -3,8 +3,8 @@
 //
 
 #include "ex_7_21.h"
-#include <iostream>
 #include <cstdlib>
+#include <iostream>
 
 int main() {
   SalesData total;

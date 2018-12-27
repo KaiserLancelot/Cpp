@@ -2,10 +2,10 @@
 // Created by kaiser on 18-12-18.
 //
 
-#include <unordered_map>
-#include <string>
-#include <iostream>
 #include <cstdint>
+#include <iostream>
+#include <string>
+#include <unordered_map>
 
 int main() {
   std::unordered_map<std::string, std::int32_t> word_count;
@@ -14,7 +14,7 @@ int main() {
     ++word_count[word];
   }
 
-  for (const auto &[s, count]:word_count) {
+  for (const auto& [s, count] : word_count) {
     std::cout << s << ' ' << count << '\n';
   }
 }

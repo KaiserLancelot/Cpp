@@ -2,9 +2,9 @@
 // Created by kaiser on 18-12-5.
 //
 
-#include <string>
-#include <list>
 #include <iostream>
+#include <list>
+#include <string>
 
 int main() {
   std::string str;

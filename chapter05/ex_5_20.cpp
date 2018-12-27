@@ -9,8 +9,9 @@ int main() {
   std::string curr, pre;
 
   while (std::cin >> curr) {
-    if (curr == pre)
+    if (curr == pre) {
       break;
+    }
     pre = curr;
   }
 

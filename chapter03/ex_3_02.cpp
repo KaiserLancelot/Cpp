@@ -6,13 +6,15 @@
 #include <string>
 
 int main() {
-  //a
+  // a
   std::string line;
-  while (std::getline(std::cin, line))
+  while (std::getline(std::cin, line)) {
     std::cout << line << '\n';
+  }
 
-  //b
+  // b
   std::string word;
-  while (std::cin >> word)
+  while (std::cin >> word) {
     std::cout << word << '\n';
+  }
 }

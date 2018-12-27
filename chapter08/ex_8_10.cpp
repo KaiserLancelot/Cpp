@@ -2,12 +2,12 @@
 // Created by kaiser on 18-12-3.
 //
 
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <vector>
-#include <string>
 #include <cstdlib>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
 
 int main() {
   std::vector<std::string> vs;
@@ -23,10 +23,9 @@ int main() {
     vs.push_back(line);
   }
 
-  for (const auto &str:vs) {
+  for (const auto &str : vs) {
     std::istringstream iss{str};
     std::string word;
-    while (iss >> word)
-      std::cout << word << '\n';
+    while (iss >> word) std::cout << word << '\n';
   }
 }

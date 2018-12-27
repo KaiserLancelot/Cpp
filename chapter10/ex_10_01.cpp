@@ -3,9 +3,9 @@
 //
 
 #include <algorithm>
-#include <vector>
 #include <cstdint>
 #include <iostream>
+#include <vector>
 
 int main() {
   std::vector<std::int32_t> vi{1, 2, 3, 3, 4, 4, 5};

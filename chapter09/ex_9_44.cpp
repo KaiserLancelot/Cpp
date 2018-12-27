@@ -2,11 +2,13 @@
 // Created by kaiser on 18-12-5.
 //
 
-#include <string>
 #include <iostream>
+#include <string>
 
-void Fun(std::string &s, const std::string &old_val, const std::string &new_val) {
-  for (std::string::size_type index{}; index <= std::size(s) - std::size(old_val);) {
+void Fun(std::string &s, const std::string &old_val,
+         const std::string &new_val) {
+  for (std::string::size_type index{};
+       index <= std::size(s) - std::size(old_val);) {
     if (old_val == s.substr(index, std::size(old_val))) {
       s.erase(index, std::size(old_val));
       s.insert(index, new_val);

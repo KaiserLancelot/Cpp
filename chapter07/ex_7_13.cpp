@@ -2,9 +2,9 @@
 // Created by kaiser on 18-11-29.
 //
 
-#include "ex_7_12.h"
-#include <iostream>
 #include <cstdlib>
+#include <iostream>
+#include "ex_7_12.h"
 
 int main() {
   SalesData total(std::cin);
@@ -12,8 +12,7 @@ int main() {
   if (!total.Isbn().empty()) {
     while (std::cin) {
       SalesData trans(std::cin);
-      if (!std::cin)
-        break;
+      if (!std::cin) break;
 
       if (total.Isbn() == trans.Isbn()) {
         total.Combine(trans);

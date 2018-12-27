@@ -6,20 +6,23 @@
 #define CPP_PRIMER_EX_14_13_H
 
 #include <cstdint>
-#include <string>
 #include <iostream>
+#include <string>
 
 class SalesData {
   friend std::ostream &operator<<(std::ostream &os, const SalesData &item);
   friend std::istream &operator>>(std::istream &is, SalesData &item);
+
  public:
   SalesData() = default;
   explicit SalesData(const std::string &book_no);
-  SalesData(const std::string &book_no, std::int32_t units_sold, double revenue);
+  SalesData(const std::string &book_no, std::int32_t units_sold,
+            double revenue);
   explicit SalesData(std::istream &is);
   SalesData &operator+=(const SalesData &rhs);
   SalesData &operator-=(const SalesData &rhs);
   const std::string &Isbn() const;
+
  private:
   double AvgPrice() const;
 
@@ -33,4 +36,4 @@ std::istream &operator>>(std::istream &is, SalesData &item);
 SalesData operator+(const SalesData &lhs, const SalesData &rhs);
 SalesData operator-(const SalesData &lhs, const SalesData &rhs);
 
-#endif //CPP_PRIMER_EX_14_13_H
+#endif  // CPP_PRIMER_EX_14_13_H

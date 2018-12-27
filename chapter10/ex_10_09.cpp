@@ -2,10 +2,10 @@
 // Created by kaiser on 18-12-17.
 //
 
-#include <iostream>
-#include <vector>
-#include <string>
 #include <algorithm>
+#include <iostream>
+#include <string>
+#include <vector>
 
 void ElimDups(std::vector<std::string> &words) {
   std::sort(std::begin(words), std::end(words));
@@ -15,7 +15,7 @@ void ElimDups(std::vector<std::string> &words) {
 int main() {
   std::vector<std::string> vs{"a", "a", "c", "c", "b"};
   ElimDups(vs);
-  for (const auto &s:vs) {
+  for (const auto &s : vs) {
     std::cout << s << '\n';
   }
 }

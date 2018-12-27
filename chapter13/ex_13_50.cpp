@@ -4,8 +4,8 @@
 
 #include "ex_13_50.h"
 
-#include <cstring>
 #include <algorithm>
+#include <cstring>
 #include <iostream>
 
 String::String(const char *str) {
@@ -33,38 +33,24 @@ String &String::operator=(String item) {
   return *this;
 }
 
-String::~String() {
-  Free();
-}
+String::~String() { Free(); }
 
 void String::PushBack(char ch) {
   CheckAlloc();
   std::allocator_traits<decltype(alloc_)>::construct(alloc_, end_++, ch);
 }
 
-String::SizeType String::Size() const {
-  return end_ - begin_;
-}
+String::SizeType String::Size() const { return end_ - begin_; }
 
-String::SizeType String::Capacity() const {
-  return cap_ - begin_;
-}
+String::SizeType String::Capacity() const { return cap_ - begin_; }
 
-char *String::begin() {
-  return begin_;
-}
+char *String::begin() { return begin_; }
 
-char *String::end() {
-  return end_;
-}
+char *String::end() { return end_; }
 
-const char *String::begin() const {
-  return begin_;
-}
+const char *String::begin() const { return begin_; }
 
-const char *String::end() const {
-  return end_;
-}
+const char *String::end() const { return end_; }
 
 void String::Reserve(String::SizeType new_cap) {
   if (new_cap > Capacity()) {
@@ -72,9 +58,7 @@ void String::Reserve(String::SizeType new_cap) {
   }
 }
 
-void String::Resize(String::SizeType size) {
-  Resize(size, '\0');
-}
+void String::Resize(String::SizeType size) { Resize(size, '\0'); }
 
 void String::Resize(String::SizeType size, char value) {
   if (size > Size()) {
@@ -99,7 +83,8 @@ void String::CheckAlloc() {
   }
 }
 
-std::pair<char *, char *> String::AllocCopy(const char *begin, const char *end) {
+std::pair<char *, char *> String::AllocCopy(const char *begin,
+                                            const char *end) {
   auto new_data{alloc_.allocate(end - begin)};
   return {new_data, std::uninitialized_copy(begin, end, new_data)};
 }

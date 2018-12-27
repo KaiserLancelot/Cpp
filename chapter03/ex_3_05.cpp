@@ -8,14 +8,16 @@
 int main() {
   std::string total, s;
 
-  //a
-  while (std::cin >> s)
+  // a
+  while (std::cin >> s) {
     total += s;
+  }
   std::cout << total << '\n';
 
-  //b
+  // b
   total.clear();
-  while (std::cin >> s)
+  while (std::cin >> s) {
     total += ' ' + s;
+  }
   std::cout << total << '\n';
 }

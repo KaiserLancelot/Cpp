@@ -6,8 +6,7 @@
 
 #include <sstream>
 
-TextQuery::TextQuery(std::ifstream &input)
-    : text_{std::make_shared<StrVec>()} {
+TextQuery::TextQuery(std::ifstream &input) : text_{std::make_shared<StrVec>()} {
   std::string line;
   LineNo line_number{1};
 
@@ -18,7 +17,7 @@ TextQuery::TextQuery(std::ifstream &input)
 
     while (iss >> word) {
       if (!words_and_line_number_[word]) {
-        words_and_line_number_[word] = std::make_shared<std::set<LineNo >>();
+        words_and_line_number_[word] = std::make_shared<std::set<LineNo>>();
       }
       words_and_line_number_[word]->insert(line_number);
     }
@@ -27,7 +26,7 @@ TextQuery::TextQuery(std::ifstream &input)
 }
 
 QueryResult TextQuery::Query(const std::string &s) {
-  static auto nodata{std::make_shared<std::set<LineNo >>()};
+  static auto nodata{std::make_shared<std::set<LineNo>>()};
 
   auto iter{words_and_line_number_.find(s)};
   if (iter == std::end(words_and_line_number_)) {
@@ -50,9 +49,7 @@ QueryResult::ResultIterator QueryResult::End() const {
   return std::end(*line_number_);
 }
 
-std::shared_ptr<StrVec> QueryResult::GetFile() const {
-  return text_;
-}
+std::shared_ptr<StrVec> QueryResult::GetFile() const { return text_; }
 
 std::ostream &Print(std::ostream &os, QueryResult qr) {
   os << qr.word_ << " occurs " << std::size(*qr.line_number_)

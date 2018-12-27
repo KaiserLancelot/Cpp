@@ -14,4 +14,4 @@ struct SalesData {
   double revenue_{};
 };
 
-#endif //CPP_PRIMER_EX_2_42_H
+#endif  // CPP_PRIMER_EX_2_42_H

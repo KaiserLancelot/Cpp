@@ -2,13 +2,14 @@
 // Created by kaiser on 18-12-5.
 //
 
-#include <iostream>
-#include <forward_list>
 #include <cstdint>
+#include <forward_list>
+#include <iostream>
 
 int main() {
   std::forward_list<std::int32_t> data{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-  for (auto cur{std::begin(data)}, prv{data.before_begin()}; cur != std::end(data);) {
+  for (auto cur{std::begin(data)}, prv{data.before_begin()};
+       cur != std::end(data);) {
     if (*cur % 2) {
       data.insert_after(prv, *cur);
       prv = cur;

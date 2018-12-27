@@ -5,10 +5,10 @@
 #ifndef CPP_PRIMER_EX_14_28_H
 #define CPP_PRIMER_EX_14_28_H
 
-#include <vector>
-#include <string>
-#include <memory>
 #include <initializer_list>
+#include <memory>
+#include <string>
+#include <vector>
 
 class StrBlobPtr;
 class ConstStrBlobPtr;
@@ -18,8 +18,9 @@ class StrBlob {
   friend bool operator<(const StrBlob &lhs, const StrBlob &rhs);
   friend class StrBlobPtr;
   friend class ConstStrBlobPtr;
+
  public:
-  using SizeType=std::vector<std::string>::size_type;
+  using SizeType = std::vector<std::string>::size_type;
   StrBlob();
   StrBlob(std::initializer_list<std::string> il);
   StrBlobPtr begin();
@@ -38,6 +39,7 @@ class StrBlob {
   const std::string &At(SizeType index) const;
   std::string &operator[](SizeType index);
   const std::string &operator[](SizeType index) const;
+
  private:
   void Check(SizeType i, const std::string &msg) const;
   std::shared_ptr<std::vector<std::string>> data_;
@@ -50,8 +52,9 @@ class StrBlobPtr {
   friend StrBlobPtr operator+(std::size_t i, const StrBlobPtr &item);
   friend StrBlobPtr operator-(const StrBlobPtr &item, std::size_t i);
   friend StrBlobPtr operator-(std::size_t i, const StrBlobPtr &item);
+
  public:
-  using SizeType=StrBlob::SizeType;
+  using SizeType = StrBlob::SizeType;
   StrBlobPtr() = default;
   explicit StrBlobPtr(StrBlob &a, SizeType sz = 0);
   std::string &Deref() const;
@@ -63,22 +66,25 @@ class StrBlobPtr {
   StrBlobPtr operator--(int);
   StrBlobPtr &operator+=(SizeType i);
   StrBlobPtr &operator-=(SizeType i);
+
  private:
-  std::shared_ptr<std::vector<std::string>>
-  Check(SizeType i, const std::string &msg) const;
+  std::shared_ptr<std::vector<std::string>> Check(SizeType i,
+                                                  const std::string &msg) const;
   std::weak_ptr<std::vector<std::string>> wptr_;
   SizeType curr_{};
 };
 
 class ConstStrBlobPtr {
-  friend bool operator==(const ConstStrBlobPtr &lhs, const ConstStrBlobPtr &rhs);
+  friend bool operator==(const ConstStrBlobPtr &lhs,
+                         const ConstStrBlobPtr &rhs);
   friend bool operator<(const ConstStrBlobPtr &lhs, const ConstStrBlobPtr &rhs);
   friend ConstStrBlobPtr operator+(const ConstStrBlobPtr &item, std::size_t i);
   friend ConstStrBlobPtr operator+(std::size_t i, const ConstStrBlobPtr &item);
   friend ConstStrBlobPtr operator-(const ConstStrBlobPtr &item, std::size_t i);
   friend ConstStrBlobPtr operator-(std::size_t i, const ConstStrBlobPtr &item);
+
  public:
-  using SizeType=StrBlob::SizeType;
+  using SizeType = StrBlob::SizeType;
   ConstStrBlobPtr() = default;
   explicit ConstStrBlobPtr(const StrBlob &a, SizeType sz = 0);
   const std::string &Deref() const;
@@ -90,9 +96,10 @@ class ConstStrBlobPtr {
   ConstStrBlobPtr operator--(int);
   ConstStrBlobPtr &operator+=(SizeType i);
   ConstStrBlobPtr &operator-=(SizeType i);
+
  private:
-  std::shared_ptr<std::vector<std::string>>
-  Check(SizeType i, const std::string &msg) const;
+  std::shared_ptr<std::vector<std::string>> Check(SizeType i,
+                                                  const std::string &msg) const;
   std::weak_ptr<std::vector<std::string>> wptr_;
   SizeType curr_{};
 };
@@ -126,4 +133,4 @@ ConstStrBlobPtr operator+(std::size_t i, const ConstStrBlobPtr &item);
 ConstStrBlobPtr operator-(const ConstStrBlobPtr &item, std::size_t i);
 ConstStrBlobPtr operator-(std::size_t i, const ConstStrBlobPtr &item);
 
-#endif //CPP_PRIMER_EX_14_28_H
+#endif  // CPP_PRIMER_EX_14_28_H

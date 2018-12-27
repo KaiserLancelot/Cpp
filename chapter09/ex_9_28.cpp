@@ -2,8 +2,8 @@
 // Created by kaiser on 18-12-5.
 //
 
-#include <string>
 #include <forward_list>
+#include <string>
 
 void Fun(std::forward_list<std::string> &forward_list, const std::string &s1,
          const std::string &s2) {

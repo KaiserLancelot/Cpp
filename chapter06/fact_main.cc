@@ -2,8 +2,8 @@
 // Created by kaiser on 18-11-28.
 //
 
-#include "chapter6.h"
 #include <iostream>
+#include "chapter6.h"
 
 int main() {
   std::int32_t n;

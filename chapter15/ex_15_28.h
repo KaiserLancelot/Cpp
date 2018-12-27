@@ -6,12 +6,12 @@
 #define CPP_PRIMER_EX_15_28_H
 
 #include <cstdint>
-#include <string>
 #include <iostream>
+#include <string>
 
 #include <cstdint>
-#include <string>
 #include <iostream>
+#include <string>
 
 class Quote {
  public:
@@ -21,11 +21,11 @@ class Quote {
   virtual ~Quote() = default;
   std::string Isbn() const { return book_no_; }
   virtual double NetPrice(std::int32_t n) const { return n * price_; }
-  virtual void Debug() const {
-    std::cout << book_no_ << ' ' << price_ << '\n';
-  }
+  virtual void Debug() const { std::cout << book_no_ << ' ' << price_ << '\n'; }
+
  protected:
   double price_{};
+
  private:
   std::string book_no_;
 };
@@ -33,10 +33,11 @@ class Quote {
 class DiscQuote : public Quote {
  public:
   DiscQuote() = default;
-  DiscQuote(const std::string &book_no, double price,
-            int32_t quantity, double discount)
+  DiscQuote(const std::string &book_no, double price, int32_t quantity,
+            double discount)
       : Quote(book_no, price), quantity_(quantity), discount_(discount) {}
   double NetPrice(std::int32_t n) const override = 0;
+
  protected:
   std::int32_t quantity_{};
   double discount_{};
@@ -44,7 +45,8 @@ class DiscQuote : public Quote {
 
 class BulkQuote : public DiscQuote {
  public:
-  BulkQuote(const std::string &book_no, double price, int32_t quantity, double discount)
+  BulkQuote(const std::string &book_no, double price, int32_t quantity,
+            double discount)
       : DiscQuote(book_no, price, quantity, discount) {}
 
   double NetPrice(std::int32_t n) const override {
@@ -54,14 +56,15 @@ class BulkQuote : public DiscQuote {
       return n * price_;
   }
   void Debug() const override {
-    std::cout << Isbn() << ' ' << price_ << ' ' <<
-              quantity_ << ' ' << discount_ << '\n';
+    std::cout << Isbn() << ' ' << price_ << ' ' << quantity_ << ' ' << discount_
+              << '\n';
   }
 };
 
 class LimitQuote : public DiscQuote {
  public:
-  LimitQuote(const std::string &book_no, double price, int32_t quantity, double discount)
+  LimitQuote(const std::string &book_no, double price, int32_t quantity,
+             double discount)
       : DiscQuote(book_no, price, quantity, discount) {}
 
   double NetPrice(std::int32_t n) const override {
@@ -71,9 +74,9 @@ class LimitQuote : public DiscQuote {
       return n * price_;
   }
   void Debug() const override {
-    std::cout << Isbn() << ' ' << price_ << ' ' <<
-              quantity_ << ' ' << discount_ << '\n';
+    std::cout << Isbn() << ' ' << price_ << ' ' << quantity_ << ' ' << discount_
+              << '\n';
   }
 };
 
-#endif //CPP_PRIMER_EX_15_28_H
+#endif  // CPP_PRIMER_EX_15_28_H

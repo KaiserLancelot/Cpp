@@ -2,10 +2,10 @@
 // Created by kaiser on 18-12-17.
 //
 
-#include <vector>
-#include <string>
-#include <iostream>
 #include <algorithm>
+#include <iostream>
+#include <string>
+#include <vector>
 
 std::int32_t BigerThanSix(const std::vector<std::string> &vs) {
   return std::count_if(std::begin(vs), std::end(vs),

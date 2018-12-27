@@ -5,17 +5,18 @@
 #ifndef CPP_PRIMER_EX_14_23_H
 #define CPP_PRIMER_EX_14_23_H
 
-#include <string>
 #include <cstddef>
-#include <memory>
-#include <utility>
 #include <initializer_list>
+#include <memory>
+#include <string>
+#include <utility>
 
 class StrVec {
   friend bool operator==(const StrVec &lhs, const StrVec &rhs);
   friend bool operator<(const StrVec &lhs, const StrVec &rhs);
+
  public:
-  using SizeType=std::size_t;
+  using SizeType = std::size_t;
   StrVec() = default;
   StrVec(std::initializer_list<std::string> il);
   StrVec(const StrVec &item);
@@ -30,10 +31,11 @@ class StrVec {
   void Reserve(SizeType new_cap);
   void Resize(SizeType new_size);
   void Resize(SizeType new_size, const std::string &value);
+
  private:
   void CheckAlloc();
-  std::pair<std::string *, std::string *>
-  AllocCopy(const std::string *begin, const std::string *end);
+  std::pair<std::string *, std::string *> AllocCopy(const std::string *begin,
+                                                    const std::string *end);
   void Free();
   void Reallocate(SizeType new_cap);
 
@@ -51,4 +53,4 @@ bool operator<=(const StrVec &lhs, const StrVec &rhs);
 bool operator>(const StrVec &lhs, const StrVec &rhs);
 bool operator>=(const StrVec &lhs, const StrVec &rhs);
 
-#endif //CPP_PRIMER_EX_14_23_H
+#endif  // CPP_PRIMER_EX_14_23_H

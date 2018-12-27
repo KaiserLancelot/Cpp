@@ -11,7 +11,8 @@
 
 class BulkQuote : public Quote {
  public:
-  BulkQuote(const std::string &book_no, double price, std::int32_t min_qty, double discount)
+  BulkQuote(const std::string &book_no, double price, std::int32_t min_qty,
+            double discount)
       : Quote(book_no, price), min_qty_{min_qty}, discount_{discount} {}
 
   double NetPrice(std::int32_t n) const override {
@@ -26,4 +27,4 @@ class BulkQuote : public Quote {
   double discount_{};
 };
 
-#endif //CPP_PRIMER_EX_15_05_H
+#endif  // CPP_PRIMER_EX_15_05_H

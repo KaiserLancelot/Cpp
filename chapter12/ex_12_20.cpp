@@ -4,8 +4,8 @@
 
 #include "ex_12_19.h"
 
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
 
 int main() {

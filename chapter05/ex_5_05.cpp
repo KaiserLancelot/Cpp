@@ -4,12 +4,11 @@
 
 #include <cstdint>
 #include <iostream>
-#include <vector>
 #include <string>
+#include <vector>
 
 int main() {
-  const std::vector<std::string> kScores{
-      "F", "D", "C", "B", "A", "A++"};
+  const std::vector<std::string> kScores{"F", "D", "C", "B", "A", "A++"};
   std::string letter_grade;
 
   std::int32_t grade;

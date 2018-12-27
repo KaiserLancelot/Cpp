@@ -2,10 +2,10 @@
 // Created by kaiser on 18-12-5.
 //
 
-#include <vector>
-#include <list>
 #include <cstdint>
 #include <iostream>
+#include <list>
+#include <vector>
 
 int main() {
   std::int32_t ia[]{0, 1, 1, 2, 3, 5, 8, 13, 21, 55, 89};
@@ -30,11 +30,11 @@ int main() {
     }
   }
 
-  for (auto ele:li) {
+  for (auto ele : li) {
     std::cout << ele << ' ';
   }
   std::cout << '\n';
-  for (auto ele:vi) {
+  for (auto ele : vi) {
     std::cout << ele << ' ';
   }
   std::cout << '\n';

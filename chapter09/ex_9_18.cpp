@@ -2,9 +2,9 @@
 // Created by kaiser on 18-12-5.
 //
 
-#include <string>
 #include <deque>
 #include <iostream>
+#include <string>
 
 int main() {
   std::string str;
