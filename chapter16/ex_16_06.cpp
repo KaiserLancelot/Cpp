@@ -6,14 +6,14 @@
 #include <iostream>
 #include <iterator>
 
-template <typename T, auto Size>
-constexpr T *Begin(T (&arr)[Size]) {
+template <typename T, auto size>
+constexpr T *Begin(T (&arr)[size]) {
   return arr;
 }
 
-template <typename T, auto Size>
-constexpr T *End(T (&arr)[Size]) {
-  return arr + Size;
+template <typename T, auto size>
+constexpr T *End(T (&arr)[size]) {
+  return arr + size;
 }
 
 int main() {
