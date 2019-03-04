@@ -13,8 +13,11 @@ using Pos = std::string::size_type;
 
 template <Pos ht, Pos wd>
 class Screen {
-  friend std::ostream &operator<<(std::ostream &os, const Screen<ht, wd> &item);
-  friend std::istream &operator>>(std::istream &is, Screen<ht, wd> &item);
+  template <Pos h, Pos w>
+  friend std::ostream &operator<<(std::ostream &os, const Screen<h, w> &item);
+
+  template <Pos h, Pos w>
+  friend std::istream &operator>>(std::istream &is, Screen<h, w> &item);
 
  public:
   Screen() = default;
@@ -54,5 +57,19 @@ class Screen {
   Pos cursor_{};
   std::string contents_;
 };
+
+template <Pos h, Pos w>
+std::ostream &operator<<(std::ostream &os, const Screen<h, w> &item) {
+  item.Display(os);
+  return os;
+}
+
+template <Pos h, Pos w>
+std::istream &operator>>(std::istream &is, Screen<h, w> &item) {
+  char ch;
+  is >> ch;
+  item.contents_ = std::string(h * w, ch);
+  return is;
+}
 
 #endif  // CPP_PRIMER_EX_16_15_H
