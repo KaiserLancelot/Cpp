@@ -48,25 +48,8 @@ class SharedPtr {
     item.ref_count_ = nullptr;
   }
 
-  SharedPtr &operator=(const SharedPtr &item) {
-    ++*item.ref_count_;
-    ~SharedPtr();
-    ptr_ = item.ptr_;
-    ref_count_ = item.ref_count_;
-    deleter_ = item.deleter_;
-    return *this;
-  }
-
-  SharedPtr &operator=(SharedPtr &&item) noexcept {
-    if (this != &item) {
-      ++*item.ref_count_;
-      ~SharedPtr();
-      ptr_ = item.ptr_;
-      ref_count_ = item.ref_count_;
-      deleter_ = std::move(item.deleter_);
-      item.ptr_ = nullptr;
-      item.ref_count_ = nullptr;
-    }
+  SharedPtr &operator=(SharedPtr item) {
+    swap(*this, item);
     return *this;
   }
 
@@ -135,6 +118,7 @@ class UniquePtr {
   UniquePtr(UniquePtr &&item) noexcept : ptr_{item.ptr_} {
     item.ptr_ = nullptr;
   }
+
   UniquePtr &operator=(UniquePtr &&item) noexcept {
     if (this != &item) {
       ~UniquePtr();
@@ -142,11 +126,12 @@ class UniquePtr {
     }
     return *this;
   }
+
   UniquePtr &operator=(std::nullptr_t n) {
-    if (n == nullptr) {
-      ~UniquePtr();
-    }
+    ~UniquePtr();
+    return *this;
   }
+
   ~UniquePtr() {
     deleter_(ptr_);
     ptr_ = nullptr;
