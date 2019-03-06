@@ -2,25 +2,18 @@
 // Created by kaiser on 19-3-6.
 //
 
+#include <unordered_set>
+
 #include "sales_data.h"
 
-#include <cstring>
-#include <functional>
+int main() {
+  std::unordered_multiset<Sales_data> mset;
+  Sales_data sd("Bible", 10, 0.98);
 
-template <typename T>
-int compare(const T &t1, const T &t2) {
-  if (std::less<>{}(t1, t2)) {
-    return -1;
-  } else if (std::less<>{}(t2, t1)) {
-    return 1;
-  } else {
-    return 0;
-  }
+  mset.emplace(sd);
+  mset.emplace("C++ Primer", 5, 9.99);
+
+  for (const auto &item : mset)
+    std::cout << "the hash code of " << item.isbn() << ":\n0x" << std::hex
+              << std::hash<Sales_data>()(item) << "\n";
 }
-
-template <>
-int compare(const char *const &t1, const char *const &t2) {
-  return strcmp(t1, t2);
-}
-
-int main() {}

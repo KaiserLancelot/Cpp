@@ -12,12 +12,21 @@
 using Pos = std::string::size_type;
 
 template <Pos ht, Pos wd>
-class Screen {
-  template <Pos h, Pos w>
-  friend std::ostream &operator<<(std::ostream &os, const Screen<h, w> &item);
+class Screen;
 
-  template <Pos h, Pos w>
-  friend std::istream &operator>>(std::istream &is, Screen<h, w> &item);
+template <Pos ht, Pos wd>
+std::ostream &operator<<(std::ostream &os, const Screen<ht, wd> &item);
+
+template <Pos ht, Pos wd>
+std::istream &operator>>(std::istream &is, Screen<ht, wd> &item);
+
+template <Pos ht, Pos wd>
+class Screen {
+  friend std::ostream &operator<<<ht, wd>(std::ostream &os,
+                                          const Screen<ht, wd> &item);
+
+  friend std::istream &operator>>
+      <ht, wd>(std::istream &is, Screen<ht, wd> &item);
 
  public:
   Screen() = default;
