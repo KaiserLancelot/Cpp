@@ -21,4 +21,4 @@ add_subdirectory(chapter17)
 add_subdirectory(chapter18)
 add_subdirectory(chapter19)
 
-add_subdirectory(notes/cpp14_17)
+#add_subdirectory(notes/cpp14_17)
