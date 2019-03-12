@@ -1,5 +1,5 @@
 //
-// Created by kaiser on 19-3-11.
+// Created by kaiser on 19-3-12.
 //
 
 #include <cstdlib>
@@ -59,12 +59,10 @@ int main() {
   std::regex r{R"((\()?(\d{3})(\))?([-. ])?(\d{3})([-. ])?(\d{4}))"};
   for (const auto &entry : people) {
     std::ostringstream formatted, bad_nums;
-    for (const auto &nums : entry.phones) {
-      if (!valid(r, nums))
-        bad_nums << " " << nums;
-      else
-        formatted << " " << format(nums);
-    }
+    if (!valid(r, entry.phones.front()))
+      bad_nums << " " << entry.phones.front();
+    else
+      formatted << " " << format(entry.phones.front());
     if (bad_nums.str().empty()) {
       std::cout << entry.name << " " << formatted.str() << '\n';
     } else {
