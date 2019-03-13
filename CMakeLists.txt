@@ -22,5 +22,6 @@ add_subdirectory(chapter18)
 #add_subdirectory(chapter19)
 
 #add_subdirectory(notes/cpp14_17)
-#add_subdirectory(notes/fmt)
-#add_subdirectory(notes/Qt)
+
+#add_subdirectory(library/fmt)
+#add_subdirectory(library/Qt)
