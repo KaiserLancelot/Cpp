@@ -8,6 +8,7 @@ file(COPY ${PROJECT_SOURCE_DIR}/data/record2 DESTINATION ${CMAKE_CURRENT_BINARY_
 
 file(COPY ${PROJECT_SOURCE_DIR}/data/word_transformation2 DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY ${PROJECT_SOURCE_DIR}/data/given_to_transform DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${PROJECT_SOURCE_DIR}/data/copy_out DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(ex_17_03 ex_17_03.cpp ex_17_03.h ex_17_03_test.cpp)
 add_executable(ex_17_04 ex_17_04.cpp sales_data.cpp sales_data.h)
