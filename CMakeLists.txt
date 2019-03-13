@@ -17,7 +17,7 @@ project(Cpp-Primer)
 #add_subdirectory(chapter14)
 #add_subdirectory(chapter15)
 #add_subdirectory(chapter16)
-add_subdirectory(chapter17)
+#add_subdirectory(chapter17)
 add_subdirectory(chapter18)
 #add_subdirectory(chapter19)
 
