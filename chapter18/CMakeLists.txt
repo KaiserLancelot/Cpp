@@ -3,3 +3,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
 add_executable(ex_18_03 ex_18_03.cpp)
+add_executable(ex_18_05 ex_18_05.cpp)
+add_executable(ex_18_06 ex_18_06.cpp)
+add_executable(ex_18_07 ex_18_07.cpp ex_18_07.h)
+add_executable(ex_18_10 ex_18_09.cpp ex_18_09.h ex_18_10.cpp)
+add_executable(ex_18_17 ex_18_17.cpp)

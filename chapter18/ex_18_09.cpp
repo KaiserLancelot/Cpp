@@ -1,8 +1,8 @@
 //
-// Created by kaiser on 18-12-23.
+// Created by kaiser on 19-3-14.
 //
 
-#include "ex_14_22.h"
+#include "ex_18_09.h"
 
 SalesData::SalesData(const std::string &book_no) : book_no_(book_no) {}
 
@@ -18,6 +18,9 @@ SalesData &SalesData::operator==(const std::string &s) {
 }
 
 SalesData &SalesData::operator+=(const SalesData &rhs) {
+  if (Isbn() != rhs.Isbn()) {
+    throw IsbnMismatch{"wrong isbns", Isbn(), rhs.Isbn()};
+  }
   units_sold_ += rhs.units_sold_;
   revenue_ += rhs.revenue_;
   return *this;
