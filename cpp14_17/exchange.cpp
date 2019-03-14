@@ -8,7 +8,7 @@ struct S {
   int* p;
   int n;
 
-  // C++14 std::exchange
+  // C++14 std::exchange 定义于 utility
   S(S&& other)
   noexcept : p{std::exchange(other.p, nullptr)}, n{std::exchange(other.n, 0)} {}
 

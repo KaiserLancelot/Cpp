@@ -12,6 +12,7 @@ void Fun(const std::string& s1, const std::string& s2) {
 
 int main() {
   std::tuple<std::string, std::string> tuple{"aaa", "bbb"};
-  // C++17 std::apply 用元组 t 的元素调用可调用对象
+  // C++17 std::apply 定义于 tuple
+  // 用元组 t 的元素调用可调用对象
   std::apply(Fun, tuple);
 }
