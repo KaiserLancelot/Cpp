@@ -6,6 +6,8 @@ https://github.com/Mooophy/Cpp-Primer
 
 https://github.com/pezy/CppPrimer
 
+http://zh.cppreference.com/w/cpp
+
 https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide
 
 http://fmtlib.net/latest/index.html
