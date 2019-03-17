@@ -22,9 +22,9 @@ class SalesData {
   SalesData &operator==(const std::string &s);
   SalesData &operator+=(const SalesData &rhs);
   const std::string &Isbn() const;
+  double AvgPrice() const;
 
  private:
-  double AvgPrice() const;
 
   std::string book_no_;
   std::int32_t units_sold_{};

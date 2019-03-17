@@ -1,5 +1,5 @@
 //
-// Created by kaiser on 19-3-16.
+// Created by kaiser on 19-3-17.
 //
 
 #include <iostream>
@@ -30,8 +30,8 @@ class Screen {
   std::string contents_;
 };
 
-int main() {
-  Screen screen{10, 20, '*'};
-  screen.Move(5, 5);
-  std::cout << screen.*Screen::Data() << '\n';
-}
+using Fp1 = char (Screen::*)(Screen::Pos, Screen::Pos) const;
+using Fp2 = char (Screen::*)() const;
+using Fp3 = Screen &(Screen::*)(Screen::Pos, Screen::Pos) const;
+
+int main() {}
