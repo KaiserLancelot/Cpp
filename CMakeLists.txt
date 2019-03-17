@@ -21,7 +21,7 @@ project(Cpp-Primer)
 #add_subdirectory(chapter18)
 #add_subdirectory(chapter19)
 
-add_subdirectory(cpp11_14_17)
+add_subdirectory(cpp11-14-17)
 
 #add_subdirectory(library/fmt)
 #add_subdirectory(library/Qt)
