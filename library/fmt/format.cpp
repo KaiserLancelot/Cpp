@@ -2,7 +2,6 @@
 // Created by kaiser on 19-3-13.
 //
 
-#include <fstream>
 #include <iostream>
 #include <iterator>
 #include <string>
@@ -30,10 +29,4 @@ int main() {
 
   // 返回字符数
   fmt::print("{}\n", fmt::formatted_size("{:s}", "foo"));
-
-  std::string filename("madeup");
-  std::ifstream file{filename};
-  if (!file) {
-    throw fmt::system_error(errno, "cannot open file '{}'", filename);
-  }
 }
