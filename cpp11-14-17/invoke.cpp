@@ -24,7 +24,7 @@ int main() {
   std::invoke(print_num, -9);
 
   // 调用 lambda
-  std::invoke([]() { print_num(42); });
+  std::invoke([] { print_num(42); });
 
   // 调用成员函数
   const Foo foo{314159};
