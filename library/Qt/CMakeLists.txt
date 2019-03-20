@@ -12,3 +12,9 @@ add_definitions(-DFMT_STRING_ALIAS=1)
 
 add_executable(sql sql.cpp)
 target_link_libraries(sql Qt5::Core Qt5::Sql fmt::fmt)
+
+add_executable(enum enum.cpp enum.h)
+target_link_libraries(enum Qt5::Core)
+
+add_executable(json json.cpp)
+target_link_libraries(json Qt5::Core)

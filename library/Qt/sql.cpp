@@ -19,6 +19,7 @@ int main() {
   db.setHostName("localhost");
   db.setUserName("root");
   db.setPassword("524321");
+  // 如果使用 QSQLITE 只需要指定这个
   db.setDatabaseName("fuck");
   if (db.open()) {
     std::cout << "open\n";
