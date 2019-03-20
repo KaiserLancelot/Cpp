@@ -11,5 +11,3 @@ https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide
 http://fmtlib.net/latest/index.html
 
 https://www.devbean.net/2012/08/qt-study-road-2-catelog
-
-http://zh.cppreference.com/w/cpp
