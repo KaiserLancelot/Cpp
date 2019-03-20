@@ -45,7 +45,7 @@ template <typename... T>
 std::ostream &Print(std::ostream &os, const T &... args) {
   return (os << ... << [&args] {
     if constexpr (std::is_array_v<T>) {
-      return args;
+      return std::string(args) + ' ';
     } else {
       return std::to_string(args) + ' ';
     }

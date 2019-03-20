@@ -17,16 +17,6 @@ int main() {
   std::string s(fmt::format(fmt("{:s}"), "foo"));
   fmt::print("{}\n", s);
 
-  std::ostream_iterator<char> it{std::cout, " "};
-  fmt::format_to(it, "{}\n", s);
-
-  std::vector<char> v;
-  // 至多 n 个字符
-  fmt::format_to_n(std::back_inserter(v), 2, "{}\n", s);
-  for (auto c : v) {
-    fmt::print("{}", c);
-  }
-
   // 返回字符数
   fmt::print("{}\n", fmt::formatted_size("{:s}", "foo"));
 }

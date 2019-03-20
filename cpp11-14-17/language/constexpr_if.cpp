@@ -19,7 +19,7 @@ constexpr auto length(const T& value) noexcept {
   if constexpr (std::is_integral_v<T>) {
     return value;
   } else {
-    return std::size(value);
+    return value.length();
   }
 }
 
