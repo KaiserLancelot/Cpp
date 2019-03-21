@@ -2,9 +2,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
-include_directories(${PROJECT_SOURCE_DIR}/chapter07)
-file(COPY ${PROJECT_SOURCE_DIR}/data/str DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ${PROJECT_SOURCE_DIR}/data/in DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+include_directories(../chapter07)
+file(COPY ../data/str DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ../data/in DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(ex_10_01 ex_10_01.cpp)
 add_executable(ex_10_02 ex_10_02.cpp)

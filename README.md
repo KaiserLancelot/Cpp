@@ -1,8 +1,8 @@
-# Cpp-Primer
-C++ Primer Fifth Edition Solutions
+# Cpp
+C++ learning
 
 # Reference
-* Answer
+* C++ Primer Answer
   * https://github.com/Mooophy/Cpp-Primer
   * https://github.com/pezy/CppPrimer
 

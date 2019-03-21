@@ -2,7 +2,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
-file(COPY ${PROJECT_SOURCE_DIR}/data/story DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ../data/story DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(ex_14_02 ex_14_02.h ex_14_02.cpp)
 add_executable(ex_14_07 ex_14_07.h ex_14_07.cpp ex_14_07_test.cpp)

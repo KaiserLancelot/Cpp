@@ -2,8 +2,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
-file(COPY ${PROJECT_SOURCE_DIR}/data/book DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ${PROJECT_SOURCE_DIR}/data/person_info DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ../data/book DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ../data/person_info DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(ex_8_02 ex_8_02.cpp)
 add_executable(ex_8_04 ex_8_04.cpp)

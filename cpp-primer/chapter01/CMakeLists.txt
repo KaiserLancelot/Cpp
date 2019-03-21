@@ -2,8 +2,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
-include_directories(${PROJECT_SOURCE_DIR}/include)
-file(COPY ${PROJECT_SOURCE_DIR}/data/book DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+include_directories(../include)
+file(COPY ../data/book DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(ex_1_01 ex_1_01.cpp)
 add_executable(ex_1_02 ex_1_02.cpp)
