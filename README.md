@@ -2,7 +2,6 @@
 C++ Primer Fifth Edition Solutions
 
 # Reference
-
 * Answer
   * https://github.com/Mooophy/Cpp-Primer
   * https://github.com/pezy/CppPrimer
