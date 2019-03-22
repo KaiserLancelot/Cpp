@@ -50,10 +50,10 @@ int main() {
     }
     std::cout << '\n';
 
-    QVariantMap nestedMap{result["indent"].toMap()};
-    std::cout << "length: " << nestedMap["length"].toInt();
+    QVariantMap nested_map{result["indent"].toMap()};
+    std::cout << "length: " << nested_map["length"].toInt();
     std::cout << '\t';
     std::cout << "use_space: " << std::boolalpha
-              << nestedMap["use_space"].toBool();
+              << nested_map["use_space"].toBool();
   }
 }

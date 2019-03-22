@@ -4,8 +4,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
 find_package(fmt)
 
-add_executable(filesystem base.cpp)
-target_link_libraries(filesystem stdc++fs)
+add_executable(base base.cpp)
+target_link_libraries(base stdc++fs)
 
 add_executable(ls ls.cpp)
 target_link_libraries(ls stdc++fs fmt::fmt)

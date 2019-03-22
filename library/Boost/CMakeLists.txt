@@ -9,5 +9,5 @@ add_definitions(-DBOOST_TEST_DYN_LINK)
 add_executable(program_options program_options.cpp)
 target_link_libraries(program_options ${Boost_LIBRARIES})
 
-add_executable(my_test test.cpp test_run.cpp)
+add_executable(my_test my_test1.cpp my_test2.cpp my_test_run.cpp)
 target_link_libraries(my_test ${Boost_LIBRARIES})

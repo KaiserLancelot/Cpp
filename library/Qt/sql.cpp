@@ -28,7 +28,7 @@ int main() {
   }
 
   // 如果使用默认构造函数则使用默认连接,
-  QSqlQuery query;
+  QSqlQuery query{db};
   if (!query.exec("select *\n"
                   "from instructor;")) {
     std::cerr << "error\n";

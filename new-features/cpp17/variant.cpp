@@ -32,17 +32,19 @@ struct AnimalVoice {
 };
 
 // C++17 std::variant
-// 类似与 union
+// 表示一个类型安全的联合体
+// 没有默认构造函数
 int main() {
   std::vector<std::variant<Cat, Dog>> v{Cat{"Tuba"}, Dog{"Balou"},
                                         Cat{"Bobby"}};
   for (const auto &item : v) {
+    // 返回 variant 所保有可选项的零基下标
     switch (item.index()) {
       case 0:
         std::get<Cat>(item).Meow();
         break;
       case 1:
-        std::get<Dog>(item).Woof();
+        std::get<1>(item).Woof();
         break;
       default: {}
     }
@@ -58,7 +60,7 @@ int main() {
   }
 
   for (const auto &item : v) {
-    // 接受一个函数对象和一个 variant 实例.函数对象需要对 variant
+    // 接受一个函数对象和一个 variant 实例, 函数对象需要对 variant
     // 中所有类型进行重载
     std::visit(AnimalVoice{}, item);
   }

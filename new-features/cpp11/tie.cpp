@@ -18,8 +18,8 @@ struct S {
     // std::tie 能用于引入字典序比较到结构体, 或解包 tuple
     // std::tie 可用于解包 std::pair, 因为 std::tuple 拥有从 pair 的转换赋值
     // 比较 n 与 rhs.n,
-    // 然后为 s 与 rhs.s,
-    // 然后为 d 与 rhs.d
+    // 然后比较 s 与 rhs.s,
+    // 然后比较 d 与 rhs.d
     return std::tie(n, s, d) < std::tie(rhs.n, rhs.s, rhs.d);
   }
 };

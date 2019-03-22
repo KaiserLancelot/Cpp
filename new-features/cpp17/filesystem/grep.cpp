@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
 
   // recursive_directory_iterator 是在目录的 directory_entry
   // 元素上, 及递归地在所有子目录的目录条目上迭代的输入迭代器
-  // (LegacyInputIterator).迭代顺序是未指定的, 除了只造访一次每个目录条目
+  // 迭代顺序是未指定的, 除了只造访一次每个目录条目
   for (const auto &entry :
        fs::recursive_directory_iterator{fs::current_path()}) {
     auto match{Matches(entry, pattern)};

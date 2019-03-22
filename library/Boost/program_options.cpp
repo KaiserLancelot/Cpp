@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
       std::cout << '\n';
     }
 
-  } catch (const std::exception &) {
-    std::cerr << "Unknown program parameter.\n";
+  } catch (const boost::program_options::unknown_option &error) {
+    std::cerr << error.what() << '\n';
   }
 }

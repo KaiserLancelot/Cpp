@@ -2,8 +2,6 @@
 // Created by kaiser on 19-3-19.
 //
 
-// https://stackoverflow.com/questions/43434491/difference-between-if-constexpr-vs-if
-
 #include <cstdint>
 #include <iostream>
 #include <string>

@@ -18,5 +18,5 @@ int main() {
   fmt::print("{}\n", s);
 
   // 返回字符数
-  fmt::print("{}\n", fmt::formatted_size("{:s}", "foo"));
+  fmt::print("{}\n", fmt::formatted_size("{}", "foo"));
 }
