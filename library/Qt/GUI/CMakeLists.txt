@@ -8,7 +8,11 @@ find_package(Qt5Core REQUIRED CONFIG)
 find_package(Qt5Widgets REQUIRED CONFIG)
 
 add_executable(exercise main.cpp mainwindow.cpp mainwindow.h)
-
 target_link_libraries(exercise
+    Qt5::Core
+    Qt5::Widgets)
+
+add_executable(layout layout.cpp)
+target_link_libraries(layout
     Qt5::Core
     Qt5::Widgets)
