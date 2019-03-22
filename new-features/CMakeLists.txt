@@ -2,6 +2,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
+find_package(fmt)
+
 add_executable(variable_template cpp14/variable_template.cpp)
 add_executable(exchange cpp14/exchange.cpp)
 add_executable(make_from_tuple cpp17/make_from_tuple.cpp)
@@ -25,4 +27,4 @@ add_executable(filesystem cpp17/filesystem/filesystem.cpp)
 target_link_libraries(filesystem stdc++fs)
 
 add_executable(ls cpp17/filesystem/ls.cpp)
-target_link_libraries(ls stdc++fs)
+target_link_libraries(ls stdc++fs fmt::fmt)
