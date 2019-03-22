@@ -2,10 +2,12 @@
 // Created by kaiser on 19-3-21.
 //
 
+// C++17 文件系统库
 #include <filesystem>
 #include <iostream>
 
 int main() {
+  // path 表示一个路径
   std::filesystem::path dir{"."};
   // 连接
   dir /= "cmake_install.cmake";
@@ -27,10 +29,13 @@ int main() {
   // 返回与 dir 引用同一文件的绝对(尽管不必规范)路径名
   std::cout << std::filesystem::absolute(dir).c_str() << '\n';
   // 判断是否是相同的路径, 不必标准化
-  std::cout << std::filesystem::equivalent("any", "../new-features/any") << '\n';
+  std::cout << std::filesystem::equivalent("any", "../new-features/any")
+            << '\n';
   // parent_path() 返回的不是绝对路径
   std::cout << std::filesystem::canonical(dir.parent_path()).c_str() << '\n';
   // 返回文件名
+  std::cout << dir.filename().c_str() << '\n';
+  // 返回文件名(不含拓展名)
   std::cout << dir.stem().c_str() << '\n';
   // 返回拓展名
   std::cout << dir.extension().c_str() << '\n';

@@ -28,3 +28,6 @@ target_link_libraries(filesystem stdc++fs)
 
 add_executable(ls cpp17/filesystem/ls.cpp)
 target_link_libraries(ls stdc++fs fmt::fmt)
+
+add_executable(grep cpp17/filesystem/grep.cpp)
+target_link_libraries(grep stdc++fs)

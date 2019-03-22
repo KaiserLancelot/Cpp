@@ -10,64 +10,68 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-#include <tuple>
+#include <utility>
 #include <vector>
 
 #include <fmt/core.h>
 
-namespace sf = std::filesystem;
+namespace fs = std::filesystem;
 
-std::tuple<sf::path, sf::file_status, std::size_t> FileInfo(
-    const sf::directory_entry &entry) {
-  auto file_status{sf::status(entry)};
-  return {entry.path(), file_status,
-          sf::is_regular_file(file_status) ? sf::file_size(entry.path()) : 0};
+// is_regular_file 检查给定文件状态或路径是否对应常规文件
+// Linux 文件分为目录文件, 符号链接文件, 字符特殊文件, 块特殊文件
+// 管道, IPC 接头, 常规文件, 其他文件
+// file_size 返回文件大小
+std::pair<fs::path, std::size_t> FileInfo(const fs::path &dir) {
+  return {dir, fs::is_regular_file(dir) ? fs::file_size(dir) : 0};
 }
 
-char TypeChar(sf::file_status file_status) {
-  if (sf::is_directory(file_status)) {
+char TypeChar(const fs::path &dir) {
+  if (fs::is_directory(dir)) {
     return 'd';
-  } else if (sf::is_symlink(file_status)) {
+  } else if (fs::is_symlink(dir)) {
     return 'l';
-  } else if (sf::is_character_file(file_status)) {
+  } else if (fs::is_character_file(dir)) {
     return 'c';
-  } else if (sf::is_block_file(file_status)) {
+  } else if (fs::is_block_file(dir)) {
     return 'b';
-  } else if (sf::is_fifo(file_status)) {
+  } else if (fs::is_fifo(dir)) {
     return 'p';
-  } else if (sf::is_socket(file_status)) {
+  } else if (fs::is_socket(dir)) {
     return 's';
-  } else if (sf::is_other(file_status)) {
+  } else if (fs::is_regular_file(dir)) {
+    return '-';
+  } else if (fs::is_other(dir)) {
     return 'o';
-  } else if (sf::is_regular_file(file_status)) {
-    return 'f';
   } else {
     return '?';
   }
 }
 
-std::string Rwx(sf::perms p) {
-  auto check{[p](sf::perms bit, char c) {
-    return (p & bit) == sf::perms ::none ? '-' : c;
+// std::filesystem::perms 是一个枚举类型
+// 代表文件访问权限
+// rwx 位, 有三个3位字段, 分别用于所有者,同组成员和其他人
+std::string Rwx(fs::perms p) {
+  auto check{[p](fs::perms bit, char c) {
+    return (p & bit) == fs::perms ::none ? '-' : c;
   }};
 
   return {
-      check(sf::perms::owner_read, 'r'),  check(sf::perms::owner_write, 'w'),
-      check(sf::perms::owner_exec, 'x'),  check(sf::perms::group_read, 'r'),
-      check(sf::perms::group_write, 'w'), check(sf::perms::group_exec, 'x'),
-      check(sf::perms::others_read, 'r'), check(sf::perms::others_write, 'w'),
-      check(sf::perms::others_exec, 'x')};
+      check(fs::perms::owner_read, 'r'),  check(fs::perms::owner_write, 'w'),
+      check(fs::perms::owner_exec, 'x'),  check(fs::perms::group_read, 'r'),
+      check(fs::perms::group_write, 'w'), check(fs::perms::group_exec, 'x'),
+      check(fs::perms::others_read, 'r'), check(fs::perms::others_write, 'w'),
+      check(fs::perms::others_exec, 'x')};
 }
 
 std::string SizeString(std::size_t size) {
   std::stringstream ss;
 
-  if (size >= static_cast<std::size_t>(std::pow(2, 30))) {
-    ss << (size / static_cast<std::size_t>(std::pow(2, 30))) << " GB";
-  } else if (size >= static_cast<std::size_t>(std::pow(2, 20))) {
-    ss << (size / static_cast<std::size_t>(std::pow(2, 20))) << " MB";
-  } else if (size >= static_cast<std::size_t>(std::pow(2, 10))) {
-    ss << (size / static_cast<std::size_t>(std::pow(2, 10))) << " KB";
+  if (size >= std::pow(2, 30)) {
+    ss << (size / std::pow(2, 30)) << " GB";
+  } else if (size >= std::pow(2, 20)) {
+    ss << (size / std::pow(2, 20)) << " MB";
+  } else if (size >= std::pow(2, 10)) {
+    ss << (size / std::pow(2, 10)) << " KB";
   } else {
     ss << size << " Byte";
   }
@@ -76,21 +80,25 @@ std::string SizeString(std::size_t size) {
 }
 
 int main(int argc, char *argv[]) {
-  sf::path dir{argc > 1 ? argv[1] : "."};
-
-  if (!sf::exists(dir)) {
+  fs::path dir{argc > 1 ? argv[1] : "."};
+  if (!fs::exists(dir)) {
     std::cerr << "Path " << dir << " does not exist\n";
     std::exit(EXIT_FAILURE);
   }
 
-  std::vector<std::tuple<sf::path, sf::file_status, std::size_t>> items;
+  std::vector<std::pair<fs::path, std::size_t>> items;
 
-  std::transform(sf::directory_iterator{dir}, {}, std::back_inserter(items),
+  // directory_iterator 是一个迭代于目录的输入迭代器(不造访子目录)
+  // 迭代顺序是未指定的, 除了每个目录条目只被造访一次
+  // 有 begin 和 end 成员
+  // 解引用返回 directory_entry, 它表示目录条目, 存储一个 path 作为成员
+  // 可以由 path 构造, 有一个非 explicit 的类型转换运算符可以转换为 path
+  std::transform(fs::directory_iterator{dir}, {}, std::back_inserter(items),
                  FileInfo);
 
-  for (const auto &[path, status, size] : items) {
-    fmt::print("{}{:<20}{:<20}{:<20}\n", TypeChar(status),
-               Rwx(status.permissions()), SizeString(size),
+  for (const auto &[path, size] : items) {
+    fmt::print("{}{:<20}{:<20}{:<20}\n", TypeChar(path),
+               Rwx(fs::status(path).permissions()), SizeString(size),
                path.filename().c_str());
   }
 }
