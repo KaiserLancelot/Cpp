@@ -25,4 +25,7 @@ project(Cpp)
 #add_subdirectory(library/Qt)
 #add_subdirectory(library/Boost)
 
-add_subdirectory(new-features)
+#add_subdirectory(new-features/cpp11)
+#add_subdirectory(new-features/cpp14)
+#add_subdirectory(new-features/cpp17)
+add_subdirectory(new-features/cpp17/filesystem)
