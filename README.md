@@ -13,7 +13,7 @@ C++ learning
   
 * New Features
   * https://chenxiaowei.gitbooks.io/c-17-stl-cook-book/content
+  * https://zh.cppreference.com/w/cpp
   
 * Notes
   * https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide
-  * https://zh.cppreference.com/w/cpp
