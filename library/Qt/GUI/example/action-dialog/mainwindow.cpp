@@ -12,10 +12,12 @@
 #include <QToolBar>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+  // 设置最小大小
   setMinimumSize(1200, 800);
   // 设置主窗口的标题
   setWindowTitle("Main Window");
 
+  // 以:开始意味着从资源文件中查找资源
   open_action_ = new QAction{QIcon{":/images/doc-open.png"}, "Open", this};
   open_action_->setShortcut(QKeySequence::Open);
   open_action_->setStatusTip("Open an existing file");

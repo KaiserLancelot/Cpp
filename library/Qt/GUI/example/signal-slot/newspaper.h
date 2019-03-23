@@ -18,11 +18,12 @@ class Newspaper : public QObject {
  public:
   explicit Newspaper(const std::string &name) : name_{name} {}
   void Send() { emit New(name_); }
- signals:
-  void New(const std::string &name);
 
  private:
   std::string name_;
+
+ signals:
+  void New(const std::string &name);
 };
 
 #endif  // CPP_NEWSPAPER_H

@@ -2,14 +2,10 @@
 // Created by kaiser on 19-3-23.
 //
 
-#include <QCoreApplication>
-
 #include "newspaper.h"
 #include "reader.h"
 
-int main(int argc, char *argv[]) {
-  QCoreApplication app{argc, argv};
-
+int main() {
   Newspaper newspaper{"Newspaper A"};
   Reader reader;
 
@@ -17,6 +13,4 @@ int main(int argc, char *argv[]) {
   QObject::connect(&newspaper, &Newspaper::New, &reader,
                    &Reader::ReceiveNewspaper);
   newspaper.Send();
-
-  return QCoreApplication::exec();
 }

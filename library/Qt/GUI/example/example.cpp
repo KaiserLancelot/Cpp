@@ -3,13 +3,19 @@
 //
 
 #include <QApplication>
-#include <QMainWindow>
+#include <QPushButton>
 
 int main(int argc, char *argv[]) {
   QApplication app{argc, argv};
 
-  QMainWindow window;
-  window.show();
+  {
+    // QWidget window;
+    // QPushButton quit("Quit", &window);
+    QPushButton quit("Quit");
+    QWidget window;
 
-  return QApplication::exec();
+    quit.setParent(&window);
+  }
+
+  // return QApplication::exec();
 }
