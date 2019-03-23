@@ -21,7 +21,6 @@ project(Cpp)
 #add_subdirectory(cpp-primer/chapter18)
 #add_subdirectory(cpp-primer/chapter19)
 
-#add_subdirectory(library/Boost)
 #add_subdirectory(library/fmt)
 #add_subdirectory(library/Qt)
 add_subdirectory(library/Qt/GUI/example)
