@@ -24,7 +24,7 @@ project(Cpp)
 #add_subdirectory(library/Boost)
 #add_subdirectory(library/fmt)
 #add_subdirectory(library/Qt)
-add_subdirectory(library/Qt/GUI)
+add_subdirectory(library/Qt/GUI/example)
 
 #add_subdirectory(new-features/cpp11)
 #add_subdirectory(new-features/cpp14)

@@ -3,9 +3,6 @@
 //
 
 #include <QApplication>
-#include <QDebug>
-#include <QLabel>
-#include <QPushButton>
 
 #include "mainwindow.h"
 
