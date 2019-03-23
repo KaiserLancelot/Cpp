@@ -2,10 +2,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
-# 使用 moc
+# 指示CMake在需要时自动运行moc
 set(CMAKE_AUTOMOC ON)
 # 处理 .qrc 文件
 set(CMAKE_AUTORCC ON)
+# 查找包含在相应的构建目录中
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package(Qt5Core REQUIRED CONFIG)
 find_package(Qt5Widgets REQUIRED CONFIG)
