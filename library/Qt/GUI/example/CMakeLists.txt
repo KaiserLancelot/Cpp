@@ -32,7 +32,7 @@ target_link_libraries(base
     Qt5::Core
     Qt5::Widgets)
 
-add_executable(accept_ignore event/accept_ignore.cpp)
+add_executable(accept_ignore event/accept_ignore.cpp event/accept_ignore.h)
 target_link_libraries(accept_ignore
     Qt5::Core
     Qt5::Widgets)
