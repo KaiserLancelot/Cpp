@@ -13,12 +13,10 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   setMinimumSize(1200, 800);
+  // 设置主窗口的标题
   setWindowTitle("Main Window");
 
-  open_action_ = new QAction{
-      QIcon{
-          "/home/kaiser/CLionProjects/Cpp/library/Qt/GUI/images/doc-open.png"},
-      "Open", this};
+  open_action_ = new QAction{QIcon{":/images/doc-open.png"}, "Open", this};
   open_action_->setShortcut(QKeySequence::Open);
   open_action_->setStatusTip("Open an existing file");
   // triggered 触发

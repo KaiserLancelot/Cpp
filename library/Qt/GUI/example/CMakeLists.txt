@@ -3,11 +3,12 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
 
 find_package(Qt5Core REQUIRED CONFIG)
 find_package(Qt5Widgets REQUIRED CONFIG)
 
-add_executable(action-dialog action-dialog/main.cpp action-dialog/mainwindow.cpp action-dialog/mainwindow.h)
+add_executable(action-dialog action-dialog/main.cpp action-dialog/mainwindow.cpp action-dialog/mainwindow.h resource.qrc)
 target_link_libraries(action-dialog
     Qt5::Core
     Qt5::Widgets)
@@ -22,7 +23,7 @@ target_link_libraries(message-box
     Qt5::Core
     Qt5::Widgets)
 
-add_executable(file-dialog file-dialog/mainwindow.h file-dialog/mainwindow.cpp file-dialog/main.cpp)
+add_executable(file-dialog file-dialog/mainwindow.h file-dialog/mainwindow.cpp file-dialog/main.cpp resource.qrc)
 target_link_libraries(file-dialog
     Qt5::Core
     Qt5::Widgets)
@@ -34,5 +35,14 @@ target_link_libraries(base
 
 add_executable(accept_ignore event/accept_ignore.cpp event/accept_ignore.h)
 target_link_libraries(accept_ignore
+    Qt5::Core
+    Qt5::Widgets)
+
+add_executable(signal-slot signal-slot/newspaper.h signal-slot/reader.h signal-slot/main.cpp)
+target_link_libraries(signal-slot
+    Qt5::Core)
+
+add_executable(example example.cpp)
+target_link_libraries(example
     Qt5::Core
     Qt5::Widgets)

@@ -7,6 +7,7 @@
 #include <QSlider>
 #include <QSpinBox>
 #include <QWidget>
+#include <QtGlobal>
 
 int main(int argc, char *argv[]) {
   QApplication app{argc, argv};
@@ -27,8 +28,8 @@ int main(int argc, char *argv[]) {
                    &QSpinBox::setValue);
   // QSpinBox::valueChanged 还有一个接受 const QString & 的重载,
   // 所以不能直接使用
-  void (QSpinBox::*spin_box_signal)(int){&QSpinBox::valueChanged};
-  QObject::connect(spin_box, spin_box_signal, slider, &QSlider::setValue);
+  QObject::connect(spin_box, QOverload<int>::of(&QSpinBox::valueChanged),
+                   slider, &QSlider::setValue);
   // 设置默认值
   spin_box->setValue(35);
 

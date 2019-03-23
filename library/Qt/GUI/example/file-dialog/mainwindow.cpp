@@ -17,17 +17,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   setMinimumSize(1200, 800);
   setWindowTitle("Main Window");
 
-  open_action_ = new QAction{
-      QIcon{
-          "/home/kaiser/CLionProjects/Cpp/library/Qt/GUI/images/file-open.png"},
-      "Open", this};
+  open_action_ = new QAction{QIcon{":images/file-open.png"}, "Open", this};
   open_action_->setShortcut(QKeySequence::Open);
   open_action_->setStatusTip("Open an existing file");
 
-  save_action_ = new QAction{
-      QIcon{
-          "/home/kaiser/CLionProjects/Cpp/library/Qt/GUI/images/file-save.png"},
-      "Save", this};
+  save_action_ = new QAction{QIcon{":/images/file-save.png"}, "Save", this};
   save_action_->setShortcut(QKeySequence::Save);
   save_action_->setStatusTip("Save a new file");
 
