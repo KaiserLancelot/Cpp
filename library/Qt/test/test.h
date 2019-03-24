@@ -8,10 +8,13 @@
 #include <QObject>
 #include <QString>
 #include <QTest>
+#include <iostream>
 
 class TestQString : public QObject {
   Q_OBJECT
  private slots:
+  void initTestCase() { std::cout << "init\n"; }
+
   void toUpper_data() {
     QTest::addColumn<QString>("string");
     QTest::addColumn<QString>("result");
@@ -30,12 +33,14 @@ class TestQString : public QObject {
   }
 
   void toUpper2() {
-    QString str = "Hello";
+    QString str{"Hello"};
     QVERIFY(str.toUpper() == "HELLO");
 
-    QString str2 = "Hello";
+    QString str2{"Hello"};
     QCOMPARE(str2.toUpper(), QString("HELLO"));
   }
+
+  void cleanupTestCase() { std::cout << "clean up\n"; }
 };
 
 #endif  // CPP_TEST_H

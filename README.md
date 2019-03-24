@@ -1,5 +1,5 @@
-# Cpp
-C++ learning
+# Cpp-Study
+C++ study notes
 
 # Reference
 * C++ Primer Answer

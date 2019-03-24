@@ -4,7 +4,6 @@
 
 #include <QCommandLineParser>
 #include <QCoreApplication>
-#include <cstdint>
 #include <iostream>
 
 int main(int argc, char *argv[]) {

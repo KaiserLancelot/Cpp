@@ -8,10 +8,13 @@
 #include <QObject>
 #include <QString>
 #include <QTest>
+#include <iostream>
 
 class TestBenchmark : public QObject {
   Q_OBJECT
  private slots:
+  void initTestCase() { std::cout << "init\n"; }
+
   void simple() {
     QString str1 = QLatin1String("This is a test string");
     QString str2 = QLatin1String("This is a test string");
@@ -39,6 +42,8 @@ class TestBenchmark : public QObject {
     }
     Q_UNUSED(result);
   }
+
+  void cleanupTestCase() { std::cout << "clean up\n"; }
 };
 
 #endif  // CPP_BENCHMARK_H
