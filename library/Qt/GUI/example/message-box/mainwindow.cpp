@@ -3,7 +3,6 @@
 //
 
 #include "mainwindow.h"
-#include "../file-dialog/mainwindow.h"
 
 #include <QDebug>
 #include <QMenuBar>
@@ -34,16 +33,19 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 }
 
 void MainWindow::Open() {
+  // 第一个参数指定标题
   // 最后一个参数指定默认选择的按钮, 不指定默认为 YES
-  //  if (QMessageBox::question(this, "Question", "Are you OK",
-  //                            QMessageBox::Yes | QMessageBox::No,
-  //                            QMessageBox::No) == QMessageBox::Yes) {
-  //    QMessageBox::information(this, "Hmmm...", "I'm glad to hear that");
-  //  } else {
-  //    QMessageBox::information(this, "Hmmm...", "I'm sorry!");
-  //  }
+  if (QMessageBox::question(this, "Question", "Are you OK",
+                            QMessageBox::Yes | QMessageBox::No,
+                            QMessageBox::No) == QMessageBox::Yes) {
+    QMessageBox::information(this, "Hmmm...", "I'm glad to hear that");
+  } else {
+    QMessageBox::information(this, "Hmmm...", "I'm sorry!");
+  }
 
   auto msg_box{new QMessageBox{this}};
+  // 标题
+  msg_box->setWindowTitle("msg");
   // 主要文本信息
   msg_box->setText("The document has been modified");
   // 显示的简单说明文字

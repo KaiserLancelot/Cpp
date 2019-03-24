@@ -7,7 +7,6 @@
 #include <QDebug>
 #include <QDialog>
 #include <QMenuBar>
-#include <QMessageBox>
 #include <QStatusBar>
 #include <QToolBar>
 
@@ -37,12 +36,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 }
 
 void MainWindow::Open() {
-  // QMessageBox::information(this, "Information", "Open");
-
   // 对话框分为模态对话框和非模态对话框.所谓模态对话框,
   // 就是会阻塞同一应用程序中其它窗口的输入,
   // 不能对除此对话框之外的窗口部分进行操作
-  // 非模态对话框相反
+  // 非模态对话框与之相反
 
   // Qt 有两种级别的模态对话框:应用程序级别的模态和窗口级别的模态
   // 应用程序级别的模态是指, 当该种模态的对话框出现时, 用户必须首先
@@ -51,16 +48,18 @@ void MainWindow::Open() {
   // 用户与程序中其它窗口交互.窗口级别的模态尤其适用于多窗口模式
 
   // 设置为子对话框, 默认出现在父窗口的中心
-  auto dialog{new QDialog{this}};
+  QDialog dialog{this};
 
-  dialog->setMinimumSize(500, 400);
-  dialog->setWindowTitle("Hello dialog");
+  dialog.setMinimumSize(500, 400);
+  dialog.setWindowTitle("Hello dialog");
 
   // Qt 使用 QDialog::exec() 实现应用程序级别的模态对话框,
   // 使用 QDialog::open() 实现窗口级别的模态对话框,
   // 使用 QDialog::show() 实现非模态对话框, 不会阻塞当前线程
-  dialog->exec();
+  dialog.exec();
+  // 如果使用 QDialog::show() 并且 dialog 分配在栈上, 窗口会一闪而过
+  // 该函数立即返回, dialog 之后就析构了
 
   // 直到对话框关闭, exec() 函数返回, 我们才可以取得对话框的数据
-  qDebug() << dialog->result();
+  qDebug() << dialog.result();
 }

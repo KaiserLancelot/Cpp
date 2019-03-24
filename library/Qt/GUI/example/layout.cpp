@@ -44,5 +44,5 @@ int main(int argc, char *argv[]) {
 
   window.show();
 
-  QApplication::exec();
+  return QApplication::exec();
 }

@@ -11,7 +11,7 @@
 
 class Reader : public QObject {
   Q_OBJECT
- public:
+ public slots:
   void ReceiveNewspaper(const std::string &name) {
     std::cout << "Receive newspaper: " << name << '\n';
   }
