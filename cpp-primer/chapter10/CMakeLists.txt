@@ -1,7 +1,3 @@
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_EXTENSIONS OFF)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
-
 include_directories(../chapter07)
 file(COPY ../data/str DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY ../data/in DESTINATION ${CMAKE_CURRENT_BINARY_DIR})

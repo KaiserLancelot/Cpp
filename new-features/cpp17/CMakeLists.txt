@@ -1,7 +1,3 @@
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_EXTENSIONS OFF)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
-
 add_executable(make_from_tuple make_from_tuple.cpp)
 add_executable(apply apply.cpp)
 add_executable(invoke invoke.cpp)

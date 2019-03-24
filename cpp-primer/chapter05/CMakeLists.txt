@@ -1,7 +1,3 @@
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_EXTENSIONS OFF)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
-
 add_executable(ex_5_03 ex_5_03.cpp)
 add_executable(ex_5_05 ex_5_05.cpp)
 add_executable(ex_5_06 ex_5_06.cpp)
