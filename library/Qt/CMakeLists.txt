@@ -16,9 +16,6 @@ target_link_libraries(enum Qt5::Core)
 add_executable(json json.cpp)
 target_link_libraries(json Qt5::Core)
 
-add_executable(command_line command_line.cpp)
-target_link_libraries(command_line Qt5::Core)
-
 add_executable(test test/test.cpp test/test.h)
 target_link_libraries(test Qt5::Test)
 
