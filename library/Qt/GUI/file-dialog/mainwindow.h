@@ -8,11 +8,15 @@
 #include <QAction>
 #include <QMainWindow>
 #include <QTextEdit>
+#include <QCloseEvent>
 
 class MainWindow : public QMainWindow {
   Q_OBJECT
  public:
   explicit MainWindow(QWidget *parent = nullptr);
+
+ protected:
+  void closeEvent(QCloseEvent *event) override;
 
  private:
   void Open();

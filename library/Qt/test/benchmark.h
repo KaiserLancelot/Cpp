@@ -40,6 +40,7 @@ class TestBenchmark : public QObject {
     } else {
       QBENCHMARK { result = (str1 == str2); }
     }
+    // 这可以抑制编译器有关未使用变量的警告
     Q_UNUSED(result);
   }
 

@@ -30,7 +30,7 @@ add_compile_options(-Wall -Wextra -Wpedantic -Werror)
 
 #add_subdirectory(library/fmt)
 #add_subdirectory(library/Qt)
-add_subdirectory(library/Qt/GUI/example)
+add_subdirectory(library/Qt/GUI)
 
 #add_subdirectory(new-features/cpp11)
 #add_subdirectory(new-features/cpp14)

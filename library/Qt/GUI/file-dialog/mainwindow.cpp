@@ -4,6 +4,7 @@
 
 #include "mainwindow.h"
 
+#include <QDebug>
 #include <QFileDialog>
 #include <QIODevice>
 #include <QMenuBar>
@@ -15,9 +16,8 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   setMinimumSize(1200, 800);
-  setWindowTitle("Main Window");
 
-  open_action_ = new QAction{QIcon{":images/file-open.png"}, "Open", this};
+  open_action_ = new QAction{QIcon{":/images/file-open.png"}, "Open", this};
   open_action_->setShortcut(QKeySequence::Open);
   open_action_->setStatusTip("Open an existing file");
 
@@ -47,6 +47,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   text_edit_->setFontPointSize(26);
   // 将一个组件作为窗口的中心组件, 放在窗口中央显示区
   setCentralWidget(text_edit_);
+
+  QObject::connect(text_edit_, &QTextEdit::textChanged, this,
+                   [this] { this->setWindowModified(true); });
+  // 使用 [] 这种语法来表明, 在窗口内容发生
+  // 改变时(由 setWindowModified 函数通知)
+  // Qt 会自动在标题上面的 [] 位置替换成 * 号
+  setWindowTitle("TextPad [*]");
 }
 
 void MainWindow::Open() {
@@ -62,10 +69,16 @@ void MainWindow::Open() {
   // parent 父窗口, caption 对话框标题, dir 默认目录
   // filter 过滤器, 用于过滤特定的后缀名, 如果有多个则使用 ;; 分割
   // selectedFilter 默认的过滤器, options 参数设定，比如只显示文件夹等
-  // QFileDialog::Option
+  // 具体见 QFileDialog::Option
   // 返回选择的文件路径
-  auto path{QFileDialog::getOpenFileName(this, "Open file", ".",
-                                         "Text Files(*.txt)")};
+
+  //  QString default_filter{"Image(*.jpg)"};
+  //  auto path{QFileDialog::getOpenFileName(this, "Open file", ".",
+  //                                         "Text Files(*.txt);;Image(*.jpg)",
+  //                                         &default_filter)};
+
+  auto path{
+      QFileDialog::getOpenFileName(this, "Open file", ".", "All Files(*)")};
   if (!path.isEmpty()) {
     QFile file{path};
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -76,8 +89,6 @@ void MainWindow::Open() {
     QTextStream in{&file};
     text_edit_->setText(in.readAll());
     file.close();
-  } else {
-    QMessageBox::warning(this, "Path", "You did not select any file.");
   }
 }
 
@@ -97,5 +108,23 @@ void MainWindow::Save() {
     file.close();
   } else {
     QMessageBox::warning(this, "Path", "You did not select any file.");
+  }
+}
+
+void MainWindow::closeEvent(QCloseEvent *event) {
+  if (isWindowModified()) {
+    auto exit{QMessageBox::question(
+        this, "Quit", "Are you sur to quit this application",
+        QMessageBox::Yes | QMessageBox::No, QMessageBox::No)};
+    // 对于窗口关闭 QCloseEvent 事件, 调用 accept() 意味
+    // 着 Qt 会停止事件的传播, 窗口关闭;调用 ignore() 则意味着
+    // 事件继续传播, 即阻止窗口关闭
+    if (exit) {
+      event->accept();
+    } else {
+      event->ignore();
+    }
+  } else {
+    event->accept();
   }
 }

@@ -14,5 +14,6 @@ int main(int argc, char *argv[]) {
   MainWindow w;
   w.show();
 
+  // 程序将进入事件循环来监听应用程序的事件
   return QApplication::exec();
 }

@@ -9,6 +9,7 @@
 #include <QMouseEvent>
 #include <QObject>
 #include <QPushButton>
+#include <QWidget>
 
 class CustomButton : public QPushButton {
   Q_OBJECT
@@ -19,10 +20,14 @@ class CustomButton : public QPushButton {
   }
 
  protected:
+  // 事件默认是 accept 的
+  // ignore 说明想让事件继续传播(给父组件而不是父类)
+  // 事件的传播是在组件层次上面的, 而不是依靠类继承机制
   void mousePressEvent(QMouseEvent *event) override {
-    if (event->button() == Qt::LeftButton) {
+    if (event->button() == Qt::MouseButton::LeftButton) {
       qDebug() << "left";
     } else {
+      // 注意只有左键才算 clicked
       QPushButton::mousePressEvent(event);
     }
   }

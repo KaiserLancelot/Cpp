@@ -8,6 +8,12 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 find_package(Qt5Core REQUIRED CONFIG)
 find_package(Qt5Widgets REQUIRED CONFIG)
 
+add_executable(signal-slot signal-slot/main.cpp
+    signal-slot/newspaper.h
+    signal-slot/reader.h)
+target_link_libraries(signal-slot
+    Qt5::Core)
+
 add_executable(action-dialog action-dialog/main.cpp
     action-dialog/mainwindow.cpp
     action-dialog/mainwindow.h
@@ -48,13 +54,12 @@ target_link_libraries(accept_ignore
     Qt5::Core
     Qt5::Widgets)
 
-add_executable(signal-slot signal-slot/main.cpp
-    signal-slot/newspaper.h
-    signal-slot/reader.h)
-target_link_libraries(signal-slot
-    Qt5::Core)
+add_executable(accept_ignore2 event/accept_ignore2.cpp event/accept_ignore2.h)
+target_link_libraries(accept_ignore2
+    Qt5::Core
+    Qt5::Widgets)
 
-add_executable(example example.cpp)
-target_link_libraries(example
+add_executable(event event/event.cpp event/event.h)
+target_link_libraries(event
     Qt5::Core
     Qt5::Widgets)

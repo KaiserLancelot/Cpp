@@ -5,8 +5,9 @@
 #ifndef CPP_NEWSPAPER_H
 #define CPP_NEWSPAPER_H
 
-#include <QObject>
 #include <string>
+
+#include <QObject>
 
 // 只有继承了 QObject 的类才有信号槽的能力
 // 凡是 QObject类, 都应该在第一行代码写上 Q_OBJECT
@@ -18,12 +19,14 @@ class Newspaper : public QObject {
  public:
   explicit Newspaper(const std::string &name) : name_{name} {}
   void Send() { emit New(name_); }
+  // signals: 是必不可少的
+  // 而且不应该有函数定义
+ signals:
+  void New(const std::string &);
+  void New(const std::string &, const std::string &);
 
  private:
   std::string name_;
-
- signals:
-  void New(const std::string &name);
 };
 
 #endif  // CPP_NEWSPAPER_H

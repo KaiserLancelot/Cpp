@@ -7,6 +7,9 @@
 // 都会发出一个相应的事件.一些事件在对用户操作做出响应时发出,
 // 如键盘事件等;另一些事件则是由系统自动发出,如计时器事件
 
+// 总的来说, 如果我们使用组件, 我们关心的是信号槽;如果我们自定义组件,
+// 我们关心的是事件.因为我们可以通过事件来改变组件的默认操作
+
 #include <QApplication>
 #include <QLabel>
 #include <QMouseEvent>
@@ -27,23 +30,22 @@ class EventLabel : public QLabel {
   }
 
   void mouseReleaseEvent(QMouseEvent *event) override {
-    QString msg;
-    msg.sprintf("<center><h1>Release: (%d, %d)</h1></center>", event->x(),
-                event->y());
-    this->setText(msg);
+    this->setText(
+        QString("<center><h1>Release: (%1, %2)</h1></center>")
+            .arg(QString::number(event->x()), QString::number(event->y())));
   }
 };
 
 int main(int argc, char *argv[]) {
   QApplication app{argc, argv};
 
-  auto label = new EventLabel;
-  label->setWindowTitle("MouseEvent Demo");
-  label->resize(1200, 800);
-  // 该属性用于设置是否追踪鼠标.只有鼠标被追踪时, mouseMoveEvent() 才会发出
-  // 默认是 false , 至少一次鼠标点击之后, 才能够被追踪
-  label->setMouseTracking(true);
-  label->show();
+  EventLabel label;
+  label.setWindowTitle("MouseEvent Demo");
+  label.resize(600, 400);
+  // 该属性用于设置是否追踪鼠标.只有鼠标被追踪时, mouseMoveEvent()
+  // 等事件才会发出, 默认是 false , 所以至少一次鼠标点击之后, 才能够被追踪
+  label.setMouseTracking(true);
+  label.show();
 
   QApplication::exec();
 }
