@@ -15,4 +15,5 @@ int main() {
   QObject::connect(&newspaper,
                    QOverload<const std::string &>::of(&Newspaper::New), &reader,
                    &Reader::ReceiveNewspaper);
+  newspaper.Send();
 }

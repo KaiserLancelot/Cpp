@@ -44,12 +44,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   // QTextEdit 不仅仅用于显示文本, 还可以显示图片, 表格等
   text_edit_ = new QTextEdit{this};
-  text_edit_->setFontPointSize(26);
+  text_edit_->setFontPointSize(18);
   // 将一个组件作为窗口的中心组件, 放在窗口中央显示区
   setCentralWidget(text_edit_);
 
   QObject::connect(text_edit_, &QTextEdit::textChanged, this,
-                   [this] { this->setWindowModified(true); });
+                   [this] { setWindowModified(true); });
   // 使用 [] 这种语法来表明, 在窗口内容发生
   // 改变时(由 setWindowModified 函数通知)
   // Qt 会自动在标题上面的 [] 位置替换成 * 号
@@ -117,7 +117,7 @@ void MainWindow::closeEvent(QCloseEvent *event) {
         this, "Quit", "Are you sur to quit this application",
         QMessageBox::Yes | QMessageBox::No, QMessageBox::No)};
     // 对于窗口关闭 QCloseEvent 事件, 调用 accept() 意味
-    // 着 Qt 会停止事件的传播, 窗口关闭;调用 ignore() 则意味着
+    // 着会停止事件的传播, 窗口关闭;调用 ignore() 则意味着
     // 事件继续传播, 即阻止窗口关闭
     if (exit) {
       event->accept();

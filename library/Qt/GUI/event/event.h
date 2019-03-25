@@ -29,15 +29,14 @@ class CustomWidget : public QWidget {
   // 注意在 event() 函数中, 调用事件对象的 accept() 和 ignore()
   // 函数是没有作用的, 不会影响到事件的传播
   bool event(QEvent *event) override {
-    if (event->type() == QEvent::KeyPress) {
-      auto key_event{dynamic_cast<QKeyEvent *>(event)};
-      if (key_event->key() == Qt::Key::Key_Tab) {
-        qDebug() << "You press tab";
-        return true;
-      }
+    if (auto key_event{dynamic_cast<QKeyEvent *>(event)};
+        key_event->key() == Qt::Key::Key_Tab) {
+      qDebug() << "You press tab";
+      return true;
+    } else {
+      // 如果没有调用, 则只有处理上面的事件
+      return QWidget::event(event);
     }
-    // 如果没有调用, 则只有处理上面的事件
-    return QWidget::event(event);
   }
 };
 

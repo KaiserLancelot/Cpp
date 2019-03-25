@@ -42,7 +42,7 @@ class CustomWidget : public QWidget {
   void mousePressEvent(QMouseEvent *event) override {
     qDebug() << "CustomWidget";
     // 效果和 event->ignore() 相同
-    // 它的实现会调用 event->ignore()
+    // QWidget::mousePressEvent 会调用 event->ignore()
     QWidget::mousePressEvent(event);
   }
 };
@@ -53,17 +53,17 @@ class MainWindow : public QMainWindow {
   explicit MainWindow(QWidget *parent = nullptr) : QMainWindow(parent) {
     auto widget{new CustomWidget{this}};
 
-    auto cbex{new CustomButton{widget}};
-    cbex->setText("CustomButton");
+    auto cb{new CustomButton{widget}};
+    cb->setText("CustomButton");
 
-    auto cb{new CustomButtonEx{widget}};
-    cb->setText("CustomButtonEx");
+    auto cb_ex{new CustomButtonEx{widget}};
+    cb_ex->setText("CustomButtonEx");
 
     auto widgetLayout{new QVBoxLayout{widget}};
-    widgetLayout->addWidget(cbex);
     widgetLayout->addWidget(cb);
+    widgetLayout->addWidget(cb_ex);
 
-    this->setCentralWidget(widget);
+    setCentralWidget(widget);
   }
 
  protected:
