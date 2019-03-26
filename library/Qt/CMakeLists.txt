@@ -13,6 +13,9 @@ target_link_libraries(sql Qt5::Core Qt5::Sql fmt::fmt)
 add_executable(json json.cpp)
 target_link_libraries(json Qt5::Core)
 
+add_executable(enum enum.cpp enum.h)
+target_link_libraries(enum Qt5::Core)
+
 add_executable(test test/test.cpp test/test.h)
 target_link_libraries(test Qt5::Test)
 
