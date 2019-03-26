@@ -63,3 +63,18 @@ add_executable(event event/event.cpp event/event.h)
 target_link_libraries(event
     Qt5::Core
     Qt5::Widgets)
+
+add_executable(filter event/filter.cpp event/filter.h)
+target_link_libraries(filter
+    Qt5::Core
+    Qt5::Widgets)
+
+add_executable(summary event/summary.cpp event/summary.h)
+target_link_libraries(summary
+    Qt5::Core
+    Qt5::Widgets)
+
+add_executable(paint paint-system/paint.cpp paint-system/paint.h)
+target_link_libraries(paint
+    Qt5::Core
+    Qt5::Widgets)
