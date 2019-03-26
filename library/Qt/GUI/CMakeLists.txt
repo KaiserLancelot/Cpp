@@ -78,3 +78,9 @@ add_executable(paint paint-system/paint.cpp paint-system/paint.h)
 target_link_libraries(paint
     Qt5::Core
     Qt5::Widgets)
+
+add_executable(text-editor text-editor/main.cpp
+    text-editor/main_window.cpp text-editor/main_window.h resource.qrc)
+target_link_libraries(text-editor
+    Qt5::Core
+    Qt5::Widgets)
