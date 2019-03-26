@@ -13,6 +13,7 @@
 class MainWindow : public QMainWindow {
  public:
   MainWindow();
+
   void CreateAction();
   void CreateConnect();
   void CreateMenu();
@@ -32,7 +33,6 @@ class MainWindow : public QMainWindow {
   QAction *cut_action_;
 
   QAction *exit_action_;
-  QAction *about_action_;
   QAction *about_qt_action_;
 
   // 用于编辑和显示纯文本
@@ -50,7 +50,6 @@ class MainWindow : public QMainWindow {
   void Open();
   void Save();
   void SaveAs();
-  void About();
   void DocumentWasModified();
 };
 

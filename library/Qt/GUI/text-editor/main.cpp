@@ -3,18 +3,13 @@
 //
 
 #include <QApplication>
-#include <QCommandLineParser>
 
 #include "main_window.h"
 
 int main(int argc, char *argv[]) {
   QApplication app{argc, argv};
-  QApplication::setApplicationName("text editor");
-  QApplication::setApplicationVersion("1.0");
-
-  QCommandLineParser parser;
-  parser.addHelpOption();
-  parser.addVersionOption();
+  QApplication::setWindowIcon(QIcon{":/images/icon.png"});
+  QApplication::setApplicationName("Text Editor");
 
   MainWindow window;
   window.show();

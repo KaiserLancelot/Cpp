@@ -16,7 +16,7 @@
 #include <QToolBar>
 
 MainWindow::MainWindow() : text_edit_{new QPlainTextEdit{this}} {
-  setWindowTitle("untitled.txt");
+  setWindowTitle("untitled.txt [*]");
   resize(800, 600);
 
   setCentralWidget(text_edit_);
@@ -75,9 +75,6 @@ void MainWindow::CreateAction() {
   exit_action_->setShortcut(QKeySequence::Quit);
   exit_action_->setStatusTip(tr("Exit the application"));
 
-  about_action_ = new QAction{tr("&About"), this};
-  about_action_->setStatusTip(tr("Show the application's About box"));
-
   about_qt_action_ = new QAction{tr("About &Qt"), this};
   about_qt_action_->setStatusTip(tr("Show the Qt library's About box"));
 }
@@ -87,6 +84,7 @@ void MainWindow::CreateMenu() {
   file_menu->addAction(new_action_);
   file_menu->addAction(open_action_);
   file_menu->addAction(save_action_);
+  file_menu->addAction(save_as_action_);
   file_menu->addSeparator();
   file_menu->addAction(exit_action_);
 
@@ -96,7 +94,6 @@ void MainWindow::CreateMenu() {
   edit_menu->addAction(paste_action_);
 
   auto help_menu{menuBar()->addMenu(tr("&Help"))};
-  help_menu->addAction(about_action_);
   help_menu->addAction(about_qt_action_);
 }
 
@@ -124,7 +121,6 @@ void MainWindow::CreateConnect() {
   connect(cut_action_, &QAction::triggered, text_edit_, &QPlainTextEdit::cut);
 
   connect(exit_action_, &QAction::triggered, this, &MainWindow::close);
-  connect(about_action_, &QAction::triggered, this, &MainWindow::About);
   connect(about_qt_action_, &QAction::triggered, qApp, &QApplication::aboutQt);
 
   connect(text_edit_->document(), &QTextDocument::contentsChanged, this,
@@ -134,6 +130,7 @@ void MainWindow::CreateConnect() {
 void MainWindow::New() {
   text_edit_->clear();
   file_path_.clear();
+  setWindowModified(false);
 }
 
 void MainWindow::Open() {
@@ -146,37 +143,33 @@ void MainWindow::Open() {
 }
 
 void MainWindow::Save() {
-  if (file_path_.isEmpty()) {
-    SaveAs();
-  } else {
-    SaveFile();
+  if (text_edit_->document()->isModified()) {
+    if (file_path_.isEmpty()) {
+      SaveAs();
+    } else {
+      SaveFile();
+    }
+    setWindowModified(false);
   }
 }
 
 void MainWindow::SaveAs() {
-  auto path{QFileDialog::getSaveFileName(this)};
-  if (!path.isEmpty()) {
-    QFile file{path};
+  file_path_ = QFileDialog::getSaveFileName(this);
+  if (!file_path_.isEmpty()) {
+    QFile file{file_path_};
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
       QMessageBox::warning(
           this, tr("Application"),
           tr("Cannot read file %1:\n%2.")
-              .arg(QDir::toNativeSeparators(path), file.errorString()));
+              .arg(QDir::toNativeSeparators(file_path_), file.errorString()));
       return;
     }
     QTextStream stream{&file};
     stream << text_edit_->toPlainText();
-
+    setWindowTitle(QFileInfo{file_path_}.fileName() + "[*]");
     statusBar()->showMessage("File saved");
+    text_edit_->document()->setModified(false);
   }
-}
-
-void MainWindow::About() {
-  QMessageBox::about(
-      this, tr("About Application"),
-      tr("The <b>Application</b> example demonstrates how to "
-         "write modern GUI applications using Qt, with a menu bar, "
-         "toolbars, and a status bar."));
 }
 
 void MainWindow::closeEvent(QCloseEvent *event) {
@@ -221,6 +214,8 @@ void MainWindow::LoadFile() {
   }
   QTextStream stream{&file};
   text_edit_->setPlainText(stream.readAll());
+  setWindowTitle(QFileInfo{file_path_}.fileName() + "[*]");
+  setWindowModified(false);
 
   statusBar()->showMessage(tr("File loaded"), 2000);
 }
