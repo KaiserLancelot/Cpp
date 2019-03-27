@@ -9,6 +9,7 @@ C++ study notes
 * Library
   * http://fmtlib.net/latest/index.html
   * https://www.devbean.net/2012/08/qt-study-road-2-catelog
+  * https://doc.qt.io
   
 * New Features
   * https://chenxiaowei.gitbooks.io/c-17-stl-cook-book/content

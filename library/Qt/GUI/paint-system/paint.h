@@ -42,7 +42,7 @@ class Paint : public QWidget {
     painter.setBrush(Qt::GlobalColor::blue);
     // 椭圆
     painter.drawEllipse(50, 150, 400, 200);
-    // 注意按顺序绘制
+    // 注意 painter 将按顺序绘制
   }
 };
 

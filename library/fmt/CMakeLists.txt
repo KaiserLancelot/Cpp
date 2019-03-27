@@ -13,3 +13,6 @@ target_link_libraries(ostream fmt::fmt)
 
 add_executable(syntax syntax.cpp)
 target_link_libraries(syntax fmt::fmt)
+
+add_executable(color color.cpp)
+target_link_libraries(color fmt::fmt)

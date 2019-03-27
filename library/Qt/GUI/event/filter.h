@@ -21,7 +21,6 @@ class MainWindow : public QMainWindow {
     text_edit_->installEventFilter(this);
   }
 
-  // 过滤之后组件根本不会收到这个事件
   bool eventFilter(QObject *watched, QEvent *event) override {
     if (auto key_event{dynamic_cast<QKeyEvent *>(event)};
         watched == text_edit_ && key_event &&

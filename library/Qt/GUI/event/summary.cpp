@@ -8,8 +8,11 @@
 
 int main(int argc, char *argv[]) {
   QApplication app{argc, argv};
+
   Label label;
-  app.installEventFilter(new EventFilter{&label, &label});
+  EventFilter filter{&label, &label};
+  app.installEventFilter(&filter);
   label.show();
+
   return QApplication::exec();
 }

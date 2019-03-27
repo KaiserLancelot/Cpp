@@ -18,21 +18,18 @@
 class EventLabel : public QLabel {
  protected:
   void mouseMoveEvent(QMouseEvent *event) override {
-    this->setText(
-        QString("<center><h1>Move: (%1, %2)</h1></center>")
-            .arg(QString::number(event->x()), QString::number(event->y())));
+    setText(QString("<center><h1>Move: (%1, %2)</h1></center>")
+                .arg(QString::number(event->x()), QString::number(event->y())));
   }
 
   void mousePressEvent(QMouseEvent *event) override {
-    this->setText(
-        QString("<center><h1>Press: (%1, %2)</h1></center>")
-            .arg(QString::number(event->x()), QString::number(event->y())));
+    setText(QString("<center><h1>Press: (%1, %2)</h1></center>")
+                .arg(QString::number(event->x()), QString::number(event->y())));
   }
 
   void mouseReleaseEvent(QMouseEvent *event) override {
-    this->setText(
-        QString("<center><h1>Release: (%1, %2)</h1></center>")
-            .arg(QString::number(event->x()), QString::number(event->y())));
+    setText(QString("<center><h1>Release: (%1, %2)</h1></center>")
+                .arg(QString::number(event->x()), QString::number(event->y())));
   }
 };
 
@@ -43,7 +40,8 @@ int main(int argc, char *argv[]) {
   label.setWindowTitle("MouseEvent Demo");
   label.resize(600, 400);
   // 该属性用于设置是否追踪鼠标.只有鼠标被追踪时, mouseMoveEvent()
-  // 等事件才会发出, 默认是 false , 所以至少一次鼠标点击之后, 才能够被追踪
+  // 等事件才会发出, 默认是 false , 所以如果不设置为 true 至少一次鼠标点击之后,
+  // 才能够被追踪
   label.setMouseTracking(true);
   label.show();
 

@@ -33,10 +33,10 @@ class PaintDevice : public QWidget {
     //    // QPixmap 使用底层平台的绘制系统进行绘制, 无法提供像素级别的操作
     //    // 而 QImage 是使用独立于硬件的绘制系统, 提供了像素级别的操作
     //    // 并且能够在不同系统之上提供一个一致的显示形式
-    //    // 这时 image 包含未初始化的数据, 使用32位RGB格式
-    //    QImage image{3, 3, QImage::Format_RGB32};
-    //    QRgb value{qRgb(189, 49, 9)};
-    //    image.setPixel(1, 1, value);
+    //    // 注意这时 image 包含未初始化的数据, QImage::Format_RGB32 表示
+    //    // 使用32位RGB格式
+    //    QImage image{3, 3, QImage::Format_RGB32}; QRgb
+    //    value{qRgb(189, 49, 9)}; image.setPixel(1, 1, value);
     //
     //    value = qRgb(122, 63, 9);
     //    image.setPixel(0, 1, value);
@@ -45,8 +45,6 @@ class PaintDevice : public QWidget {
     //    value = qRgb(237, 187, 51);
     //    image.setPixel(2, 1, value);
     //
-    //    // 设定窗口坐标, 窗口大小不变, 相当于等比例的放大/缩小
-    //    painter.setWindow(0, 0, 6, 6);
     //    painter.drawImage(1, 1, image);
 
     // QPicture 可以记录和重现 QPainter 的各条命令

@@ -53,6 +53,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   // 使用 [] 这种语法来表明, 在窗口内容发生
   // 改变时(由 setWindowModified 函数通知)
   // Qt 会自动在标题上面的 [] 位置替换成 * 号
+  // 注意设置了 setWindowModified 则 Title 中必须有 []
   setWindowTitle("TextPad [*]");
 }
 

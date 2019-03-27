@@ -8,11 +8,8 @@
 
 int main(int argc, char *argv[]) {
   QCoreApplication app{argc, argv};
-  QCoreApplication::setApplicationName("CommandLineTest");
-  QCoreApplication::setApplicationVersion("1.0");
 
   QCommandLineParser parser;
-  parser.setApplicationDescription("Test helper");
   parser.addHelpOption();
   parser.addVersionOption();
   parser.addPositionalArgument("files", "Source file to compile");

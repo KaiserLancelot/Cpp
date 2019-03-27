@@ -8,6 +8,7 @@
 
 int main(int argc, char *argv[]) {
   QApplication app{argc, argv};
+  // 设置图标
   QApplication::setWindowIcon(QIcon{":/images/icon.png"});
   QApplication::setApplicationName("Text Editor");
 

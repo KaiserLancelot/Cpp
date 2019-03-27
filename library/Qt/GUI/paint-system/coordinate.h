@@ -19,7 +19,6 @@ class Coordinate : public QWidget {
   void paintEvent(QPaintEvent *) override {
     QPainter painter(this);
 
-    // 传给 QPainter 都是逻辑坐标
     // 使用给定的颜色以给定的宽度和高度填充从 (x, y) 开始的矩形
     painter.fillRect(10, 10, 50, 100, Qt::red);
     // 保存当前的状态, 和 restore 必须成对出现, 使用的是栈

@@ -11,6 +11,12 @@
 #include <QObject>
 #include <QWidget>
 
+// 点击后会输出
+// QApplication::eventFilter
+// eventFilter
+// event
+// mousePressEvent
+
 class Label : public QWidget {
   Q_OBJECT
  public:
@@ -19,6 +25,8 @@ class Label : public QWidget {
   bool eventFilter(QObject *watched, QEvent *event) override {
     if (watched == this && event->type() == QEvent::MouseButtonPress) {
       qDebug() << "eventFilter";
+      // 只输出但不过滤
+      // return true;
     }
     return QWidget::eventFilter(watched, event);
   }
@@ -31,6 +39,8 @@ class Label : public QWidget {
   bool event(QEvent *event) override {
     if (event->type() == QEvent::MouseButtonPress) {
       qDebug() << "event";
+      // 输出并继续分发
+      // return true;
     }
     return QWidget::event(event);
   }
@@ -41,9 +51,12 @@ class EventFilter : public QObject {
  public:
   explicit EventFilter(QObject *watched, QObject *parent = nullptr)
       : QObject{parent}, watched_{watched} {}
+
   bool eventFilter(QObject *watched, QEvent *event) override {
     if (watched == watched_ && event->type() == QEvent::MouseButtonPress) {
       qDebug() << "QApplication::eventFilter";
+      // 只输出但不过滤
+      // return true;
     }
     return QObject::eventFilter(watched, event);
   }

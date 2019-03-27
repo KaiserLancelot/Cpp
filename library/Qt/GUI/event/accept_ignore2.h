@@ -28,8 +28,8 @@ class CustomButtonEx : public CustomButton {
 
  protected:
   void mousePressEvent(QMouseEvent *event) override {
-    event->ignore();
     qDebug() << "CustomButtonEx";
+    event->ignore();
   }
 };
 
@@ -41,9 +41,7 @@ class CustomWidget : public QWidget {
  protected:
   void mousePressEvent(QMouseEvent *event) override {
     qDebug() << "CustomWidget";
-    // 效果和 event->ignore() 相同
-    // QWidget::mousePressEvent 会调用 event->ignore()
-    QWidget::mousePressEvent(event);
+    event->ignore();
   }
 };
 

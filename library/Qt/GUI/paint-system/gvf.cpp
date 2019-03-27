@@ -20,14 +20,11 @@ int main(int argc, char *argv[]) {
   // 注意它不是 QWidget 的子类
   QGraphicsScene scene;
   scene.addLine(0, 0, 150, 150);
-  // 供 QGraphicsView 确定视图默认的滚动条区域, 并且协助 QGraphicsScene
-  // 管理元素索引
+  // 定义 Scene 的默认大小
   scene.setSceneRect(0, 0, 300, 300);
 
   QGraphicsView view{&scene};
   view.setWindowTitle("Graphics View");
-  // 让系统去决定视图的最小尺寸(否则的话,
-  // 我们需要手动将窗口标题栏等的大小同时考虑设置)
   // view.resize(800, 600);
   view.show();
 

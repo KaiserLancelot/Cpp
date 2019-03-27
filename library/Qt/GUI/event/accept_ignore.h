@@ -28,7 +28,7 @@ class CustomButton : public QPushButton {
       qDebug() << "left";
     } else {
       // 注意只有左键才算 clicked
-      QPushButton::mousePressEvent(event);
+      event->ignore();
     }
   }
 

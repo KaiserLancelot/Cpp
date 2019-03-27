@@ -24,14 +24,13 @@ class CustomWidget : public QWidget {
   // event() 函数主要用于事件的分发.所以, 如果你希望在
   // 事件分发之前做一些操作, 就可以重写这个event()函数
 
-  // 如果传入的事件已被识别并且处理, 则返回 true
-
   // 注意在 event() 函数中, 调用事件对象的 accept() 和 ignore()
   // 函数是没有作用的, 不会影响到事件的传播
   bool event(QEvent *event) override {
     if (auto key_event{dynamic_cast<QKeyEvent *>(event)};
-        key_event->key() == Qt::Key::Key_Tab) {
+        key_event && key_event->key() == Qt::Key::Key_Tab) {
       qDebug() << "You press tab";
+      // 如果传入的事件已被识别并且处理, 则返回 true
       return true;
     } else {
       // 如果没有调用, 则只有处理上面的事件
