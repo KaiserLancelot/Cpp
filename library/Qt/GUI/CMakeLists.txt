@@ -101,3 +101,12 @@ add_executable(gvf paint-system/gvf.cpp)
 target_link_libraries(gvf
     Qt5::Core
     Qt5::Widgets)
+
+add_executable(snake snake/main.cpp snake/main_window.h
+    snake/main_window.cpp snake/game_controller.cpp
+    snake/game_controller.h snake/food.cpp snake/food.h
+    snake/snake.cpp snake/snake.h snake/consts.h
+    resource.qrc)
+target_link_libraries(snake
+    Qt5::Core
+    Qt5::Widgets)
