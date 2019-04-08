@@ -4,10 +4,13 @@
 
 #include "game_controller.h"
 
+#include <cstdint>
 #include <cstdlib>
+#include <random>
 
 #include <QMessageBox>
 
+#include "consts.h"
 #include "snake.h"
 
 GameController::GameController(QGraphicsScene *scene, QObject *parent)
@@ -30,6 +33,8 @@ void GameController::SnakeAteFood(Food *food) {
 }
 
 void GameController::SnakeAteItself() {
+  // 不应该在一个 update 操作中去清空整个场景.
+  // 因此我们使用QTimer , 在 update 事件之后完成这个操作
   QTimer::singleShot(0, this, &GameController::GameOver);
 }
 
@@ -58,20 +63,20 @@ void GameController::HandleKeyPressed(QKeyEvent *event) {
 }
 
 void GameController::AddNewFood() {
-  int x, y;
+  std::int32_t x, y;
+  std::default_random_engine e{std::random_device{}()};
+  std::uniform_int_distribution<std::int32_t> uid{-100, 100};
 
   do {
-    x = (int)(qrand() % 200) / 10 - 10;
-    y = (int)(qrand() % 200) / 10 - 10;
-
-    x *= 10;
-    y *= 10;
+    // 需要是 TILE_SIZE 的整数倍
+    x = uid(e) / TILE_SIZE * TILE_SIZE;
+    y = uid(e) / TILE_SIZE * TILE_SIZE;
   } while (
-      // shape() 返回的是元素坐标系的坐标, 二计算的 x, y 为场景坐标
-      snake_->shape().contains(snake_->mapFromScene(QPointF(x + 5, y + 5))));
+      // shape() 返回的是元素坐标系的坐标, 而计算的 x, y 为场景坐标
+      snake_->shape().contains(
+          snake_->mapFromScene({x + TILE_SIZE / 2.0, y + TILE_SIZE / 2.0})));
 
-  Food *food = new Food(x, y);
-  scene_->addItem(food);
+  scene_->addItem(new Food(x, y));
 }
 
 void GameController::GameOver() {

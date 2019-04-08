@@ -65,10 +65,12 @@ void Snake::SetMoveDirection(Direction direction) {
 // 该函数 1 秒会调用 30 次, 这是在 GameController 的定时器中决定的
 // 该函数会被 QGraphicsScene::advance() 函数调用两次, 第一次时这个 int 为
 // 0, 代表即将开始调用;第二次这个 int 为 1, 代表已经开始调用
+// 只使用不为 0 的阶段, 因此当 step 为 0 时, 函数直接返回
 void Snake::advance(int step) {
   if (!step) {
     return;
   }
+
   // 使用 speed_ 作为蛇两次动作的间隔事件
   if (tick_counter_++ % speed_ != 0) {
     return;
@@ -137,12 +139,11 @@ void Snake::MoveDown() {
 
 // 碰撞处理
 void Snake::HandleCollisions() {
-  // 返回与这个元素碰撞的所有元素,
+  // 返回与这个元素碰撞的所有元素
   // 默认情况是如果被检测物的形状与检测物有交集算做碰撞
   for (auto &collidingItem : collidingItems()) {
-    if (auto p{dynamic_cast<Food *>(collidingItem)};
-        collidingItem->data(GD_Type) == GO_Food && p) {
-      controller_->SnakeAteFood(p);
+    if (collidingItem->data(GD_Type) == GO_Food) {
+      controller_->SnakeAteFood(dynamic_cast<Food *>(collidingItem));
       growing_ += 1;
     }
   }
