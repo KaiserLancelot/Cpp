@@ -16,7 +16,7 @@ class Food : public QGraphicsItem {
   // 如果范围太大会影响性能
   QRectF boundingRect() const override;
   // 使用 QPainter 将图形元素绘制出来
-  // 这两个函数是必须要覆盖的
+  // 这两个函数是必须要覆盖的, 而 shape() 不是必须的
   void paint(QPainter *painter, const QStyleOptionGraphicsItem *,
              QWidget *) override;
 

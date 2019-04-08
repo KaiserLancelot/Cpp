@@ -5,6 +5,7 @@
 #include "snake.h"
 
 #include <QPainter>
+#include <QTimer>
 
 #include "consts.h"
 
@@ -109,28 +110,28 @@ void Snake::advance(int step) {
 void Snake::MoveLeft() {
   head_.rx() -= SNAKE_SIZE;
   if (head_.rx() < -100) {
-    exit(0);
+    controller_->GameOver();
   }
 }
 
 void Snake::MoveRight() {
   head_.rx() += SNAKE_SIZE;
   if (head_.rx() >= 100) {
-    exit(0);
+    controller_->GameOver();
   }
 }
 
 void Snake::MoveUp() {
   head_.ry() -= SNAKE_SIZE;
   if (head_.ry() < -100) {
-    exit(0);
+    controller_->GameOver();
   }
 }
 
 void Snake::MoveDown() {
   head_.ry() += SNAKE_SIZE;
   if (head_.ry() >= 100) {
-    exit(0);
+    controller_->GameOver();
   }
 }
 
@@ -139,8 +140,9 @@ void Snake::HandleCollisions() {
   // 返回与这个元素碰撞的所有元素,
   // 默认情况是如果被检测物的形状与检测物有交集算做碰撞
   for (auto &collidingItem : collidingItems()) {
-    if (collidingItem->data(GD_Type) == GO_Food) {
-      controller_->SnakeAteFood((Food *)collidingItem);
+    if (auto p{dynamic_cast<Food *>(collidingItem)};
+        collidingItem->data(GD_Type) == GO_Food && p) {
+      controller_->SnakeAteFood(p);
       growing_ += 1;
     }
   }

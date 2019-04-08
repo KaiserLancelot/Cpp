@@ -13,17 +13,24 @@ MainWindow::MainWindow()
       view_{new QGraphicsView(scene_, this)},
       controller_{new GameController(scene_, this)} {
   setCentralWidget(view_);
-  resize(800, 800);
+  resize(1000, 1000);
 
   InitScene();
 
-  // 在第一个参数指定的毫秒后调用槽函数
-  // 需要在视图绘制完毕后才去改变大小, 在一下次事件循环开始时立即调用槽函数
+  // QTimer::singleShot() 的作用是将其放到事件列表中
+  // 等到下一次事件循环开始指定的毫秒后去调用这个函数, 也就是绘制完成之后调用
+  // 这样做是为了避免在绘制没有完成之前就调整了大小, 导致显示异常
+  // 如果 override resizeEvent(), 则在调整大小之前, view 的缩放是不合适的
+  // 但是每一次改变大小都会进行缩放, 而使用下面的方式不会
   QTimer::singleShot(0, this, &MainWindow::AdjustViewSize);
 }
 
+// Graphics View Framework 为每一个元素维护三个不同的坐标系:
+// 场景坐标,元素自己的坐标以及其相对于父组件的坐标.
+// 除了元素在场景中的位置, 其它几乎所有位置都是相对于元素坐标系
 void MainWindow::InitScene() {
   scene_->setSceneRect(-100, -100, 200, 200);
+
   QPixmap bg{TILE_SIZE, TILE_SIZE};
   QPainter p{&bg};
   p.setBrush(Qt::gray);
@@ -33,5 +40,7 @@ void MainWindow::InitScene() {
 }
 
 void MainWindow::AdjustViewSize() {
+  // 缩放 view 确保 view 适合 scene
+  // KeepAspectRatioByExpanding -- 通过扩展保持纵横比
   view_->fitInView(scene_->sceneRect(), Qt::KeepAspectRatioByExpanding);
 }

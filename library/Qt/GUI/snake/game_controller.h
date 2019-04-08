@@ -15,6 +15,7 @@
 
 class Snake;
 
+// 初始化场景中的游戏对象, 开始游戏循环
 class GameController : public QObject {
   Q_OBJECT
  public:
@@ -30,7 +31,7 @@ class GameController : public QObject {
   void HandleKeyPressed(QKeyEvent *event);
   void AddNewFood();
 
-  // 由定时器实现游戏循环, 每一帧都应该调用 advance() 函数
+  // 由定时器实现游戏循环, 每一帧都应该调用 QGraphicsScene::advance() 函数
   // 它会调用场景里每一个元素自己的 advance(), 所以图形元素
   // 想做些什么事必须覆盖该函数
   QTimer timer_;
@@ -38,7 +39,7 @@ class GameController : public QObject {
   Snake *snake_;
   bool is_pause_{false};
 
- private slots:
+ public slots:
   void Pause();
   void Resume();
   void GameOver();

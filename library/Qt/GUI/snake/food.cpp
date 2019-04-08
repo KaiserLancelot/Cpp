@@ -16,7 +16,7 @@ Food::Food(qreal x, qreal y) {
 
 QRectF Food::boundingRect() const {
   // 以元素为中心
-  return QRectF(-TILE_SIZE, -TILE_SIZE, TILE_SIZE * 2, TILE_SIZE * 2);
+  return {-TILE_SIZE, -TILE_SIZE, TILE_SIZE * 2, TILE_SIZE * 2};
 }
 
 void Food::paint(QPainter *painter, const QStyleOptionGraphicsItem *,
@@ -24,11 +24,11 @@ void Food::paint(QPainter *painter, const QStyleOptionGraphicsItem *,
   painter->fillPath(shape(), Qt::red);
 }
 
-// 返回元素的实际路径(轮廓线)
+// 返回元素的实际路径(轮廓线), 由 QPainterPath 表示
 QPainterPath Food::shape() const {
   QPainterPath p;
   // 添加一个椭圆(后两个参数相等为圆), 第一个参数为圆心
-  p.addEllipse(QPointF(TILE_SIZE / 2.0, TILE_SIZE / 2.0), FOOD_RADIUS,
-               FOOD_RADIUS);
+  // 注意相对于元素坐标系
+  p.addEllipse({TILE_SIZE / 2.0, TILE_SIZE / 2.0}, FOOD_RADIUS, FOOD_RADIUS);
   return p;
 }

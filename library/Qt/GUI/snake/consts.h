@@ -11,7 +11,7 @@ enum GameObjectsData { GD_Type };
 
 enum GameObjectTypes { GO_Food };
 
-const qreal FOOD_RADIUS{3.0};
+const qreal FOOD_RADIUS{4.0};
 
 const qreal SNAKE_SIZE = TILE_SIZE;
 

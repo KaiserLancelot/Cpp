@@ -4,19 +4,20 @@
 
 #include "game_controller.h"
 
+#include <cstdlib>
+
 #include <QMessageBox>
 
 #include "snake.h"
 
 GameController::GameController(QGraphicsScene *scene, QObject *parent)
     : QObject(parent), scene_(scene), snake_(new Snake(this)) {
-  // 定时间隔为 1000/33 毫秒
+  // 定时间隔为 1000 / 33 毫秒
   timer_.start(1000 / 33);
 
-  Food *food{new Food(0, -50)};
-  scene->addItem(food);
-
+  scene->addItem(new Food(0, -50));
   scene->addItem(snake_);
+
   scene->installEventFilter(this);
 
   Resume();
@@ -74,28 +75,30 @@ void GameController::AddNewFood() {
 }
 
 void GameController::GameOver() {
-  disconnect(&timer_, SIGNAL(timeout()), scene_, SLOT(advance()));
+  disconnect(&timer_, &QTimer::timeout, scene_, &QGraphicsScene::advance);
   if (QMessageBox::Yes ==
       QMessageBox::information(nullptr, tr("Game Over"), tr("Again?"),
                                QMessageBox::Yes | QMessageBox::No,
                                QMessageBox::Yes)) {
-    connect(&timer_, SIGNAL(timeout()), scene_, SLOT(advance()));
+    connect(&timer_, &QTimer::timeout, scene_, &QGraphicsScene::advance);
     scene_->clear();
 
     snake_ = new Snake(this);
     scene_->addItem(snake_);
     AddNewFood();
   } else {
-    exit(0);
+    std::exit(EXIT_SUCCESS);
   }
 }
 
-// 断开或连接定时器的信号
+// 断开定时器的信号
 void GameController::Pause() {
   disconnect(&timer_, &QTimer::timeout, scene_, &QGraphicsScene::advance);
   is_pause_ = true;
 }
 
+// 连接定时器的信号
+// resume -- 恢复
 void GameController::Resume() {
   connect(&timer_, &QTimer::timeout, scene_, &QGraphicsScene::advance);
   is_pause_ = false;
