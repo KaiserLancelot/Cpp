@@ -32,12 +32,6 @@ void GameController::SnakeAteFood(Food *food) {
   AddNewFood();
 }
 
-void GameController::SnakeAteItself() {
-  // 不应该在一个 update 操作中去清空整个场景.
-  // 因此我们使用QTimer , 在 update 事件之后完成这个操作
-  QTimer::singleShot(0, this, &GameController::GameOver);
-}
-
 void GameController::HandleKeyPressed(QKeyEvent *event) {
   if (!is_pause_) {
     switch (event->key()) {
@@ -81,6 +75,7 @@ void GameController::AddNewFood() {
 
 void GameController::GameOver() {
   disconnect(&timer_, &QTimer::timeout, scene_, &QGraphicsScene::advance);
+
   if (QMessageBox::Yes ==
       QMessageBox::information(nullptr, tr("Game Over"), tr("Again?"),
                                QMessageBox::Yes | QMessageBox::No,

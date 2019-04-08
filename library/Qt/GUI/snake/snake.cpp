@@ -23,11 +23,11 @@ QRectF Snake::boundingRect() const {
   }
 
   // 从场景坐标转换为元素的坐标
-  QPointF tl{mapFromScene({min_x, min_y})};
-  QPointF br{mapFromScene({max_x, max_y})};
+  auto tl{mapFromScene({min_x, min_y})};
+  auto br{mapFromScene({max_x, max_y})};
 
-  return QRectF{tl.x(), tl.y(), br.x() - tl.x() + SNAKE_SIZE,
-                br.y() - tl.y() + SNAKE_SIZE};
+  return {tl.x(), tl.y(), br.x() - tl.x() + SNAKE_SIZE,
+          br.y() - tl.y() + SNAKE_SIZE};
 }
 
 QPainterPath Snake::shape() const {
@@ -101,8 +101,7 @@ void Snake::advance(int step) {
     case Direction::MoveDown:
       MoveDown();
       break;
-    default: {
-    }
+    default:;
   }
 
   setPos(head_);
@@ -112,28 +111,28 @@ void Snake::advance(int step) {
 void Snake::MoveLeft() {
   head_.rx() -= SNAKE_SIZE;
   if (head_.rx() < -100) {
-    controller_->GameOver();
+    QTimer::singleShot(0, controller_, &GameController::GameOver);
   }
 }
 
 void Snake::MoveRight() {
   head_.rx() += SNAKE_SIZE;
   if (head_.rx() >= 100) {
-    controller_->GameOver();
+    QTimer::singleShot(0, controller_, &GameController::GameOver);
   }
 }
 
 void Snake::MoveUp() {
   head_.ry() -= SNAKE_SIZE;
   if (head_.ry() < -100) {
-    controller_->GameOver();
+    QTimer::singleShot(0, controller_, &GameController::GameOver);
   }
 }
 
 void Snake::MoveDown() {
   head_.ry() += SNAKE_SIZE;
   if (head_.ry() >= 100) {
-    controller_->GameOver();
+    QTimer::singleShot(0, controller_, &GameController::GameOver);
   }
 }
 
@@ -141,7 +140,7 @@ void Snake::MoveDown() {
 void Snake::HandleCollisions() {
   // 返回与这个元素碰撞的所有元素
   // 默认情况是如果被检测物的形状与检测物有交集算做碰撞
-  for (auto &collidingItem : collidingItems()) {
+  for (auto collidingItem : collidingItems()) {
     if (collidingItem->data(GD_Type) == GO_Food) {
       controller_->SnakeAteFood(dynamic_cast<Food *>(collidingItem));
       growing_ += 1;
@@ -149,6 +148,6 @@ void Snake::HandleCollisions() {
   }
 
   if (tail_.contains(head_)) {
-    controller_->SnakeAteItself();
+    QTimer::singleShot(0, controller_, &GameController::GameOver);
   }
 }

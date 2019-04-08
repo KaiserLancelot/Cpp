@@ -13,7 +13,7 @@ MainWindow::MainWindow()
       view_{new QGraphicsView(scene_, this)},
       controller_{new GameController(scene_, this)} {
   setCentralWidget(view_);
-  resize(1000, 1000);
+  resize(2000, 2000);
 
   InitScene();
 
@@ -40,7 +40,12 @@ void MainWindow::InitScene() {
 }
 
 void MainWindow::AdjustViewSize() {
+  view_->fitInView(scene_->sceneRect(), Qt::KeepAspectRatioByExpanding);
+}
+
+void MainWindow::resizeEvent(QResizeEvent *event) {
   // 缩放 view 确保 view 适合 scene
   // KeepAspectRatioByExpanding -- 通过扩展保持纵横比
   view_->fitInView(scene_->sceneRect(), Qt::KeepAspectRatioByExpanding);
+  QWidget::resizeEvent(event);
 }

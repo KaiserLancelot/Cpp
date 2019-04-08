@@ -22,7 +22,6 @@ class GameController : public QObject {
   explicit GameController(QGraphicsScene *scene, QObject *parent = nullptr);
 
   void SnakeAteFood(Food *food);
-  void SnakeAteItself();
 
  protected:
   bool eventFilter(QObject *object, QEvent *event) override;

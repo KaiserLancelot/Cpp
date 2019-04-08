@@ -16,6 +16,9 @@ class MainWindow : public QMainWindow {
  public:
   MainWindow();
 
+ protected:
+  void resizeEvent(QResizeEvent *event) override;
+
  private:
   void InitScene();
 
