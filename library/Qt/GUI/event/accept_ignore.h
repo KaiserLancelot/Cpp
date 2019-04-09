@@ -33,7 +33,7 @@ class CustomButton : public QPushButton {
   }
 
  private:
-  void OnButtonClicked() { qDebug() << "You clicked this!"; }
+  static void OnButtonClicked() { qDebug() << "You clicked this!"; }
 };
 
 #endif  // CPP_ACCEPT_IGNORE_H

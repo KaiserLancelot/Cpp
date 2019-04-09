@@ -41,7 +41,7 @@ class TestBenchmark : public QObject {
       QBENCHMARK { result = (str1 == str2); }
     }
     // 这可以抑制编译器有关未使用变量的警告
-    Q_UNUSED(result);
+    Q_UNUSED(result)
   }
 
   void cleanupTestCase() { std::cout << "clean up\n"; }
