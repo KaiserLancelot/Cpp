@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <random>
 
+#include <QApplication>
 #include <QMessageBox>
 
 #include "consts.h"
@@ -15,14 +16,17 @@
 
 GameController::GameController(QGraphicsScene *scene, QObject *parent)
     : QObject(parent), scene_(scene), snake_(new Snake(this)) {
-  // 定时间隔为 1000 / 33 毫秒
-  timer_.start(1000 / 33);
+  // 定时间隔为 1000 / 60 毫秒
+  timer_.start(1000 / 60);
 
   scene->addItem(new Food(0, -50));
   scene->addItem(snake_);
 
   scene->installEventFilter(this);
 
+  // 由定时器实现游戏循环, 每一帧都应该调用 QGraphicsScene::advance() 函数
+  // 它会调用场景里每一个元素自己的 advance(), 所以图形元素
+  // 想做些什么事必须覆盖该函数
   Resume();
 }
 
@@ -80,14 +84,15 @@ void GameController::GameOver() {
       QMessageBox::information(nullptr, tr("Game Over"), tr("Again?"),
                                QMessageBox::Yes | QMessageBox::No,
                                QMessageBox::Yes)) {
-    connect(&timer_, &QTimer::timeout, scene_, &QGraphicsScene::advance);
     scene_->clear();
 
     snake_ = new Snake(this);
     scene_->addItem(snake_);
     AddNewFood();
+
+    connect(&timer_, &QTimer::timeout, scene_, &QGraphicsScene::advance);
   } else {
-    std::exit(EXIT_SUCCESS);
+    QApplication::exit(EXIT_SUCCESS);
   }
 }
 

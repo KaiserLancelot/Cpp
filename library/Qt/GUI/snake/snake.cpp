@@ -37,6 +37,7 @@ QPainterPath Snake::shape() const {
 
   for (const auto &p : tail_) {
     auto item{mapFromScene(p)};
+    // 注意相对于元素坐标系
     path.addRect(item.x(), item.y(), SNAKE_SIZE, SNAKE_SIZE);
   }
 
@@ -65,7 +66,7 @@ void Snake::SetMoveDirection(Direction direction) {
 // 该函数 1 秒会调用 30 次, 这是在 GameController 的定时器中决定的
 // 该函数会被 QGraphicsScene::advance() 函数调用两次, 第一次时这个 int 为
 // 0, 代表即将开始调用;第二次这个 int 为 1, 代表已经开始调用
-// 只使用不为 0 的阶段, 因此当 step 为 0 时, 函数直接返回
+// 这里只使用不为 0 的阶段, 因此当 step 为 0 时, 函数直接返回
 void Snake::advance(int step) {
   if (!step) {
     return;
@@ -79,11 +80,10 @@ void Snake::advance(int step) {
     return;
   }
 
-  // growing 为正在增长的方格数
   if (growing_ > 0) {
     tail_ << head_;
     growing_ -= 1;
-  } else {
+  } else if (growing_ == 0) {
     tail_.removeFirst();
     tail_ << head_;
   }
@@ -111,6 +111,7 @@ void Snake::advance(int step) {
 void Snake::MoveLeft() {
   head_.rx() -= SNAKE_SIZE;
   if (head_.rx() < -100) {
+    // 注意这里不能直接调用 GameController::GameOver()
     QTimer::singleShot(0, controller_, &GameController::GameOver);
   }
 }

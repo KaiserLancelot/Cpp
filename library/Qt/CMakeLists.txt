@@ -24,3 +24,14 @@ target_link_libraries(test Qt5::Test)
 
 add_executable(benchmark test/benchmark.cpp test/benchmark.h)
 target_link_libraries(benchmark Qt5::Test)
+
+add_executable(file file/file.cpp)
+target_link_libraries(file Qt5::Core)
+
+file(COPY data/in.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+add_executable(text_stream file/text_stream.cpp)
+target_link_libraries(text_stream Qt5::Core)
+
+add_executable(containers containers.cpp)
+target_link_libraries(containers Qt5::Core)

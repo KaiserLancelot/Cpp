@@ -5,6 +5,8 @@
 #ifndef CPP_STUDY_LIBRARY_QT_GUI_SNAKE_SNAKE_H_
 #define CPP_STUDY_LIBRARY_QT_GUI_SNAKE_SNAKE_H_
 
+#include <cstdint>
+
 #include <QGraphicsItem>
 #include <QRectF>
 
@@ -35,10 +37,11 @@ class Snake : public QGraphicsItem {
   void HandleCollisions();
 
   QPointF head_{0, 0};
-  int growing_{7};
-  int speed_{5};
+  std::int32_t growing_{7};
+  // 数字越大越慢
+  std::int32_t speed_{7};
   QList<QPointF> tail_;
-  int tick_counter_{};
+  std::int32_t tick_counter_{};
   Direction move_direction_{Direction::NoMove};
   GameController *controller_;
 };

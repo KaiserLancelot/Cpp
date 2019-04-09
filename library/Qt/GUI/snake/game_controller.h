@@ -30,9 +30,6 @@ class GameController : public QObject {
   void HandleKeyPressed(QKeyEvent *event);
   void AddNewFood();
 
-  // 由定时器实现游戏循环, 每一帧都应该调用 QGraphicsScene::advance() 函数
-  // 它会调用场景里每一个元素自己的 advance(), 所以图形元素
-  // 想做些什么事必须覆盖该函数
   QTimer timer_;
   QGraphicsScene *scene_;
   Snake *snake_;

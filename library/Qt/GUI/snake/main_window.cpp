@@ -13,7 +13,7 @@ MainWindow::MainWindow()
       view_{new QGraphicsView(scene_, this)},
       controller_{new GameController(scene_, this)} {
   setCentralWidget(view_);
-  resize(2000, 2000);
+  resize(1600, 1600);
 
   InitScene();
 
@@ -21,7 +21,7 @@ MainWindow::MainWindow()
   // 等到下一次事件循环开始指定的毫秒后去调用这个函数, 也就是绘制完成之后调用
   // 这样做是为了避免在绘制没有完成之前就调整了大小, 导致显示异常
   // 如果 override resizeEvent(), 则在调整大小之前, view 的缩放是不合适的
-  // 但是每一次改变大小都会进行缩放, 而使用下面的方式不会
+  // 但是每一次改变大小都会进行缩放, 而只使用下面的方式不会
   QTimer::singleShot(0, this, &MainWindow::AdjustViewSize);
 }
 
@@ -40,12 +40,12 @@ void MainWindow::InitScene() {
 }
 
 void MainWindow::AdjustViewSize() {
+  // 缩放 view 确保 view 适合 scene
+  // KeepAspectRatioByExpanding -- 通过扩展保持纵横比
   view_->fitInView(scene_->sceneRect(), Qt::KeepAspectRatioByExpanding);
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event) {
-  // 缩放 view 确保 view 适合 scene
-  // KeepAspectRatioByExpanding -- 通过扩展保持纵横比
-  view_->fitInView(scene_->sceneRect(), Qt::KeepAspectRatioByExpanding);
   QWidget::resizeEvent(event);
+  AdjustViewSize();
 }
