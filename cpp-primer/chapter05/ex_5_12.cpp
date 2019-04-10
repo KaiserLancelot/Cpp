@@ -50,7 +50,8 @@ int main() {
       case 'l':
         if (pre == 'f') ++fl_count;
         break;
-      default: {}
+      default: {
+      }
     }
     pre = ch;
   }

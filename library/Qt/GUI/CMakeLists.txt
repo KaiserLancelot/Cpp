@@ -110,3 +110,19 @@ add_executable(snake snake/main.cpp snake/main_window.h
 target_link_libraries(snake
     Qt5::Core
     Qt5::Widgets)
+
+add_executable(list_widget mv/list_widget.cpp
+    resource.qrc)
+target_link_libraries(list_widget
+    Qt5::Core
+    Qt5::Widgets)
+
+add_executable(tree_widget mv/tree_widget.cpp)
+target_link_libraries(tree_widget
+    Qt5::Core
+    Qt5::Widgets)
+
+add_executable(table_widget mv/table_widget.cpp)
+target_link_libraries(table_widget
+    Qt5::Core
+    Qt5::Widgets)

@@ -37,9 +37,10 @@ TextQuery::QueryResult TextQuery::Query(const std::string &s) {
   }
 }
 
-TextQuery::QueryResult::QueryResult(const std::string &word,
-                         const std::shared_ptr<std::vector<std::string>> &text,
-                         const std::shared_ptr<std::set<LineNo>> &line_number)
+TextQuery::QueryResult::QueryResult(
+    const std::string &word,
+    const std::shared_ptr<std::vector<std::string>> &text,
+    const std::shared_ptr<std::set<LineNo>> &line_number)
     : word_{word}, text_{text}, line_number_{line_number} {}
 
 std::ostream &Print(std::ostream &os, TextQuery::QueryResult qr) {

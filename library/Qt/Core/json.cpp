@@ -28,11 +28,11 @@ int main() {
   root["indent"] = indent;
 
   QJsonDocument document{root};
-  std::ofstream ofs{"test.json"};
+  std::ofstream ofs{"Test.json"};
   ofs << document.toJson().toStdString();
   ofs.close();
 
-  std::ifstream ifs{"test.json"};
+  std::ifstream ifs{"Test.json"};
   std::string json{std::istreambuf_iterator<char>{ifs}, {}};
 
   QJsonParseError error;

@@ -51,4 +51,4 @@ std::ostream &operator<<(std::ostream &os, const SalesData &item);
 std::istream &operator>>(std::istream &is, SalesData &item);
 SalesData operator+(const SalesData &lhs, const SalesData &rhs);
 
-#endif //CPP_PRIMER_EX_18_09_H
+#endif  // CPP_PRIMER_EX_18_09_H

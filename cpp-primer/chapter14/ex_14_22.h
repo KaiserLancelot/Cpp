@@ -25,7 +25,6 @@ class SalesData {
   double AvgPrice() const;
 
  private:
-
   std::string book_no_;
   std::int32_t units_sold_{};
   double revenue_{};

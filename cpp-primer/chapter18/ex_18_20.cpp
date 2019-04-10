@@ -20,7 +20,7 @@ void compute(char*, char* = nullptr) {
 }
 
 void f() {
-  //using primerLib::compute;
+  // using primerLib::compute;
   compute(0);
 }
 

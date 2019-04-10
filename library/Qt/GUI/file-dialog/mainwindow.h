@@ -6,9 +6,9 @@
 #define CPP_MAINWINDOW_H
 
 #include <QAction>
+#include <QCloseEvent>
 #include <QMainWindow>
 #include <QTextEdit>
-#include <QCloseEvent>
 
 class MainWindow : public QMainWindow {
   Q_OBJECT

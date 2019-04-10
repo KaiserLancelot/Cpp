@@ -14,7 +14,7 @@ class Foo {
     std::sort(std::begin(data_), std::end(data_));
     return *this;
   }
-  Foo sorted() const & {
+  Foo sorted() const& {
     std::cout << "&\n";
     return Foo{*this}.sorted();
   }

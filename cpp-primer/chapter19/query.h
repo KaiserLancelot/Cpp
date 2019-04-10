@@ -33,4 +33,4 @@ Query operator~(const Query &item);
 Query operator|(const Query &lhs, const Query &rhs);
 Query operator&(const Query &lhs, const Query &rhs);
 
-#endif //CPP_PRIMER_QUERY_H
+#endif  // CPP_PRIMER_QUERY_H

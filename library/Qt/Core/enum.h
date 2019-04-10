@@ -11,14 +11,14 @@
 #include <string>
 
 class Enum : public QObject {
- Q_OBJECT
+  Q_OBJECT
  public:
   enum Values { kTest };
   Q_ENUM(Values);
 };
 
 class Enum2 : public QObject {
- Q_OBJECT
+  Q_OBJECT
  public:
   enum Values { kTest2 };
   Q_ENUM(Values);

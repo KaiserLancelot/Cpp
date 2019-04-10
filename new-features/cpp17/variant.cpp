@@ -46,7 +46,8 @@ int main() {
       case 1:
         std::get<1>(item).Woof();
         break;
-      default: {}
+      default: {
+      }
     }
   }
 

@@ -41,7 +41,8 @@ int main() {
       case '\n':
         ++new_line_count;
         break;
-      default: {}
+      default: {
+      }
     }
   }
   std::cout << a_count << ' ' << e_count << ' ' << i_count << ' ' << o_count

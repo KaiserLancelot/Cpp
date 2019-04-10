@@ -16,8 +16,8 @@ class TestBenchmark : public QObject {
   void initTestCase() { std::cout << "init\n"; }
 
   void simple() {
-    QString str1 = QLatin1String("This is a test string");
-    QString str2 = QLatin1String("This is a test string");
+    QString str1 = QLatin1String("This is a Test string");
+    QString str2 = QLatin1String("This is a Test string");
 
     QCOMPARE(str1.localeAwareCompare(str2), 0);
     QBENCHMARK { str1.localeAwareCompare(str2); }
@@ -31,8 +31,8 @@ class TestBenchmark : public QObject {
 
   void multiple() {
     QFETCH(bool, useLocaleCompare);
-    QString str1 = QLatin1String("This is a test string");
-    QString str2 = QLatin1String("This is a test string");
+    QString str1 = QLatin1String("This is a Test string");
+    QString str2 = QLatin1String("This is a Test string");
 
     int result;
     if (useLocaleCompare) {

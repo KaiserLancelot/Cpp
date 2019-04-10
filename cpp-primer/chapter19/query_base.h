@@ -37,6 +37,7 @@ class WordQuery : public QueryBase {
 
 class NotQuery : public QueryBase {
   friend Query operator~(const Query &operand);
+
  public:
   explicit NotQuery(const Query &query) : query_{query} {}
   QueryResult Eval(const TextQuery &text) const override;
@@ -57,6 +58,7 @@ class BinaryQuery : public QueryBase {
 
 class AndQuery : public BinaryQuery {
   friend Query operator&(const Query &, const Query &);
+
  public:
   AndQuery(const Query &lhs, const Query &rhs) : BinaryQuery(lhs, rhs, "&") {}
   QueryResult Eval(const TextQuery &text) const override;
@@ -64,9 +66,10 @@ class AndQuery : public BinaryQuery {
 
 class OrQuery : public BinaryQuery {
   friend Query operator|(const Query &, const Query &);
+
  public:
   OrQuery(const Query &lhs, const Query &rhs) : BinaryQuery(lhs, rhs, "|") {}
   QueryResult Eval(const TextQuery &text) const override;
 };
 
-#endif //CPP_PRIMER_QUERY_BASE_H
+#endif  // CPP_PRIMER_QUERY_BASE_H

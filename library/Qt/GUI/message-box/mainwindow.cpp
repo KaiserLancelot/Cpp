@@ -68,6 +68,7 @@ void MainWindow::Open() {
     case QMessageBox::Cancel:
       qDebug() << "Close document!";
       break;
-    default: {}
+    default: {
+    }
   }
 }
