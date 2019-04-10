@@ -20,7 +20,8 @@ int main() {
   db.setUserName("root");
   db.setPassword("524321");
   // 如果使用 QSQLITE 只需要指定这个
-  db.setDatabaseName("fuck");
+  // 在 MySQL 中, 这个指定的是模式的名字
+  db.setDatabaseName("example");
   if (db.open()) {
     std::cout << "open\n";
   } else {
