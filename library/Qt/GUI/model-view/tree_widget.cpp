@@ -23,6 +23,7 @@ int main(int argc, char *argv[]) {
   auto root{new QTreeWidgetItem{&tree_widget, {"Root", "0"}}};
   new QTreeWidgetItem{root, {"Leaf 1", "1"}};
   auto leaf2{new QTreeWidgetItem{root, {"Leaf 2", "2"}}};
+  // 第一个参数指定在第几列显示
   leaf2->setCheckState(0, Qt::Checked);
 
   QList<QTreeWidgetItem *> list;

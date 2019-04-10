@@ -111,18 +111,18 @@ target_link_libraries(snake
     Qt5::Core
     Qt5::Widgets)
 
-add_executable(list_widget mv/list_widget.cpp
+add_executable(list_widget model-view/list_widget.cpp
     resource.qrc)
 target_link_libraries(list_widget
     Qt5::Core
     Qt5::Widgets)
 
-add_executable(tree_widget mv/tree_widget.cpp)
+add_executable(tree_widget model-view/tree_widget.cpp)
 target_link_libraries(tree_widget
     Qt5::Core
     Qt5::Widgets)
 
-add_executable(table_widget mv/table_widget.cpp)
+add_executable(table_widget model-view/table_widget.cpp)
 target_link_libraries(table_widget
     Qt5::Core
     Qt5::Widgets)
