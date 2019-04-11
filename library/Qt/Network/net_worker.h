@@ -26,6 +26,7 @@ class NetWorker : public QObject {
 
  private:
   NetWorker();
+  // 它默认是异步的, 网络访问并不会阻塞 GUI 界面
   QNetworkAccessManager* manager_;
 };
 

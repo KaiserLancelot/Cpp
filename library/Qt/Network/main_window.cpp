@@ -5,6 +5,7 @@
 #include "main_window.h"
 
 #include <QComboBox>
+#include <QEventLoop>
 #include <QJsonDocument>
 #include <QLabel>
 #include <QNetworkReply>
@@ -75,8 +76,13 @@ MainWindow::MainWindow() {
                 weather_info.SetPressure(main["pressure"].toDouble());
                 weather_info.SetHumidity(main["humidity"].toDouble());
 
+                QVariant detail;
                 // weather -- 包含 天气的描述和图标(该网站上的一个图片)等
-                auto detail{data["weather"].toList().at(0)};
+                // 注意下面的初始化不能使用花括号, QList 有一个接受
+                // std::initializer_list 的参数
+                if (auto list = data["weather"].toList(); !list.isEmpty()) {
+                  detail = list.at(0);
+                }
 
                 auto map{detail.toMap()};
                 weather_info.SetDesc(map["description"].toString());
@@ -115,6 +121,11 @@ MainWindow::MainWindow() {
 }
 
 void MainWindow::FetchWeather(const QString& city_name) {
+  QEventLoop event_loop;
+  // 注意, 非 GUI 程序中另外启动事件循环会将主线程阻塞, QNetworkAccessManager
+  // 的所有信号都不会收到, 这并不是一个好的做法
+  connect(net_worker_, &NetWorker::Finished, &event_loop, &QEventLoop::quit);
+
   // http://api.openweathermap.org/data/2.5/weather?q=BeiJing,cn&mode=json&units=metric&lang=zh_cn&APPID=6b55db98c0b1a112f1f98bd93e4726ac
   auto reply{net_worker_->Get(
       QString{"http://api.openweathermap.org/data/2.5/"
@@ -122,11 +133,18 @@ void MainWindow::FetchWeather(const QString& city_name) {
               "6b55db98c0b1a112f1f98bd93e4726ac"}
           .arg(city_name))};
   reply_.insert(reply, ReplyType::kWeather);
+
+  event_loop.exec();
 }
 
 void MainWindow::FetchIcon(const QString& icon_name) {
+  QEventLoop event_loop;
+  connect(net_worker_, &NetWorker::Finished, &event_loop, &QEventLoop::quit);
+
   // http://openweathermap.org/img/w/10d.png
   auto reply{net_worker_->Get(
       QString{"http://openweathermap.org/img/w/%1.png"}.arg(icon_name))};
   reply_.insert(reply, ReplyType::kIcon);
+
+  event_loop.exec();
 }
