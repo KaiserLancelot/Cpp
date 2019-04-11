@@ -40,3 +40,6 @@ add_compile_options(-Wall -Wextra -Wpedantic -Werror)
 #add_subdirectory(new-features/cpp14)
 #add_subdirectory(new-features/cpp17)
 #add_subdirectory(new-features/cpp17/filesystem)
+
+add_subdirectory(concurrency/chapter01)
+add_subdirectory(concurrency/chapter02)

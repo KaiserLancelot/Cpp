@@ -17,3 +17,6 @@ C++ study notes
   
 * Notes
   * https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide
+  
+* Concurrency
+  * https://chenxiaowei.gitbooks.io/c-concurrency-in-action-second-edition-2019/content
