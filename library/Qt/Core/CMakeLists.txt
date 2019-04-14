@@ -21,3 +21,9 @@ target_link_libraries(text_stream Qt5::Core)
 
 add_executable(containers containers.cpp)
 target_link_libraries(containers Qt5::Core)
+
+add_executable(string string.cpp)
+target_link_libraries(string Qt5::Core)
+
+add_executable(variant variant.cpp)
+target_link_libraries(variant Qt5::Core)
