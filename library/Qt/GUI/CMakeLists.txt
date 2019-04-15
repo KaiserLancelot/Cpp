@@ -7,6 +7,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package(Qt5Core REQUIRED CONFIG)
 find_package(Qt5Widgets REQUIRED CONFIG)
+find_package(Qt5Sql REQUIRED CONFIG)
 
 add_executable(signal-slot signal-slot/main.cpp
     signal-slot/newspaper.h
@@ -126,3 +127,10 @@ add_executable(table_widget model-view/table_widget.cpp)
 target_link_libraries(table_widget
     Qt5::Core
     Qt5::Widgets)
+
+add_executable(lottery lottery/main_window.h lottery/main_window.cpp lottery/main.cpp
+    lottery/login.cpp lottery/login.h)
+target_link_libraries(lottery
+    Qt5::Core
+    Qt5::Widgets
+    Qt5::Sql)
