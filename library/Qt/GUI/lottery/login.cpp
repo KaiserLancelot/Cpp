@@ -7,7 +7,6 @@
 #include <cstdlib>
 
 #include <QApplication>
-#include <QDebug>
 #include <QHBoxLayout>
 #include <QMessageBox>
 #include <QSqlDatabase>

@@ -37,7 +37,7 @@ void MainWindow::LoadData() {
   // TODO 数据库删除连接问题
   auto db{QSqlDatabase::database()};
 
-  if (!db.open()) {
+  if (!db.isOpen()) {
     QMessageBox::critical(this, "错误", "无法连接用户数据库");
     QApplication::exit(EXIT_FAILURE);
   }
