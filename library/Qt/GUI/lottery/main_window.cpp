@@ -14,22 +14,28 @@
 #include <QMessageBox>
 #include <QSqlRecord>
 
-#include <QMessageBox>
-#include <QSqlError>
-#include <QSqlQuery>
-
 MainWindow::MainWindow()
     : widget_{new QWidget{this}},
       model_{nullptr},
       view_{new QTableView{widget_}},
-      lottery_{new QPushButton{"抽奖", widget_}} {
+      lottery_num_label_{new QLabel{"中奖用户: ", this}},
+      lottery_num_{new QLabel{this}},
+      lottery_{new QPushButton{"开始抽奖", widget_}},
+      timer_{new QTimer{this}} {
   resize(1600, 1200);
   setWindowTitle("抽奖系统");
 
-  auto layout{new QHBoxLayout};
-  layout->addWidget(view_);
-  layout->addWidget(lottery_);
-  widget_->setLayout(layout);
+  timer_->start(100);
+
+  auto lottery_layout{new QVBoxLayout};
+  lottery_layout->addWidget(lottery_num_label_);
+  lottery_layout->addWidget(lottery_num_);
+  lottery_layout->addWidget(lottery_);
+
+  auto main_layout{new QHBoxLayout};
+  main_layout->addWidget(view_);
+  main_layout->addLayout(lottery_layout);
+  widget_->setLayout(main_layout);
 
   setCentralWidget(widget_);
 
@@ -67,6 +73,7 @@ void MainWindow::LoadData() {
     QApplication::exit(EXIT_FAILURE);
   }
 
+  // 在执行 MainWindow 的构造函数之前初始化成员时, 数据库连接可能还不存在
   model_ = new QSqlTableModel{widget_, db};
 
   model_->setTable("person");
@@ -83,10 +90,22 @@ void MainWindow::LoadData() {
 
 void MainWindow::OnClickLottery() {
   if (model_->rowCount() == 0) {
-    QMessageBox::information(this, "错误", "没有待抽奖用户");
+    QMessageBox::warning(this, "错误", "没有待抽奖用户");
     return;
   }
 
+  if (lottery_->text() == "开始抽奖") {
+    lottery_->setText("停止");
+    connect(timer_, &QTimer::timeout, this, &MainWindow::ChangeLotteryNumLabel);
+  } else if (lottery_->text() == "停止") {
+    disconnect(timer_, &QTimer::timeout, this,
+               &MainWindow::ChangeLotteryNumLabel);
+    QMessageBox::information(this, "中奖用户: ", lottery_num_->text());
+    lottery_->setText("开始抽奖");
+  }
+}
+
+void MainWindow::ChangeLotteryNumLabel() {
   static std::default_random_engine e{std::random_device{}()};
   static std::uniform_int_distribution<std::int32_t> uid{
       0, model_->rowCount() - 1};
@@ -100,7 +119,6 @@ void MainWindow::OnClickLottery() {
 
   set.insert(num);
 
-  QMessageBox::information(this, "中奖用户",
-                           model_->record(num).value("id").toString() + " " +
-                               model_->record(num).value("name").toString());
+  lottery_num_->setText(model_->record(num).value("id").toString() + " " +
+                        model_->record(num).value("name").toString());
 }

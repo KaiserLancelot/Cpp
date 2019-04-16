@@ -5,10 +5,12 @@
 #ifndef CPP_STUDY_LIBRARY_QT_GUI_LOTTERY_MAIN_WINDOW_H_
 #define CPP_STUDY_LIBRARY_QT_GUI_LOTTERY_MAIN_WINDOW_H_
 
+#include <QLabel>
 #include <QMainWindow>
 #include <QPushButton>
 #include <QSqlTableModel>
 #include <QTableView>
+#include <QTimer>
 #include <QWidget>
 
 class MainWindow : public QMainWindow {
@@ -22,10 +24,15 @@ class MainWindow : public QMainWindow {
   QWidget* widget_;
   QSqlTableModel* model_;
   QTableView* view_;
+  QLabel* lottery_num_label_;
+  QLabel* lottery_num_;
   QPushButton* lottery_;
+
+  QTimer* timer_;
 
  private slots:
   void OnClickLottery();
+  void ChangeLotteryNumLabel();
 };
 
 #endif  // CPP_STUDY_LIBRARY_QT_GUI_LOTTERY_MAIN_WINDOW_H_
