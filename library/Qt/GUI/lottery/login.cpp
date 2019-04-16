@@ -14,6 +14,8 @@
 #include <QSqlQuery>
 #include <QVBoxLayout>
 
+#include "register.h"
+
 Login::Login(QWidget *parent)
     : QDialog{parent},
       username_label_{new QLabel{"用户名: ", this}},
@@ -21,8 +23,10 @@ Login::Login(QWidget *parent)
       username_{new QLineEdit{this}},
       password_{new QLineEdit{this}},
       login_{new QPushButton{"登录", this}},
-      register_{new QPushButton{"注册", this}} {
+      register_{new QPushButton{"注册", this}},
+      try_out_{new QPushButton{"试用", this}} {
   setWindowTitle("登录");
+  password_->setEchoMode(QLineEdit::Password);
 
   auto username_layout{new QHBoxLayout};
   username_layout->addWidget(username_label_);
@@ -35,6 +39,7 @@ Login::Login(QWidget *parent)
   auto button_layout{new QHBoxLayout};
   button_layout->addWidget(login_);
   button_layout->addWidget(register_);
+  button_layout->addWidget(try_out_);
 
   auto main_layout{new QVBoxLayout};
   main_layout->addLayout(username_layout);
@@ -45,29 +50,41 @@ Login::Login(QWidget *parent)
 
   connect(login_, &QPushButton::clicked, this, &Login::OnClickLogin);
   connect(register_, &QPushButton::clicked, this, &Login::OnClickRegister);
+  connect(try_out_, &QPushButton::clicked, this, &Login::OnClickTryOut);
 }
 
 void Login::OnClickLogin() {
-  username_str_ = username_->text();
-  password_str_ = password_->text();
+  auto username{username_->text()};
+  auto password{password_->text()};
 
-  if (username_str_.isEmpty() || password_str_.isEmpty()) {
+  if (username.isEmpty() || password.isEmpty()) {
     QMessageBox::warning(this, "警告", "用户名或密码为空");
+    return;
   }
 
-  auto db{QSqlDatabase::addDatabase("QMYSQL")};
-  db.setHostName("localhost");
-  db.setUserName("root");
-  db.setPassword("524321");
-  db.setDatabaseName("lottery");
+  QSqlDatabase db;
+  if (!QSqlDatabase::contains(QSqlDatabase::defaultConnection)) {
+    db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName("localhost");
+    db.setUserName("root");
+    db.setPassword("524321");
+    db.setDatabaseName("lottery");
 
-  if (!db.open()) {
-    QMessageBox::critical(this, "错误", "无法连接用户数据库");
+    if (!db.open()) {
+      QMessageBox::critical(this, "错误", "无法连接数据库");
+      QApplication::exit(EXIT_FAILURE);
+    }
+  } else {
+    db = QSqlDatabase::database();
+  }
+
+  if (!db.isOpen()) {
+    QMessageBox::critical(this, "错误", "无法连接数据库");
     QApplication::exit(EXIT_FAILURE);
   }
 
   QSqlQuery query;
-  if (!query.exec("select password from user where username='" + username_str_ +
+  if (!query.exec("select password from user where username='" + username +
                   "'")) {
     QMessageBox::critical(this, "错误",
                           "查询用户数据库失败\n" + query.lastError().text());
@@ -75,7 +92,7 @@ void Login::OnClickLogin() {
   }
 
   if (query.next()) {
-    if (query.value("password").toString() != password_str_) {
+    if (query.value("password").toString() != password) {
       QMessageBox::critical(this, "错误", "密码错误");
       password_->clear();
     } else {
@@ -90,5 +107,10 @@ void Login::OnClickLogin() {
 }
 
 void Login::OnClickRegister() {
-  QMessageBox::warning(this, "警告", "暂时不支持注册功能");
+  Register a_register;
+  if (a_register.exec() == QDialog::Accepted) {
+    accept();
+  }
 }
+
+void Login::OnClickTryOut() { accept(); }

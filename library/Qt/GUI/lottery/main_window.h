@@ -14,6 +14,7 @@
 class MainWindow : public QMainWindow {
  public:
   MainWindow();
+  ~MainWindow() override;
 
  private:
   void LoadData();

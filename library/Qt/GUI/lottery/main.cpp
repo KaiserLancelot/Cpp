@@ -18,6 +18,6 @@ int main(int argc, char *argv[]) {
     window.show();
     return QApplication::exec();
   } else {
-    QApplication::exit(EXIT_FAILURE);
+    QApplication::exit(EXIT_SUCCESS);
   }
 }

@@ -5,6 +5,7 @@
 #include "main_window.h"
 
 #include <cstdint>
+#include <cstdlib>
 #include <random>
 #include <unordered_set>
 
@@ -13,9 +14,13 @@
 #include <QMessageBox>
 #include <QSqlRecord>
 
+#include <QMessageBox>
+#include <QSqlError>
+#include <QSqlQuery>
+
 MainWindow::MainWindow()
     : widget_{new QWidget{this}},
-      model_{new QSqlTableModel{widget_}},
+      model_{nullptr},
       view_{new QTableView{widget_}},
       lottery_{new QPushButton{"抽奖", widget_}} {
   resize(1600, 1200);
@@ -33,14 +38,36 @@ MainWindow::MainWindow()
   connect(lottery_, &QPushButton::clicked, this, &MainWindow::OnClickLottery);
 }
 
-void MainWindow::LoadData() {
-  // TODO 数据库删除连接问题
+MainWindow::~MainWindow() {
   auto db{QSqlDatabase::database()};
+  if (db.isOpen()) {
+    db.close();
+  }
+}
+
+void MainWindow::LoadData() {
+  QSqlDatabase db;
+  if (!QSqlDatabase::contains(QSqlDatabase::defaultConnection)) {
+    db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName("localhost");
+    db.setUserName("root");
+    db.setPassword("524321");
+    db.setDatabaseName("lottery");
+
+    if (!db.open()) {
+      QMessageBox::critical(this, "错误", "无法连接数据库");
+      QApplication::exit(EXIT_FAILURE);
+    }
+  } else {
+    db = QSqlDatabase::database();
+  }
 
   if (!db.isOpen()) {
-    QMessageBox::critical(this, "错误", "无法连接用户数据库");
+    QMessageBox::critical(this, "错误", "无法连接数据库");
     QApplication::exit(EXIT_FAILURE);
   }
+
+  model_ = new QSqlTableModel{widget_, db};
 
   model_->setTable("person");
   model_->setHeaderData(0, Qt::Horizontal, "编号");
@@ -55,6 +82,11 @@ void MainWindow::LoadData() {
 }
 
 void MainWindow::OnClickLottery() {
+  if (model_->rowCount() == 0) {
+    QMessageBox::information(this, "错误", "没有待抽奖用户");
+    return;
+  }
+
   static std::default_random_engine e{std::random_device{}()};
   static std::uniform_int_distribution<std::int32_t> uid{
       0, model_->rowCount() - 1};
@@ -68,7 +100,7 @@ void MainWindow::OnClickLottery() {
 
   set.insert(num);
 
-  QMessageBox::information(this, "中奖号码",
+  QMessageBox::information(this, "中奖用户",
                            model_->record(num).value("id").toString() + " " +
                                model_->record(num).value("name").toString());
 }

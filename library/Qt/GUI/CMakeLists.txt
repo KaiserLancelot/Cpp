@@ -129,7 +129,7 @@ target_link_libraries(table_widget
     Qt5::Widgets)
 
 add_executable(lottery lottery/main_window.h lottery/main_window.cpp lottery/main.cpp
-    lottery/login.cpp lottery/login.h)
+    lottery/login.cpp lottery/login.h lottery/register.cpp lottery/register.h)
 target_link_libraries(lottery
     Qt5::Core
     Qt5::Widgets

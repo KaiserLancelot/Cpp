@@ -9,12 +9,10 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
-#include <QString>
 
 class Login : public QDialog {
  public:
   explicit Login(QWidget *parent = nullptr);
-  QString GetUsername() const { return username_str_; }
 
  private:
   QLabel *username_label_;
@@ -23,13 +21,12 @@ class Login : public QDialog {
   QLineEdit *password_;
   QPushButton *login_;
   QPushButton *register_;
-
-  QString username_str_;
-  QString password_str_;
+  QPushButton *try_out_;
 
  private slots:
   void OnClickLogin();
   void OnClickRegister();
+  void OnClickTryOut();
 };
 
 #endif  // CPP_STUDY_LIBRARY_QT_GUI_LOTTERY_LOGIN_H_
