@@ -100,7 +100,7 @@ void MainWindow::OnClickLottery() {
   } else if (lottery_->text() == "停止") {
     disconnect(timer_, &QTimer::timeout, this,
                &MainWindow::ChangeLotteryNumLabel);
-    QMessageBox::information(this, "中奖用户: ", lottery_num_->text());
+    QMessageBox::information(this, "", lottery_num_->text());
     lottery_->setText("开始抽奖");
   }
 }
