@@ -8,6 +8,7 @@
 #include <QLabel>
 #include <QMainWindow>
 #include <QPushButton>
+#include <QResizeEvent>
 #include <QSqlTableModel>
 #include <QTableView>
 #include <QTimer>
@@ -27,6 +28,10 @@ class MainWindow : public QMainWindow {
   QLabel* lottery_num_;
   QPushButton* lottery_;
 
+ protected:
+  void resizeEvent(QResizeEvent* event) override;
+
+ private:
   QTimer* timer_;
 
  private slots:

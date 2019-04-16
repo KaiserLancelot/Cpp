@@ -24,7 +24,7 @@ MainWindow::MainWindow()
   resize(1600, 1200);
   setWindowTitle("抽奖系统");
 
-  lottery_num_->setFixedSize(400, 100);
+  lottery_num_->setFixedSize(width() / 3, 100);
 
   timer_->start(100);
 
@@ -49,6 +49,11 @@ MainWindow::~MainWindow() {
   if (db.isOpen()) {
     db.close();
   }
+}
+
+void MainWindow::resizeEvent(QResizeEvent* event) {
+  lottery_num_->setFixedWidth(event->size().width() / 3);
+  QWidget::resizeEvent(event);
 }
 
 void MainWindow::LoadData() {
@@ -100,7 +105,7 @@ void MainWindow::OnClickLottery() {
   } else if (lottery_->text() == "停止") {
     disconnect(timer_, &QTimer::timeout, this,
                &MainWindow::ChangeLotteryNumLabel);
-    QMessageBox::information(this, "", lottery_num_->text());
+    QMessageBox::information(this, "中奖用户", lottery_num_->text());
     lottery_->setText("开始抽奖");
   }
 }
