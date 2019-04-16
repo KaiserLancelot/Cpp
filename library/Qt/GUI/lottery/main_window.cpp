@@ -18,17 +18,17 @@ MainWindow::MainWindow()
     : widget_{new QWidget{this}},
       model_{nullptr},
       view_{new QTableView{widget_}},
-      lottery_num_label_{new QLabel{"中奖用户: ", this}},
-      lottery_num_{new QLabel{this}},
+      lottery_num_{new QLabel{"中奖用户: ", this}},
       lottery_{new QPushButton{"开始抽奖", widget_}},
       timer_{new QTimer{this}} {
   resize(1600, 1200);
   setWindowTitle("抽奖系统");
 
+  lottery_num_->setFixedSize(400, 100);
+
   timer_->start(100);
 
   auto lottery_layout{new QVBoxLayout};
-  lottery_layout->addWidget(lottery_num_label_);
   lottery_layout->addWidget(lottery_num_);
   lottery_layout->addWidget(lottery_);
 
@@ -119,6 +119,7 @@ void MainWindow::ChangeLotteryNumLabel() {
 
   set.insert(num);
 
-  lottery_num_->setText(model_->record(num).value("id").toString() + " " +
-                        model_->record(num).value("name").toString());
+  lottery_num_->setText(
+      "中奖用户: " + model_->record(num).value("id").toString() + " " +
+      model_->record(num).value("name").toString());
 }

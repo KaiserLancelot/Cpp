@@ -24,7 +24,6 @@ class MainWindow : public QMainWindow {
   QWidget* widget_;
   QSqlTableModel* model_;
   QTableView* view_;
-  QLabel* lottery_num_label_;
   QLabel* lottery_num_;
   QPushButton* lottery_;
 
