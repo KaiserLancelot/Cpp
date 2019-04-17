@@ -6,6 +6,9 @@
   * try块
   * 非字面类型,静态或线程存储期,不进行初始化的变量定义
     (=default或=delete的函数体不含上述内容)
+    
+注意, 如果任何参数都不能使函数提供 constexpr, 则程序为 ill-formed no diagnostic required
+(例如调用了一个 non-constexpr 函数)
 
 ### 2. constexpr构造函数
 
