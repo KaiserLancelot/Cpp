@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.13)
 project(Cpp-Study LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -6,7 +6,11 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_compile_options(-Wall -Wextra -Wpedantic -Werror)
+if (MSVC)
+  add_compile_options(/W4 /WX /permissive- /Za /source-charset:utf-8)
+else ()
+  add_compile_options(-Wall -Wextra -Werror -Wpedantic)
+endif ()
 
 #add_subdirectory(cpp-primer/chapter01)
 #add_subdirectory(cpp-primer/chapter02)
