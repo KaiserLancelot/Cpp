@@ -32,5 +32,6 @@
 *.app
 
 # IDE files
-.vs/Cpp-Study
-out
+.idea
+cmake-build-debug
+cmake-build-release

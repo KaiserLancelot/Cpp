@@ -9,11 +9,6 @@ find_package(Qt5Core REQUIRED CONFIG)
 find_package(Qt5Widgets REQUIRED CONFIG)
 find_package(Qt5Sql REQUIRED CONFIG)
 
-if (MSVC)
-  add_compile_options(/execution-charset:utf-8)
-  add_link_options(/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup)
-endif ()
-
 add_executable(signal-slot signal-slot/main.cpp
     signal-slot/newspaper.h
     signal-slot/reader.h)

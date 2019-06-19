@@ -6,12 +6,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-if(MSVC)
-  string(REGEX REPLACE /W[0-4] "" CMAKE_CXX_FLAGS_INIT /W4)
-  add_compile_options(/WX /sdl /MP /Za /permissive- /source-charset:utf-8)
-else()
-  add_compile_options(-Wall -Wextra -Werror -Wpedantic)
-endif()
+add_compile_options(-Wall -Wextra -Werror -Wpedantic)
 
 #add_subdirectory(cpp-primer/chapter01)
 #add_subdirectory(cpp-primer/chapter02)
