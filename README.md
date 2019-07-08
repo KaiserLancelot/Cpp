@@ -9,7 +9,6 @@ C++ study notes
 * Library
   * http://fmtlib.net/latest/index.html
   * https://www.devbean.net/2012/08/qt-study-road-2-catelog
-  * https://cwc1987.gitbooks.io/qmlbook-in-chinese/content
   * https://doc.qt.io
   
 * New Features
