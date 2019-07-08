@@ -9,11 +9,10 @@
 
 int main() {
   Newspaper newspaper{"Newspaper A"};
-  Reader reader;
 
   // 槽函数的参数不能多于信号函数的参数
   QObject::connect(&newspaper,
-                   QOverload<const std::string &>::of(&Newspaper::New), &reader,
+                   QOverload<const std::string &>::of(&Newspaper::New),
                    &Reader::ReceiveNewspaper);
   newspaper.Send();
 }

@@ -4,27 +4,35 @@
 
 #include "mainwindow.h"
 
+#include <QApplication>
 #include <QDebug>
 #include <QDialog>
 #include <QMenuBar>
+#include <QScreen>
 #include <QStatusBar>
 #include <QToolBar>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+  // 获取主屏幕的可用几何(也就是获取了分辨率)
+  auto rect{QApplication::primaryScreen()->availableGeometry()};
   // 设置最小大小
-  setMinimumSize(1200, 800);
+  setMinimumSize(rect.width() / 2, rect.height() / 2);
   // 设置主窗口的标题
   setWindowTitle("Main Window");
 
   // 以:开始意味着从资源文件中查找资源
-  open_action_ = new QAction{QIcon{":/images/doc-open.png"}, "Open", this};
+  // tr() 是一个用于 Qt 国际化的函数, 可以使用 Qt 提供的国际化工具
+  // 将 tr() 函数的字符串提取出来, 进行国际化.
+  // tr() 函数里面一般是英文文本
+  // 某符号前有一个 &, 这意味着该符号成为一个快捷键
+  open_action_ = new QAction{QIcon{":doc-open"}, tr("&Open"), this};
   open_action_->setShortcut(QKeySequence::Open);
   open_action_->setStatusTip("Open an existing file");
   // triggered 触发
   QObject::connect(open_action_, &QAction::triggered, this, &MainWindow::Open);
 
   // menuBar 返回或创建一个菜单栏(只能有一个), addMenu 添加了一个菜单
-  auto menu{menuBar()->addMenu("File")};
+  auto menu{menuBar()->addMenu("&File")};
   menu->addAction(open_action_);
 
   // 添加一个工具栏

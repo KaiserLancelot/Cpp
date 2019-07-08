@@ -13,7 +13,7 @@ class Reader : public QObject {
   Q_OBJECT
   // slots 不是必不可少的
  public slots:
-  void ReceiveNewspaper(const std::string &name) {
+  static void ReceiveNewspaper(const std::string &name) {
     std::cout << "Receive newspaper: " << name << '\n';
   }
 };
