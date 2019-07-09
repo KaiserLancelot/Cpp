@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   setMinimumSize(1200, 800);
   setWindowTitle("Main Window");
 
-  open_action_ = new QAction{QIcon{":/images/doc-open.png"}, "Open", this};
+  open_action_ = new QAction{QIcon{":doc-open"}, "Open", this};
   open_action_->setShortcut(QKeySequence::Open);
   open_action_->setStatusTip("Open an existing file");
   // triggered 触发
@@ -33,6 +33,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 }
 
 void MainWindow::Open() {
+  QMessageBox::aboutQt(this);
+
   // 第一个参数指定标题
   // 最后一个参数指定默认选择的按钮, 不指定默认为 YES
   if (QMessageBox::question(this, "Question", "Are you OK",

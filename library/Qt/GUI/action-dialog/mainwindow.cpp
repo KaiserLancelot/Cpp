@@ -64,6 +64,8 @@ void MainWindow::Open() {
   // Qt 使用 QDialog::exec() 实现应用程序级别的模态对话框,
   // 使用 QDialog::open() 实现窗口级别的模态对话框,
   // 使用 QDialog::show() 实现非模态对话框, 不会阻塞当前线程
+
+  // QDialog::exec() 是有返回值的, 其返回值是 QDialog::Accepted 或者 QDialog::Rejected
   dialog.exec();
   // 如果使用 QDialog::show() 并且 dialog 分配在栈上, 窗口会一闪而过
   // 该函数立即返回, dialog 之后就析构了
