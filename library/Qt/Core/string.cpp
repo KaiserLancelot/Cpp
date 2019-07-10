@@ -25,6 +25,7 @@ int main() {
   // QString 可以嵌入空字符 (QChar::Null), size() 会计算它
 
   QString str("and");
+  // 插到前面
   str.prepend("rock ");
   str.append(" roll");
   str.replace(5, 3, "&");
@@ -44,7 +45,7 @@ int main() {
   str = "The answer is 42";
   // 同 strsub()
   out << str.mid(14, 2) << '\n';
-  // 最右边的 n 个字符(还有 left)
+  // 最右边的 n 个字符(还有 left())
   out << str.right(2) << '\n' << flush;
 
   // 判断一个字符串是否包含某个字符, 字符串或匹配某个正则表达式

@@ -10,29 +10,30 @@
 #include <QTest>
 #include <iostream>
 
-class TestBenchmark : public QObject {
+class Benchmark : public QObject {
   Q_OBJECT
  private slots:
   void initTestCase() { std::cout << "init\n"; }
 
-  void simple() {
-    QString str1 = QLatin1String("This is a Test string");
-    QString str2 = QLatin1String("This is a Test string");
+  void Simple() {
+    QString str1("This is a Test string");
+    QString str2("This is a Test string");
 
+    // localeAwareCompare 比较两个字符串, 并返回指示小于大于或等于的整数
     QCOMPARE(str1.localeAwareCompare(str2), 0);
     QBENCHMARK { str1.localeAwareCompare(str2); }
   }
 
-  void multiple_data() {
+  void Multiple_data() {
     QTest::addColumn<bool>("useLocaleCompare");
     QTest::newRow("locale aware compare") << true;
     QTest::newRow("standard compare") << false;
   }
 
-  void multiple() {
+  void Multiple() {
     QFETCH(bool, useLocaleCompare);
-    QString str1 = QLatin1String("This is a Test string");
-    QString str2 = QLatin1String("This is a Test string");
+    QString str1("This is a Test string");
+    QString str2("This is a Test string");
 
     int result;
     if (useLocaleCompare) {

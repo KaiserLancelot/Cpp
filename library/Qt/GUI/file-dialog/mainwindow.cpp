@@ -69,7 +69,7 @@ void MainWindow::Open() {
 
   // parent 父窗口, caption 对话框标题, dir 默认目录
   // filter 过滤器, 用于过滤特定的后缀名, 如果有多个则使用 ;; 分割
-  // selectedFilter 默认的过滤器, options 参数设定，比如只显示文件夹等
+  // selectedFilter 默认的过滤器, options 参数设定, 比如只显示文件夹等
   // 具体见 QFileDialog::Option
   // 返回选择的文件路径
 

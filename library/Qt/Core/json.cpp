@@ -2,12 +2,14 @@
 // Created by kaiser on 19-3-20.
 //
 
-#include <fstream>
+#include <cstdlib>
 #include <iostream>
 
+#include <QFile>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QTextStream>
 #include <QVariant>
 
 int main() {
@@ -27,19 +29,29 @@ int main() {
   indent["use_space"] = true;
   root["indent"] = indent;
 
-  QJsonDocument document{root};
-  std::ofstream ofs{"Test.json"};
-  ofs << document.toJson().toStdString();
-  ofs.close();
+  QFile file{"test.json"};
+  if (!file.open(QIODevice::WriteOnly)) {
+    std::cerr << "Open file failed\n";
+    return EXIT_FAILURE;
+  }
+  QTextStream out{&file};
 
-  std::ifstream ifs{"Test.json"};
-  std::string json{std::istreambuf_iterator<char>{ifs}, {}};
+  QJsonDocument document{root};
+  out << document.toJson();
+  file.close();
+
+  if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    std::cerr << "Open file failed\n";
+    return EXIT_FAILURE;
+  }
+
+  QTextStream in{&file};
+  QString json{in.readAll()};
 
   QJsonParseError error;
-  QJsonDocument json_document{
-      QJsonDocument::fromJson(QString::fromStdString(json).toUtf8(), &error)};
+  auto json_document{QJsonDocument::fromJson(json.toUtf8(), &error)};
   if (error.error == QJsonParseError::NoError) {
-    QVariantMap result{json_document.toVariant().toMap()};
+    auto result{json_document.toVariant().toMap()};
 
     std::cout << "encoding: " << result["encoding"].toString().toStdString()
               << '\n';
@@ -50,7 +62,7 @@ int main() {
     }
     std::cout << '\n';
 
-    QVariantMap nested_map{result["indent"].toMap()};
+    auto nested_map{result["indent"].toMap()};
     std::cout << "length: " << nested_map["length"].toInt();
     std::cout << '\t';
     std::cout << "use_space: " << std::boolalpha

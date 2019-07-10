@@ -2,9 +2,9 @@
 // Created by kaiser on 19-3-20.
 //
 
-#include <iostream>
-
 #include "enum.h"
+
+#include <iostream>
 
 int main() {
   auto test{Enum::kTest};

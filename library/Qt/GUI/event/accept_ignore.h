@@ -26,6 +26,8 @@ class CustomButton : public QPushButton {
   void mousePressEvent(QMouseEvent *event) override {
     if (event->button() == Qt::MouseButton::LeftButton) {
       qDebug() << "left";
+    } else if (event->button() == Qt::MouseButton::RightButton) {
+      qDebug() << "right";
     } else {
       // 注意只有左键才算 clicked
       event->ignore();

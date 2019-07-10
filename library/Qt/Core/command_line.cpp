@@ -9,6 +9,9 @@
 int main(int argc, char *argv[]) {
   QCoreApplication app{argc, argv};
 
+  // 设置版本信息, 注意在这之前会显示程序名
+  QCoreApplication::setApplicationVersion("Version");
+
   QCommandLineParser parser;
   parser.addHelpOption();
   parser.addVersionOption();
