@@ -14,3 +14,5 @@ add_definitions(-DAPP_VERSION="${PROJECT_VERSION}")
 
 add_subdirectory(internationalization)
 add_subdirectory(custom_line_edit)
+add_subdirectory(custom_main_window)
+add_subdirectory(push_button)

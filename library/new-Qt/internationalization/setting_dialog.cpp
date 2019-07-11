@@ -20,7 +20,9 @@ SettingDialog::SettingDialog(QWidget* parent)
                                QVariant::fromValue(Language::kChinese));
   language_combo_box_->addItem(tr("english"),
                                QVariant::fromValue(Language::kEnglish));
-  language_combo_box_->setFixedWidth(100);
+
+  // 默认为 AdjustToContentsOnFirstShow
+  language_combo_box_->setSizeAdjustPolicy(QComboBox::AdjustToContents);
 
   auto layout{new QHBoxLayout};
   layout->addStretch(1);
@@ -65,4 +67,8 @@ void SettingDialog::changeEvent(QEvent* event) {
   } else {
     QWidget::changeEvent(event);
   }
+}
+
+void SettingDialog::SetLanguage(Language language) {
+  language_combo_box_->setCurrentIndex(language == Language::kChinese ? 0 : 1);
 }

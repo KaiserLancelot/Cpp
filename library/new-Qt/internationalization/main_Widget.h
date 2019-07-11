@@ -39,7 +39,6 @@ class MainWidget : public QWidget {
   QTranslator *sys_translator_{};
 
  private slots:
-  void ShowSetting();
   void SwitchLanguage(Language language);
 };
 

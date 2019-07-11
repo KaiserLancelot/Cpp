@@ -6,6 +6,7 @@
 
 #include <QHBoxLayout>
 #include <QMessageBox>
+#include <QSettings>
 #include <QString>
 #include <QVBoxLayout>
 
@@ -20,7 +21,7 @@ MainWidget::MainWidget()
 
   auto button_layout{new QHBoxLayout};
   // 添加一个可伸缩空间, 如果只有一个为 0 的则占有全部剩余空间
-  // 有多个为 0 的则平均分配, 有其他数字则忽略0, 其他的按比例分配
+  // 有多个为 0 的则平均分配, 有其他数字则忽略 0, 其他的按比例分配
   button_layout->addStretch();
   button_layout->addWidget(setting_);
   button_layout->addWidget(determine_);
@@ -30,7 +31,7 @@ MainWidget::MainWidget()
   button_layout->setSpacing(10);
 
   auto main_layout{new QVBoxLayout{this}};
-  // 第二个参数指示按比例分配给 widget 的空间, 0为默认
+  // 第二个参数指示按比例分配给 widget 的空间, 0 为默认
   main_layout->addWidget(label_, 0, Qt::AlignCenter);
   main_layout->addLayout(button_layout);
   // 添加一个不可伸缩的空间
@@ -40,7 +41,10 @@ MainWidget::MainWidget()
 
   connect(setting_dialog_, &SettingDialog::SwitchLanguage, this,
           &MainWidget::SwitchLanguage);
-  connect(setting_, &QPushButton::clicked, this, &MainWidget::ShowSetting);
+  connect(setting_, &QPushButton::clicked, this, [this] {
+    setting_dialog_->SetLanguage(curr_language_);
+    setting_dialog_->show();
+  });
   connect(determine_, &QPushButton::clicked, this, &MainWidget::close);
   connect(cancel_, &QPushButton::clicked, this, &MainWidget::close);
   connect(about_qt_, &QPushButton::clicked, this,
@@ -56,8 +60,6 @@ void MainWidget::TranslateUi() {
   about_qt_->setText(tr("about"));
 }
 
-void MainWidget::ShowSetting() { setting_dialog_->show(); }
-
 void MainWidget::SwitchLanguage(Language language) {
   if (curr_language_ != language) {
     curr_language_ = language;
@@ -65,6 +67,11 @@ void MainWidget::SwitchLanguage(Language language) {
                                                            : ":en-US");
     sys_translator_->load(curr_language_ == Language::kChinese ? ":qt_zh_CN"
                                                                : ":qt_en");
+    QSettings settings;
+    settings.beginGroup("General");
+    settings.setValue("language", curr_language_ == Language::kChinese
+                                      ? "chinese"
+                                      : "english");
   }
 }
 

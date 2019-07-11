@@ -24,6 +24,7 @@ class SettingDialog : public QDialog {
   Q_OBJECT
  public:
   explicit SettingDialog(QWidget *parent = nullptr);
+  void SetLanguage(Language language);
 
  protected:
   void changeEvent(QEvent *event) override;

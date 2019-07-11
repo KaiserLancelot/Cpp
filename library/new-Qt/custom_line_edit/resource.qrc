@@ -1,0 +1,6 @@
+<RCC>
+    <qresource>
+        <file alias="search_normal">images/search_normal.png</file>
+        <file alias="search_press">images/search_press.png</file>
+    </qresource>
+</RCC>
