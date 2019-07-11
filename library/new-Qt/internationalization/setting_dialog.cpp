@@ -5,8 +5,9 @@
 #include "setting_dialog.h"
 
 #include <QVariant>
+#include <QtGlobal>
 
-SettingDialog::SettingDialog(QWidget *parent)
+SettingDialog::SettingDialog(QWidget* parent)
     : QDialog{parent},
       label_{new QLabel{this}},
       language_label_{new QLabel{this}},
@@ -15,7 +16,6 @@ SettingDialog::SettingDialog(QWidget *parent)
                                QVariant::fromValue(Language::kChinese));
   language_combo_box_->addItem(tr("english"),
                                QVariant::fromValue(Language::kEnglish));
-
 }
 
 void SettingDialog::TranslateUi() {
@@ -25,6 +25,10 @@ void SettingDialog::TranslateUi() {
 
   language_combo_box_->setItemText(0, tr("chinese"));
   language_combo_box_->setItemText(1, tr("english"));
+
+  connect(language_combo_box_,
+          QOverload<int>::of(&QComboBox::currentIndexChanged), this,
+          &SettingDialog::OnIndexChanged);
 }
 
 void SettingDialog::OnIndexChanged() {
@@ -33,5 +37,12 @@ void SettingDialog::OnIndexChanged() {
 }
 
 void SettingDialog::changeEvent(QEvent* event) {
-  QWidget::changeEvent(event);
+  switch (event->type()) {
+    // The application translation changed.
+    case QEvent::LanguageChange:
+      TranslateUi();
+      break;
+    default:
+      QDialog::changeEvent(event);
+  }
 }

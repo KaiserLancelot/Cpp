@@ -6,7 +6,7 @@ qt5_add_translation(QM_FILES ${TS_FILES})
 
 file(GLOB cppsrc *.h *.cpp)
 add_executable(internationalization ${cppsrc}
-    resource.qrc ${QM_FILES} main.cpp setting_dialog.cpp setting_dialog.h main_window.cpp main_window.h)
+    resource.qrc ${QM_FILES} main.cpp setting_dialog.cpp setting_dialog.h main_Widget.cpp main_Widget.h)
 
 target_link_libraries(internationalization
     Qt5::Core
