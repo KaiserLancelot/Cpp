@@ -4,7 +4,9 @@
 
 #include "main_Widget.h"
 
+#include <QFile>
 #include <QHBoxLayout>
+#include <QIODevice>
 #include <QMessageBox>
 #include <QSettings>
 #include <QString>
@@ -18,6 +20,12 @@ MainWidget::MainWidget()
       about_qt_{new QPushButton{this}},
       setting_dialog_{new SettingDialog{this}} {
   setMinimumSize(1000, 600);
+
+  setWindowFlags(Qt::FramelessWindowHint | windowFlags());
+
+  QFile file{":lightgray"};
+  file.open(QIODevice::ReadOnly);
+  setStyleSheet(file.readAll());
 
   auto button_layout{new QHBoxLayout};
   // 添加一个可伸缩空间, 如果只有一个为 0 的则占有全部剩余空间

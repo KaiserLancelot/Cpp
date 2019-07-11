@@ -4,32 +4,32 @@
 <context>
     <name>MainWidget</name>
     <message>
-        <location filename="../main_Widget.cpp" line="55"/>
+        <location filename="../main_Widget.cpp" line="63"/>
         <source>Main Widget</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main_Widget.cpp" line="56"/>
+        <location filename="../main_Widget.cpp" line="64"/>
         <source>Welcome to Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main_Widget.cpp" line="57"/>
+        <location filename="../main_Widget.cpp" line="65"/>
         <source>Setting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main_Widget.cpp" line="58"/>
+        <location filename="../main_Widget.cpp" line="66"/>
         <source>ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main_Widget.cpp" line="59"/>
+        <location filename="../main_Widget.cpp" line="67"/>
         <source>cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main_Widget.cpp" line="60"/>
+        <location filename="../main_Widget.cpp" line="68"/>
         <source>about</source>
         <translation type="unfinished"></translation>
     </message>
