@@ -1,5 +1,8 @@
 <RCC>
     <qresource>
         <file alias="zh-CN">i18n/zh-CN.qm</file>
+        <file alias="en-US">i18n/en-US.qm</file>
+        <file alias="qt_zh_CN">i18n/qt_zh_CN.qm</file>
+        <file alias="qt_en">i18n/qt_en.qm</file>
     </qresource>
 </RCC>

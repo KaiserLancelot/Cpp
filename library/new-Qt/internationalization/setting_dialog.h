@@ -35,7 +35,6 @@ class SettingDialog : public QDialog {
   QLabel *language_label_;
   QComboBox *language_combo_box_;
 
- public:
  signals:
   void SwitchLanguage(Language language);
 
