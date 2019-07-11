@@ -9,6 +9,7 @@
 #include <QWidget>
 
 #include "password_line_edit.h"
+#include "search_line_edit.h"
 
 class MainWidget : public QWidget {
   Q_OBJECT
@@ -18,6 +19,7 @@ class MainWidget : public QWidget {
  private:
   QLineEdit *normal_;
   PasswordLineEdit *custom_;
+  SearchLineEdit *search_;
 };
 
 #endif  // CPP_STUDY_LIBRARY_NEW_QT_PASSWORD_LINE_EDIT_MAIN_WIDGET_H_

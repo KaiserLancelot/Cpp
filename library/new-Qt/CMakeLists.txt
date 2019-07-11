@@ -13,4 +13,4 @@ find_package(Qt5LinguistTools REQUIRED CONFIG)
 add_definitions(-DAPP_VERSION="${PROJECT_VERSION}")
 
 add_subdirectory(internationalization)
-add_subdirectory(password_line_edit)
+add_subdirectory(custom_line_edit)
