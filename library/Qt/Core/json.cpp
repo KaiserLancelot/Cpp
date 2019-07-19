@@ -38,34 +38,4 @@ int main() {
 
   QJsonDocument document{root};
   out << document.toJson();
-  file.close();
-
-  if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-    std::cerr << "Open file failed\n";
-    return EXIT_FAILURE;
-  }
-
-  QTextStream in{&file};
-  QString json{in.readAll()};
-
-  QJsonParseError error;
-  auto json_document{QJsonDocument::fromJson(json.toUtf8(), &error)};
-  if (error.error == QJsonParseError::NoError) {
-    auto result{json_document.toVariant().toMap()};
-
-    std::cout << "encoding: " << result["encoding"].toString().toStdString()
-              << '\n';
-
-    std::cout << "plugins:";
-    for (const auto &plugin : result["plug-ins"].toList()) {
-      std::cout << " " << plugin.toString().toStdString();
-    }
-    std::cout << '\n';
-
-    auto nested_map{result["indent"].toMap()};
-    std::cout << "length: " << nested_map["length"].toInt();
-    std::cout << '\t';
-    std::cout << "use_space: " << std::boolalpha
-              << nested_map["use_space"].toBool();
-  }
 }

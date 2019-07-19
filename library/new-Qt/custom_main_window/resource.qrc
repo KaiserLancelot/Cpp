@@ -1,8 +1,0 @@
-<RCC>
-    <qresource>
-        <file alias="background">images/background.png</file>
-        <file alias="logo">images/logo.png</file>
-        <file alias="close">images/close.png</file>
-        <file alias="minimize">images/minimize.png</file>
-    </qresource>
-</RCC>

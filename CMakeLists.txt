@@ -32,11 +32,8 @@ add_compile_options(-Wall -Wextra -Werror -Wpedantic)
 
 #add_subdirectory(library/Qt/Core)
 #add_subdirectory(library/Qt/GUI)
-#add_subdirectory(library/Qt/Network)
 #add_subdirectory(library/Qt/SQL)
 #add_subdirectory(library/Qt/Test)
-
-add_subdirectory(library/new-Qt)
 
 #add_subdirectory(new-features/cpp11)
 #add_subdirectory(new-features/cpp14)

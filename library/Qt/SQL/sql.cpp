@@ -46,10 +46,12 @@ int main() {
     fmt::print(fmt("{:<15}{:<15}{:<15}{:<15}\n"), id, name, dept_name, salary);
   }
 
+  // 对这条 SQL 语句进行预处理, 问号 ? 相当于占位符
   query.prepare("insert into instructor values(?,?,?,?)");
   QVariantList ids;
   ids << "111"
       << "222";
+  // 将实际数据绑定到这个预处理的 SQL 语句上
   query.addBindValue(ids);
   QVariantList names;
   names << "Srinivasan"
@@ -65,8 +67,4 @@ int main() {
 
   // 批量执行 SQL
   query.execBatch();
-
-  std::cout << std::boolalpha << query.isActive() << '\n';
-  query.finish();
-  std::cout << std::boolalpha << query.isActive() << '\n';
 }
