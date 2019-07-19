@@ -8,25 +8,23 @@
 
 #include <QMetaEnum>
 #include <QObject>
-#include <string>
+#include <QString>
 
-class Enum : public QObject {
+class Test : public QObject {
   Q_OBJECT
  public:
-  enum Values { kTest };
-  Q_ENUM(Values);
-};
-
-class Enum2 : public QObject {
-  Q_OBJECT
- public:
-  enum Values { kTest2 };
-  Q_ENUM(Values);
+  enum Value { kV1, kV2 };
+  Q_ENUM(Value)
 };
 
 template <typename T>
-std::string ToString(T value) {
-  return QMetaEnum::fromType<T>().valueToKey(value) + 1;
+QString ToString(qint32 enum_key) {
+  return QMetaEnum::fromType<T>().valueToKey(enum_key);
+}
+
+template <typename T>
+int ToEnum(const QString &enum_str) {
+  return QMetaEnum::fromType<T>().keyToValue(enum_str.toLocal8Bit().data());
 }
 
 #endif  // CPP_PRIMER_ENUM_H
