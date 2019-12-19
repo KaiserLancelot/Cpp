@@ -32,6 +32,9 @@
 *.app
 
 # IDE files
+.clangd
 .idea
-cmake-build-debug
-cmake-build-release
+cmake-build-*
+build
+compile_commands.json
+default.profraw

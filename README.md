@@ -22,5 +22,3 @@ C++ study notes
 * Concurrency
   * https://chenxiaowei.gitbooks.io/c-concurrency-in-action-second-edition-2019/content
   
-* Template
-  * https://github.com/wuye9036/CppTemplateTutorial
