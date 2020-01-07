@@ -33,7 +33,7 @@ add_subdirectory(cpp-primer/chapter01)
 # add_subdirectory(cpp-primer/chapter16) add_subdirectory(cpp-primer/chapter17)
 # add_subdirectory(cpp-primer/chapter18) add_subdirectory(cpp-primer/chapter19)
 
-# add_subdirectory(library/fmt)
+# add_subdirectory(library/fmt) add_subdirectory(library/range)
 
 # add_subdirectory(library/Qt/Core) add_subdirectory(library/Qt/GUI)
 # add_subdirectory(library/Qt/SQL) add_subdirectory(library/Qt/Test)

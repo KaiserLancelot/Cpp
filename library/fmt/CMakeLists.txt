@@ -1,4 +1,4 @@
-find_package(fmt REQUIRED CONFIG)
+find_package(fmt REQUIRED)
 
 add_definitions(-DFMT_STRING_ALIAS=1)
 
