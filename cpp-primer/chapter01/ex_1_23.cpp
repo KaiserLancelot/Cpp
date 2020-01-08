@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <iostream>
 #include <unordered_map>
+
 #include "Sales_item.h"
 
 int main() {
@@ -15,5 +16,7 @@ int main() {
     ++data[item.isbn()];
   }
 
-  for (const auto& [isbn, cnt] : data) std::cout << isbn << ' ' << cnt << '\n';
+  for (const auto& [isbn, cnt] : data) {
+    std::cout << isbn << ' ' << cnt << '\n';
+  }
 }

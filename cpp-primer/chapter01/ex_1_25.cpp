@@ -2,7 +2,9 @@
 // Created by kaiser on 18-11-20.
 //
 
+#include <cstdlib>
 #include <iostream>
+
 #include "Sales_item.h"
 
 int main() {
@@ -20,7 +22,7 @@ int main() {
     }
     std::cout << total << '\n';
   } else {
-    std::cerr << "No data?!" << '\n';
-    return -1;
+    std::cerr << "No data?!" << std::endl;
+    return EXIT_FAILURE;
   }
 }

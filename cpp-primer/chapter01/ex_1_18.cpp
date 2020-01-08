@@ -6,19 +6,19 @@
 #include <iostream>
 
 int main() {
-  std::int32_t currVal{}, val{};
+  std::int32_t curr_val{}, val{};
 
-  if (std::cin >> currVal) {
+  if (std::cin >> curr_val) {
     std::int32_t cnt{1};
     while (std::cin >> val) {
-      if (val == currVal)
+      if (val == curr_val)
         ++cnt;
       else {
-        std::cout << currVal << " occurs " << cnt << " times\n";
+        std::cout << curr_val << " occurs " << cnt << " times\n";
         cnt = 1;
-        currVal = val;
+        curr_val = val;
       }
     }
-    std::cout << currVal << " occurs " << cnt << " times\n";
+    std::cout << curr_val << " occurs " << cnt << " times\n";
   }
 }
