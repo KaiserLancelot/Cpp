@@ -33,7 +33,6 @@
 
 # IDE files
 .clangd
-.vscode
 .idea
 cmake-build-*
 build

@@ -1,5 +1,6 @@
-include_directories(../include)
-file(COPY ../data/book DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+include_directories(${CMAKE_SOURCE_DIR}/cpp-primer/include)
+file(COPY ${CMAKE_SOURCE_DIR}/cpp-primer/data/book
+     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(ex_1_01 ex_1_01.cpp)
 add_executable(ex_1_02 ex_1_02.cpp)

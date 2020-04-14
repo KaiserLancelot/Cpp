@@ -13,9 +13,9 @@ int main() {
   if (std::cin >> total) {
     Sales_item trans;
     while (std::cin >> trans) {
-      if (trans.isbn() == total.isbn())
+      if (trans.isbn() == total.isbn()) {
         total += trans;
-      else {
+      } else {
         std::cout << total << '\n';
         total = trans;
       }

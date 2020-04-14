@@ -13,9 +13,9 @@ int main() {
   if (std::cin >> sum) {
     Sales_item item;
     while (std::cin >> item) {
-      if (item.isbn() == sum.isbn())
+      if (item.isbn() == sum.isbn()) {
         sum += item;
-      else {
+      } else {
         std::cout << sum << '\n';
         sum = item;
       }
