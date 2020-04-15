@@ -7,17 +7,17 @@
 #include <string>
 
 struct SalesData {
-  std::string book_no_;
-  std::int32_t units_sold_{};
-  double revenue_{};
+  std::string book_no;
+  std::int32_t units_sold{};
+  double revenue{};
 };
 
 int main() {
   double price;
   SalesData sales_data;
-  std::cin >> sales_data.book_no_ >> sales_data.units_sold_ >> price;
-  sales_data.revenue_ = sales_data.units_sold_ * price;
+  std::cin >> sales_data.book_no >> sales_data.units_sold >> price;
+  sales_data.revenue = sales_data.units_sold * price;
 
-  std::cout << sales_data.book_no_ << ' ' << sales_data.units_sold_ << ' '
-            << sales_data.revenue_ << '\n';
+  std::cout << sales_data.book_no << ' ' << sales_data.units_sold << ' '
+            << sales_data.revenue << '\n';
 }

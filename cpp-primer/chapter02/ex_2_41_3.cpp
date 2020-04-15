@@ -7,41 +7,41 @@
 #include <string>
 
 struct SalesData {
-  std::string book_no_;
-  std::int32_t units_sold_{};
-  double revenue_{};
+  std::string book_no;
+  std::int32_t units_sold{};
+  double revenue{};
 };
 
 int main() {
   SalesData total;
   double price;
 
-  if (std::cin >> total.book_no_ >> total.units_sold_ >> price) {
-    total.revenue_ = total.units_sold_ * price;
+  if (std::cin >> total.book_no >> total.units_sold >> price) {
+    total.revenue = total.units_sold * price;
     SalesData trans;
 
-    while (std::cin >> trans.book_no_ >> trans.units_sold_ >> price) {
-      trans.revenue_ = trans.units_sold_ * price;
-      if (total.book_no_ == trans.book_no_) {
-        total.units_sold_ += trans.units_sold_;
-        total.revenue_ += trans.revenue_;
+    while (std::cin >> trans.book_no >> trans.units_sold >> price) {
+      trans.revenue = trans.units_sold * price;
+      if (total.book_no == trans.book_no) {
+        total.units_sold += trans.units_sold;
+        total.revenue += trans.revenue;
       } else {
-        std::cout << total.book_no_ << ' ' << total.units_sold_ << ' '
-                  << total.revenue_ << '\n';
-        if (total.revenue_ != 0)
-          std::cout << total.revenue_ / total.units_sold_ << '\n';
+        std::cout << total.book_no << ' ' << total.units_sold << ' '
+                  << total.revenue << '\n';
+        if (total.revenue != 0)
+          std::cout << total.revenue / total.units_sold << '\n';
         else
           std::cout << "(no sales)" << '\n';
 
-        total.book_no_ = trans.book_no_;
-        total.units_sold_ = trans.units_sold_;
-        total.revenue_ = trans.revenue_;
+        total.book_no = trans.book_no;
+        total.units_sold = trans.units_sold;
+        total.revenue = trans.revenue;
       }
     }
-    std::cout << total.book_no_ << ' ' << total.units_sold_ << ' '
-              << total.revenue_ << '\n';
-    if (total.revenue_ != 0)
-      std::cout << total.revenue_ / total.units_sold_ << '\n';
+    std::cout << total.book_no << ' ' << total.units_sold << ' '
+              << total.revenue << '\n';
+    if (total.revenue != 0)
+      std::cout << total.revenue / total.units_sold << '\n';
     else
       std::cout << "(no sales)" << '\n';
   } else {

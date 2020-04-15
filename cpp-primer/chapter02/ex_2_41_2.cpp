@@ -7,27 +7,27 @@
 #include <string>
 
 struct SalesData {
-  std::string book_no_;
-  std::int32_t units_sold_{};
-  double revenue_{};
+  std::string book_no;
+  std::int32_t units_sold{};
+  double revenue{};
 };
 
 int main() {
   double price;
   SalesData sales_data1, sales_data2;
 
-  std::cin >> sales_data1.book_no_ >> sales_data1.units_sold_ >> price;
-  sales_data1.revenue_ = sales_data1.units_sold_ * price;
+  std::cin >> sales_data1.book_no >> sales_data1.units_sold >> price;
+  sales_data1.revenue = sales_data1.units_sold * price;
 
-  std::cin >> sales_data2.book_no_ >> sales_data2.units_sold_ >> price;
-  sales_data2.revenue_ = sales_data2.units_sold_ * price;
+  std::cin >> sales_data2.book_no >> sales_data2.units_sold >> price;
+  sales_data2.revenue = sales_data2.units_sold * price;
 
-  if (sales_data1.book_no_ == sales_data2.book_no_) {
-    int total_cnt = sales_data1.units_sold_ + sales_data2.units_sold_;
-    double total_revenue = sales_data1.revenue_ + sales_data2.revenue_;
+  if (sales_data1.book_no == sales_data2.book_no) {
+    int total_cnt = sales_data1.units_sold + sales_data2.units_sold;
+    double total_revenue = sales_data1.revenue + sales_data2.revenue;
 
-    std::cout << sales_data1.book_no_ << ' ' << total_cnt << ' '
-              << total_revenue << ' ';
+    std::cout << sales_data1.book_no << ' ' << total_cnt << ' ' << total_revenue
+              << ' ';
     if (total_revenue != 0)
       std::cout << total_revenue / total_cnt << '\n';
     else
