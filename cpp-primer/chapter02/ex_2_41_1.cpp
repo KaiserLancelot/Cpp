@@ -2,15 +2,9 @@
 // Created by kaiser on 18-11-21.
 //
 
-#include <cstdint>
 #include <iostream>
-#include <string>
 
-struct SalesData {
-  std::string book_no;
-  std::int32_t units_sold{};
-  double revenue{};
-};
+#include "ex_2_42.h"
 
 int main() {
   double price;

@@ -4,13 +4,8 @@
 
 #include <cstdint>
 #include <iostream>
-#include <string>
 
-struct SalesData {
-  std::string book_no;
-  std::int32_t units_sold{};
-  double revenue{};
-};
+#include "ex_2_42.h"
 
 int main() {
   double price;
@@ -23,7 +18,7 @@ int main() {
   sales_data2.revenue = sales_data2.units_sold * price;
 
   if (sales_data1.book_no == sales_data2.book_no) {
-    int total_cnt = sales_data1.units_sold + sales_data2.units_sold;
+    std::int32_t total_cnt = sales_data1.units_sold + sales_data2.units_sold;
     double total_revenue = sales_data1.revenue + sales_data2.revenue;
 
     std::cout << sales_data1.book_no << ' ' << total_cnt << ' ' << total_revenue
