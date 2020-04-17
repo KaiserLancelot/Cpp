@@ -10,13 +10,13 @@ int main() {
 
   // a
   decltype(std::size(s)) index1{};
-  while (index1 != std::size(s)) {
+  while (index1 < std::size(s)) {
     s[index1++] = 'X';
   }
   std::cout << s << '\n';
 
   // b
-  for (decltype(std::size(s)) index2{}; index2 != std::size(s); ++index2) {
+  for (decltype(std::size(s)) index2{}; index2 < std::size(s); ++index2) {
     s[index2] = 'X';
   }
   std::cout << s << '\n';
