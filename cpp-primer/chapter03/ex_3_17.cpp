@@ -15,8 +15,8 @@ int main() {
     vs.push_back(word);
   }
 
-  for (auto &element : vs) {
-    for (auto &c : element) {
+  for (auto &&element : vs) {
+    for (auto &&c : element) {
       c = static_cast<char>(std::toupper(c));
     }
     std::cout << element << '\n';

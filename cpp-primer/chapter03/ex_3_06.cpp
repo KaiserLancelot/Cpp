@@ -7,7 +7,7 @@
 
 int main() {
   std::string s("hello world");
-  for (auto &element : s) {
+  for (auto &&element : s) {
     element = 'X';
   }
   std::cout << s << '\n';

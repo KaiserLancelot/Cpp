@@ -14,10 +14,12 @@ int main() {
   }
   std::cout << total << '\n';
 
-  // b
   total.clear();
+
+  // b
   while (std::cin >> s) {
-    total += ' ' + s;
+    total += s + ' ';
   }
+  total.pop_back();
   std::cout << total << '\n';
 }
