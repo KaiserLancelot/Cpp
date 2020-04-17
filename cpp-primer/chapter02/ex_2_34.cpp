@@ -18,7 +18,10 @@ int main() {
   const auto kF = kCi;
   auto &g = kCi;
 
+  (void)d;
+  (void)e;
   (void)kF;
+  (void)g;
 
   a = 42;
   b = 42;

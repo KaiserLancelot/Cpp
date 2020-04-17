@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.16)
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   message(STATUS "Setting build type to 'Release' as none was specified")
@@ -22,8 +22,8 @@ include(check)
 include(sanitizers)
 include(compiler-options)
 
-# add_subdirectory(cpp-primer/chapter01)
-# add_subdirectory(cpp-primer/chapter02)
+add_subdirectory(cpp-primer/chapter01)
+add_subdirectory(cpp-primer/chapter02)
 add_subdirectory(cpp-primer/chapter03)
 # add_subdirectory(cpp-primer/chapter04)
 # add_subdirectory(cpp-primer/chapter05)
@@ -53,6 +53,7 @@ add_subdirectory(cpp-primer/chapter03)
 # add_subdirectory(new-features/cpp14)
 # add_subdirectory(new-features/cpp17)
 # add_subdirectory(new-features/cpp17/filesystem)
+add_subdirectory(new-features/cpp20)
 
 # add_subdirectory(notes)
 
