@@ -12,7 +12,7 @@ int main() {
 
   for (auto it{std::begin(text)}; it != std::end(text) && !std::empty(*it);
        ++it) {
-    for (auto &c : *it) {
+    for (auto &&c : *it) {
       if (std::isalpha(c)) {
         c = static_cast<char>(std::toupper(c));
       }
