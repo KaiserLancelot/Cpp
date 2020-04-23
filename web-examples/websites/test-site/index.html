@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--HTML 是一种用于定义内容结构的标记语言, 由一系列的元素(elements)组成-->
+<!--元素也可以有属性(Attribute), 属性包含了关于元素的一些额外信息,
+  这些信息本身不显现在内容中-->
+<!--文档类型.早期 DOCTYPE 用来链接一些 HTML 编写守则.
+  然而现在已经没有人关心这些, 只是因为历史原因必须将它保留, 但没有实际作用
+  必须放在文件开始处-->
+
+<!--<html> 元素.这个元素包含了整个页面的内容, 有时也被称作根元素-->
+<html lang="zh">
+  <!--<head> 元素.这个元素放置的内容不是展现给用户的, 而是包含
+    例如页面描述, CSS 样式表和字符编码声明等-->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <title> 元素.这个元素设置页面的标题, 显示在浏览器标签页上, 同时作为收藏网页的描述文字-->
+    <title>测试页面</title>
+    <!--将该 CSS 文件链接至 HTML 文档-->
+    <!--rel 属性命名链接文档与当前文档的关系(stylesheet 样式表)-->
+    <link href="styles/style.css" rel="stylesheet" />
+  </head>
+
+  <!--<body> 元素.这个元素包含期望让用户在访问页面时看到的内容
+    可以是文本, 图像, 视频, 游戏, 可播放的音轨或其他内容-->
+  <body>
+    <!--标题(Heading), <h1>–<h6>-->
+    <h1>Mozilla 酷毙了!</h1>
+    <!--不包含任何内容的元素称为空元素.比如 <img> 元素, 没有 </img> 结束标签-->
+    <!--属性 alt, 是图像的描述内容, 用于当图像不能被用户看见时显示-->
+    <!--属性 class 可为元素提供一个标识名称, 以便进一步为
+      元素指定样式或进行其他操作时使用-->
+    <img
+      class="firefox-icon"
+      src="images/firefox-icon.png"
+      alt="Firefox 标志: 一只盘旋在地球上的火狐"
+    />
+
+    <!--段落(Paragraph)-->
+    <p>Mozilla 是一个全球社区, 这里聚集着来自五湖四海的</p>
+
+    <!--列表(List)-->
+    <!--无序列表(Unordered List, 起始为点), 用一个 <ul> 元素包围
+      有序列表(Ordered List, 起始为数字序号), 用一个 <ol> 元素包围-->
+    <!--列表的每个项目用一个列表项目(List Item)元素 <li> 包围-->
+    <ul>
+      <li>技术人员</li>
+      <li>思考者</li>
+      <li>建造者</li>
+    </ul>
+
+    <p>
+      我们致力于让 Internet 保持活力, 保持畅通, 人人皆可贡献,
+      人人皆可创造.我们坚信: 开放平台的协作对于人的发展至关重要,
+      也决定着我们共同的未来.
+    </p>
+
+    <!--链接-->
+    <!--注意不能省略 https:// 或者 http://-->
+    <!--a 是 "anchor"(锚)的缩写-->
+    <!--href代表超文本引用(hypertext reference)-->
+    <!--可以将一个元素置于其他元素之中, 称作嵌套-->
+    <p>
+      为了达成我们共同的理想, 我们遵循一系列的价值观和理念, 请参阅
+      <a href="https://www.mozilla.org/zh-CN/about/manifesto/">Mozilla 宣言</a>.
+    </p>
+
+    <button>切换用户</button>
+
+    <!--将 JavaScript 引入页面以作用于 HTML-->
+    <!--放在 HTML 文件的底部附近的原因是浏览器会按照代码在文件中的顺序加载 HTML
+      如果先加载的 JavaScript 期望修改其下方的 HTML, 那么它可能由于 HTML 尚未被加载而失效
+      因此, 将 JavaScript 代码放在 HTML 页面的底部附近通常是最好的策略-->
+    <!--defer 这个布尔属性被设定用来通知浏览器该脚本将在文档完成解析后, 触发 DOMContentLoaded 事件前执行
+      如果缺少 src 属性, 该属性不应被使用, 因为这种情况下它不起作用-->
+    <!--当初始的 HTML 文档被完全加载和解析完成之后, DOMContentLoaded 事件被触发
+      而无需等待样式表, 图像和子框架的完成加载-->
+    <script src="scripts/main.js" defer></script>
+  </body>
+</html>

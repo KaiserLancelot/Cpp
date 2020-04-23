@@ -1,9 +1,0 @@
-QColorDialog: 选择颜色
-QFileDialog: 选择文件或者目录
-QFontDialog: 选择字体
-QInputDialog: 允许用户输入一个值，并将其值返回
-QMessageBox: 模态对话框，用于显示信息、询问问题等
-QPageSetupDialog: 为打印机提供纸张相关的选项
-QPrintDialog: 打印机配置
-QPrintPreviewDialog: 打印预览
-QProgressDialog: 显示操作过程

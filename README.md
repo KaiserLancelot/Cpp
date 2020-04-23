@@ -1,14 +1,13 @@
-# Cpp-Study
-C++ study notes
+# Programming-learning
+Programming learning notes
 
 # Reference
+### C++
 * C++ Primer Answer
   * https://github.com/Mooophy/Cpp-Primer
-  * https://github.com/pezy/CppPrimer
 
 * Library
   * http://fmtlib.net/latest/index.html
-  * https://www.devbean.net/2012/08/qt-study-road-2-catelog
   * https://doc.qt.io
   
 * New Features
@@ -20,3 +19,20 @@ C++ study notes
 * Concurrency
   * https://chenxiaowei.gitbooks.io/c-concurrency-in-action-second-edition-2019/content
   
+### HTML/CSS/JavaScript
+  * https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web
+  
+### TypeScript  
+  * https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+  
+### Rust
+  * https://kaisery.github.io/trpl-zh-cn
+  
+### WebAssembly
+  * https://rustwasm.github.io/docs/book
+  
+### React
+  * https://zh-hans.reactjs.org/docs/getting-started.html
+  
+### Electron
+  * https://www.electronjs.org/docs
