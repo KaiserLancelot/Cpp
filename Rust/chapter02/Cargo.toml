@@ -1,0 +1,26 @@
+# cargo new hello-world 创建项目
+# cargo build 构建项目
+# cargo run 构建并运行
+# cargo check 快速检查代码确保其可以编译, 但并不产生可执行文件
+# cargo build --release 优化无调试信息
+# cargo doc --open 命令构建所有本地依赖提供的文档, 并在浏览器中打开
+
+# Cargo.lock 文件记录项目依赖的实际版本
+
+# [package], 是一个片段(section)标题, 表明下面的语句用来配置一个包
+# 随着我们在这个文件增加更多的信息, 还将增加其他片段
+# 标题以及之后的内容属同一个片段, 直到遇到下一个标题才开始新的片段
+[package]
+name = "chapter02"
+version = "0.1.0"
+authors = ["kaiser <1244713586@qq.com>"]
+edition = "2018"
+
+# 项目依赖的片段
+# 在 Rust 中, 代码包被称为 crates
+[dependencies]
+# 语义化版本, 是一种定义版本号的标准
+# 0.7.3 事实上是 ^0.7.3 的简写, 它表示任何与 0.7.3 版本公有 API 相兼容的版本
+# 如果 Cargo.lock 存在则使用其中指定的版本, 而不是再次计算所有的版本
+# 使用 Cargo update 可以升级, 但是不会升级为 0.8.x 的版本, 除非修改 Cargo.toml
+rand = "0.7.3"

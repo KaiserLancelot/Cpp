@@ -27,6 +27,7 @@ Programming learning notes
   
 ### Rust
   * https://kaisery.github.io/trpl-zh-cn
+  * https://github.com/rust-lang/async-book
   
 ### WebAssembly
   * https://rustwasm.github.io/docs/book
