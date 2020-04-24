@@ -26,7 +26,7 @@ fn main() {
 
         io::stdin()
             // & 表示引用, 默认也是不可变的
-            // read_line 行为和 C++ 的 getline() 相同, 返回 io::Result, 是枚举类型
+            // read_line 读到换行符为止(保存了换行符), 返回 io::Result, 是枚举类型
             // 成员是 Ok 和 Err, Ok 成员表示操作成功, 内部包含成功时产生的值
             // Err 成员则意味着操作失败, 并且包含失败的前因后果
             .read_line(&mut guess)
@@ -36,6 +36,7 @@ fn main() {
 
         // Rust 允许用一个新变量来隐藏(shadow)之前同名的变量.这个功能常用在需要转换值类型之类的场景
         // 因为 parse() 可以解析多种数字类型, 因此需要告诉 Rust 具体的数字类型
+        // 注意 50x 这种也不行
         // 注意, 因为 guess 与 secret_number 的比较,  secret_number 也被推断出是 u32 类型
         let guess: u32 = match guess.trim().parse() {
             // match 语句是处理错误的惯用方法

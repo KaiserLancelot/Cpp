@@ -1,3 +1,5 @@
+# rustup docs --book 用浏览器打开 The Rust Programming Language
+
 # cargo new hello-world 创建项目
 # cargo build 构建项目
 # cargo run 构建并运行
