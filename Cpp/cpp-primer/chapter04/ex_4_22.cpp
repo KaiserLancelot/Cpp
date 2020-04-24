@@ -17,14 +17,15 @@ int main() {
           : (grade > 75) ? "pass" : (grade > 60) ? "low pass" : "fail");
 
   // b
-  if (grade > 90)
+  if (grade > 90) {
     final_grade = "high pass";
-  else if (grade > 75)
+  } else if (grade > 75) {
     final_grade = "pass";
-  else if (grade > 60)
+  } else if (grade > 60) {
     final_grade = "low pass";
-  else
+  } else {
     final_grade = "fail";
+  }
 
   std::cout << final_grade << '\n';
 }

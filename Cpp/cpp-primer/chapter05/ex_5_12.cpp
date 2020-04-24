@@ -23,7 +23,11 @@ int main() {
         ++e_count;
         break;
       case 'i':
-        if (pre == 'f') ++fi_count;
+        if (pre == 'f') {
+          ++fi_count;
+        }
+        ++i_count;
+        break;
       case 'I':
         ++i_count;
         break;

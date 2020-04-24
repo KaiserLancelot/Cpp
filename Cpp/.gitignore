@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# IDE files
+.clangd
+.idea
+.vscode
+build
+cmake-build-*
+default.profraw
+compile_commands.json
