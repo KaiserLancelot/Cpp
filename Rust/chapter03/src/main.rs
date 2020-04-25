@@ -25,7 +25,7 @@ fn main() {
     // 关于整型溢出, 当在 debug 模式编译时, Rust 检查这类问题并使程序 panic
     // 这个术语被 Rust 用来表明程序因错误而退出
     // 在 release 构建中, Rust 不检测溢出, 相反会进行一种被称为
-    // 二进制补码包装(two’s complement wrapping)的操作
+    // two’s complement wrapping 的操作
     // 也就是加/减/mod 2^n
     // let num: i8 = 127;
     // println!("{}", num + 1); // -128
