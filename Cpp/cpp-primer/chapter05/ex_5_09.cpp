@@ -10,16 +10,17 @@ int main() {
   char ch;
 
   while (std::cin >> ch) {
-    if (ch == 'a')
+    if (ch == 'a') {
       ++a_count;
-    else if (ch == 'e')
+    } else if (ch == 'e') {
       ++e_count;
-    else if (ch == 'i')
+    } else if (ch == 'i') {
       ++i_count;
-    else if (ch == 'o')
+    } else if (ch == 'o') {
       ++o_count;
-    else if (ch == 'u')
+    } else if (ch == 'u') {
       ++u_count;
+    }
   }
   std::cout << a_count << ' ' << e_count << ' ' << i_count << ' ' << o_count
             << ' ' << u_count << '\n';

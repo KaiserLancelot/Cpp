@@ -35,6 +35,7 @@ int main() {
       }
     }
   }
+
   std::cout << a_count << ' ' << e_count << ' ' << i_count << ' ' << o_count
             << ' ' << u_count << '\n';
 }

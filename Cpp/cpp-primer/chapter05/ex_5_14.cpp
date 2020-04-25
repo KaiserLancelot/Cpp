@@ -13,19 +13,22 @@ int main() {
   std::int32_t count{};
 
   while (std::cin >> curr) {
-    if (curr == pre)
+    if (curr == pre) {
       ++count;
-    else
+    } else {
       count = 0;
+    }
 
     if (count > result.second) {
       result = {curr, count};
     }
+
     pre = curr;
   }
 
-  if (result.first.empty())
+  if (std::empty(result.first)) {
     std::cout << "No consecutively repeated strings\n";
-  else
+  } else {
     std::cout << result.first << ' ' << result.second + 1 << " times\n";
+  }
 }

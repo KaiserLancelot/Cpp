@@ -49,16 +49,21 @@ int main() {
         ++new_line_count;
         break;
       case 'f':
-        if (pre == 'f') ++ff_count;
+        if (pre == 'f') {
+          ++ff_count;
+        }
         break;
       case 'l':
-        if (pre == 'f') ++fl_count;
+        if (pre == 'f') {
+          ++fl_count;
+        }
         break;
       default: {
       }
     }
     pre = ch;
   }
+
   std::cout << a_count << ' ' << e_count << ' ' << i_count << ' ' << o_count
             << ' ' << u_count << ' ' << sp_count << ' ' << tab_count << ' '
             << new_line_count << '\n';

@@ -17,6 +17,7 @@ int main() {
       std::cout << v1 / v2 << '\n';
     } catch (const std::runtime_error &error) {
       std::cout << error.what() << "\nTry again? Enter y or n\n";
+      
       char choice;
       std::cin >> choice;
       if (!std::cin || choice == 'n') {

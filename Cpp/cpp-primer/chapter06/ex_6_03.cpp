@@ -12,3 +12,5 @@ std::int32_t Fact(std::int32_t val) {
   }
   return ret;
 }
+
+int main() {}

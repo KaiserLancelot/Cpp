@@ -16,8 +16,9 @@ int main() {
     pre = curr;
   }
 
-  if (std::cin.eof())
+  if (std::cin.eof()) {
     std::cout << "No consecutively repeated strings\n";
-  else
+  } else {
     std::cout << curr << '\n';
+  }
 }

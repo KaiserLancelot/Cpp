@@ -3,6 +3,7 @@
 //
 
 #include <cstdint>
+#include <cstdlib>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -24,7 +25,8 @@ int main() {
     }
   } else {
     std::cerr << "wrong grade\n";
-    return -1;
+    return EXIT_FAILURE;
   }
+
   std::cout << letter_grade << '\n';
 }
