@@ -5,35 +5,34 @@ Programming learning notes
 ### C++
 * C++ Primer Answer
   * https://github.com/Mooophy/Cpp-Primer
-
 * Library
+  * https://www.boost.org/doc/libs/1_72_0
+  * https://github.com/Neargye/magic_enum
   * http://fmtlib.net/latest/index.html
-  * https://doc.qt.io
-  
+  * https://github.com/nlohmann/json
+  * https://dev.mysql.com/doc/dev/connector-cpp/8.0/devapi_ref.html
+  * https://github.com/google/googletest/blob/master/googletest/docs/primer.md
+* Concurrency
+  * https://chenxiaowei.gitbook.io/concurrency-with-modern-c/
 * New Features
   * https://zh.cppreference.com/w/cpp
-  
 * Notes
   * https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide
-  
-* Concurrency
-  * https://chenxiaowei.gitbooks.io/c-concurrency-in-action-second-edition-2019/content
-  
 ### HTML/CSS/JavaScript
   * https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web
-  
+
 ### TypeScript  
   * https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
-  
+
 ### Rust
   * https://kaisery.github.io/trpl-zh-cn
   * https://github.com/rust-lang/async-book
-  
+
 ### WebAssembly
   * https://rustwasm.github.io/docs/book
-  
+
 ### React
   * https://zh-hans.reactjs.org/docs/getting-started.html
-  
+
 ### Electron
   * https://www.electronjs.org/docs

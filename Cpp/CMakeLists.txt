@@ -42,17 +42,17 @@ add_subdirectory(cpp-primer/chapter06)
 # add_subdirectory(cpp-primer/chapter18)
 # add_subdirectory(cpp-primer/chapter19)
 
-# add_subdirectory(library/fmt)
+add_subdirectory(library/Boost)
+add_subdirectory(library/enum)
+add_subdirectory(library/fmt)
+# add_subdirectory(library/json)
+add_subdirectory(library/sql)
+add_subdirectory(library/test)
 
-# add_subdirectory(library/Qt/Core) add_subdirectory(library/Qt/GUI)
-# add_subdirectory(library/Qt/SQL) add_subdirectory(library/Qt/Test)
-
-# add_subdirectory(new-features/cpp11) add_subdirectory(new-features/cpp14)
-# add_subdirectory(new-features/cpp17) add_subdirectory(new-
-# features/cpp17/filesystem)
+add_subdirectory(new-features/cpp11)
+add_subdirectory(new-features/cpp14)
+add_subdirectory(new-features/cpp17)
+add_subdirectory(new-features/cpp17/filesystem)
 add_subdirectory(new-features/cpp20)
 
-# add_subdirectory(notes)
-
-# add_subdirectory(concurrency/chapter01)
-# add_subdirectory(concurrency/chapter02)
+add_subdirectory(notes)

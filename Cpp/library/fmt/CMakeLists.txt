@@ -1,6 +1,6 @@
 find_package(fmt REQUIRED)
 
-add_definitions(-DFMT_STRING_ALIAS=1)
+add_definitions(-DFMT_STRING_ALIAS)
 
 add_executable(core core.cpp)
 target_link_libraries(core fmt::fmt)
@@ -16,3 +16,6 @@ target_link_libraries(syntax fmt::fmt)
 
 add_executable(color color.cpp)
 target_link_libraries(color fmt::fmt)
+
+add_executable(ranges ranges.cpp)
+target_link_libraries(ranges fmt::fmt)

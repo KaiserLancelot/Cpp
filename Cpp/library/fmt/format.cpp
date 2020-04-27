@@ -19,4 +19,13 @@ int main() {
 
   // 返回字符数
   fmt::print("{}\n", fmt::formatted_size("{}", "foo"));
+
+  std::vector<char> out;
+  fmt::format_to(std::back_inserter(out), "{}", 42);
+
+  std::vector<int> v = {1, 2, 3};
+  fmt::print("{}", fmt::join(v, ", "));
+
+  fmt::memory_buffer buffer;
+  fmt::format_to(buffer, "The answer is {}.", 42);
 }
