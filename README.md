@@ -13,7 +13,7 @@ Programming learning notes
   * https://dev.mysql.com/doc/dev/connector-cpp/8.0/devapi_ref.html
   * https://github.com/google/googletest/blob/master/googletest/docs/primer.md
 * Concurrency
-  * https://chenxiaowei.gitbook.io/concurrency-with-modern-c/
+  * https://github.com/xiaoweiChen/CPP-Concurrency-In-Action-2ed-2019
 * New Features
   * https://zh.cppreference.com/w/cpp
 * Notes

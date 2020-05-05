@@ -4,23 +4,24 @@
 
 #include <cstdlib>
 #include <iostream>
+
 #include "ex_7_02.h"
 
 int main() {
   SalesData total;
-  if (std::cin >> total.book_no_ >> total.units_sold_ >> total.revenue_) {
+  if (std::cin >> total.book_no >> total.units_sold >> total.revenue) {
     SalesData trans;
-    while (std::cin >> trans.book_no_ >> trans.units_sold_ >> trans.revenue_) {
+    while (std::cin >> trans.book_no >> trans.units_sold >> trans.revenue) {
       if (total.Isbn() == trans.Isbn()) {
         total.Combine(trans);
       } else {
-        std::cout << total.book_no_ << " " << total.units_sold_ << " "
-                  << total.revenue_ << '\n';
+        std::cout << total.book_no << " " << total.units_sold << " "
+                  << total.revenue << '\n';
         total = trans;
       }
     }
-    std::cout << total.book_no_ << " " << total.units_sold_ << " "
-              << total.revenue_ << '\n';
+    std::cout << total.book_no << " " << total.units_sold << " "
+              << total.revenue << '\n';
   } else {
     std::cerr << "no data\n";
     return EXIT_FAILURE;

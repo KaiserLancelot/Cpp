@@ -3,6 +3,7 @@
 //
 
 #include <cstdint>
+#include <iostream>
 
 std::int32_t Fact(std::int32_t val) {
   std::int32_t ret{1};
@@ -13,4 +14,4 @@ std::int32_t Fact(std::int32_t val) {
   return ret;
 }
 
-int main() {}
+int main() { std::cout << Fact(5) << '\n'; }

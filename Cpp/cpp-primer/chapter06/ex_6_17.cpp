@@ -17,12 +17,12 @@ bool Fun1(const std::string &s) {
 
 void Fun2(std::string &s) {
   for (auto &element : s) {
-    element = static_cast<char>(std::tolower(element));
+    element = std::tolower(element);
   }
 }
 
 int main() {
-  std::string s("Hello World");
+  std::string s{"HELLO WORLD"};
   Fun2(s);
   std::cout << s << '\n';
   std::cout << std::boolalpha << Fun1(s) << '\n';

@@ -14,4 +14,4 @@ std::int32_t Sum(std::initializer_list<std::int32_t> il) {
   return sum;
 }
 
-int main() { std::cout << Sum({1, 2, 3, 4}) << '\n'; }
+int main() { std::cout << Sum({2, 2, 3, 4}) << '\n'; }

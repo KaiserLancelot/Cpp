@@ -13,6 +13,7 @@ std::int32_t Div(std::int32_t a, std::int32_t b) { return a / b; }
 
 int main() {
   using FuncPointer = std::int32_t (*)(std::int32_t, std::int32_t);
+
   std::vector<FuncPointer> v{Add, Sub, Mul, Div};
   for (const auto &item : v) {
     std::cout << item(2, 3) << '\n';
