@@ -7,17 +7,28 @@ function(append value)
 endfunction()
 
 if(sanitizer MATCHES "([Nn]one)")
-  message(STATUS "None sanitizer")
+  message(STATUS "None Sanitizer")
 else()
   if(sanitizer MATCHES "([Aa]ddress)")
-    message(STATUS "Building with Address sanitizer")
-    append("-fsanitize=address -fno-omit-frame-pointer -O1" CMAKE_CXX_FLAGS)
+    message(STATUS "Building with Address and Undefined Sanitizer")
+    append("-fsanitize=address -fno-omit-frame-pointer -O1 -fsanitize=undefined"
+           CMAKE_CXX_FLAGS)
+  elseif(sanitizer MATCHES "([Mm]emory)")
+    if(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
+      message(
+        STATUS
+          "Building with Undefined sanitizer, GCC does not support Memory Sanitizer"
+      )
+      append("-fsanitize=undefined" CMAKE_CXX_FLAGS)
+    else()
+      message(STATUS "Building with Memory and Undefined Sanitizer")
+      append(
+        "-fsanitize=memory -fsanitize-memory-track-origins -fPIE -fno-omit-frame-pointer -O2 -fsanitize=undefined"
+        CMAKE_CXX_FLAGS)
+    endif()
   elseif(sanitizer MATCHES "([Tt]hread)")
-    message(STATUS "Building with Thread sanitizer")
-    append("-fsanitize=thread -O2" CMAKE_CXX_FLAGS)
-  elseif(sanitizer MATCHES "([Uu]ndefined)")
-    message(STATUS "Building with Undefined sanitizer")
-    append("-fsanitize=undefined" CMAKE_CXX_FLAGS)
+    message(STATUS "Building with Thread and Undefined Sanitizer")
+    append("-fsanitize=thread -O2 -fsanitize=undefined" CMAKE_CXX_FLAGS)
   else()
     message(FATAL_ERROR "Sanitizer is not supported")
   endif()

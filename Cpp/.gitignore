@@ -31,11 +31,12 @@
 *.out
 *.app
 
-# IDE files
-.clangd
-.idea
+# Development files
 .vscode
+.clangd
 build
-cmake-build-*
-default.profraw
+coverage
+*.profraw
+*.profdata
+callgrind.out.*
 compile_commands.json

@@ -11,11 +11,13 @@ project(Cpp LANGUAGES CXX)
 
 if((CMAKE_BUILD_TYPE MATCHES "Debug") OR (CMAKE_BUILD_TYPE MATCHES
                                           "RelWithDebInfo"))
-  # Address Thread Undefined None
-  set(sanitizer "Undefined")
+  # Address Memory Thread None
+  set(sanitizer "Address")
 else()
   set(sanitizer "None")
 endif()
+
+option(coverage "Open code coverage tool" OFF)
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 include(check)

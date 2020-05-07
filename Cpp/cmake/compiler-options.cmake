@@ -6,8 +6,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_compile_options(-Wall -Wextra -Wpedantic -Werror)
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-  if((CMAKE_BUILD_TYPE MATCHES "Debug") OR (CMAKE_BUILD_TYPE MATCHES
-                                            "RelWithDebInfo"))
+  if(coverage)
+    message(STATUS "Building with lcov Code Coverage Tools")
     append("--coverage" CMAKE_CXX_FLAGS)
   endif()
 else()
@@ -16,6 +16,10 @@ else()
   if((CMAKE_BUILD_TYPE MATCHES "Debug") OR (CMAKE_BUILD_TYPE MATCHES
                                             "RelWithDebInfo"))
     append("-fstandalone-debug" CMAKE_CXX_FLAGS)
+  endif()
+
+  if(coverage)
+    message(STATUS "Building with llvm Code Coverage Tools")
     append("-fprofile-instr-generate -fcoverage-mapping" CMAKE_CXX_FLAGS)
   endif()
 endif()
