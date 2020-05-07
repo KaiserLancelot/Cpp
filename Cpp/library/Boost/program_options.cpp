@@ -58,8 +58,8 @@ int main(int argc, char* argv[]) {
       return EXIT_SUCCESS;
     }
 
-    std::cout << std::size(vm["input-file"].as<std::vector<std::string>>())
-              << '\n';
+    // 如果为空, 那么 .as<std::vector<std::string>> 会出错
+    std::cout << std::boolalpha << vm["input-file"].empty() << '\n';
   } catch (const std::exception& err) {
     std::cerr << err.what() << "\n";
     return EXIT_FAILURE;

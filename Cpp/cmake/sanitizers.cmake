@@ -11,7 +11,7 @@ if(sanitizer MATCHES "([Nn]one)")
 else()
   if(sanitizer MATCHES "([Aa]ddress)")
     message(STATUS "Building with Address and Undefined Sanitizer")
-    append("-fsanitize=address -fno-omit-frame-pointer -O1 -fsanitize=undefined"
+    append("-fsanitize=address -fno-omit-frame-pointer -fsanitize=undefined"
            CMAKE_CXX_FLAGS)
   elseif(sanitizer MATCHES "([Mm]emory)")
     if(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
@@ -23,12 +23,12 @@ else()
     else()
       message(STATUS "Building with Memory and Undefined Sanitizer")
       append(
-        "-fsanitize=memory -fsanitize-memory-track-origins -fPIE -fno-omit-frame-pointer -O2 -fsanitize=undefined"
+        "-fsanitize=memory -fsanitize-memory-track-origins -fPIE -fno-omit-frame-pointer -fsanitize=undefined"
         CMAKE_CXX_FLAGS)
     endif()
   elseif(sanitizer MATCHES "([Tt]hread)")
     message(STATUS "Building with Thread and Undefined Sanitizer")
-    append("-fsanitize=thread -O2 -fsanitize=undefined" CMAKE_CXX_FLAGS)
+    append("-fsanitize=thread -fsanitize=undefined" CMAKE_CXX_FLAGS)
   else()
     message(FATAL_ERROR "Sanitizer is not supported")
   endif()
