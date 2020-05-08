@@ -14,7 +14,7 @@ Programming learning notes
   - https://github.com/Neargye/magic_enum
   - http://fmtlib.net/latest/index.html
   - https://github.com/nlohmann/json
-  - https://tangentsoft.com/mysqlpp/doc/html/userman/
+  - https://dev.mysql.com/doc/x-devapi-userguide/en/
   - https://github.com/google/googletest/blob/master/googletest/docs/primer.md
 
 - Concurrency

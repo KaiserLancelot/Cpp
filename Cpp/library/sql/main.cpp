@@ -2,25 +2,48 @@
 // Created by kaiser on 2020/4/29.
 //
 
+#include <cstdlib>
 #include <iostream>
+#include <stdexcept>
 
-#include <mysql++/mysql++.h>
+#include <mysqlx/xdevapi.h>
 
-int main() {
-  mysqlpp::Connection conn;
-  if (conn.connect("test", "localhost:3306", "root", "524321")) {
-    std::cout << "Database connection succeeded!\n";
-  } else {
-    std::cerr << "Database connection failed" << std::endl;
+int main() try {
+  // 要访问数据必须先创建一个 Session
+  mysqlx::Session session{33060, "root", "524321"};
+  session.startTransaction();
+
+  auto schema{session.getSchema("test")};
+  auto table{schema.getTable("student")};
+
+  // table.insert("ID", "name", "dept_name", "tot_cred")
+  //     .values("66666", "kaiser", "Comp. Sci.", 666)
+  //     .execute();
+
+  table.update()
+      .set("tot_cred", 99)
+      .where("ID > :id")
+      .bind("id", "33333")
+      .execute();
+
+  table.remove().where("tot_cred > 100").execute();
+
+  auto result{
+      table.select("*").where("ID < :id").bind("id", "33333").execute()};
+
+  for (const auto &row : result) {
+    std::cout << row[0] << '\t' << row[1] << '\t' << row[2] << '\t' << row[3]
+              << '\n';
   }
 
-  auto query{conn.query("select * from student")};
-  if (auto res{query.store()}) {
-    for (const auto &row : res) {
-      std::cout << row[0] << "\t" << row["name"] << "\t" << row["dept_name"]
-                << "\t" << row["tot_cred"] << '\n';
-    }
-  } else {
-    std::cerr << "failed" << std::endl;
-  }
+  session.commit();
+} catch (const mysqlx::Error &err) {
+  std::cerr << "error: " << err << std::endl;
+  return EXIT_FAILURE;
+} catch (std::exception &ex) {
+  std::cerr << "std exception: " << ex.what() << std::endl;
+  return EXIT_FAILURE;
+} catch (const char *ex) {
+  std::cerr << "exception: " << ex << std::endl;
+  return EXIT_FAILURE;
 }
