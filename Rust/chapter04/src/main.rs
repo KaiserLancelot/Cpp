@@ -36,27 +36,48 @@ fn main() {
     // 只在栈上的数据: 拷贝
     let y = x;
 
-    // TODO Copy trait ???
+    // 如果一个类型拥有 Copy trait, 一个旧的变量在将其赋值给其他变量后仍然可用
+    // 任何简单标量值的组合可以是 Copy 的, 不需要分配内存或某种形式资源的类型是 Copy 的
+    // 所有整数类型
+    // 布尔类型
+    // 所有浮点数类型
+    // 字符类型
+    // 元组, 当且仅当其包含的类型也都是 Copy 的时候
+    // 注意 struct 中成员类型都是 copy 的时候, 它也不是 copy 的
 
     let s1 = String::from("hello");
     let (s2, len) = calculate_length(s1);
     println!("The length of '{}' is {}.", s2, len);
 
     let s1 = String::from("hello");
-    // &s1 语法让我们创建一个指向值 s1 的引用, 但是并不拥有它
+    // &s1 语法让我们创建一个指向值 s1 的引用
     println!("{}\n", calculate_length2(&s1));
 
     let mut s = String::from("hello");
-    // 在特定作用域中的特定数据最多只能有一个可变引用
+    // 在同一作用域中的同一数据最多只能有一个可变引用
+    // 可以使用大括号来创建一个新的作用域, 以允许拥有多个可变引用
+    // 只是不能同时拥有
+    // 这个限制的好处是 Rust 可以在编译时就避免数据竞争
+    // 错误
+    // let r1 = &mut s;
+    // let r2 = &mut s;
+    // println!("{}, {}", r1, r2);
+
     // 也不能在拥有不可变引用的同时拥有可变引用
+    // 错误
+    // let r1 = &s;
+    // let r2 = &s;
+    // let r3 = &mut s;
+    // println!("{}, {}, and {}", r1, r2, r3);
+
     change(&mut s);
     println!("{}\n", s);
 
     // 注意一个引用的作用域从声明的地方开始一直持续到最后一次使用为止
     let mut s = String::from("hello");
 
-    let r1 = &s; // 没问题
-    let r2 = &s; // 没问题
+    let r1 = &s;
+    let r2 = &s;
     println!("{} and {}", r1, r2);
     // 此位置之后 r1 和 r2 不再使用
 
@@ -65,6 +86,7 @@ fn main() {
 
     let s = String::from("hello world");
     // 字符串 slice(string slice)是 String 中一部分值的引用
+    // 它没有所有权
     let hello = &s[0..5]; // 0 可以省略
     let world = &s[6..11]; // 11 可以省略
 
@@ -80,9 +102,13 @@ fn main() {
 
     let word = first_word2(&s);
 
-    // s.clear(); // 错误
+    // 错误, 当拥有某值的不可变引用时, 就不能再获取一个可变引用(&mut self)
+    // s.clear();
 
     println!("the first word is: {}", word);
+
+    let s = String::from("str");
+    first_word2(&s[..]);
 
     let a = [1, 2, 3, 4, 5];
     // 类型是 &[i32], 它跟字符串 slice 的工作方式一样
@@ -107,7 +133,7 @@ fn change(s: &mut String) {
     s.push_str("aaaaa");
 }
 
-// error
+// 错误
 // fn dangle() -> &String {
 //     let s = String::from("hello");
 //     &s
@@ -129,8 +155,20 @@ fn first_word(s: &String) -> usize {
     s.len()
 }
 
-// 可以将函数参数类型改为 &str, 更加通用
 fn first_word2(s: &String) -> &str {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[..i];
+        }
+    }
+
+    &s[..]
+}
+
+// 可以将函数参数类型改为 &str, 更加通用
+fn first_word2(s: &str) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {

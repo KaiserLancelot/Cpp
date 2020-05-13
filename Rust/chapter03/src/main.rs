@@ -1,7 +1,9 @@
 fn main() {
     // 声明常量使用 const 关键字而不是 let, 并且必须注明值的类型
     // 变量不能在全局作用域中使用, 但是常量可以
+    // 常量只能被设置为常量表达式
     // 常量在整个程序生命周期中都有效
+    // 可以在数字字面值中插入下划线来提升可读性
     const MAX_VALUE: i32 = 100_000;
     println!("{}", MAX_VALUE);
 
@@ -16,7 +18,6 @@ fn main() {
     // let b: u32 = 4;
     // let c = a + b;
 
-    // 编写数字字面值时允许使用 _ 做为分隔符以方便读数
     // 有 0x/0o/0b 前缀, 还有一个特殊的 Byte(u8 only), e.g. b'A'
     // 除 byte 以外的所有数字字面值允许使用类型后缀, 例如 57u16
     let num = 1u8;
@@ -63,14 +64,17 @@ fn main() {
 
     function(4);
 
+    // Rust 是一门基于表达式(expression-based)的语言
+    // 语句(Statements)是执行一些操作但不返回值的指令.表达式(Expressions)计算并产生一个值
+    // 使用 let 关键字创建变量并绑定一个值是语句, 函数定义是语句,  y = 6 也是语句
+    // {}, 是一个表达式, 值等同于 {} 中最后一个表达式的值
+
     // let mut x = 2;
     // let mut y = 3;
-    // 错误
+    // // 错误
     // x = y = 6;
 
     let x = 5;
-
-    // {}, 也是一个表达式
     let y = {
         let x = 3;
         x + 1
@@ -85,7 +89,7 @@ fn main() {
     }
 
     let condition = true;
-    // if 和 else 分支表达式类型必须匹配
+    // 在这种情况下, if 和 else 分支表达式类型必须匹配
     let number = if condition { 5 } else { 6 };
 
     let mut counter = 0;
@@ -94,6 +98,7 @@ fn main() {
         counter += 1;
 
         if counter == 10 {
+            // break 表达式
             break counter * 2;
         }
     };
@@ -123,12 +128,11 @@ fn main() {
 
 // 定义在 main 之后也可以在 main 中调用
 // 必须声明每个参数的类型
+// 在 Rust 中, 函数的返回值等同于函数体最后一个表达式的值
+// 使用 return 关键字和指定值, 可从函数中提前返回
 fn function(x: i32) -> i32 {
     println!("the value is {}", x);
     5
-    // 也可以
-    // return 5;
-
-    // 5; 为错误
-    // 使用空元组 () 表示不返回值
+    // 5; 为错误: expected i32, found ()
+    // 空元组 () 表示不返回值
 }
