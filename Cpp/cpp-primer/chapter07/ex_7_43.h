@@ -2,8 +2,7 @@
 // Created by kaiser on 18-11-29.
 //
 
-#ifndef CPP_PRIMER_EX_7_43_H
-#define CPP_PRIMER_EX_7_43_H
+#pragma once
 
 #include <cstdint>
 
@@ -19,5 +18,3 @@ class C {
  private:
   NoDefault no_default_;
 };
-
-#endif  // CPP_PRIMER_EX_7_43_H

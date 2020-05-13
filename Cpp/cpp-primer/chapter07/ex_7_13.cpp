@@ -4,15 +4,18 @@
 
 #include <cstdlib>
 #include <iostream>
+
 #include "ex_7_12.h"
 
 int main() {
-  SalesData total(std::cin);
+  SalesData total{std::cin};
 
   if (!total.Isbn().empty()) {
     while (std::cin) {
-      SalesData trans(std::cin);
-      if (!std::cin) break;
+      SalesData trans{std::cin};
+      if (!std::cin) {
+        break;
+      }
 
       if (total.Isbn() == trans.Isbn()) {
         total.Combine(trans);
@@ -23,7 +26,7 @@ int main() {
     }
     Print(std::cout, total) << '\n';
   } else {
-    std::cerr << "no data\n";
+    std::cerr << "no data" << std::endl;
     return EXIT_FAILURE;
   }
 }

@@ -2,8 +2,9 @@
 // Created by kaiser on 18-11-29.
 //
 
-#include "ex_7_29.h"
 #include <iostream>
+
+#include "ex_7_29.h"
 
 int main() {
   Screen my_screen(5, 5, 'X');

@@ -2,14 +2,11 @@
 // Created by kaiser on 18-11-29.
 //
 
-#ifndef CPP_PRIMER_EX_7_4_H
-#define CPP_PRIMER_EX_7_4_H
+#pragma once
 
 #include <string>
 
 struct Person {
-  std::string name_;
-  std::string address_;
+  std::string name;
+  std::string address;
 };
-
-#endif  // CPP_PRIMER_EX_7_4_H

@@ -2,8 +2,7 @@
 // Created by kaiser on 18-11-29.
 //
 
-#ifndef CPP_PRIMER_EX_7_29_H
-#define CPP_PRIMER_EX_7_29_H
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -54,5 +53,3 @@ class Screen {
   Pos height_{}, width_{};
   std::string contents_;
 };
-
-#endif  // CPP_PRIMER_EX_7_29_H

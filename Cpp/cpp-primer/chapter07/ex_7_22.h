@@ -2,8 +2,7 @@
 // Created by kaiser on 18-11-29.
 //
 
-#ifndef CPP_PRIMER_EX_7_22_H
-#define CPP_PRIMER_EX_7_22_H
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -39,5 +38,3 @@ inline std::ostream &Print(std::ostream &os, const Person &item) {
   os << item.name_ << ' ' << item.address_;
   return os;
 }
-
-#endif  // CPP_PRIMER_EX_7_22_H

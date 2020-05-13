@@ -2,8 +2,7 @@
 // Created by kaiser on 18-11-29.
 //
 
-#ifndef CPP_PRIMER_EX_7_2_H
-#define CPP_PRIMER_EX_7_2_H
+#pragma once
 
 #include <cstdint>
 #include <string>
@@ -22,4 +21,3 @@ struct SalesData {
   double revenue{};
 };
 
-#endif  // CPP_PRIMER_EX_7_2_H

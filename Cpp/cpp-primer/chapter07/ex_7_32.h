@@ -2,8 +2,7 @@
 // Created by kaiser on 18-11-29.
 //
 
-#ifndef CPP_PRIMER_EX_7_32_H
-#define CPP_PRIMER_EX_7_32_H
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -14,14 +13,14 @@ class Screen;
 class WindowMgr {
  public:
   using ScreenIndex = std::vector<Screen>::size_type;
-  void clear(ScreenIndex index);
+  void Clear(ScreenIndex index);
 
  private:
-  std::vector<Screen> screens;
+  std::vector<Screen> screens_;
 };
 
 class Screen {
-  friend void WindowMgr::clear(ScreenIndex index);
+  friend void WindowMgr::Clear(ScreenIndex index);
 
  public:
   using Pos = std::string::size_type;
@@ -32,6 +31,7 @@ class Screen {
 
   Screen(Pos ht, Pos wd, char ch)
       : height_{ht}, width_{wd}, contents_(ht * wd, ch) {}
+
   char Get() const { return contents_[cursor_]; }
 
   char Get(Pos r, Pos c) const { return contents_[r * width_ + c]; }
@@ -69,9 +69,7 @@ class Screen {
   std::string contents_;
 };
 
-inline void WindowMgr::clear(WindowMgr::ScreenIndex index) {
-  auto &s{screens[index]};
+inline void WindowMgr::Clear(WindowMgr::ScreenIndex index) {
+  auto &s{screens_[index]};
   s.contents_ = std::string(s.width_ * s.height_, ' ');
 }
-
-#endif  // CPP_PRIMER_EX_7_32_H

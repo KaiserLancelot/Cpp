@@ -2,18 +2,15 @@
 // Created by kaiser on 18-11-29.
 //
 
-#ifndef CPP_PRIMER_EX_7_5_H
-#define CPP_PRIMER_EX_7_5_H
+#pragma once
 
 #include <string>
 
 struct Person {
-  const std::string &GetName() const { return name_; }
+  const std::string &GetName() const { return name; }
 
-  const std::string &GetAddress() const { return address_; }
+  const std::string &GetAddress() const { return address; }
 
-  std::string name_;
-  std::string address_;
+  std::string name;
+  std::string address;
 };
-
-#endif  // CPP_PRIMER_EX_7_5_H

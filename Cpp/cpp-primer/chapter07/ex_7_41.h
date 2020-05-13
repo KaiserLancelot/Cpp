@@ -2,8 +2,7 @@
 // Created by kaiser on 18-11-29.
 //
 
-#ifndef CPP_PRIMER_EX_7_41_H
-#define CPP_PRIMER_EX_7_41_H
+#pragma once
 
 #include <cstdint>
 #include <iostream>
@@ -68,5 +67,3 @@ inline SalesData Add(const SalesData &lhs, const SalesData &rhs) {
   sum.Combine(rhs);
   return sum;
 }
-
-#endif  // CPP_PRIMER_EX_7_41_H

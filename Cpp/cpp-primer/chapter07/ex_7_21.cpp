@@ -2,12 +2,14 @@
 // Created by kaiser on 18-11-29.
 //
 
-#include "ex_7_21.h"
 #include <cstdlib>
 #include <iostream>
 
+#include "ex_7_21.h"
+
 int main() {
   SalesData total;
+
   if (Read(std::cin, total)) {
     SalesData trans;
     while (Read(std::cin, trans)) {
@@ -20,7 +22,7 @@ int main() {
     }
     Print(std::cout, total) << '\n';
   } else {
-    std::cerr << "no data\n";
+    std::cerr << "no data" << std::endl;
     return EXIT_FAILURE;
   }
 }

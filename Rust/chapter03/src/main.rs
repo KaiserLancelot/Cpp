@@ -1,3 +1,10 @@
+/**
+ * @ Author: KaiserLancelot
+ * @ Create Time: 2020-04-29 00:00:26
+ * @ Modified by: KaiserLancelot
+ * @ Modified time: 2020-05-14 04:18:28
+ */
+
 fn main() {
     // 声明常量使用 const 关键字而不是 let, 并且必须注明值的类型
     // 变量不能在全局作用域中使用, 但是常量可以
