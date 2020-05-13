@@ -1,28 +1,19 @@
-cmake_minimum_required(VERSION 3.17)
-
-if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-  message(STATUS "Setting build type to 'Release' as none was specified")
-  set(CMAKE_BUILD_TYPE
-      "Release"
-      CACHE STRING "Choose the type of build" FORCE)
-endif()
+cmake_minimum_required(VERSION 3.13)
 
 project(Cpp LANGUAGES CXX)
 
-if((CMAKE_BUILD_TYPE MATCHES "Debug") OR (CMAKE_BUILD_TYPE MATCHES
-                                          "RelWithDebInfo"))
+if((CMAKE_BUILD_TYPE STREQUAL "Debug") OR (CMAKE_BUILD_TYPE STREQUAL
+                                           "RelWithDebInfo"))
   # Address Memory Thread None
-  set(sanitizer "Address")
+  set(SANITIZER "Address")
 else()
-  set(sanitizer "None")
+  set(SANITIZER "None")
 endif()
 
-option(coverage "Open code coverage tool" OFF)
-
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
-include(check)
-include(sanitizers)
-include(compiler-options)
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+include(Check)
+include(CompilerOptions)
+include(Sanitizers)
 
 add_subdirectory(cpp-primer/chapter01)
 add_subdirectory(cpp-primer/chapter02)

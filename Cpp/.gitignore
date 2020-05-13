@@ -35,8 +35,5 @@
 .vscode
 .clangd
 build
-coverage
 *.profraw
-*.profdata
-callgrind.out.*
 compile_commands.json
