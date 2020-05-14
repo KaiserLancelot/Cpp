@@ -16,3 +16,5 @@ void Fun(std::forward_list<std::string> &forward_list, const std::string &s1,
   }
   forward_list.insert_after(prv, s2);
 }
+
+int main() {}

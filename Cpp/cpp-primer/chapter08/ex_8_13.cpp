@@ -15,16 +15,13 @@ struct PersonInfo {
   std::vector<std::string> phones;
 };
 
-bool valid(const std::string &str) { return std::isdigit(str[0]); }
+bool Valid(const std::string &str) { return std::isdigit(str[0]); }
 
-std::string format(const std::string &str) {
+std::string Format(const std::string &str) {
   return str.substr(0, 3) + "-" + str.substr(3, 3) + "-" + str.substr(6);
 }
 
 int main() {
-  std::string line, word;
-  std::vector<PersonInfo> people;
-  std::istringstream record;
   std::ifstream ifs{"person_info"};
 
   if (!ifs) {
@@ -32,11 +29,15 @@ int main() {
     return EXIT_FAILURE;
   }
 
+  std::string line, word;
+  std::vector<PersonInfo> people;
+  std::istringstream record;
   while (std::getline(ifs, line)) {
     PersonInfo info;
     record.clear();
     record.str(line);
     record >> info.name;
+
     while (record >> word) {
       info.phones.push_back(word);
     }
@@ -46,10 +47,11 @@ int main() {
   for (const auto &entry : people) {
     std::ostringstream formatted, bad_nums;
     for (const auto &nums : entry.phones) {
-      if (!valid(nums))
+      if (!Valid(nums)) {
         bad_nums << " " << nums;
-      else
-        formatted << " " << format(nums);
+      } else {
+        formatted << " " << Format(nums);
+      }
     }
     if (bad_nums.str().empty()) {
       std::cout << entry.name << " " << formatted.str() << '\n';

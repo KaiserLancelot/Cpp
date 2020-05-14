@@ -2,10 +2,11 @@
 // Created by kaiser on 18-12-3.
 //
 
-#include "ex_8_08.h"
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
+
+#include "ex_8_06.h"
 
 int main(int argc, char *argv[]) {
   if (argc != 3) {
@@ -22,18 +23,18 @@ int main(int argc, char *argv[]) {
   }
 
   SalesData total;
-  if (ifs >> total.book_no_ >> total.units_sold_ >> total.revenue_) {
+  if (ifs >> total.book_no >> total.units_sold >> total.revenue) {
     SalesData trans;
-    while (ifs >> trans.book_no_ >> trans.units_sold_ >> trans.revenue_) {
+    while (ifs >> trans.book_no >> trans.units_sold >> trans.revenue) {
       if (total.Isbn() == trans.Isbn()) {
         total.Combine(trans);
       } else {
-        ofs << total.book_no_ << " " << total.units_sold_ << " "
-            << total.revenue_ << '\n';
+        ofs << total.book_no << " " << total.units_sold << " " << total.revenue
+            << '\n';
         total = trans;
       }
     }
-    ofs << total.book_no_ << " " << total.units_sold_ << " " << total.revenue_
+    ofs << total.book_no << " " << total.units_sold << " " << total.revenue
         << '\n';
   } else {
     std::cerr << "no data\n";

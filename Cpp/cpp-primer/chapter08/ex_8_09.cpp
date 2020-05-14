@@ -6,7 +6,7 @@
 #include <sstream>
 #include <string>
 
-std::istream &fun(std::istream &is) {
+std::istream &Fun(std::istream &is) {
   std::string word;
   while (is >> word) {
     std::cout << word << '\n';
@@ -17,5 +17,5 @@ std::istream &fun(std::istream &is) {
 
 int main() {
   std::istringstream iss{"Hello World"};
-  fun(iss);
+  Fun(iss);
 }

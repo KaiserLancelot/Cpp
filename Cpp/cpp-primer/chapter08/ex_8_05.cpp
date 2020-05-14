@@ -19,7 +19,9 @@ int main() {
   std::string word;
   std::vector<std::string> vs;
 
-  while (ifs >> word) vs.push_back(word);
+  while (ifs >> word) {
+    vs.push_back(word);
+  }
 
   for (const auto &s : vs) {
     std::cout << s << '\n';

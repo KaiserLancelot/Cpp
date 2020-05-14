@@ -26,6 +26,8 @@ int main() {
   for (const auto &str : vs) {
     std::istringstream iss{str};
     std::string word;
-    while (iss >> word) std::cout << word << '\n';
+    while (iss >> word) {
+      std::cout << word << '\n';
+    }
   }
 }

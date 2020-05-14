@@ -1,4 +1,14 @@
-| mode  | openmode & ~ate                       | 若文件已存在的动作 | 若文件不存在的动作 |
+https://zh.cppreference.com/w/cpp/io/basic_filebuf/open
+
+常量	    解释
+app	    每次写入前寻位到流结尾
+binary	以二进制模式打开
+in	    为读打开
+out	    为写打开
+trunc	  在打开时舍弃流的内容
+ate	    打开后立即寻位到流结尾
+
+| mode  | openmode & ~ate                       | 若文件已存在的动作 | 若文件不存在的动作   |
 | ----- | ------------------------------------- | ------------------ | ------------------ |
 | "r"   | in                                    | 从头读取           | 打开失败           |
 | "w"   | out, out\|trunc                       | 销毁内容           | 创建新文件         |

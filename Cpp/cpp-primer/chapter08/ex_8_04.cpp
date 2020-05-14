@@ -19,7 +19,9 @@ int main() {
   std::string line;
   std::vector<std::string> vs;
 
-  while (std::getline(ifs, line)) vs.push_back(line);
+  while (std::getline(ifs, line)) {
+    vs.push_back(line);
+  }
 
   for (const auto &s : vs) {
     std::cout << s << '\n';

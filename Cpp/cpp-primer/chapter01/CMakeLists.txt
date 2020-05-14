@@ -1,4 +1,4 @@
-include_directories(${CMAKE_SOURCE_DIR}/cpp-primer/include)
+include_directories(../include)
 
 add_executable(ex_1_01 ex_1_01.cpp)
 add_executable(ex_1_02 ex_1_02.cpp)

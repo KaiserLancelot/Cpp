@@ -15,9 +15,6 @@ struct PersonInfo {
 };
 
 int main() {
-  std::string line, word;
-  std::vector<PersonInfo> people;
-  std::istringstream record;
   std::ifstream ifs{"person_info"};
 
   if (!ifs) {
@@ -25,18 +22,28 @@ int main() {
     return EXIT_FAILURE;
   }
 
+  std::vector<PersonInfo> people;
+
+  std::string line;
+  std::istringstream record;
   while (std::getline(ifs, line)) {
     PersonInfo info;
     record.clear();
     record.str(line);
     record >> info.name;
-    while (record >> word) info.phones.push_back(word);
+
+    std::string word;
+    while (record >> word) {
+      info.phones.push_back(word);
+    }
     people.push_back(info);
   }
 
   for (const auto &info : people) {
     std::cout << info.name << ' ';
-    for (const auto &phone : info.phones) std::cout << phone << ' ';
+    for (const auto &phone : info.phones) {
+      std::cout << phone << ' ';
+    }
     std::cout << '\n';
   }
 }
