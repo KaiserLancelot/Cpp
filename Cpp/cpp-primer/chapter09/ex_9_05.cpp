@@ -10,7 +10,9 @@ std::vector<std::int32_t>::iterator Find(
     std::vector<std::int32_t>::iterator begin,
     std::vector<std::int32_t>::iterator end, std::int32_t value) {
   for (; begin != end; ++begin) {
-    if (*begin == value) return begin;
+    if (*begin == value) {
+      return begin;
+    }
   }
   return end;
 }

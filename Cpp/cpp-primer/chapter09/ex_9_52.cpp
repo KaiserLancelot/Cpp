@@ -8,21 +8,22 @@
 #include <vector>
 
 int main() {
-  std::string expr("I am (Kaiser)");
+  std::string expr("I am (Kaiser))");
 
   std::stack<char> stack;
-  bool left{};
+  std::stack<bool> left;
   for (auto c : expr) {
     stack.push(c);
     if (c == '(') {
-      left = true;
+      left.push(true);
     }
-    if (c == ')' && left) {
+    if (c == ')' && !left.empty() && left.top()) {
       while (stack.top() != '(') {
         stack.pop();
       }
       stack.pop();
       stack.push('1');
+      left.pop();
     }
   }
 
@@ -32,5 +33,5 @@ int main() {
     stack.pop();
   }
 
-  std::cout << std::string(std::rbegin(result), std::rend(result)) << '\n';
+  std::cout << std::string{std::rbegin(result), std::rend(result)} << '\n';
 }

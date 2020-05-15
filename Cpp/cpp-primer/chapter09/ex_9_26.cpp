@@ -9,8 +9,8 @@
 
 int main() {
   std::int32_t ia[]{0, 1, 1, 2, 3, 5, 8, 13, 21, 55, 89};
-  std::list<std::int32_t> li(std::begin(ia), std::end(ia));
-  std::vector<std::int32_t> vi(std::begin(ia), std::end(ia));
+  std::list<std::int32_t> li{std::begin(ia), std::end(ia)};
+  std::vector<std::int32_t> vi{std::begin(ia), std::end(ia)};
 
   auto it1{std::begin(li)};
   while (it1 != std::end(li)) {
@@ -34,6 +34,7 @@ int main() {
     std::cout << ele << ' ';
   }
   std::cout << '\n';
+
   for (auto ele : vi) {
     std::cout << ele << ' ';
   }

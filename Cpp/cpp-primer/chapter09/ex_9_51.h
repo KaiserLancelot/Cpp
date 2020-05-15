@@ -2,15 +2,14 @@
 // Created by kaiser on 18-12-5.
 //
 
-#ifndef CPP_PRIMER_EX_9_51_H
-#define CPP_PRIMER_EX_9_51_H
+#pragma once
 
 #include <cstdint>
 #include <iostream>
 #include <string>
 
 class Date {
-  friend std::ostream &print(std::ostream &os, const Date &item);
+  friend std::ostream &Print(std::ostream &os, const Date &item);
 
  public:
   Date() = default;
@@ -45,8 +44,10 @@ class Date {
       day_ = std::stoi(s.substr(s.find_first_of('/') + 1));
     }
 
-    year_ = std::stoi(s.substr(std::size(s) - 4));
-    day_ = std::stoi(s.substr(s.find_first_of("0123456789")));
+    if (year_ == 0 && day_ == 0) {
+      year_ = std::stoi(s.substr(std::size(s) - 4));
+      day_ = std::stoi(s.substr(s.find_first_of("0123456789")));
+    }
   }
 
  private:
@@ -55,9 +56,7 @@ class Date {
   std::int32_t day_{};
 };
 
-inline std::ostream &print(std::ostream &os, const Date &item) {
+inline std::ostream &Print(std::ostream &os, const Date &item) {
   os << item.year_ << ' ' << item.month_ << ' ' << item.day_;
   return os;
 }
-
-#endif  // CPP_PRIMER_EX_9_51_H
