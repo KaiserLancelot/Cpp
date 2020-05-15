@@ -1,7 +1,7 @@
 /**
  * @ Author: KaiserLancelot
  * @ Create Time: 2020-05-14 03:38:18
- * @ Modified time: 2020-05-15 02:07:28
+ * @ Modified time: 2020-05-16 04:29:03
  */
 
 enum IpAddrKind {
@@ -61,4 +61,70 @@ fn main() {
     // 换句话说, 在对 Option<T> 进行 T 的运算之前必须将其转换为 T
     // 通常这能帮助我们捕获到空值最常见的问题之一: 假设某值不为空但实际上为空的情况
     // let sum = x + y;
+
+    let some_u8_value = 0u8;
+    match some_u8_value {
+        1 => println!("one"),
+        3 => println!("three"),
+        5 => println!("five"),
+        7 => println!("seven"),
+        // _ 模式会匹配所有的值
+        // 通过将其放置于其他分支之后, _ 将会匹配所有之前没有
+        // 指定的可能的值.() 就是 unit 值, 所以 _ 的情况什么也不会发生
+        _ => (),
+    }
+
+    let some_u8_value = Some(0u8);
+
+    match some_u8_value {
+        Some(3) => println!("three"),
+        _ => (),
+    }
+
+    // 和上面的 match 等价
+    // if let 获取通过等号分隔的一个模式和一个表达式
+    // 但是这样会失去 match 强制要求的穷尽性检查
+    if let Some(3) = some_u8_value {
+        println!("three");
+    } else {
+        // else 相当于 _ 分支块
+        println!("other");
+    }
+}
+
+#[derive(Debug)]
+enum UsState {
+    Alabama,
+    Alaska,
+}
+
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter(UsState),
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => {
+            println!("Lucky penny!");
+            1
+        }
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter(state) => {
+            println!("State quarter from {:?}!", state);
+            25
+        }
+    }
+}
+
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    // Rust 中的匹配是穷尽的(exhaustive):
+    // 必须穷举到最后的可能性来使代码有效
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
 }
