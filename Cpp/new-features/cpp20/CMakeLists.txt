@@ -6,4 +6,7 @@ add_executable(consteval consteval.cpp)
 add_executable(constinit constinit.cpp)
 add_executable(explicit explicit.cpp)
 add_executable(aggregate aggregate.cpp)
+add_executable(to_array to_array.cpp)
+add_executable(span span.cpp)
+
 add_executable(range range/main.cpp)
