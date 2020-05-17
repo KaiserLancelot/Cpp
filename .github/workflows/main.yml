@@ -42,7 +42,7 @@ jobs:
         cd JSON-2.90
         perl Makefile.PL
         make -j4 && make install
-        curl '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
     - name: configure-cpp
       env:
