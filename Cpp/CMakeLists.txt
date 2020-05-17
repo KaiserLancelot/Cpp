@@ -39,7 +39,7 @@ add_subdirectory(library/Boost)
 add_subdirectory(library/enum)
 add_subdirectory(library/fmt)
 add_subdirectory(library/json)
-add_subdirectory(library/sql)
+# add_subdirectory(library/sql)
 add_subdirectory(library/test)
 
 add_subdirectory(new-features/cpp11)
