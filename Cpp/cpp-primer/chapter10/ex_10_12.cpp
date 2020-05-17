@@ -2,11 +2,11 @@
 // Created by kaiser on 18-12-17.
 //
 
-#include "ex_7_12.h"
-
 #include <algorithm>
 #include <iostream>
 #include <vector>
+
+#include "ex_7_12.h"
 
 bool CompareIsbn(const SalesData &lhs, const SalesData &rhs) {
   return lhs.Isbn() < rhs.Isbn();

@@ -7,7 +7,7 @@
 
 int main() {
   std::int32_t i{10};
-  auto f{[&i]() mutable {
+  auto f{[&i] {
     if (i > 0) {
       --i;
     }

@@ -9,7 +9,7 @@
 int main() {
   std::vector<std::int32_t> vi{1, 2, 3};
 
-  for (auto begin{std::end(vi)}; begin-- != std::begin(vi);) {
-    std::cout << *begin << '\n';
+  for (auto end{std::end(vi)}; end != std::begin(vi);) {
+    std::cout << *--end << '\n';
   }
 }

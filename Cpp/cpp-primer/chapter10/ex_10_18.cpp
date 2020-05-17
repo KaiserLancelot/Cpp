@@ -20,7 +20,7 @@ void Biggies(std::vector<std::string> &words,
                      return std::size(s1) < std::size(s2);
                    });
   auto wc{std::partition(std::begin(words), std::end(words),
-                         [sz](const auto s) { return std::size(s) < sz; })};
+                         [sz](const auto &s) { return std::size(s) < sz; })};
   std::for_each(wc, std::end(words),
                 [](const auto &s) { std::cout << s << ' '; });
   std::cout << '\n';
