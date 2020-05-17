@@ -17,7 +17,7 @@ class Screen {
 
   Screen(Pos ht, Pos wd, char ch)
       : height_{ht}, width_{wd}, contents_(ht * wd, ch) {}
-      
+
   char Get() const { return contents_[cursor_]; }
 
   char Get(Pos r, Pos c) const { return contents_[r * width_ + c]; }
@@ -48,7 +48,10 @@ class Screen {
   }
 
  private:
-  void DoDisplay(std::ostream &os) const { os << contents_; }
+  void DoDisplay(std::ostream &os) const {
+    (void)height_;
+    os << contents_;
+  }
 
   Pos cursor_{};
   Pos height_{}, width_{};
