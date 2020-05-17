@@ -1,7 +1,7 @@
 /**
  * @ Author: KaiserLancelot
  * @ Create Time: 2020-04-29 00:00:26
- * @ Modified time: 2020-05-15 02:11:41
+ * @ Modified time: 2020-05-17 18:25:28
  */
 
 // 所有权规则:
@@ -159,18 +159,6 @@ fn first_word(s: &String) -> usize {
     }
 
     s.len()
-}
-
-fn first_word2(s: &String) -> &str {
-    let bytes = s.as_bytes();
-
-    for (i, &item) in bytes.iter().enumerate() {
-        if item == b' ' {
-            return &s[..i];
-        }
-    }
-
-    &s[..]
 }
 
 // 可以将函数参数类型改为 &str, 更加通用

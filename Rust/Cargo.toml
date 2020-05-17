@@ -1,0 +1,12 @@
+[workspace]
+
+members = [
+    "chapter02",
+    "chapter03",
+    "chapter04",
+    "chapter05",
+    "chapter06",
+    "chapter07",
+    "homework/convert-celsius-to-fahrenheit",
+    "homework/fibonacci"
+]
