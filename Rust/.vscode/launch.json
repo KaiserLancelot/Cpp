@@ -1,0 +1,150 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'chapter02'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=chapter02",
+          "--package=chapter02"
+        ],
+        "filter": {
+          "name": "chapter02",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'chapter03'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=chapter03",
+          "--package=chapter03"
+        ],
+        "filter": {
+          "name": "chapter03",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'chapter04'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=chapter04",
+          "--package=chapter04"
+        ],
+        "filter": {
+          "name": "chapter04",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'chapter05'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=chapter05",
+          "--package=chapter05"
+        ],
+        "filter": {
+          "name": "chapter05",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'chapter06'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=chapter06",
+          "--package=chapter06"
+        ],
+        "filter": {
+          "name": "chapter06",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'chapter07'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=chapter07"
+        ],
+        "filter": {
+          "name": "chapter07",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'convert-celsius-to-fahrenheit'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=convert-celsius-to-fahrenheit",
+          "--package=convert-celsius-to-fahrenheit"
+        ],
+        "filter": {
+          "name": "convert-celsius-to-fahrenheit",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'fibonacci'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=fibonacci",
+          "--package=fibonacci"
+        ],
+        "filter": {
+          "name": "fibonacci",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
