@@ -6,7 +6,7 @@
 #include <initializer_list>
 #include <iostream>
 
-std::int32_t Sum(std::initializer_list<std::int32_t> il) {
+std::int32_t sum(std::initializer_list<std::int32_t> il) {
   std::int32_t sum{0};
   for (auto element : il) {
     sum += element;
@@ -14,4 +14,4 @@ std::int32_t Sum(std::initializer_list<std::int32_t> il) {
   return sum;
 }
 
-int main() { std::cout << Sum({2, 2, 3, 4}) << '\n'; }
+int main() { std::cout << sum({2, 2, 3, 4}) << '\n'; }

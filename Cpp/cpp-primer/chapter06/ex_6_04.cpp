@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <iostream>
 
-std::int32_t Fact(std::int32_t val) {
+std::int32_t fact(std::int32_t val) {
   std::int32_t ret{1};
   while (val > 1) {
     ret *= val;
@@ -18,5 +18,5 @@ int main() {
   std::int32_t n;
   std::cin >> n;
 
-  std::cout << Fact(n) << '\n';
+  std::cout << fact(n) << '\n';
 }

@@ -7,9 +7,9 @@
 #include <string>
 
 struct Person {
-  const std::string &GetName() const { return name; }
+  const std::string &get_name() const { return name; }
 
-  const std::string &GetAddress() const { return address; }
+  const std::string &get_address() const { return address; }
 
   std::string name;
   std::string address;

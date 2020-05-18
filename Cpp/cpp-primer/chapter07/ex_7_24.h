@@ -17,11 +17,12 @@ class Screen {
   Screen(Pos ht, Pos wd, char c)
       : height_{ht}, width_{wd}, contents_(ht * wd, c) {}
 
-  char Get() const { return contents_[cursor_]; }
+  char get() const { return contents_[cursor_]; }
 
-  char Get(Pos r, Pos c) const { return contents_[r * width_ + c]; }
+  char get(Pos r, Pos c) const { return contents_[r * width_ + c]; }
 
-  Screen &Move(Pos r, Pos c) {
+  Screen &move(Pos r, Pos c) {
+    (void)height_;
     cursor_ = r * width_ + c;
     return *this;
   }

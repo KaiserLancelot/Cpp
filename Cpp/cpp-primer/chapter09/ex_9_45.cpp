@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-std::string &Fun(std::string &name, const std::string &prefix,
+std::string &fun(std::string &name, const std::string &prefix,
                  const std::string &suffix) {
   name.insert(std::begin(name), std::begin(prefix), std::end(prefix));
   name.append(suffix);
@@ -14,5 +14,5 @@ std::string &Fun(std::string &name, const std::string &prefix,
 
 int main() {
   std::string name("kaiser");
-  std::cout << Fun(name, "Mr.", " Jr.") << '\n';
+  std::cout << fun(name, "Mr.", " Jr.") << '\n';
 }

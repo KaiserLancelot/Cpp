@@ -25,8 +25,8 @@ int main(int argc, char *argv[]) {
   if (ifs >> total.book_no >> total.units_sold >> total.revenue) {
     SalesData trans;
     while (ifs >> trans.book_no >> trans.units_sold >> trans.revenue) {
-      if (total.Isbn() == trans.Isbn()) {
-        total.Combine(trans);
+      if (total.isbn() == trans.isbn()) {
+        total.combine(trans);
       } else {
         std::cout << total.book_no << " " << total.units_sold << " "
                   << total.revenue << '\n';

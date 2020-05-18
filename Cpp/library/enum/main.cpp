@@ -7,11 +7,11 @@
 
 #include <magic_enum.hpp>
 
-enum class Color { kRed = 2, kBlue = 4, kGreen = 8 };
+enum class Color { Red = 2, Blue = 4, Green = 8 };
 
 int main() {
   {
-    auto color{Color::kRed};
+    auto color{Color::Red};
     std::cout << magic_enum::enum_name(color) << '\n';
   }
 

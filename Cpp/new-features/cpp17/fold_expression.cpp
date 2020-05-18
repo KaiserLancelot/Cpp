@@ -42,7 +42,7 @@
 #include <vector>
 
 template <typename... T>
-std::ostream &Print(std::ostream &os, const T &... args) {
+std::ostream &print(std::ostream &os, const T &... args) {
   return (os << ... << [&args] {
     if constexpr (std::is_array_v<T>) {
       return std::string(args) + ' ';
@@ -53,23 +53,23 @@ std::ostream &Print(std::ostream &os, const T &... args) {
 }
 
 template <typename T, typename... Args>
-auto Matches(const T &range, Args... args) {
+auto matches(const T &range, Args... args) {
   return (std::count(std::begin(range), std::end(range), args) + ... + 0);
 }
 
 template <typename T, typename... Args>
-void PushAll(std::vector<T> &v, Args... args) {
+void push_all(std::vector<T> &v, Args... args) {
   (v.push_back(args), ...);
 }
 
 int main() {
-  Print(std::cout, 1, 3.5, "fuck", -5) << '\n';
+  print(std::cout, 1, 3.5, "fuck", -5) << '\n';
 
-  std::cout << Matches(std::vector<std::string>{"a", "a", "b", "b"}, "a", "b")
+  std::cout << matches(std::vector<std::string>{"a", "a", "b", "b"}, "a", "b")
             << '\n';
 
   std::vector<std::string> v;
-  PushAll(v, "a", "b", "c");
+  push_all(v, "a", "b", "c");
   for (const auto &item : v) {
     std::cout << item << ' ';
   }

@@ -10,7 +10,7 @@
 class Test {
  public:
   Test(const std::string& str) : str_{str} {}
-  const std::string& GetString() const { return str_; }
+  const std::string& get_string() const { return str_; }
 
  private:
   std::string str_;
@@ -22,5 +22,5 @@ int main() {
   // destroy() 相当与 p->~ElementType(); this->free(p);
   auto ptr{pool.construct("string")};
 
-  std::cout << ptr->GetString() << '\n';
+  std::cout << ptr->get_string() << '\n';
 }

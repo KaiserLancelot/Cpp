@@ -9,7 +9,8 @@
 #include <string>
 #include <unordered_map>
 
-std::unordered_map<std::string, std::string> BuildMap(std::ifstream &map_file) {
+std::unordered_map<std::string, std::string> build_map(
+    std::ifstream &map_file) {
   std::unordered_map<std::string, std::string> trans_map;
   std::string key, value;
 
@@ -23,7 +24,7 @@ std::unordered_map<std::string, std::string> BuildMap(std::ifstream &map_file) {
   return trans_map;
 }
 
-const std::string Translation(
+const std::string translation(
     const std::string &s,
     const std::unordered_map<std::string, std::string> &trans_map) {
   auto map_iter{trans_map.find(s)};
@@ -34,8 +35,8 @@ const std::string Translation(
   }
 }
 
-void WordTransform(std::ifstream &map_file, std::ifstream &input) {
-  auto trans_map{BuildMap(map_file)};
+void word_transform(std::ifstream &map_file, std::ifstream &input) {
+  auto trans_map{build_map(map_file)};
   std::string text;
 
   while (std::getline(input, text)) {
@@ -48,7 +49,7 @@ void WordTransform(std::ifstream &map_file, std::ifstream &input) {
       } else {
         std::cout << ' ';
       }
-      std::cout << Translation(word, trans_map);
+      std::cout << translation(word, trans_map);
     }
     std::cout << '\n';
   }
@@ -63,5 +64,5 @@ int main() {
     std::exit(EXIT_FAILURE);
   }
 
-  WordTransform(map_file, input);
+  word_transform(map_file, input);
 }

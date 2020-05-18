@@ -4,6 +4,6 @@
 
 #include <string>
 
-std::string (&Fun())[10];
+std::string (&fun())[10];
 
 int main() {}

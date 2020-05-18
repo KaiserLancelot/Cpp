@@ -7,7 +7,7 @@
 #include "Sales_item.h"
 
 int main() {
-  Sales_item item;
+  SalesItem item;
 
   while (std::cin >> item) {
     std::cout << item << '\n';

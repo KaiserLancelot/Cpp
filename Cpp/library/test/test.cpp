@@ -22,9 +22,9 @@ class SortTest : public testing::Test {
     std::cout << "SortTest()\n";
 
     std::default_random_engine e{std::random_device{}()};
-    constexpr std::size_t kSize{10000};
-    arr_.reserve(kSize);
-    std::generate_n(std::back_inserter(arr_), kSize, e);
+    constexpr std::size_t size{10000};
+    arr.reserve(size);
+    std::generate_n(std::back_inserter(arr), size, e);
   }
 
   ~SortTest() override { std::cout << "~SortTest()\n"; }
@@ -35,20 +35,20 @@ class SortTest : public testing::Test {
   void TearDown() override { std::cout << "TearDown()\n"; }
 
   // 可以被测试使用
-  std::vector<std::int32_t> arr_;
+  std::vector<std::int32_t> arr;
 };
 
 // ASSERT 系列是 Fatal assertion
 // EXPECT 系列是 Nonfatal assertion
 
 TEST_F(SortTest, InsertionSortTest) {
-  InsertionSort(arr_);
-  ASSERT_TRUE(std::is_sorted(std::begin(arr_), std::end(arr_)));
+  insertion_sort(arr);
+  ASSERT_TRUE(std::is_sorted(std::begin(arr), std::end(arr)));
 }
 
 TEST_F(SortTest, StdSortTest) {
-  std::sort(std::begin(arr_), std::end(arr_));
-  ASSERT_TRUE(std::is_sorted(std::begin(arr_), std::end(arr_)));
+  std::sort(std::begin(arr), std::end(arr));
+  ASSERT_TRUE(std::is_sorted(std::begin(arr), std::end(arr)));
 }
 
 TEST(Test, Test1) { ASSERT_EQ(1, 1); }

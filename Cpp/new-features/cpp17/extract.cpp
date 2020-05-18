@@ -10,7 +10,7 @@
 #include <utility>
 
 template <typename M>
-void Print(const M &m) {
+void print(const M &m) {
   std::cout << "Race placement:\n";
   for (const auto &[placement, driver] : m) {
     std::cout << placement << ": " << driver << '\n';
@@ -21,7 +21,7 @@ int main() {
   std::map<std::int32_t, std::string> race_placement{
       {1, "Mario"}, {2, "Luigi"}, {3, "Bowser"}, {4, "Peach"},
       {5, "Yoshi"}, {6, "Koopa"}, {7, "Toad"},   {8, "Donkey Kong Jr."}};
-  Print(race_placement);
+  print(race_placement);
   std::cout << '\n';
 
   // C++17 std::map::extract
@@ -41,5 +41,5 @@ int main() {
   race_placement.insert(std::move(a));
   race_placement.insert(std::move(b));
 
-  Print(race_placement);
+  print(race_placement);
 }

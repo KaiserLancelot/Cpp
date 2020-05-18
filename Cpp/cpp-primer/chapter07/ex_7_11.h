@@ -17,38 +17,38 @@ struct SalesData {
 
   explicit SalesData(std::istream &is);
 
-  SalesData &Combine(const SalesData &rhs) {
+  SalesData &combine(const SalesData &rhs) {
     units_sold += rhs.units_sold;
     revenue += rhs.revenue;
     return *this;
   }
 
-  const std::string &Isbn() const { return book_no; }
+  const std::string &isbn() const { return book_no; }
 
-  double AvgPrice() const { return units_sold ? revenue / units_sold : 0; }
+  double avg_price() const { return units_sold ? revenue / units_sold : 0; }
 
   std::string book_no;
   std::int32_t units_sold{};
   double revenue{};
 };
 
-inline std::istream &Read(std::istream &is, SalesData &item) {
+inline std::istream &read(std::istream &is, SalesData &item) {
   double price;
   is >> item.book_no >> item.units_sold >> price;
   item.revenue = item.units_sold * price;
   return is;
 }
 
-inline std::ostream &Print(std::ostream &os, const SalesData &item) {
+inline std::ostream &print(std::ostream &os, const SalesData &item) {
   os << item.book_no << ' ' << item.units_sold << ' ' << item.revenue << ' '
-     << item.AvgPrice();
+     << item.avg_price();
   return os;
 }
 
-inline SalesData Add(const SalesData &lhs, const SalesData &rhs) {
+inline SalesData add(const SalesData &lhs, const SalesData &rhs) {
   SalesData sum{lhs};
-  sum.Combine(rhs);
+  sum.combine(rhs);
   return sum;
 }
 
-inline SalesData::SalesData(std::istream &is) { Read(is, *this); }
+inline SalesData::SalesData(std::istream &is) { read(is, *this); }

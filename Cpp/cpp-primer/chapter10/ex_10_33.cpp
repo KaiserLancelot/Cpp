@@ -9,7 +9,7 @@
 #include <string>
 #include <vector>
 
-void Fun(const std::string &input_file, const std::string &out_file1,
+void fun(const std::string &input_file, const std::string &out_file1,
          const std::string &out_file2) {
   std::ifstream ifs{input_file};
   std::vector<std::int32_t> vi{std::istream_iterator<std::int32_t>{ifs}, {}};
@@ -23,4 +23,4 @@ void Fun(const std::string &input_file, const std::string &out_file1,
                [](auto i) { return i % 2 == 0; });
 }
 
-int main() { Fun("in", "out1", "out2"); }
+int main() { fun("in", "out1", "out2"); }

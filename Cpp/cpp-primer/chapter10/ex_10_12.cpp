@@ -8,16 +8,16 @@
 
 #include "ex_7_12.h"
 
-bool CompareIsbn(const SalesData &lhs, const SalesData &rhs) {
-  return lhs.Isbn() < rhs.Isbn();
+bool compare_isbn(const SalesData &lhs, const SalesData &rhs) {
+  return lhs.isbn() < rhs.isbn();
 }
 
 int main() {
   std::vector<SalesData> vector{SalesData{"aa"}, SalesData{"aaaa"},
                                 SalesData{"aaa"}, SalesData{"z"}};
-  std::sort(std::begin(vector), std::end(vector), CompareIsbn);
+  std::sort(std::begin(vector), std::end(vector), compare_isbn);
 
   for (const auto &ele : vector) {
-    std::cout << ele.Isbn() << '\n';
+    std::cout << ele.isbn() << '\n';
   }
 }

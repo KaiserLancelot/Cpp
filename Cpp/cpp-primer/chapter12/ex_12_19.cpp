@@ -15,62 +15,62 @@ StrBlobPtr StrBlob::begin() { return StrBlobPtr{*this}; }
 
 StrBlobPtr StrBlob::end() { return StrBlobPtr{*this, std::size(*data_)}; }
 
-StrBlob::size_type StrBlob::size() const { return std::size(*data_); }
+StrBlob::SizeType StrBlob::size() const { return std::size(*data_); }
 
 bool StrBlob::empty() const { return std::empty(*data_); }
 
-void StrBlob::PushBack(const std::string &t) { data_->push_back(t); }
+void StrBlob::push_back(const std::string &t) { data_->push_back(t); }
 
-void StrBlob::PopBack() {
-  Check(0, "PopBack on empty StrBlob");
+void StrBlob::pop_back() {
+  check(0, "PopBack on empty StrBlob");
   data_->pop_back();
 }
 
-std::string &StrBlob::Front() {
-  Check(0, "Front on empty StrBlob");
+std::string &StrBlob::front() {
+  check(0, "Front on empty StrBlob");
   return data_->front();
 }
 
-std::string &StrBlob::Front() const {
-  Check(0, "Front on empty StrBlob");
+std::string &StrBlob::front() const {
+  check(0, "Front on empty StrBlob");
   return data_->front();
 }
 
-std::string &StrBlob::Back() {
-  Check(0, "Back on empty StrBlob");
+std::string &StrBlob::back() {
+  check(0, "Back on empty StrBlob");
   return data_->back();
 }
 
-std::string &StrBlob::Back() const {
-  Check(0, "Back on empty StrBlob");
+std::string &StrBlob::back() const {
+  check(0, "Back on empty StrBlob");
   return data_->back();
 }
 
-void StrBlob::Check(StrBlob::size_type i, const std::string &msg) const {
+void StrBlob::check(StrBlob::SizeType i, const std::string &msg) const {
   if (i >= size()) {
     throw std::out_of_range{msg};
   }
 }
 
-StrBlobPtr::StrBlobPtr(StrBlob &a, size_type sz) : wptr_{a.data_}, curr_{sz} {}
+StrBlobPtr::StrBlobPtr(StrBlob &a, SizeType sz) : wptr_{a.data_}, curr_{sz} {}
 
-std::string &StrBlobPtr::Deref() const {
-  auto p{Check(curr_, "dereference past end")};
+std::string &StrBlobPtr::deref() const {
+  auto p{check(curr_, "dereference past end")};
   return (*p)[curr_];
 }
 
-StrBlobPtr &StrBlobPtr::Incr() {
-  Check(curr_, "increment past end of StrBlobPtr");
+StrBlobPtr &StrBlobPtr::incr() {
+  check(curr_, "increment past end of StrBlobPtr");
   ++curr_;
   return *this;
 }
 
-bool StrBlobPtr::NotEqual(const StrBlobPtr &item) const {
+bool StrBlobPtr::not_equal(const StrBlobPtr &item) const {
   return curr_ != item.curr_;
 }
 
-std::shared_ptr<std::vector<std::string>> StrBlobPtr::Check(
-    StrBlobPtr::size_type i, const std::string &msg) const {
+std::shared_ptr<std::vector<std::string>> StrBlobPtr::check(
+    StrBlobPtr::SizeType i, const std::string &msg) const {
   auto ret{wptr_.lock()};
   if (!ret) {
     throw std::runtime_error{"unbound StrBlobPtr"};

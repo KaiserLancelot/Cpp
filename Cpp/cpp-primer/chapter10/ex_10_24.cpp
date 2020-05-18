@@ -11,7 +11,7 @@
 #include <iostream>
 #include <vector>
 
-bool CheckSize(const std::string &str, std::size_t size) {
+bool check_size(const std::string &str, std::size_t size) {
   return std::size(str) < size;
 }
 
@@ -20,6 +20,6 @@ int main() {
   std::vector<std::int32_t> v{1, 2, 3, 4, 5, 6};
   std::string str{"aaa"};
   std::cout << *std::find_if(std::begin(v), std::end(v),
-                             std::bind(&CheckSize, str, _1))
+                             std::bind(&check_size, str, _1))
             << '\n';
 }

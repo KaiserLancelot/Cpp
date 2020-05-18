@@ -6,15 +6,15 @@
 #include <iostream>
 #include <vector>
 
-void PrintVector(std::vector<std::int32_t>::const_iterator begin,
-                 std::vector<std::int32_t>::const_iterator end) {
+void print_vector(std::vector<std::int32_t>::const_iterator begin,
+                  std::vector<std::int32_t>::const_iterator end) {
   if (begin != end) {
     std::cout << *begin++ << '\n';
-    PrintVector(begin, end);
+    print_vector(begin, end);
   }
 }
 
 int main() {
   std::vector<std::int32_t> vi{1, 2, 3};
-  PrintVector(std::begin(vi), std::end(vi));
+  print_vector(std::begin(vi), std::end(vi));
 }

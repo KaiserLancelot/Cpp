@@ -9,7 +9,7 @@
 #include <iostream>
 #include <string>
 
-void RunQueries(std::ifstream &input) {
+void run_queries(std::ifstream &input) {
   TextQuery tq{input};
   while (true) {
     std::cout << "enter word to look for, or q to quit: ";
@@ -17,7 +17,7 @@ void RunQueries(std::ifstream &input) {
     if (!(std::cin >> s) || s == "q") {
       break;
     }
-    Print(std::cout, tq.Query(s)) << '\n';
+    print(std::cout, tq.query(s)) << '\n';
   }
 }
 
@@ -28,5 +28,5 @@ int main() {
     std::exit(EXIT_FAILURE);
   }
 
-  RunQueries(ifs);
+  run_queries(ifs);
 }

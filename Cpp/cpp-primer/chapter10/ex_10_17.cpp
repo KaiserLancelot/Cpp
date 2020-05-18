@@ -13,9 +13,9 @@ int main() {
                                 SalesData{"aaa"}, SalesData{"z"}};
   std::sort(
       std::begin(vector), std::end(vector),
-      [](const auto &lhs, const auto &rhs) { return lhs.Isbn() < rhs.Isbn(); });
+      [](const auto &lhs, const auto &rhs) { return lhs.isbn() < rhs.isbn(); });
 
   for (const auto &ele : vector) {
-    std::cout << ele.Isbn() << '\n';
+    std::cout << ele.isbn() << '\n';
   }
 }

@@ -13,32 +13,32 @@
 
 class Lexicon {
  public:
-  using const_iterator = std::set<std::string>::const_iterator;
+  using ConstIterator = std::set<std::string>::const_iterator;
 
   explicit Lexicon(const std::string& filename);
 
-  bool ContainsWord(const std::string& word) const;
-  bool ContainsPrefix(const std::string& prefix) const;
+  bool contains_word(const std::string& word) const;
+  bool contains_prefix(const std::string& prefix) const;
 
-  void AddWord(const std::string& word) {
-    EnsureUnique();
+  void add_word(const std::string& word) {
+    ensure_unique();
     all_words_->insert(word);
   }
 
-  const_iterator begin() const { return all_words_->begin(); }
-  const_iterator end() const { return all_words_->end(); }
+  ConstIterator begin() const { return all_words_->begin(); }
+  ConstIterator end() const { return all_words_->end(); }
 
  private:
   std::shared_ptr<std::set<std::string>> all_words_{
       std::make_shared<std::set<std::string>>()};
 
-  void EnsureUnique() {
+  void ensure_unique() {
     if (!all_words_.unique())
       all_words_ = std::make_shared<std::set<std::string>>(*all_words_);
   }
 };
 
-std::string ConvertToLowerCase(const std::string& str) {
+std::string convert_to_lower_case(const std::string& str) {
   std::string result(str);
   transform(result.begin(), result.end(), result.begin(), ::tolower);
   return result;
@@ -49,12 +49,12 @@ Lexicon::Lexicon(const std::string& filename) {
   all_words_->insert(std::istream_iterator<std::string>{input}, {});
 }
 
-bool Lexicon::ContainsWord(const std::string& word) const {
-  return all_words_->find(ConvertToLowerCase(word)) != all_words_->end();
+bool Lexicon::contains_word(const std::string& word) const {
+  return all_words_->find(convert_to_lower_case(word)) != all_words_->end();
 }
 
-bool Lexicon::ContainsPrefix(const std::string& prefix) const {
-  const std::string lower_prefix(ConvertToLowerCase(prefix));
+bool Lexicon::contains_prefix(const std::string& prefix) const {
+  const std::string lower_prefix(convert_to_lower_case(prefix));
 
   auto itr = all_words_->lower_bound(lower_prefix);
 

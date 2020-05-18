@@ -11,7 +11,7 @@ TextQuery::TextQuery(std::ifstream &input) {
   LineNo line_number{1};
 
   while (std::getline(input, line)) {
-    text_.PushBack(line);
+    text_.push_back(line);
     std::istringstream iss{line};
     std::string word;
 
@@ -25,7 +25,7 @@ TextQuery::TextQuery(std::ifstream &input) {
   }
 }
 
-QueryResult TextQuery::Query(const std::string &s) {
+QueryResult TextQuery::query(const std::string &s) {
   static auto nodata{std::make_shared<std::set<LineNo>>()};
 
   auto iter{words_and_line_number_.find(s)};
@@ -40,12 +40,12 @@ QueryResult::QueryResult(const std::string &word, const StrBlob &text,
                          const std::shared_ptr<std::set<LineNo>> &line_number)
     : word_{word}, text_{text}, line_number_{line_number} {}
 
-std::ostream &Print(std::ostream &os, QueryResult qr) {
+std::ostream &print(std::ostream &os, QueryResult qr) {
   os << qr.word_ << " occurs " << std::size(*qr.line_number_)
      << (std::size(*qr.line_number_) > 1 ? " times" : " time") << '\n';
 
   for (auto i : *qr.line_number_) {
-    os << "\t(line " << i << ") " << qr.text_.At(i - 1) << '\n';
+    os << "\t(line " << i << ") " << qr.text_.at(i - 1) << '\n';
   }
 
   return os;

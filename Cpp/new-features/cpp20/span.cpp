@@ -1,7 +1,7 @@
 /**
  * @ Author: KaiserLancelot
  * @ Create Time: 2020-05-16 07:33:22
- * @ Modified time: 2020-05-16 08:18:56
+ * @ Modified time: 2020-05-19 04:30:52
  */
 
 #include <algorithm>
@@ -15,7 +15,7 @@
 // span 能拥有静态长度, 该情况下序列中的元素数已知并编码于类型中, 或拥有动态长度
 // 典型实现只保有二个成员: 指向 T 的指针和大小
 
-void Fun(std::span<std::int32_t> span) {
+void fun(std::span<std::int32_t> span) {
   std::cout << span.front() << '\n';
   std::cout << span.back() << '\n';
   std::cout << span[2] << '\n';
@@ -28,7 +28,7 @@ void Fun(std::span<std::int32_t> span) {
 
 int main() {
   std::vector<std::int32_t> v{11, 2, 1, 434, 22, 3};
-  Fun(v);
+  fun(v);
 
   for (auto i : v) {
     std::cout << i << ' ';

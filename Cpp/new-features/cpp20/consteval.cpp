@@ -13,10 +13,10 @@
 
 // 立即函数是 constexpr 函数, 而且只要情况符合, 必须满足适用于
 // constexpr 函数或 constexpr 构造函数的要求
-consteval std::int32_t Sqr(std::int32_t n) { return n * n; }
+consteval std::int32_t sqr(std::int32_t n) { return n * n; }
 
-consteval std::int32_t SqrSqr(std::int32_t n) {
-  return Sqr(Sqr(n));  // OK
+consteval std::int32_t sqr_sqr(std::int32_t n) {
+  return sqr(sqr(n));  // OK
 }
 
 // constexpr std::int32_t DblSqr(std::int32_t n) {
@@ -24,8 +24,8 @@ consteval std::int32_t SqrSqr(std::int32_t n) {
 // }
 
 int main() {
-  constexpr auto kR{Sqr(100)};  // OK
-  (void)kR;
+  constexpr auto r{sqr(100)};  // OK
+  (void)r;
   // std::int32_t x{100};
   // auto r2{Sqr(x)};  // 错误: 调用不产生常量
 }

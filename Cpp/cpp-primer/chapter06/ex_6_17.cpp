@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 
-bool Fun1(const std::string &s) {
+bool fun1(const std::string &s) {
   for (auto element : s) {
     if (std::isupper(element)) {
       return true;
@@ -15,7 +15,7 @@ bool Fun1(const std::string &s) {
   return false;
 }
 
-void Fun2(std::string &s) {
+void fun2(std::string &s) {
   for (auto &element : s) {
     element = std::tolower(element);
   }
@@ -23,7 +23,7 @@ void Fun2(std::string &s) {
 
 int main() {
   std::string s{"HELLO WORLD"};
-  Fun2(s);
+  fun2(s);
   std::cout << s << '\n';
-  std::cout << std::boolalpha << Fun1(s) << '\n';
+  std::cout << std::boolalpha << fun1(s) << '\n';
 }

@@ -8,10 +8,10 @@
 #include "Sales_item.h"
 
 int main() {
-  Sales_item total;
+  SalesItem total;
 
   if (std::cin >> total) {
-    Sales_item trans;
+    SalesItem trans;
     while (std::cin >> trans) {
       if (trans.isbn() == total.isbn()) {
         total += trans;

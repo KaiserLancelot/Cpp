@@ -6,12 +6,12 @@
 #include <cstdint>
 #include <iostream>
 
-std::int32_t Fun(std::int32_t i, const std::int32_t *p) {
+std::int32_t fun(std::int32_t i, const std::int32_t *p) {
   assert(p != nullptr);
   return i > *p ? i : *p;
 }
 
 int main() {
   std::int32_t i{10};
-  std::cout << Fun(42, &i) << '\n';
+  std::cout << fun(42, &i) << '\n';
 }

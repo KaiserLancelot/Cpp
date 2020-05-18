@@ -9,7 +9,7 @@
 #include "Sales_item.h"
 
 int main() {
-  Sales_item item;
+  SalesItem item;
   std::unordered_map<std::string, std::int32_t> data;
 
   while (std::cin >> item) {

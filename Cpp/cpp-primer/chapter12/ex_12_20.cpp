@@ -14,10 +14,10 @@ int main() {
   StrBlob sb;
 
   while (std::getline(ifs, line)) {
-    sb.PushBack(line);
+    sb.push_back(line);
   }
 
-  for (auto begin{sb.begin()}; begin.NotEqual(sb.end()); begin.Incr()) {
-    std::cout << begin.Deref() << '\n';
+  for (auto begin{sb.begin()}; begin.not_equal(sb.end()); begin.incr()) {
+    std::cout << begin.deref() << '\n';
   }
 }

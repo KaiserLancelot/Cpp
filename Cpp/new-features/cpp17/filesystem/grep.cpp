@@ -16,7 +16,7 @@
 
 namespace fs = std::filesystem;
 
-std::vector<std::pair<std::size_t, std::string>> Matches(const fs::path &path,
+std::vector<std::pair<std::size_t, std::string>> matches(const fs::path &path,
                                                          const std::regex &re) {
   std::vector<std::pair<std::size_t, std::string>> ret;
   if (fs::is_regular_file(path) && !path.extension().empty()) {
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
   // 迭代顺序是未指定的, 除了只造访一次每个目录条目
   for (const auto &entry :
        fs::recursive_directory_iterator{fs::current_path()}) {
-    auto match{Matches(entry, pattern)};
+    auto match{matches(entry, pattern)};
 
     for (const auto &[line_num, content] : match) {
       std::string filename{entry.path().filename().c_str()};

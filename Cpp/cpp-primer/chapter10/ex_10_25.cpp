@@ -11,26 +11,26 @@
 #include <string>
 #include <vector>
 
-bool CheckSize(const std::string &str, std::size_t size) {
+bool check_size(const std::string &str, std::size_t size) {
   return std::size(str) < size;
 }
 
-void ElimDups(std::vector<std::string> &words) {
+void elim_dups(std::vector<std::string> &words) {
   std::sort(std::begin(words), std::end(words));
   words.erase(std::unique(std::begin(words), std::end(words)), std::end(words));
 }
 
-void Biggies(std::vector<std::string> &words,
+void biggies(std::vector<std::string> &words,
              std::vector<std::string>::size_type sz) {
   using namespace std::placeholders;
 
-  ElimDups(words);
+  elim_dups(words);
   std::stable_sort(std::begin(words), std::end(words),
                    [](const auto &s1, const auto &s2) {
                      return std::size(s1) < std::size(s2);
                    });
   auto wc{std::partition(std::begin(words), std::end(words),
-                         std::bind(&CheckSize, _1, sz))};
+                         std::bind(&check_size, _1, sz))};
   std::for_each(wc, std::end(words),
                 [](const auto &s) { std::cout << s << ' '; });
   std::cout << '\n';
@@ -38,5 +38,5 @@ void Biggies(std::vector<std::string> &words,
 
 int main() {
   std::vector<std::string> vs{"aaaaa", "aaaaaa", "cc", "cc", "b"};
-  Biggies(vs, 3);
+  biggies(vs, 3);
 }

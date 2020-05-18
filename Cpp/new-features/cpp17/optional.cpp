@@ -8,7 +8,7 @@
 
 // C++17 std::optional
 // 管理一个可选的容纳值, 即可以存在也可以不存在的值
-std::optional<std::int32_t> ReadInt() {
+std::optional<std::int32_t> read_int() {
   std::int32_t i;
   if (std::cin >> i) {
     return i;
@@ -29,8 +29,8 @@ std::optional<std::int32_t> operator+(std::optional<std::int32_t> a,
 }
 
 int main() {
-  auto a{ReadInt()};
-  auto b{ReadInt()};
+  auto a{read_int()};
+  auto b{read_int()};
 
   auto sum{a + b};
   if (sum) {

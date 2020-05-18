@@ -7,9 +7,9 @@
 #include <iostream>
 
 struct Foo {
-  explicit Foo(std::int32_t num) : num_{num} {}
-  void print_add(std::int32_t i) const { std::cout << num_ + i << '\n'; }
-  std::int32_t num_{};
+  explicit Foo(std::int32_t num) : num{num} {}
+  void print_add(std::int32_t i) const { std::cout << num + i << '\n'; }
+  std::int32_t num{};
 };
 
 void print_num(std::int32_t i) { std::cout << i << '\n'; }
@@ -31,7 +31,7 @@ int main() {
   std::invoke(&Foo::print_add, foo, 1);
 
   // 调用(访问)数据成员
-  std::cout << "num_: " << std::invoke(&Foo::num_, foo) << '\n';
+  std::cout << "num_: " << std::invoke(&Foo::num, foo) << '\n';
 
   // 调用函数对象
   std::invoke(PrintNum{}, 18);

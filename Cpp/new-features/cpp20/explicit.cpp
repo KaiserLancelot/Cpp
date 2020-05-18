@@ -1,7 +1,7 @@
 /**
  * @ Author: KaiserLancelot
  * @ Create Time: 2020-05-14 06:13:47
- * @ Modified time: 2020-05-15 02:16:56
+ * @ Modified time: 2020-05-19 04:37:50
  */
 
 #include <cstdint>
@@ -13,6 +13,6 @@ class A {
   explicit(false) A(std::int32_t) {}
 };
 
-void Fun(A) {}
+void fun(A) {}
 
-int main() { Fun(1); }
+int main() { fun(1); }

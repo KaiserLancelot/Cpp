@@ -8,10 +8,10 @@
 #include "Sales_item.h"
 
 int main() {
-  Sales_item sum;
+  SalesItem sum;
 
   if (std::cin >> sum) {
-    Sales_item item;
+    SalesItem item;
     while (std::cin >> item) {
       if (item.isbn() == sum.isbn()) {
         sum += item;

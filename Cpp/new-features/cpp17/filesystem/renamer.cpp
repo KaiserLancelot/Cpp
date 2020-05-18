@@ -12,7 +12,7 @@
 
 namespace fs = std::filesystem;
 
-std::string Replace(
+std::string replace(
     std::string s,
     const std::vector<std::pair<std::regex, std::string>> &replacements) {
   for (const auto &[pattern, replace] : replacements) {
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
   for (const auto &entry :
        fs::recursive_directory_iterator{fs::current_path()}) {
     const auto &old_path{entry.path()};
-    std::string new_name{Replace(old_path.filename().string(), patterns)};
+    std::string new_name{replace(old_path.filename().string(), patterns)};
     auto new_path{old_path};
     // 替换文件名
     new_path.replace_filename(new_name);

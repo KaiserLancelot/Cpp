@@ -15,9 +15,9 @@ struct PersonInfo {
   std::vector<std::string> phones;
 };
 
-bool Valid(const std::string &str) { return std::isdigit(str[0]); }
+bool valid(const std::string &str) { return std::isdigit(str[0]); }
 
-std::string Format(const std::string &str) {
+std::string format(const std::string &str) {
   return str.substr(0, 3) + "-" + str.substr(3, 3) + "-" + str.substr(6);
 }
 
@@ -47,10 +47,10 @@ int main() {
   for (const auto &entry : people) {
     std::ostringstream formatted, bad_nums;
     for (const auto &nums : entry.phones) {
-      if (!Valid(nums)) {
+      if (!valid(nums)) {
         bad_nums << " " << nums;
       } else {
-        formatted << " " << Format(nums);
+        formatted << " " << format(nums);
       }
     }
     if (bad_nums.str().empty()) {

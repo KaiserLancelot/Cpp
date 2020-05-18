@@ -15,7 +15,7 @@
 
 namespace fs = std::filesystem;
 
-std::string SizeString(std::size_t size) {
+std::string size_string(std::size_t size) {
   std::stringstream ss;
 
   if (size >= std::pow(2, 30)) {
@@ -31,7 +31,7 @@ std::string SizeString(std::size_t size) {
   return ss.str();
 }
 
-std::size_t EntrySize(const fs::path &path) {
+std::size_t entry_size(const fs::path &path) {
   if (!fs::is_directory(path)) {
     // file_size只能对普通文件和符号链接有效, 否则, 会抛出异常
     // file_size对符号链接有效, 如果链接失效, 函数还是会抛出异常
@@ -40,7 +40,7 @@ std::size_t EntrySize(const fs::path &path) {
     return std::accumulate(
         fs::directory_iterator{path}, {}, std::size_t{},
         [](std::size_t accum, const fs::directory_entry &entry) {
-          return accum + EntrySize(entry);
+          return accum + entry_size(entry);
         });
   }
 }
@@ -54,6 +54,6 @@ int main(int argc, char *argv[]) {
 
   for (const auto &entry : fs::directory_iterator{dir}) {
     fmt::print("{:<30}", entry.path().filename().c_str());
-    fmt::print("{}\n", SizeString(EntrySize(entry)));
+    fmt::print("{}\n", size_string(entry_size(entry)));
   }
 }

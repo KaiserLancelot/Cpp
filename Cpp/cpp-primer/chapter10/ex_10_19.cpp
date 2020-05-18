@@ -7,14 +7,14 @@
 #include <string>
 #include <vector>
 
-void ElimDups(std::vector<std::string> &words) {
+void elim_dups(std::vector<std::string> &words) {
   std::sort(std::begin(words), std::end(words));
   words.erase(std::unique(std::begin(words), std::end(words)), std::end(words));
 }
 
-void Biggies(std::vector<std::string> &words,
+void biggies(std::vector<std::string> &words,
              std::vector<std::string>::size_type sz) {
-  ElimDups(words);
+  elim_dups(words);
   std::stable_sort(std::begin(words), std::end(words),
                    [](const auto &s1, const auto &s2) {
                      return std::size(s1) < std::size(s2);
@@ -29,5 +29,5 @@ void Biggies(std::vector<std::string> &words,
 
 int main() {
   std::vector<std::string> vs{"aaaaa", "aaaaaa", "cc", "cc", "b"};
-  Biggies(vs, 3);
+  biggies(vs, 3);
 }

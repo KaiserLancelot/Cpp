@@ -21,11 +21,11 @@ namespace fs = std::filesystem;
 // Linux 文件分为目录文件, 符号链接文件, 字符特殊文件, 块特殊文件
 // 管道, IPC 接头, 常规文件, 其他文件
 // file_size 返回文件大小
-std::pair<fs::path, std::size_t> FileInfo(const fs::path &dir) {
+std::pair<fs::path, std::size_t> file_info(const fs::path &dir) {
   return {dir, fs::is_regular_file(dir) ? fs::file_size(dir) : 0};
 }
 
-char TypeChar(const fs::path &dir) {
+char type_char(const fs::path &dir) {
   if (fs::is_directory(dir)) {
     return 'd';
   } else if (fs::is_symlink(dir)) {
@@ -50,7 +50,7 @@ char TypeChar(const fs::path &dir) {
 // std::filesystem::perms 是一个枚举类型
 // 代表文件访问权限
 // rwx 位, 有三个3位字段, 分别用于所有者,同组成员和其他人
-std::string Rwx(fs::perms p) {
+std::string rwx(fs::perms p) {
   auto check{[p](fs::perms bit, char c) {
     return (p & bit) == fs::perms ::none ? '-' : c;
   }};
@@ -63,7 +63,7 @@ std::string Rwx(fs::perms p) {
       check(fs::perms::others_exec, 'x')};
 }
 
-std::string SizeString(std::size_t size) {
+std::string size_string(std::size_t size) {
   std::stringstream ss;
 
   if (size >= std::pow(2, 30)) {
@@ -94,11 +94,11 @@ int main(int argc, char *argv[]) {
   // 解引用返回 directory_entry, 它表示目录条目, 存储一个 path 作为成员
   // 可以由 path 构造, 有一个非 explicit 的类型转换运算符可以转换为 path
   std::transform(fs::directory_iterator{dir}, {}, std::back_inserter(items),
-                 FileInfo);
+                 file_info);
 
   for (const auto &[path, size] : items) {
-    fmt::print("{}{:<20}{:<20}{:<20}\n", TypeChar(path),
-               Rwx(fs::status(path).permissions()), SizeString(size),
+    fmt::print("{}{:<20}{:<20}{:<20}\n", type_char(path),
+               rwx(fs::status(path).permissions()), size_string(size),
                path.filename().c_str());
   }
 }

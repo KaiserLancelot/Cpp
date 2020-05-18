@@ -10,7 +10,7 @@ int main() {
   const StrBlob csb{"hello", "world", "AAA"};
   StrBlob sb{"hello", "world", "BBB"};
 
-  std::cout << csb.Front() << " " << csb.Back() << '\n';
-  sb.Back() = "AAA";
-  std::cout << sb.Front() << " " << sb.Back() << '\n';
+  std::cout << csb.front() << " " << csb.back() << '\n';
+  sb.back() = "AAA";
+  std::cout << sb.front() << " " << sb.back() << '\n';
 }

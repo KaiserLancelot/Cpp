@@ -6,12 +6,12 @@
 #include <cstdint>
 #include <iostream>
 
-void Print(const std::int32_t *p) {
+void print(const std::int32_t *p) {
   assert(p != nullptr);
   std::cout << *p << '\n';
 }
 
-void Print(const std::int32_t *begin, const std::int32_t *end) {
+void print(const std::int32_t *begin, const std::int32_t *end) {
   assert(begin != nullptr && end != nullptr);
 
   while (begin != end) {
@@ -24,6 +24,6 @@ int main() {
   std::int32_t i{};
   std::int32_t j[2]{0, 1};
 
-  Print(&i);
-  Print(std::begin(j), std::end(j));
+  print(&i);
+  print(std::begin(j), std::end(j));
 }

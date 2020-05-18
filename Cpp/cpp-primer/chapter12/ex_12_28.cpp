@@ -14,7 +14,7 @@
 
 using LineNo = std::vector<std::string>::size_type;
 
-std::ostream &Print(std::ostream &os, const std::string &word,
+std::ostream &print(std::ostream &os, const std::string &word,
                     const std::vector<std::string> &text,
                     const std::set<LineNo> &line_number) {
   os << word << " occurs " << std::size(line_number)
@@ -65,9 +65,9 @@ int main(int argc, char *argv[]) {
 
     if (auto iter{words_and_line_number.find(s)};
         iter != std::end(words_and_line_number)) {
-      Print(std::cout, s, text, words_and_line_number[s]);
+      print(std::cout, s, text, words_and_line_number[s]);
     } else {
-      Print(std::cout, s, text, std::set<LineNo>{});
+      print(std::cout, s, text, std::set<LineNo>{});
     }
   }
 }

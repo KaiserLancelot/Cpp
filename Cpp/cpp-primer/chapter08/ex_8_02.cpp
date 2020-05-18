@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-std::istream &Fun(std::istream &is) {
+std::istream &fun(std::istream &is) {
   std::string word;
   while (is >> word) {
     std::cout << word << '\n';
@@ -14,4 +14,4 @@ std::istream &Fun(std::istream &is) {
   return is;
 }
 
-int main() { Fun(std::cin); }
+int main() { fun(std::cin); }

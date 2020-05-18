@@ -8,8 +8,8 @@
 
 int main() {
   Screen my_screen(5, 5, 'X');
-  my_screen.Move(4, 0).Set('#').Display(std::cout);
+  my_screen.move(4, 0).set('#').display(std::cout);
   std::cout << '\n';
-  my_screen.Display(std::cout);
+  my_screen.display(std::cout);
   std::cout << '\n';
 }

@@ -9,12 +9,12 @@
 #include <string>
 
 class SalesData;
-std::istream &Read(std::istream &is, SalesData &item);
+std::istream &read(std::istream &is, SalesData &item);
 
 class SalesData {
-  friend std::istream &Read(std::istream &is, SalesData &item);
-  friend std::ostream &Print(std::ostream &os, const SalesData &item);
-  friend SalesData Add(const SalesData &lhs, const SalesData &rhs);
+  friend std::istream &read(std::istream &is, SalesData &item);
+  friend std::ostream &print(std::ostream &os, const SalesData &item);
+  friend SalesData add(const SalesData &lhs, const SalesData &rhs);
 
  public:
   SalesData() = default;
@@ -23,39 +23,39 @@ class SalesData {
   SalesData(const std::string &book_no, std::int32_t units_sold, double revenue)
       : book_no_(book_no), units_sold_{units_sold}, revenue_{revenue} {}
 
-  explicit SalesData(std::istream &is) { Read(is, *this); }
+  explicit SalesData(std::istream &is) { read(is, *this); }
 
-  SalesData &Combine(const SalesData &rhs) {
+  SalesData &combine(const SalesData &rhs) {
     units_sold_ += rhs.units_sold_;
     revenue_ += rhs.revenue_;
     return *this;
   }
 
-  const std::string &Isbn() const { return book_no_; }
+  const std::string &isbn() const { return book_no_; }
 
  private:
-  double AvgPrice() const { return units_sold_ ? revenue_ / units_sold_ : 0; }
+  double avg_price() const { return units_sold_ ? revenue_ / units_sold_ : 0; }
 
   std::string book_no_;
   std::int32_t units_sold_{};
   double revenue_{};
 };
 
-inline std::istream &Read(std::istream &is, SalesData &item) {
+inline std::istream &read(std::istream &is, SalesData &item) {
   double price;
   is >> item.book_no_ >> item.units_sold_ >> price;
   item.revenue_ = item.units_sold_ * price;
   return is;
 }
 
-inline std::ostream &Print(std::ostream &os, const SalesData &item) {
+inline std::ostream &print(std::ostream &os, const SalesData &item) {
   os << item.book_no_ << ' ' << item.units_sold_ << ' ' << item.revenue_ << ' '
-     << item.AvgPrice();
+     << item.avg_price();
   return os;
 }
 
-inline SalesData Add(const SalesData &lhs, const SalesData &rhs) {
+inline SalesData add(const SalesData &lhs, const SalesData &rhs) {
   SalesData sum{lhs};
-  sum.Combine(rhs);
+  sum.combine(rhs);
   return sum;
 }

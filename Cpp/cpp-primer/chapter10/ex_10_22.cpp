@@ -10,7 +10,7 @@
 #include <iostream>
 #include <vector>
 
-bool CheckSize(const std::string &str, std::size_t size) {
+bool check_size(const std::string &str, std::size_t size) {
   return std::size(str) < size;
 }
 
@@ -18,6 +18,6 @@ int main() {
   using namespace std::placeholders;
   std::vector<std::string> v{"aaa", "aaaaaaaaaaa", "a"};
   std::cout << std::count_if(std::begin(v), std::end(v),
-                             std::bind(&CheckSize, _1, 6))
+                             std::bind(&check_size, _1, 6))
             << '\n';
 }

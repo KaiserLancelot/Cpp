@@ -16,39 +16,39 @@ class StrBlob {
   friend class StrBlobPtr;
 
  public:
-  using size_type = std::vector<std::string>::size_type;
+  using SizeType = std::vector<std::string>::size_type;
   StrBlob();
   StrBlob(std::initializer_list<std::string> il);
   StrBlobPtr begin();
   StrBlobPtr end();
-  size_type size() const;
+  SizeType size() const;
   bool empty() const;
-  void PushBack(const std::string &t);
-  void PopBack();
-  std::string &Front();
-  std::string &Front() const;
-  std::string &Back();
-  std::string &Back() const;
+  void push_back(const std::string &t);
+  void pop_back();
+  std::string &front();
+  std::string &front() const;
+  std::string &back();
+  std::string &back() const;
 
  private:
-  void Check(size_type i, const std::string &msg) const;
+  void check(SizeType i, const std::string &msg) const;
   std::shared_ptr<std::vector<std::string>> data_;
 };
 
 class StrBlobPtr {
  public:
-  using size_type = StrBlob::size_type;
+  using SizeType = StrBlob::SizeType;
   StrBlobPtr() = default;
-  explicit StrBlobPtr(StrBlob &a, size_type sz = 0);
-  std::string &Deref() const;
-  StrBlobPtr &Incr();
-  bool NotEqual(const StrBlobPtr &item) const;
+  explicit StrBlobPtr(StrBlob &a, SizeType sz = 0);
+  std::string &deref() const;
+  StrBlobPtr &incr();
+  bool not_equal(const StrBlobPtr &item) const;
 
  private:
-  std::shared_ptr<std::vector<std::string>> Check(size_type i,
+  std::shared_ptr<std::vector<std::string>> check(SizeType i,
                                                   const std::string &msg) const;
   std::weak_ptr<std::vector<std::string>> wptr_;
-  size_type curr_{};
+  SizeType curr_{};
 };
 
 #endif  // CPP_PRIMER_EX_12_19_H

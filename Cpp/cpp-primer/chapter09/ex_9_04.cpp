@@ -6,7 +6,7 @@
 #include <iostream>
 #include <vector>
 
-bool Find(std::vector<std::int32_t>::const_iterator begin,
+bool find(std::vector<std::int32_t>::const_iterator begin,
           std::vector<std::int32_t>::const_iterator end, std::int32_t value) {
   for (; begin != end; ++begin) {
     if (*begin == value) {
@@ -18,5 +18,5 @@ bool Find(std::vector<std::int32_t>::const_iterator begin,
 
 int main() {
   std::vector<std::int32_t> vi{1, 2, 3};
-  std::cout << std::boolalpha << Find(std::cbegin(vi), std::cend(vi), 2);
+  std::cout << std::boolalpha << find(std::cbegin(vi), std::cend(vi), 2);
 }

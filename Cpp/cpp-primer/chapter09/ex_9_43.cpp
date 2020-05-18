@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-void Fun(std::string &s, const std::string &old_val,
+void fun(std::string &s, const std::string &old_val,
          const std::string &new_val) {
   for (auto begin{std::begin(s)}; begin <= std::end(s) - std::size(old_val);) {
     if (old_val == std::string(begin, begin + std::size(old_val))) {
@@ -20,7 +20,7 @@ void Fun(std::string &s, const std::string &old_val,
 
 int main() {
   std::string s("To drive straight thru is a foolish, tho courageous act.");
-  Fun(s, "tho", "thought");
-  Fun(s, "thru", "through");
+  fun(s, "tho", "thought");
+  fun(s, "thru", "through");
   std::cout << s << '\n';
 }

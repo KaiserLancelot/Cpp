@@ -7,14 +7,14 @@
 #include <string>
 #include <vector>
 
-void ElimDups(std::vector<std::string> &words) {
+void elim_dups(std::vector<std::string> &words) {
   std::sort(std::begin(words), std::end(words));
   words.erase(std::unique(std::begin(words), std::end(words)), std::end(words));
 }
 
 int main() {
   std::vector<std::string> vs{"a", "a", "c", "c", "b"};
-  ElimDups(vs);
+  elim_dups(vs);
   for (const auto &s : vs) {
     std::cout << s << '\n';
   }

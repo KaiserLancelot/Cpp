@@ -1,7 +1,7 @@
 /**
  * @ Author: KaiserLancelot
  * @ Create Time: 2020-05-17 20:54:37
- * @ Modified time: 2020-05-17 21:18:36
+ * @ Modified time: 2020-05-19 04:32:10
  */
 
 #include <cstdint>
@@ -10,7 +10,7 @@
 class A {
  public:
   A(std::int32_t i) : a{i} {}
-  std::int32_t Fun() {
+  std::int32_t fun() {
     // 引用捕获当前对象
     auto f{[this] { return a; }};
     (void)f;
@@ -47,7 +47,7 @@ class A {
 };
 
 int main() {
-  std::cout << A{42}.Fun() << '\n';
+  std::cout << A{42}.fun() << '\n';
 
   std::int32_t x{4};
   // 带有初始化器的捕获符, 其行为如同它声明并显示捕获一个以类型 auto 声明的变量

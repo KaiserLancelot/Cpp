@@ -7,14 +7,14 @@
 #include <list>
 #include <string>
 
-void ElimDups(std::list<std::string> &words) {
+void elim_dups(std::list<std::string> &words) {
   words.sort();
   words.unique();
 }
 
 int main() {
   std::list<std::string> vs{"a", "a", "c", "c", "b"};
-  ElimDups(vs);
+  elim_dups(vs);
   for (const auto &s : vs) {
     std::cout << s << '\n';
   }

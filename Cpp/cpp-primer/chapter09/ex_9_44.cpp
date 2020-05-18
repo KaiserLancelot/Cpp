@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-void Fun(std::string &s, const std::string &old_val,
+void fun(std::string &s, const std::string &old_val,
          const std::string &new_val) {
   for (std::string::size_type index{};
        index <= std::size(s) - std::size(old_val);) {
@@ -21,7 +21,7 @@ void Fun(std::string &s, const std::string &old_val,
 
 int main() {
   std::string s("To drive straight thru is a foolish, tho courageous act.");
-  Fun(s, "tho", "thought");
-  Fun(s, "thru", "through");
+  fun(s, "tho", "thought");
+  fun(s, "thru", "through");
   std::cout << s << '\n';
 }

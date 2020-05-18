@@ -27,17 +27,17 @@ class StrBlob {
   ConstStrBlobPtr end() const;
   SizeType size() const;
   bool empty() const;
-  void PushBack(const std::string &t);
-  void PopBack();
-  std::string &Front();
-  const std::string &Front() const;
-  std::string &Back();
-  const std::string &Back() const;
-  std::string &At(SizeType index);
-  const std::string &At(SizeType index) const;
+  void push_back(const std::string &t);
+  void pop_back();
+  std::string &front();
+  const std::string &front() const;
+  std::string &back();
+  const std::string &back() const;
+  std::string &at(SizeType index);
+  const std::string &at(SizeType index) const;
 
  private:
-  void Check(SizeType i, const std::string &msg) const;
+  void check(SizeType i, const std::string &msg) const;
   std::shared_ptr<std::vector<std::string>> data_;
 };
 
@@ -46,12 +46,12 @@ class StrBlobPtr {
   using SizeType = StrBlob::SizeType;
   StrBlobPtr() = default;
   explicit StrBlobPtr(StrBlob &a, SizeType sz = 0);
-  std::string &Deref() const;
-  StrBlobPtr &Incr();
-  bool NotEqual(const StrBlobPtr &item) const;
+  std::string &deref() const;
+  StrBlobPtr &incr();
+  bool not_equal(const StrBlobPtr &item) const;
 
  private:
-  std::shared_ptr<std::vector<std::string>> Check(SizeType i,
+  std::shared_ptr<std::vector<std::string>> check(SizeType i,
                                                   const std::string &msg) const;
   std::weak_ptr<std::vector<std::string>> wptr_;
   SizeType curr_{};
@@ -62,12 +62,12 @@ class ConstStrBlobPtr {
   using SizeType = StrBlob::SizeType;
   ConstStrBlobPtr() = default;
   explicit ConstStrBlobPtr(const StrBlob &a, SizeType sz = 0);
-  std::string &Deref() const;
-  ConstStrBlobPtr &Incr();
-  bool NotEqual(const ConstStrBlobPtr &item) const;
+  std::string &deref() const;
+  ConstStrBlobPtr &incr();
+  bool not_equal(const ConstStrBlobPtr &item) const;
 
  private:
-  std::shared_ptr<std::vector<std::string>> Check(SizeType i,
+  std::shared_ptr<std::vector<std::string>> check(SizeType i,
                                                   const std::string &msg) const;
   std::weak_ptr<std::vector<std::string>> wptr_;
   SizeType curr_{};

@@ -1,7 +1,7 @@
 /**
  * @ Author: KaiserLancelot
  * @ Create Time: 2020-05-18 16:01:10
- * @ Modified time: 2020-05-18 16:48:30
+ * @ Modified time: 2020-05-19 04:23:32
  */
 
 #include <cstddef>
@@ -13,17 +13,18 @@
 
 class A {
  public:
-  const std::string &GetString() const { return s_; }
+  const std::string &get_string() const { return s_; }
 
  private:
   std::string s_;
 };
 
 int main() {
-  auto hasher{
-      [](const A &item) { return std::hash<std::string>{}(item.GetString()); }};
+  auto hasher{[](const A &item) {
+    return std::hash<std::string>{}(item.get_string());
+  }};
   auto equal_op{[](const A &lhs, const A &rhs) {
-    return lhs.GetString() == rhs.GetString();
+    return lhs.get_string() == rhs.get_string();
   }};
 
   std::unordered_map<A, std::string, decltype(hasher), decltype(equal_op)>

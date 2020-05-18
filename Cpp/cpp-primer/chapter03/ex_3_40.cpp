@@ -8,14 +8,14 @@
 #include <iterator>
 
 int main() {
-  const char kS1[] = "aaa";
-  const char kS2[] = "bbb";
+  const char s1[] = "aaa";
+  const char s2[] = "bbb";
 
-  constexpr std::size_t kSize{std::size(kS1) + std::size(kS2) - 1};
-  char s[kSize];
+  constexpr std::size_t size{std::size(s1) + std::size(s2) - 1};
+  char s[size];
 
-  std::strcpy(s, kS1);
-  std::strcat(s, kS2);
+  std::strcpy(s, s1);
+  std::strcat(s, s2);
 
   std::cout << s << '\n';
 }

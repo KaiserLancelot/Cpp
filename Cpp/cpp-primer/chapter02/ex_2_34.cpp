@@ -9,18 +9,18 @@ int main() {
   std::int32_t i = 0, &r = i;
   auto a = r;
 
-  const std::int32_t kCi = i, &cr = kCi;
-  auto b = kCi;
+  const std::int32_t k_ci = i, &cr = k_ci;
+  auto b = k_ci;
   auto c = cr;
   auto d = &i;
-  auto e = &kCi;
+  auto e = &k_ci;
 
-  const auto kF = kCi;
-  auto &g = kCi;
+  const auto k_f = k_ci;
+  auto &g = k_ci;
 
   (void)d;
   (void)e;
-  (void)kF;
+  (void)k_f;
   (void)g;
 
   a = 42;

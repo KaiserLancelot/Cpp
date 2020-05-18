@@ -5,7 +5,7 @@
 #include <forward_list>
 #include <string>
 
-void Fun(std::forward_list<std::string> &forward_list, const std::string &s1,
+void fun(std::forward_list<std::string> &forward_list, const std::string &s1,
          const std::string &s2) {
   auto cur{std::begin(forward_list)}, prv{forward_list.before_begin()};
   for (; cur != std::end(forward_list); prv = cur, ++cur) {

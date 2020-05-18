@@ -6,7 +6,7 @@
 #include <iostream>
 #include <vector>
 
-std::vector<std::int32_t>::iterator Find(
+std::vector<std::int32_t>::iterator find(
     std::vector<std::int32_t>::iterator begin,
     std::vector<std::int32_t>::iterator end, std::int32_t value) {
   for (; begin != end; ++begin) {
@@ -19,7 +19,7 @@ std::vector<std::int32_t>::iterator Find(
 
 int main() {
   std::vector<std::int32_t> vi{1, 2, 3};
-  if (Find(std::begin(vi), std::end(vi), 2) != std::end(vi)) {
+  if (find(std::begin(vi), std::end(vi), 2) != std::end(vi)) {
     std::cout << "found\n";
   } else {
     std::cout << "not found\n";

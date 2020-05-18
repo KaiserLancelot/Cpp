@@ -17,37 +17,37 @@ class Screen {
 
   Screen(Pos ht, Pos wd, char ch)
       : height_{ht}, width_{wd}, contents_(ht * wd, ch) {}
-  char Get() const { return contents_[cursor_]; }
+  char get() const { return contents_[cursor_]; }
 
-  char Get(Pos r, Pos c) const { return contents_[r * width_ + c]; }
+  char get(Pos r, Pos c) const { return contents_[r * width_ + c]; }
 
-  Screen Set(char ch) {
+  Screen set(char ch) {
     contents_[cursor_] = ch;
     return *this;
   }
 
-  Screen Set(Pos r, Pos c, char ch) {
+  Screen set(Pos r, Pos c, char ch) {
     contents_[r * width_ + c] = ch;
     return *this;
   }
 
-  Screen Move(Pos r, Pos c) {
+  Screen move(Pos r, Pos c) {
     cursor_ = r * width_ + c;
     return *this;
   }
 
-  const Screen Display(std::ostream &os) const {
-    DoDisplay(os);
+  Screen display(std::ostream &os) const {
+    do_display(os);
     return *this;
   }
 
-  Screen Display(std::ostream &os) {
-    DoDisplay(os);
+  Screen display(std::ostream &os) {
+    do_display(os);
     return *this;
   }
 
  private:
-  void DoDisplay(std::ostream &os) const {
+  void do_display(std::ostream &os) const {
     (void)height_;
     os << contents_;
   }

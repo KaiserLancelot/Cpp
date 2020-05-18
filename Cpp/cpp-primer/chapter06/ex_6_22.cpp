@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <iostream>
 
-void Swap(std::int32_t *&lhs, std::int32_t *&rhs) {
+void swap(std::int32_t *&lhs, std::int32_t *&rhs) {
   auto temp{lhs};
   lhs = rhs;
   rhs = temp;
@@ -16,6 +16,6 @@ int main() {
   auto pa{&a}, pb{&b};
   std::cout << pa << ' ' << pb << '\n';
 
-  Swap(pa, pb);
+  swap(pa, pb);
   std::cout << pa << ' ' << pb << '\n';
 }

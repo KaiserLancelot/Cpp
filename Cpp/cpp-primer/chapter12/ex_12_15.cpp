@@ -9,31 +9,30 @@
 
 class Destination {
  public:
-  Destination(const std::string &ip, std::int32_t port)
-      : ip_{ip}, port_{port} {}
-  std::string ip_;
-  std::int32_t port_;
+  Destination(const std::string &ip, std::int32_t port) : ip{ip}, port{port} {}
+  std::string ip;
+  std::int32_t port;
 };
 
 class Connection {
  public:
-  Connection(const std::string &ip, std::int32_t port) : ip_{ip}, port_{port} {}
-  std::string ip_;
-  std::int32_t port_;
+  Connection(const std::string &ip, std::int32_t port) : ip{ip}, port{port} {}
+  std::string ip;
+  std::int32_t port;
 };
 
-Connection Connect(Destination *dest) {
-  return Connection{dest->ip_, dest->port_};
+Connection connect(Destination *dest) {
+  return Connection{dest->ip, dest->port};
 }
 
-void Disconnect(Connection conn) {
-  std::cout << "connection close(" << conn.ip_ << ":" << conn.port_ << ")"
+void disconnect(Connection conn) {
+  std::cout << "connection close(" << conn.ip << ":" << conn.port << ")"
             << std::endl;
 }
 
 void f(Destination &d) {
-  auto conn{Connect(&d)};
-  std::shared_ptr<Connection> p{&conn, [](auto p) { Disconnect(*p); }};
+  auto conn{connect(&d)};
+  std::shared_ptr<Connection> p{&conn, [](auto p) { disconnect(*p); }};
   std::cout << "connecting now(" << p.use_count() << ")" << std::endl;
 }
 

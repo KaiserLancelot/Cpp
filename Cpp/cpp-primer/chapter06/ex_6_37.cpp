@@ -6,12 +6,12 @@
 
 using ArrType = std::string[10];
 
-ArrType &Fun1();
+ArrType &fun1();
 
-auto Fun2() -> std::string (&)[10];
+auto fun2() -> std::string (&)[10];
 
-std::string Arr[10];
+std::string arr[10];
 
-decltype(Arr) *Fun3();
+decltype(arr) *fun3();
 
 int main() {}

@@ -11,7 +11,7 @@
 class Cat {
  public:
   explicit Cat(const std::string &name) : name_{name} {}
-  void Meow() const { std::cout << name_ << " says Meow!\n"; }
+  void meow() const { std::cout << name_ << " says Meow!\n"; }
 
  private:
   std::string name_;
@@ -20,15 +20,15 @@ class Cat {
 class Dog {
  public:
   explicit Dog(const std::string &name) : name_{name} {}
-  void Woof() const { std::cout << name_ << " says Woof!\n"; }
+  void woof() const { std::cout << name_ << " says Woof!\n"; }
 
  private:
   std::string name_;
 };
 
 struct AnimalVoice {
-  void operator()(const Cat &cat) const { cat.Meow(); }
-  void operator()(const Dog &dog) const { dog.Woof(); }
+  void operator()(const Cat &cat) const { cat.meow(); }
+  void operator()(const Dog &dog) const { dog.woof(); }
 };
 
 // C++17 std::variant
@@ -41,10 +41,10 @@ int main() {
     // 返回 variant 所保有可选项的零基下标
     switch (item.index()) {
       case 0:
-        std::get<Cat>(item).Meow();
+        std::get<Cat>(item).meow();
         break;
       case 1:
-        std::get<1>(item).Woof();
+        std::get<1>(item).woof();
         break;
       default: {
       }
@@ -54,9 +54,9 @@ int main() {
   for (const auto &item : v) {
     // 不存在该类型则返回 nullptr
     if (auto d{std::get_if<Dog>(&item)}) {
-      d->Woof();
+      d->woof();
     } else if (auto c{std::get_if<Cat>(&item)}) {
-      c->Meow();
+      c->meow();
     }
   }
 

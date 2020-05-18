@@ -9,7 +9,7 @@
 #include <string>
 
 class Date {
-  friend std::ostream &Print(std::ostream &os, const Date &item);
+  friend std::ostream &print(std::ostream &os, const Date &item);
 
  public:
   Date() = default;
@@ -56,7 +56,7 @@ class Date {
   std::int32_t day_{};
 };
 
-inline std::ostream &Print(std::ostream &os, const Date &item) {
+inline std::ostream &print(std::ostream &os, const Date &item) {
   os << item.year_ << ' ' << item.month_ << ' ' << item.day_;
   return os;
 }

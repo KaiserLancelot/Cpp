@@ -10,21 +10,21 @@
 int main() {
   SalesData total{std::cin};
 
-  if (!total.Isbn().empty()) {
+  if (!total.isbn().empty()) {
     while (std::cin) {
       SalesData trans{std::cin};
       if (!std::cin) {
         break;
       }
 
-      if (total.Isbn() == trans.Isbn()) {
-        total.Combine(trans);
+      if (total.isbn() == trans.isbn()) {
+        total.combine(trans);
       } else {
-        Print(std::cout, total) << '\n';
+        print(std::cout, total) << '\n';
         total = trans;
       }
     }
-    Print(std::cout, total) << '\n';
+    print(std::cout, total) << '\n';
   } else {
     std::cerr << "no data" << std::endl;
     return EXIT_FAILURE;

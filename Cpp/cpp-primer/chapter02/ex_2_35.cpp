@@ -5,16 +5,16 @@
 #include <cstdint>
 
 int main() {
-  const std::int32_t kI = 42;
+  const std::int32_t k_i = 42;
 
-  auto j = kI;
-  const auto &k = kI;
-  auto *p = &kI;
-  const auto kJ2 = kI, &k2 = kI;
+  auto j = k_i;
+  const auto &k = k_i;
+  auto *p = &k_i;
+  const auto k_j2 = k_i, &k2 = k_i;
 
   (void)j;
   (void)k;
   (void)p;
-  (void)kJ2;
+  (void)k_j2;
   (void)k2;
 }

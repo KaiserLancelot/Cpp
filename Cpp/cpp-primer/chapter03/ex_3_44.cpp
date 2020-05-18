@@ -7,9 +7,9 @@
 
 int main() {
   std::int32_t ia[3][4]{{0, 1, 2, 3}, {4, 5, 6, 7}, {8, 9, 10, 11}};
-  using int4 = std::int32_t[4];
+  using Int4 = std::int32_t[4];
 
-  for (const int4 &item : ia) {
+  for (const Int4 &item : ia) {
     for (std::int32_t i : item) {
       std::cout << i << " ";
     }
@@ -23,7 +23,7 @@ int main() {
   }
   std::cout << '\n';
 
-  for (int4 *p{std::begin(ia)}; p != std::end(ia); ++p) {
+  for (Int4 *p{std::begin(ia)}; p != std::end(ia); ++p) {
     for (std::int32_t *q{std::begin(*p)}; q != std::end(*p); ++q) {
       std::cout << *q << ' ';
     }

@@ -8,7 +8,7 @@
 #include <iterator>
 
 template <typename Container>
-void InsertionSort(Container &arr) {
+void insertion_sort(Container &arr) {
   for (std::size_t i{1}; i < std::size(arr); ++i) {
     auto key{arr[i]};
     auto j{i};
