@@ -15,7 +15,7 @@ include(Check)
 include(CompilerOptions)
 include(Sanitizers)
 
-set(CMAKE_CXX_CLANG_TIDY clang-tidy -header-filter=.* --fix)
+set(CMAKE_CXX_CLANG_TIDY clang-tidy -header-filter=.*)
 
 add_subdirectory(cpp-primer/chapter01)
 add_subdirectory(cpp-primer/chapter02)
