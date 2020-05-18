@@ -22,17 +22,14 @@ Programming learning notes
   - https://dev.mysql.com/doc/x-devapi-userguide/en/
   - https://github.com/google/googletest/blob/master/googletest/docs/primer.md
 
-- Concurrency
+- Other
+  - https://github.com/wuye9036/CppTemplateTutorial
   - https://github.com/xiaoweiChen/CPP-Concurrency-In-Action-2ed-2019
-
-- New Features
+  - https://github.com/lynnboy/CppCoreGuidelines-zh-CN
   - https://zh.cppreference.com/w/cpp
-
-- Notes
-  - https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide
 
 ### Rust
 
   - https://kaisery.github.io/trpl-zh-cn
-  - https://github.com/rust-lang/async-book
+  - https://github.com/chinanf-boy/async-book-zh
   - https://doc.rust-lang.org/nightly/reference/
