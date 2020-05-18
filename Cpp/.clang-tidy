@@ -1,7 +1,7 @@
 Checks: '-*,clang-diagnostic-*,clang-analyzer-*,llvm-namespace-comment,
         llvm-twine-local,misc-*,-misc-unused-parameters,
         -misc-non-private-member-variables-in-classes,readability-identifier-naming'
-WarningsAsErrors: '*'
+WarningsAsErrors: ' '
 CheckOptions:
   - key:             readability-identifier-naming.ClassCase
     value:           CamelCase

@@ -13,7 +13,7 @@ std::string Fun(const std::string &str) {
   auto iter{std::find_if(std::begin(str), std::end(str), ispunct)};
   std::string ret{str.substr(0, iter - std::begin(str))};
   for (auto &c : ret) {
-    c = static_cast<char>(std::tolower(c));
+    c = std::tolower(c);
   }
   return ret;
 }

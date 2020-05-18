@@ -43,7 +43,7 @@ std::string &StrBlob::Back() const {
 }
 
 void StrBlob::Check(StrBlob::size_type i, const std::string &msg) const {
-  if (i >= Size()) {
+  if (i >= size()) {
     throw std::out_of_range{msg};
   }
 }
