@@ -30,7 +30,7 @@ class TextQuery {
 };
 
 class QueryResult {
-  friend std::ostream &print(std::ostream &os, QueryResult qr);
+  friend std::ostream &print(std::ostream &os, const QueryResult &qr);
 
  public:
   QueryResult(const std::string &word,
@@ -43,6 +43,6 @@ class QueryResult {
   std::shared_ptr<std::set<LineNo>> line_number_;
 };
 
-std::ostream &print(std::ostream &os, QueryResult qr);
+std::ostream &print(std::ostream &os, const QueryResult &qr);
 
 #endif  // CPP_PRIMER_EX_12_27_H

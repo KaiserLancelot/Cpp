@@ -15,9 +15,9 @@ int main() {
   std::int32_t grade;
   std::cin >> grade;
 
-  if (grade < 60)
+  if (grade < 60) {
     letter_grade = scores[0];
-  else if (grade <= 100) {
+  } else if (grade <= 100) {
     letter_grade = scores[(grade - 50) / 10];
     if (grade != 100) {
       (grade % 10 > 7) ? letter_grade += '+'

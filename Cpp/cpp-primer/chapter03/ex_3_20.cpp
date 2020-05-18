@@ -20,10 +20,12 @@ int main() {
   }
 
   // a
-  for (decltype(std::size(vi)) index{}; index + 1 < std::size(vi); index += 2)
+  for (decltype(std::size(vi)) index{}; index + 1 < std::size(vi); index += 2) {
     std::cout << vi[index] + vi[index + 1] << '\n';
+  }
 
   // b
-  for (decltype(std::size(vi)) index{}; index < std::size(vi) / 2; ++index)
+  for (decltype(std::size(vi)) index{}; index < std::size(vi) / 2; ++index) {
     std::cout << vi[index] + vi[std::size(vi) - index - 1] << '\n';
+  }
 }

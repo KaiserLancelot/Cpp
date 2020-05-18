@@ -25,7 +25,7 @@ Connection connect(Destination *dest) {
   return Connection{dest->ip, dest->port};
 }
 
-void disconnect(Connection conn) {
+void disconnect(const Connection &conn) {
   std::cout << "connection close(" << conn.ip << ":" << conn.port << ")"
             << std::endl;
 }

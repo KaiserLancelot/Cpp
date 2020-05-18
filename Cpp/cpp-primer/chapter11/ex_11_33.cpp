@@ -23,8 +23,8 @@ std::map<std::string, std::string> build_map(std::ifstream &map_file) {
   return trans_map;
 }
 
-const std::string translation(
-    const std::string &s, const std::map<std::string, std::string> &trans_map) {
+std::string translation(const std::string &s,
+                        const std::map<std::string, std::string> &trans_map) {
   auto map_iter{trans_map.find(s)};
   if (map_iter != std::end(trans_map)) {
     return map_iter->second;

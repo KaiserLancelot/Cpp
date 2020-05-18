@@ -20,11 +20,13 @@ int main() {
   }
 
   // a
-  for (auto it{std::begin(vi)}; it + 1 != std::end(vi); ++it)
+  for (auto it{std::begin(vi)}; it + 1 != std::end(vi); ++it) {
     std::cout << *it + *(it + 1) << '\n';
+  }
 
   // b
   for (auto lit{std::begin(vi)}, rit{std::end(vi) - 1}; lit != rit;
-       ++lit, --rit)
+       ++lit, --rit) {
     std::cout << *lit + *rit << '\n';
+  }
 }

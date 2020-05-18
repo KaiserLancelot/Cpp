@@ -5,7 +5,7 @@
 #include <fmt/ranges.h>
 
 int main() {
-  std::tuple<char, int, float> t{'a', 1, 2.0f};
+  std::tuple<char, int, float> t{'a', 1, 2.0F};
   // Prints "('a', 1, 2.0)"
   fmt::print("{}", t);
 

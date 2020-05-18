@@ -24,7 +24,7 @@ std::unordered_map<std::string, std::string> build_map(
   return trans_map;
 }
 
-const std::string translation(
+std::string translation(
     const std::string &s,
     const std::unordered_map<std::string, std::string> &trans_map) {
   auto map_iter{trans_map.find(s)};

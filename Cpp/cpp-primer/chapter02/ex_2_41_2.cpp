@@ -23,10 +23,11 @@ int main() {
 
     std::cout << sales_data1.book_no << ' ' << total_cnt << ' ' << total_revenue
               << ' ';
-    if (total_revenue != 0)
+    if (total_revenue != 0) {
       std::cout << total_revenue / total_cnt << '\n';
-    else
+    } else {
       std::cout << "(no sales)\n";
+    }
   } else {
     std::cerr << "data must refer to the same ISBN\n";
     return -1;
