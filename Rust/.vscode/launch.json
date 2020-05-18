@@ -94,17 +94,34 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug unit tests in library 'chapter07'",
+      "name": "Debug executable 'chapter07'",
       "cargo": {
         "args": [
-          "test",
-          "--no-run",
-          "--lib",
+          "build",
+          "--bin=chapter07",
           "--package=chapter07"
         ],
         "filter": {
           "name": "chapter07",
-          "kind": "lib"
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'chapter08'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=chapter08",
+          "--package=chapter08"
+        ],
+        "filter": {
+          "name": "chapter08",
+          "kind": "bin"
         }
       },
       "args": [],

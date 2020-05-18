@@ -1,6 +1,7 @@
 # rustup docs --book 用浏览器打开 The Rust Programming Language
 
-# cargo new hello_world 创建项目
+# cargo new hello_world 创建 binary package
+# cargo new --lib hello_world 创建 library package
 # cargo build 构建项目
 # cargo run 构建并运行
 # cargo check 快速检查代码确保其可以编译, 但并不产生可执行文件

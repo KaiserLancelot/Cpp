@@ -35,3 +35,4 @@ Programming learning notes
 
   - https://kaisery.github.io/trpl-zh-cn
   - https://github.com/rust-lang/async-book
+  - https://doc.rust-lang.org/nightly/reference/

@@ -1,32 +1,56 @@
 /**
  * @ Author: KaiserLancelot
  * @ Create Time: 2020-05-16 04:30:34
- * @ Modified time: 2020-05-17 19:59:45
+ * @ Modified time: 2020-05-18 14:46:28
  */
+// 此声明将会查找名为 front_of_house.rs 的文件
+// 并将该文件的内容放到此作用域中一个名为 front_of_house 的模块里面
+mod front_of_house;
+
+pub fn eat_at_restaurant() {
+    // Rust 中默认所有项(函数, 方法, 结构体, 枚举, 模块和常量)都是私有的
+    // 父模块中的项不能使用子模块中的私有项, 但是子模块中的项可以使用他们父模块中的项
+    // front_of_house 模块不是公有的, 不过因为 eat_at_restaurant 函数
+    // 与 front_of_house 定义于同一模块中, 所以可以访问
+    crate::front_of_house::hosting::add_to_waitlist();
+    // 使用绝对路径还是相对路径取决于你是更倾向于将项的定义代码与使用该项的代码分开移动还是一起移动
+    // 更倾向于使用绝对路径, 因为它更适合移动代码定义和项调用的相互独立
+    front_of_house::hosting::add_to_waitlist();
+}
+
+fn serve_order() {}
 
 // 使用 mod 关键字定义一个模块
 // 模块让我们可以将一个 crate 中的代码进行分组, 以提高可读性与重用性, 还可以控制项的私有性
 // 在模块内, 还可以定义其他的模块
 // 模块还可以保存一些定义的其他项, 比如结构体, 枚举, 常量, 特性, 或者函数
 // 整个模块树都植根于名为 crate 的隐式模块下
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-        fn seat_at_table() {}
+mod back_of_house {
+    fn fix_incorrect_order() {
+        cook_order();
+        // 可以使用 super 开头来构建从父模块开始的相对路径
+        // 因为 back_of_house 模块和 server_order 函数之间可能具有某种关联关系
+        // 并且, 如果我们要重新组织这个 crate 的模块树, 需要一起移动它们, 因此, 我们使用 super
+        super::serve_order();
     }
 
-    mod serving {
-        fn take_order() {}
-        fn server_order() {}
-        fn take_payment() {}
-    }
-}
+    fn cook_order() {}
 
-pub fn eat_at_restaurant() {
-    // Rust 中默认所有项(函数, 方法, 结构体, 枚举, 模块和常量)都是私有的
-    // 父模块中的项不能使用子模块中的私有项, 但是子模块中的项可以使用他们父模块中的项
-    crate::front_of_house::hosting::add_to_waitlist();
-    front_of_house::hosting::add_to_waitlist();
+    // 在一个结构体定义的前面使用了 pub, 这个结构体会变成公有的, 但是这个结构体的字段仍然是私有的
+    pub struct Breakfast {
+        pub toast: String,
+        seasonal_fruit: String,
+    }
+
+    impl Breakfast {
+        pub fn summer(toast: &str) -> Breakfast {
+            Breakfast {
+                toast: String::from(toast),
+                seasonal_fruit: String::from("peaches"),
+            }
+        }
+    }
+    // 如果我们将枚举设为公有, 则它的所有成员都将变为公有
 }
 
 // 习惯上将函数的父模块引入作用域
@@ -35,7 +59,8 @@ pub fn eat_at_restaurant() {
 // use crate::front_of_house::hosting;
 // use front_of_house::hosting;
 
-// 使用 pub use 重导出名称
+// 当使用 use 关键字将名称导入作用域时, 在新作用域中可用的名称是私有的
+// 使用 pub use 重导出名称, 这样外部代码也可以使用这个新路径
 pub use crate::front_of_house::hosting;
 
 use std::fmt::Result;
@@ -44,17 +69,6 @@ use std::io::Result as IoResult;
 
 fn eat_at_restaurant2() {
     hosting::add_to_waitlist();
-}
-
-fn serve_order() {}
-
-mod back_of_house {
-    fn fix_incorrect_order() {
-        cook_order();
-        super::serve_order();
-    }
-
-    fn cook_order() {}
 }
 
 // 嵌套路径
