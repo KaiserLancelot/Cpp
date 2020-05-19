@@ -1,5 +1,6 @@
-Checks: '-*,boost-*,bugprone-*,clang-analyzer-*,cppcoreguidelines-*,misc-*,
-        performance-*,portability-*,readability-*,clang-diagnostic-*'
+Checks: '-*,boost-*,bugprone-*,clang-analyzer-*,cppcoreguidelines-*,
+        misc-*,modernize-*,performance-*,portability-*,readability-*,
+        -modernize-use-trailing-return-type'
 
 CheckOptions:
   - key:             readability-identifier-naming.ClassCase
