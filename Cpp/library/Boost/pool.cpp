@@ -2,7 +2,6 @@
 // Created by kaiser on 2020/4/27.
 //
 
-#include <cassert>
 #include <iostream>
 #include <string>
 
@@ -22,7 +21,8 @@ int main() {
   // 返回的对象可以通过调用 destroy() 销毁, 也可以由 pool 析构时自动销毁
   // destroy() 相当与 p->~ElementType(); this->free(p);
   auto ptr{pool.construct("string")};
-  assert(ptr != nullptr);
 
-  std::cout << ptr->get_string() << '\n';
+  if (ptr != nullptr) {
+    std::cout << ptr->get_string() << '\n';
+  }
 }
