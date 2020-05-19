@@ -1,7 +1,8 @@
 Checks: '-*,boost-*,bugprone-*,clang-analyzer-*,cppcoreguidelines-*,
         misc-*,modernize-*,performance-*,portability-*,readability-*,
         -modernize-use-trailing-return-type'
-WarningsAsErrors: 'clang-analyzer-*'
+WarningsAsErrors: 'clang-analyzer-*,-clang-analyzer-deadcode.*,
+        -clang-analyzer-security.insecureAPI.*'
 CheckOptions:
   - key:             readability-identifier-naming.ClassCase
     value:           CamelCase
