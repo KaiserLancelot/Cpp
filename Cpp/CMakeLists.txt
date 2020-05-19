@@ -15,7 +15,10 @@ include(Check)
 include(CompilerOptions)
 include(Sanitizers)
 
-set(CMAKE_CXX_CLANG_TIDY clang-tidy -header-filter=.*)
+if((CMAKE_BUILD_TYPE MATCHES "Debug") OR (CMAKE_BUILD_TYPE MATCHES
+                                          "RelWithDebInfo"))
+  set(CMAKE_CXX_CLANG_TIDY clang-tidy -header-filter=.*)
+endif()
 
 add_subdirectory(cpp-primer/chapter01)
 add_subdirectory(cpp-primer/chapter02)
