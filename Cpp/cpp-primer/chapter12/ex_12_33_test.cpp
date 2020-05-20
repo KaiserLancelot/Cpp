@@ -2,12 +2,12 @@
 // Created by kaiser on 18-12-19.
 //
 
-#include "ex_12_33.h"
-
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <string>
+
+#include "ex_12_33.h"
 
 void run_queries(std::ifstream &input) {
   TextQuery tq{input};
@@ -25,7 +25,7 @@ int main() {
   std::ifstream ifs{"story"};
   if (!ifs) {
     std::cerr << "can not open file\n";
-    std::exit(EXIT_FAILURE);
+    return EXIT_FAILURE;
   }
 
   run_queries(ifs);

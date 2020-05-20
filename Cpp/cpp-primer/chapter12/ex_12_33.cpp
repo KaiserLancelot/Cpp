@@ -16,7 +16,7 @@ TextQuery::TextQuery(std::ifstream &input) {
     std::string word;
 
     while (iss >> word) {
-      if (!words_and_line_number_[word]) {
+      if (!words_and_line_number_.contains(word)) {
         words_and_line_number_[word] = std::make_shared<std::set<LineNo>>();
       }
       words_and_line_number_[word]->insert(line_number);
@@ -63,12 +63,15 @@ std::ostream &print(std::ostream &os, QueryResult qr) {
 
 std::ostream &print(std::ostream &os, QueryResult qr, std::size_t begin,
                     std::size_t end) {
-  os << qr.word_ << " occurs " << std::size(*qr.line_number_)
-     << (std::size(*qr.line_number_) > 1 ? " times" : " time") << '\n';
+  auto size{std::size(*qr.line_number_)};
+
+  os << qr.word_ << " occurs " << size << (size > 1 ? " times" : " time")
+     << '\n';
 
   for (auto i : *qr.line_number_) {
-    if (i - 1 > begin && i - 1 < end) {
-      os << "\t(line " << i << ") " << qr.text_.at(i - 1) << '\n';
+    auto index{i - 1};
+    if (index > begin && index < end) {
+      os << "\t(line " << i << ") " << qr.text_.at(index) << '\n';
     }
   }
 

@@ -2,8 +2,7 @@
 // Created by kaiser on 18-12-19.
 //
 
-#ifndef CPP_PRIMER_EX_12_02_H
-#define CPP_PRIMER_EX_12_02_H
+#pragma once
 
 #include <initializer_list>
 #include <memory>
@@ -28,5 +27,3 @@ class StrBlob {
   void check(SizeType i, const std::string &msg) const;
   std::shared_ptr<std::vector<std::string>> data_;
 };
-
-#endif  // CPP_PRIMER_EX_12_02_H

@@ -30,13 +30,13 @@ std::ostream &print(std::ostream &os, const std::string &word,
 int main(int argc, char *argv[]) {
   if (argc == 1) {
     std::cerr << "no input file\n";
-    std::exit(EXIT_FAILURE);
+    return EXIT_FAILURE;
   }
 
   std::ifstream ifs{argv[1]};
   if (!ifs) {
     std::cerr << "can not open file\n";
-    std::exit(EXIT_FAILURE);
+    return EXIT_FAILURE;
   }
 
   std::vector<std::string> text;

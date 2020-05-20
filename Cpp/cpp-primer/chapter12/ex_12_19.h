@@ -2,8 +2,7 @@
 // Created by kaiser on 18-12-19.
 //
 
-#ifndef CPP_PRIMER_EX_12_19_H
-#define CPP_PRIMER_EX_12_19_H
+#pragma once
 
 #include <initializer_list>
 #include <memory>
@@ -50,5 +49,3 @@ class StrBlobPtr {
   std::weak_ptr<std::vector<std::string>> wptr_;
   SizeType curr_{};
 };
-
-#endif  // CPP_PRIMER_EX_12_19_H

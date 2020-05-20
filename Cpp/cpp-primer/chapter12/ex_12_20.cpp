@@ -2,11 +2,11 @@
 // Created by kaiser on 18-12-19.
 //
 
-#include "ex_12_19.h"
-
 #include <fstream>
 #include <iostream>
 #include <string>
+
+#include "ex_12_19.h"
 
 int main() {
   std::ifstream ifs{"book"};
@@ -17,7 +17,8 @@ int main() {
     sb.push_back(line);
   }
 
-  for (auto begin{sb.begin()}; begin.not_equal(sb.end()); begin.incr()) {
+  for (auto begin{std::begin(sb)}; begin.not_equal(std::end(sb));
+       begin.incr()) {
     std::cout << begin.deref() << '\n';
   }
 }

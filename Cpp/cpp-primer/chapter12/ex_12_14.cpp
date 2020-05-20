@@ -35,7 +35,7 @@ void end_connection(Connection *conn) { disconnect(*conn); }
 void f(Destination &d) {
   auto conn{connect(&d)};
   std::shared_ptr<Connection> p{&conn, end_connection};
-  std::cout << "connecting now(" << p.use_count() << ")" << std::endl;
+  std::cout << "connecting now(" << p.use_count() << ")\n";
 }
 
 int main() {

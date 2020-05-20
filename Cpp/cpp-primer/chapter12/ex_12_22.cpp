@@ -16,6 +16,7 @@ StrBlobPtr StrBlob::begin() { return StrBlobPtr{*this}; }
 StrBlobPtr StrBlob::end() { return StrBlobPtr{*this, std::size(*data_)}; }
 
 ConstStrBlobPtr StrBlob::begin() const { return ConstStrBlobPtr{*this}; }
+
 ConstStrBlobPtr StrBlob::end() const {
   return ConstStrBlobPtr{*this, std::size(*data_)};
 }

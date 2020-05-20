@@ -11,7 +11,7 @@ int main() {
   auto s{std::make_unique<char[]>(size)};
 
   for (std::size_t i{}; i + 1 < size; ++i) {
-    s[i] = static_cast<char>(std::cin.get());
+    s[i] = std::cin.get();
   }
 
   std::cout << s.get() << '\n';

@@ -2,8 +2,7 @@
 // Created by kaiser on 18-12-19.
 //
 
-#ifndef CPP_PRIMER_EX_12_27_H
-#define CPP_PRIMER_EX_12_27_H
+#pragma once
 
 #include <cstdint>
 #include <fstream>
@@ -44,5 +43,3 @@ class QueryResult {
 };
 
 std::ostream &print(std::ostream &os, const QueryResult &qr);
-
-#endif  // CPP_PRIMER_EX_12_27_H

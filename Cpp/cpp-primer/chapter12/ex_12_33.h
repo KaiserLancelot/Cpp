@@ -2,10 +2,7 @@
 // Created by kaiser on 18-12-19.
 //
 
-#ifndef CPP_PRIMER_EX_12_33_H
-#define CPP_PRIMER_EX_12_33_H
-
-#include "ex_12_22.h"
+#pragma once
 
 #include <cstdint>
 #include <fstream>
@@ -14,6 +11,8 @@
 #include <memory>
 #include <set>
 #include <string>
+
+#include "ex_12_22.h"
 
 class QueryResult;
 
@@ -52,5 +51,3 @@ class QueryResult {
 std::ostream &print(std::ostream &os, QueryResult qr);
 std::ostream &print(std::ostream &os, QueryResult qr, std::size_t begin,
                     std::size_t end);
-
-#endif  // CPP_PRIMER_EX_12_33_H

@@ -1,6 +1,7 @@
 Checks: '-*,boost-*,bugprone-*,clang-analyzer-*,cppcoreguidelines-*,
         misc-*,modernize-*,performance-*,portability-*,readability-*,
-        -modernize-use-trailing-return-type'
+        -modernize-use-trailing-return-type,-readability-qualified-auto,
+        -readability-else-after-return'
 WarningsAsErrors: 'clang-analyzer-*,-clang-analyzer-deadcode.*,
         -clang-analyzer-security.insecureAPI.*'
 CheckOptions:
