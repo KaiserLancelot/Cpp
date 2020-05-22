@@ -29,6 +29,9 @@ jobs:
         mkdir build && cd build && cmake ..
         cmake --build . -j4
         make install
+        git clone https://github.com/tanakh/cmdline
+        cd cmdline
+        cp cmdline.h /usr/local/include
 
     - name: configure
       env:
