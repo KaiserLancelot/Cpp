@@ -22,7 +22,8 @@ Programming learning notes
   - https://github.com/nlohmann/json
   - https://dev.mysql.com/doc/x-devapi-userguide/en/
   - https://github.com/google/googletest/blob/master/googletest/docs/primer.md
-
+  - https://cpp.libhunt.com/
+  
 - Other
   - https://github.com/wuye9036/CppTemplateTutorial
   - https://github.com/xiaoweiChen/CPP-Concurrency-In-Action-2ed-2019
