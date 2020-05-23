@@ -33,6 +33,7 @@
 
 # Development files
 # .vscode
+.clangd
 build
 *.profraw
 compile_commands.json
