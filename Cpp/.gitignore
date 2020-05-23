@@ -32,7 +32,6 @@
 *.app
 
 # Development files
-# .vscode
 .clangd
 build
 *.profraw
