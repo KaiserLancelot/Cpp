@@ -16,10 +16,12 @@ Programming learning notes
 
 - Library
   - https://www.boost.org/doc/libs/1_73_0
+  - https://github.com/google/leveldb/blob/master/doc/index.md
+  - https://dev.mysql.com/doc/x-devapi-userguide/en/
   - https://github.com/Neargye/magic_enum
   - http://fmtlib.net/latest/index.html
   - https://github.com/nlohmann/json
-  - https://dev.mysql.com/doc/x-devapi-userguide/en/
+  - https://github.com/gabime/spdlog
   - https://github.com/google/googletest/blob/master/googletest/docs/primer.md
   - https://cpp.libhunt.com/
   

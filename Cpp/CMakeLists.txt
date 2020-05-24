@@ -37,10 +37,12 @@ add_subdirectory(cpp-primer/chapter12)
 # add_subdirectory(cpp-primer/chapter19)
 
 add_subdirectory(library/Boost)
+add_subdirectory(library/database/leveldb)
+# add_subdirectory(library/database/mysql)
 add_subdirectory(library/enum)
 add_subdirectory(library/fmt)
 add_subdirectory(library/json)
-# add_subdirectory(library/sql)
+add_subdirectory(library/spdlog)
 add_subdirectory(library/test)
 
 add_subdirectory(new-features/cpp11)
