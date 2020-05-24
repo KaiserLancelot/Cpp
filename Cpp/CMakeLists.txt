@@ -37,7 +37,6 @@ add_subdirectory(cpp-primer/chapter12)
 # add_subdirectory(cpp-primer/chapter19)
 
 add_subdirectory(library/Boost)
-add_subdirectory(library/cmdline)
 add_subdirectory(library/enum)
 add_subdirectory(library/fmt)
 add_subdirectory(library/json)
