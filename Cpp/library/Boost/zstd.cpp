@@ -1,7 +1,7 @@
 /**
  * @ Author: KaiserLancelot
  * @ Create Time: 2020-05-24 23:44:21
- * @ Modified time: 2020-05-25 00:12:20
+ * @ Modified time: 2020-05-25 00:21:11
  */
 
 #include <cstdlib>
@@ -51,7 +51,7 @@ int main(int argc, char* argv[]) {
 
   std::string file_name{argv[1]};
 
-  if (file_name.ends_with(".zstd")) {
+  if (file_name.ends_with(".zst")) {
     std::ifstream ifs{file_name, std::ifstream::binary};
     std::string data{std::istreambuf_iterator<char>{ifs}, {}};
 
@@ -63,7 +63,7 @@ int main(int argc, char* argv[]) {
     std::ifstream ifs{file_name, std::ifstream::binary};
     std::string data{std::istreambuf_iterator<char>{ifs}, {}};
 
-    file_name += ".zstd";
+    file_name += ".zst";
 
     std::ofstream ofs{file_name, std::ofstream::binary};
     ofs << compress(data) << std::endl;
