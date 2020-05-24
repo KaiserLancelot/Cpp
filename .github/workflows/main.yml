@@ -22,7 +22,7 @@ jobs:
       run: |
         pacman -Syu --noconfirm
         pacman -S --noconfirm base-devel clang lld cmake wget unzip git \
-        intel-tbb boost fmt nlohmann-json gtest spdlog leveldb
+        intel-tbb boost fmt nlohmann-json gtest spdlog leveldb protobuf
         wget https://github.com/Neargye/magic_enum/archive/v0.6.5.zip
         unzip v0.6.5.zip
         cd magic_enum-0.6.5
