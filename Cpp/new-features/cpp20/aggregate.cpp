@@ -12,6 +12,6 @@ struct A {
   std::int32_t z;
 };
 
-// TODO 编译器实现不完整, 之后再看
+// TODO 编译器实现不完整
 
 int main() {}
