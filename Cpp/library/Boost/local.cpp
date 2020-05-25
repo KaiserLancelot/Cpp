@@ -2,30 +2,22 @@
 // Created by kaiser on 2020/4/27.
 //
 
-#include <cstdint>
 #include <iostream>
 #include <string>
 
 #include <boost/locale/encoding.hpp>
 #include <boost/locale/encoding_utf.hpp>
 
-void append_ucn(std::string& s, std::int32_t val) {
-  std::u32string str;
-  str.push_back(static_cast<char32_t>(val));
-  s += boost::locale::conv::utf_to_utf<char>(str);
-}
-
-void convert_to_utf16(std::string& s) {
-  s = boost::locale::conv::between(s, "UTF-16LE", "UTF-8");
-}
-
 int main() {
-  std::string s;
-  append_ucn(s, U'你');
+  std::string utf8{"你好世界"};
+  std::cout << std::size(utf8) << '\n';
 
-  std::cout << std::size(s) << '\n';
-  std::cout << s << '\n';
+  auto utf16{boost::locale::conv::utf_to_utf<char16_t>(utf8)};
+  std::cout << std::size(utf16) << '\n';
 
-  convert_to_utf16(s);
+  auto utf32{boost::locale::conv::utf_to_utf<char32_t>(utf16)};
+  std::cout << std::size(utf32) << '\n';
+
+  auto s{boost::locale::conv::between(utf8, "UTF-16LE", "UTF-8")};
   std::cout << std::size(s) << '\n';
 }

@@ -16,7 +16,7 @@ int main() {
   }
 
   {
-    std::string color_name{"kGreen"};
+    std::string color_name{"Green"};
     auto color{magic_enum::enum_cast<Color>(color_name)};
     if (color) {
       std::cout << "Ok\n";
