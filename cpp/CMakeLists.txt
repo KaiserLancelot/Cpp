@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
-project(Cpp LANGUAGES CXX)
+project(cpp LANGUAGES CXX)
 
 if((CMAKE_BUILD_TYPE STREQUAL "Debug") OR (CMAKE_BUILD_TYPE STREQUAL
                                            "RelWithDebInfo"))

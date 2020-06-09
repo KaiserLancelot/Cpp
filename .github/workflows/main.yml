@@ -16,27 +16,27 @@ jobs:
         compiler: [g++, clang++]
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: install
-      run: |
-        pacman -Syu --noconfirm
-        pacman -S --noconfirm base-devel clang lld cmake wget unzip git \
-        intel-tbb boost fmt nlohmann-json gtest spdlog rocksdb protobuf
-        wget https://github.com/Neargye/magic_enum/archive/v0.6.5.zip
-        unzip v0.6.5.zip
-        cd magic_enum-0.6.5
-        mkdir build && cd build && cmake ..
-        cmake --build . -j4
-        make install
+      - name: install
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm base-devel clang lld llvm cmake wget unzip git \
+          intel-tbb boost fmt nlohmann-json gtest spdlog rocksdb protobuf
+          wget https://github.com/Neargye/magic_enum/archive/v0.6.6.zip
+          unzip v0.6.6.zip
+          cd magic_enum-0.6.6
+          mkdir build && cd build && cmake ..
+          cmake --build . -j4
+          make install
 
-    - name: configure
-      env:
-        CXX: ${{ matrix.compiler }}
-      run: cd Cpp && mkdir build && cd build && cmake -DCLANG_TIDY=TRUE ..
+      - name: cmake
+        env:
+          CXX: ${{ matrix.compiler }}
+        run: cd cpp && mkdir build && cd build && cmake -DCLANG_TIDY=TRUE ..
 
-    - name: build
-      run: cd Cpp && cmake --build build -j4 --target all
+      - name: build
+        run: cd cpp && cmake --build build -j4 --target all
 
   rust:
 
@@ -46,7 +46,7 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: build
-      run: cd Rust && cargo build
+      - name: build
+        run: cd rust && cargo build
