@@ -1,9 +1,3 @@
-/**
- * @ Author: KaiserLancelot
- * @ Create Time: 2020-05-14 03:38:18
- * @ Modified time: 2020-05-16 04:29:03
- */
-
 enum IpAddrKind {
     V4,
     V6,

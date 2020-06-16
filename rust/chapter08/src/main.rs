@@ -1,8 +1,4 @@
-/**
- * @ Author: KaiserLancelot
- * @ Create Time: 2020-05-18 12:24:04
- * @ Modified time: 2020-05-20 13:26:27
- */
+use std::collections::HashMap;
 
 fn main() {
     let v: Vec<i32> = Vec::new();
@@ -92,4 +88,12 @@ fn main() {
     for b in "नमस्ते".bytes() {
         println!("{}", b);
     }
+
+    let mut source = HashMap::new();
+    source.insert("blue", 10);
+    source.insert("yellow", 20);
+
+    let team = vec!["blue", "yellow"];
+    let source = vec![10, 50];
+    let map: HashMap<_, _> = team.iter().zip(source.iter()).collect();
 }

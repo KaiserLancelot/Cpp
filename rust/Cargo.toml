@@ -8,6 +8,5 @@ members = [
     "chapter06",
     "chapter07",
     "chapter08",
-    "homework/convert_celsius_to_fahrenheit",
-    "homework/fibonacci"
+    "homework/*",
 ]

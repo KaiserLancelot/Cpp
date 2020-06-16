@@ -1,9 +1,3 @@
-/**
- * @ Author: KaiserLancelot
- * @ Create Time: 2020-05-10 23:09:06
- * @ Modified time: 2020-05-15 02:11:45
- */
-
 // 如果尝试在结构体中存储一个引用而不指定生命周期将是无效的
 struct User {
     username: String,

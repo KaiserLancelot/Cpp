@@ -1,8 +1,3 @@
-/**
- * @ Author: KaiserLancelot
- * @ Create Time: 2020-05-16 04:30:34
- * @ Modified time: 2020-05-18 14:46:28
- */
 // 此声明将会查找名为 front_of_house.rs 的文件
 // 并将该文件的内容放到此作用域中一个名为 front_of_house 的模块里面
 mod front_of_house;

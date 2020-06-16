@@ -6,11 +6,7 @@
       "request": "launch",
       "name": "Debug executable 'chapter02'",
       "cargo": {
-        "args": [
-          "build",
-          "--bin=chapter02",
-          "--package=chapter02"
-        ],
+        "args": ["build", "--bin=chapter02", "--package=chapter02"],
         "filter": {
           "name": "chapter02",
           "kind": "bin"
@@ -24,11 +20,7 @@
       "request": "launch",
       "name": "Debug executable 'chapter03'",
       "cargo": {
-        "args": [
-          "build",
-          "--bin=chapter03",
-          "--package=chapter03"
-        ],
+        "args": ["build", "--bin=chapter03", "--package=chapter03"],
         "filter": {
           "name": "chapter03",
           "kind": "bin"
@@ -42,11 +34,7 @@
       "request": "launch",
       "name": "Debug executable 'chapter04'",
       "cargo": {
-        "args": [
-          "build",
-          "--bin=chapter04",
-          "--package=chapter04"
-        ],
+        "args": ["build", "--bin=chapter04", "--package=chapter04"],
         "filter": {
           "name": "chapter04",
           "kind": "bin"
@@ -60,11 +48,7 @@
       "request": "launch",
       "name": "Debug executable 'chapter05'",
       "cargo": {
-        "args": [
-          "build",
-          "--bin=chapter05",
-          "--package=chapter05"
-        ],
+        "args": ["build", "--bin=chapter05", "--package=chapter05"],
         "filter": {
           "name": "chapter05",
           "kind": "bin"
@@ -78,11 +62,7 @@
       "request": "launch",
       "name": "Debug executable 'chapter06'",
       "cargo": {
-        "args": [
-          "build",
-          "--bin=chapter06",
-          "--package=chapter06"
-        ],
+        "args": ["build", "--bin=chapter06", "--package=chapter06"],
         "filter": {
           "name": "chapter06",
           "kind": "bin"
@@ -96,11 +76,7 @@
       "request": "launch",
       "name": "Debug executable 'chapter07'",
       "cargo": {
-        "args": [
-          "build",
-          "--bin=chapter07",
-          "--package=chapter07"
-        ],
+        "args": ["build", "--bin=chapter07", "--package=chapter07"],
         "filter": {
           "name": "chapter07",
           "kind": "bin"
@@ -114,11 +90,7 @@
       "request": "launch",
       "name": "Debug executable 'chapter08'",
       "cargo": {
-        "args": [
-          "build",
-          "--bin=chapter08",
-          "--package=chapter08"
-        ],
+        "args": ["build", "--bin=chapter08", "--package=chapter08"],
         "filter": {
           "name": "chapter08",
           "kind": "bin"
@@ -150,11 +122,7 @@
       "request": "launch",
       "name": "Debug executable 'fibonacci'",
       "cargo": {
-        "args": [
-          "build",
-          "--bin=fibonacci",
-          "--package=fibonacci"
-        ],
+        "args": ["build", "--bin=fibonacci", "--package=fibonacci"],
         "filter": {
           "name": "fibonacci",
           "kind": "bin"

@@ -2,13 +2,12 @@ name: Build
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   cpp:
-
     runs-on: ubuntu-latest
     container: archlinux
     strategy:
@@ -39,7 +38,6 @@ jobs:
         run: cd cpp && cmake --build build -j4 --target all
 
   rust:
-
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:

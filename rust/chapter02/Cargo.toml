@@ -14,10 +14,10 @@
 # 随着我们在这个文件增加更多的信息, 还将增加其他片段
 # 标题以及之后的内容属同一个片段, 直到遇到下一个标题才开始新的片段
 [package]
-name = "chapter02"
-version = "0.1.0"
-authors = ["KaiserLancelot <1244713586@qq.com>"]
+authors = [ "kaiser <1244713586@qq.com>" ]
 edition = "2018"
+name    = "chapter02"
+version = "0.1.0"
 
 # 项目依赖的片段
 # 在 Rust 中, 代码包被称为 crates

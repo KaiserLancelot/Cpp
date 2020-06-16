@@ -12,9 +12,11 @@ Programming learning notes
 ### C++
 
 - C++ Primer Answer
+
   - https://github.com/Mooophy/Cpp-Primer
 
 - Library
+
   - https://www.boost.org/doc/libs/1_73_0
   - https://dev.mysql.com/doc/x-devapi-userguide/en/
   - https://rocksdb.org/
@@ -34,6 +36,6 @@ Programming learning notes
 
 ### Rust
 
-  - https://kaisery.github.io/trpl-zh-cn
-  - https://github.com/chinanf-boy/async-book-zh
-  - https://doc.rust-lang.org/nightly/reference/
+- https://kaisery.github.io/trpl-zh-cn
+- https://github.com/chinanf-boy/async-book-zh
+- https://doc.rust-lang.org/nightly/reference/
