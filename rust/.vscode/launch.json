@@ -102,15 +102,11 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug executable 'convert-celsius-to-fahrenheit'",
+      "name": "Debug executable 'chapter09'",
       "cargo": {
-        "args": [
-          "build",
-          "--bin=convert-celsius-to-fahrenheit",
-          "--package=convert-celsius-to-fahrenheit"
-        ],
+        "args": ["build", "--bin=chapter09", "--package=chapter09"],
         "filter": {
-          "name": "convert-celsius-to-fahrenheit",
+          "name": "chapter09",
           "kind": "bin"
         }
       },
@@ -120,11 +116,67 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug executable 'fibonacci'",
+      "name": "Debug executable 'chapter03_1'",
       "cargo": {
-        "args": ["build", "--bin=fibonacci", "--package=fibonacci"],
+        "args": ["build", "--bin=chapter03_1", "--package=chapter03_1"],
         "filter": {
-          "name": "fibonacci",
+          "name": "chapter03_1",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'chapter03_2'",
+      "cargo": {
+        "args": ["build", "--bin=chapter03_2", "--package=chapter03_2"],
+        "filter": {
+          "name": "chapter03_2",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'chapter08_1'",
+      "cargo": {
+        "args": ["build", "--bin=chapter08_1", "--package=chapter08_1"],
+        "filter": {
+          "name": "chapter08_1",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'chapter08_2'",
+      "cargo": {
+        "args": ["build", "--bin=chapter08_2", "--package=chapter08_2"],
+        "filter": {
+          "name": "chapter08_2",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'chapter08_3'",
+      "cargo": {
+        "args": ["build", "--bin=chapter08_3", "--package=chapter08_3"],
+        "filter": {
+          "name": "chapter08_3",
           "kind": "bin"
         }
       },

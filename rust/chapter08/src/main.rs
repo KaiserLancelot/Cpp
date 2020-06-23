@@ -7,6 +7,14 @@ fn main() {
 
     let mut v = Vec::new();
     v.push(5);
+    // 删除并返回最后一个元素
+    v.pop();
+
+    let s = String::from("fuck");
+    let mut v = Vec::new();
+    // s 被移动
+    v.push(s);
+
     // 当 vector 被丢弃时, 所有其内容也会被丢弃
 
     let v = vec![1, 2, 3, 4, 5];
@@ -25,6 +33,7 @@ fn main() {
     // 错误
     // v.push(6);
 
+    // TODO & 的用法
     for i in &v {
         println!("{}", i);
     }
@@ -71,6 +80,7 @@ fn main() {
     let s1 = String::from("tic");
     let s2 = String::from("tac");
     let s3 = String::from("toe");
+    // let s = s1 + "-" + &s2 + "-" + &s3;
     // 不会获取任何参数的所有权
     let s = format!("{}-{}-{}", s1, s2, s3);
 
@@ -89,11 +99,54 @@ fn main() {
         println!("{}", b);
     }
 
+    // HashMap 默认使用一种密码学安全的(cryptographically strong)哈希函数
+    // 它可以抵抗拒绝服务(Denial of Service, DoS)攻击.然而这并不是可用的最快的算法
     let mut source = HashMap::new();
     source.insert("blue", 10);
     source.insert("yellow", 20);
 
     let team = vec!["blue", "yellow"];
     let source = vec![10, 50];
+    // 可以使用 zip 方法来创建一个元组的 vector
+    // 使用 collect 方法将这个元组 vector 转换成一个 HashMap
+    // 这里 HashMap<_, _> 类型注解是必要的, 因为可能 collect 很多不同的数据结构
+    // 但是对于键和值的类型参数来说, 可以使用下划线占位, 而 Rust 能够根据 vector
+    // 中数据的类型推断出 HashMap 所包含的类型
     let map: HashMap<_, _> = team.iter().zip(source.iter()).collect();
+
+    let field_name = String::from("Favorite color");
+    let field_value = String::from("Blue");
+
+    let mut map = HashMap::new();
+    // field_name 和 field_value 被移动到哈希 map 中
+    map.insert(field_name, field_value);
+
+    for (key, value) in &map {
+        println!("{}: {}", key, value);
+    }
+
+    match map.get(&String::from("Favorite color")) {
+        Some(value) => println!("{}", value),
+        None => println!("error"),
+    }
+
+    let mut scores = HashMap::new();
+
+    scores.insert(String::from("Blue"), 10);
+    // 旧值将被替换
+    scores.insert(String::from("Blue"), 25);
+    // entry 函数的返回值是一个枚举, Entry, 它代表了可能存在也可能不存在的值
+    // Entry 的 or_insert 方法在键不存在时插入, 返回值的一个可变引用
+    scores.entry(String::from("Blue")).or_insert(50);
+
+    let text = "hello world wonderful world";
+
+    let mut map = HashMap::new();
+
+    for word in text.split_whitespace() {
+        let count = map.entry(word).or_insert(0);
+        *count += 1;
+    }
+
+    println!("{:?}", map);
 }

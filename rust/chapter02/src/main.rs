@@ -16,6 +16,7 @@ fn main() {
     // rand::thread_rng() 函数提供实际使用的随机数生成器
     // 它位于当前执行线程的本地环境中, 并从操作系统获取 seed
     // gen_range 方法获取两个数字作为参数, 并生成一个范围在两者之间的随机数(左开右闭)
+    // 该方法由 Rng trait 定义
     let secret_number = rand::thread_rng().gen_range(1, 101);
     println!("The secret number is: {}", secret_number);
 
@@ -54,7 +55,7 @@ fn main() {
 
         // 一个 match 表达式由分支(arms)构成.
         // 一个分支包含一个模式(pattern)和表达式开头的值与分支模式相匹配时应该执行的代码
-        // 注意, 因为 guess 与 secret_number 的比较,  secret_number 也被推断出是 u32 类型
+        // 注意, 因为 guess 与 secret_number 的比较, secret_number 也被推断出是 u32 类型
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),

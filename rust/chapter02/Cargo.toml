@@ -1,4 +1,5 @@
-# rustup docs --book 用浏览器打开 The Rust Programming Language
+# rustup docs 在浏览器中查看本地文档
+# rustup docs --book 在浏览器中查看 The Rust Programming Language
 
 # cargo new hello_world 创建 binary package
 # cargo new --lib hello_world 创建 library package
@@ -11,7 +12,6 @@
 # Cargo.lock 文件记录项目依赖的实际版本
 
 # [package], 是一个片段(section)标题, 表明下面的语句用来配置一个包
-# 随着我们在这个文件增加更多的信息, 还将增加其他片段
 # 标题以及之后的内容属同一个片段, 直到遇到下一个标题才开始新的片段
 [package]
 authors = [ "kaiser <1244713586@qq.com>" ]

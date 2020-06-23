@@ -42,7 +42,7 @@ fn main() {
     // 布尔类型
     // 所有浮点数类型
     // 字符类型
-    // 元组, 当且仅当其包含的类型也都是 Copy 的时候
+    // 元组和数组, 当且仅当其包含的类型也都是 Copy 的时候
     // 注意 struct 中成员类型都是 copy 的时候, 它也不是 copy 的
 
     let s1 = String::from("hello");
@@ -134,6 +134,7 @@ fn change(s: &mut String) {
 }
 
 // 错误
+// 引用被保证总是有效的
 // fn dangle() -> &String {
 //     let s = String::from("hello");
 //     &s
@@ -146,6 +147,7 @@ fn first_word(s: &String) -> usize {
     // 使用 iter 方法在字节数组上创建一个迭代器
     // enumerate 包装了 iter 的结果
     // enumerate 返回的元组中, 第一个元素是索引, 第二个元素是集合中元素的引用
+    // TODO 解构
     for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
             return i;

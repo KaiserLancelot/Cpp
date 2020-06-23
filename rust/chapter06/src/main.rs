@@ -40,7 +40,9 @@ fn main() {
     let m = Message::Write(String::from("hello"));
     m.call();
 
-    // Option<T> 枚举被包含在了 prelude 之中
+    let m = Message::Move { x: 1, y: 2 };
+
+    // Option<T> 枚举被包含在了 prelude 之中, 它的成员也是如此
     let some_number = Some(5);
     let some_string = Some("hello");
     // 如果使用 None 而不是 Some, 需要告诉 Rust Option<T> 是什么类型的

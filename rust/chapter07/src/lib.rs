@@ -1,3 +1,16 @@
+// crate 是一个二进制项或者库, crate root 是一个源文件
+// Rust 编译器以它为起始点, 并构成 crate 的根模块
+
+// 包(package)是提供一系列功能的一个或者多个 crate
+// 一个包会包含有一个 Cargo.toml 文件, 阐述如何去构建这些 crate
+
+// 一个包中至多只能包含一个库 crate(library crate);
+// 包中可以包含任意多个二进制 crate(binary crate);
+// 包中至少包含一个 crate, 无论是库的还是二进制的
+
+// src/main.rs 就是一个与包同名的二进制 crate 的 crate root
+// src/lib.rs 就是一个与包同名的库 crate 的 crate root
+
 // 此声明将会查找名为 front_of_house.rs 的文件
 // 并将该文件的内容放到此作用域中一个名为 front_of_house 的模块里面
 mod front_of_house;
@@ -7,6 +20,8 @@ pub fn eat_at_restaurant() {
     // 父模块中的项不能使用子模块中的私有项, 但是子模块中的项可以使用他们父模块中的项
     // front_of_house 模块不是公有的, 不过因为 eat_at_restaurant 函数
     // 与 front_of_house 定义于同一模块中, 所以可以访问
+    // add_to_waitlist 函数与 eat_at_restaurant 被定义在同一 crate 中
+    // 这意味着我们可以使用 crate 关键字为起始的绝对路径
     crate::front_of_house::hosting::add_to_waitlist();
     // 使用绝对路径还是相对路径取决于你是更倾向于将项的定义代码与使用该项的代码分开移动还是一起移动
     // 更倾向于使用绝对路径, 因为它更适合移动代码定义和项调用的相互独立
@@ -25,7 +40,8 @@ mod back_of_house {
         cook_order();
         // 可以使用 super 开头来构建从父模块开始的相对路径
         // 因为 back_of_house 模块和 server_order 函数之间可能具有某种关联关系
-        // 并且, 如果我们要重新组织这个 crate 的模块树, 需要一起移动它们, 因此, 我们使用 super
+        // 并且, 如果我们要重新组织这个 crate 的模块树, 需要一起移动它们, 因此, 使用 super
+        // 注意, 直接 serve_order() 是错误的
         super::serve_order();
     }
 
@@ -50,7 +66,7 @@ mod back_of_house {
 
 // 习惯上将函数的父模块引入作用域
 // 使用 use 引入结构体, 枚举和其他项时, 习惯是指定它们的完整路径
-// 想使用 use 语句将两个具有相同名称的项带入作用域时除外
+// (想使用 use 语句将两个具有相同名称的项带入作用域时除外)
 // use crate::front_of_house::hosting;
 // use front_of_house::hosting;
 

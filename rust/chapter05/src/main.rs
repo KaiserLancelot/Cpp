@@ -1,5 +1,6 @@
 // 如果尝试在结构体中存储一个引用而不指定生命周期将是无效的
 struct User {
+    // public 的
     username: String,
     email: String,
     sign_in_count: u64,
@@ -34,7 +35,7 @@ impl Rectangle {
         }
     }
     // 定义 area 方法
-    // 第一个参数总是 self/&self
+    // 第一个参数总是 self/&self/&mut self
     // 方法可以选择获取 self 的所有权
     fn area(&self) -> u32 {
         self.width * self.height
@@ -83,7 +84,7 @@ fn build_user(email: String, username: String) -> User {
     User {
         // 如果变量和字段同名时可以简写
         email,
-        username: username,
+        username,
         active: true,
         sign_in_count: 1,
     }
