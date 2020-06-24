@@ -12,15 +12,15 @@
 #include <string>
 
 class Lexicon {
- public:
+public:
   using ConstIterator = std::set<std::string>::const_iterator;
 
-  explicit Lexicon(const std::string& filename);
+  explicit Lexicon(const std::string &filename);
 
-  bool contains_word(const std::string& word) const;
-  bool contains_prefix(const std::string& prefix) const;
+  bool contains_word(const std::string &word) const;
+  bool contains_prefix(const std::string &prefix) const;
 
-  void add_word(const std::string& word) {
+  void add_word(const std::string &word) {
     ensure_unique();
     all_words_->insert(word);
   }
@@ -28,7 +28,7 @@ class Lexicon {
   ConstIterator begin() const { return all_words_->begin(); }
   ConstIterator end() const { return all_words_->end(); }
 
- private:
+private:
   std::shared_ptr<std::set<std::string>> all_words_{
       std::make_shared<std::set<std::string>>()};
 
@@ -38,22 +38,22 @@ class Lexicon {
   }
 };
 
-std::string convert_to_lower_case(const std::string& str) {
+std::string convert_to_lower_case(const std::string &str) {
   std::string result(str);
   transform(result.begin(), result.end(), result.begin(), ::tolower);
   return result;
 }
 
-Lexicon::Lexicon(const std::string& filename) {
+Lexicon::Lexicon(const std::string &filename) {
   std::ifstream input{filename};
   all_words_->insert(std::istream_iterator<std::string>{input}, {});
 }
 
-bool Lexicon::contains_word(const std::string& word) const {
+bool Lexicon::contains_word(const std::string &word) const {
   return all_words_->find(convert_to_lower_case(word)) != all_words_->end();
 }
 
-bool Lexicon::contains_prefix(const std::string& prefix) const {
+bool Lexicon::contains_prefix(const std::string &prefix) const {
   const std::string lower_prefix(convert_to_lower_case(prefix));
 
   auto itr = all_words_->lower_bound(lower_prefix);
@@ -67,7 +67,7 @@ bool Lexicon::contains_prefix(const std::string& prefix) const {
 
 int main() {
   Lexicon lexicon{"story"};
-  for (const auto& item : lexicon) {
+  for (const auto &item : lexicon) {
     std::cout << item << '\n';
   }
 }

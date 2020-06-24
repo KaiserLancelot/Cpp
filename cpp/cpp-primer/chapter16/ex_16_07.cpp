@@ -5,8 +5,7 @@
 #include <iostream>
 #include <string>
 
-template <typename T, auto Size>
-auto GetSize(const T (&arr)[Size]) {
+template <typename T, auto Size> auto GetSize(const T (&arr)[Size]) {
   return Size;
 }
 

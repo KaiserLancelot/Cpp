@@ -9,5 +9,5 @@
 int main() {
   SalesData a;
   std::cin >> a;
-  std::cout << a;  // (b) 遇到点则停止,不发生错误
+  std::cout << a; // (b) 遇到点则停止,不发生错误
 }

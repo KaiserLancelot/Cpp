@@ -11,18 +11,18 @@
 class Screen;
 
 class WindowMgr {
- public:
+public:
   using ScreenIndex = std::vector<Screen>::size_type;
   void clear(ScreenIndex index);
 
- private:
+private:
   std::vector<Screen> screens_;
 };
 
 class Screen {
   friend void WindowMgr::clear(ScreenIndex index);
 
- public:
+public:
   using Pos = std::string::size_type;
 
   Screen() = default;
@@ -61,7 +61,7 @@ class Screen {
     return *this;
   }
 
- private:
+private:
   void do_display(std::ostream &os) const { os << contents_; }
 
   Pos cursor_{};

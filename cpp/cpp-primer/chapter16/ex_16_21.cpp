@@ -7,16 +7,15 @@
 #include <memory>
 
 class DebugDelete {
- public:
+public:
   explicit DebugDelete(std::ostream &os = std::cerr) : os_{os} {}
 
-  template <typename T>
-  void operator()(T *p) const {
+  template <typename T> void operator()(T *p) const {
     os_ << "deleting unique_ptr\n";
     delete p;
   }
 
- private:
+private:
   std::ostream &os_;
 };
 

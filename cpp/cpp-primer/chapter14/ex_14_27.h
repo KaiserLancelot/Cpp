@@ -19,7 +19,7 @@ class StrBlob {
   friend class StrBlobPtr;
   friend class ConstStrBlobPtr;
 
- public:
+public:
   using SizeType = std::vector<std::string>::size_type;
   StrBlob();
   StrBlob(std::initializer_list<std::string> il);
@@ -40,7 +40,7 @@ class StrBlob {
   std::string &operator[](SizeType index);
   const std::string &operator[](SizeType index) const;
 
- private:
+private:
   void Check(SizeType i, const std::string &msg) const;
   std::shared_ptr<std::vector<std::string>> data_;
 };
@@ -49,7 +49,7 @@ class StrBlobPtr {
   friend bool operator==(const StrBlobPtr &lhs, const StrBlobPtr &rhs);
   friend bool operator<(const StrBlobPtr &lhs, const StrBlobPtr &rhs);
 
- public:
+public:
   using SizeType = StrBlob::SizeType;
   StrBlobPtr() = default;
   explicit StrBlobPtr(StrBlob &a, SizeType sz = 0);
@@ -61,7 +61,7 @@ class StrBlobPtr {
   StrBlobPtr operator++(int);
   StrBlobPtr operator--(int);
 
- private:
+private:
   std::shared_ptr<std::vector<std::string>> Check(SizeType i,
                                                   const std::string &msg) const;
   std::weak_ptr<std::vector<std::string>> wptr_;
@@ -73,7 +73,7 @@ class ConstStrBlobPtr {
                          const ConstStrBlobPtr &rhs);
   friend bool operator<(const ConstStrBlobPtr &lhs, const ConstStrBlobPtr &rhs);
 
- public:
+public:
   using SizeType = StrBlob::SizeType;
   ConstStrBlobPtr() = default;
   explicit ConstStrBlobPtr(const StrBlob &a, SizeType sz = 0);
@@ -85,7 +85,7 @@ class ConstStrBlobPtr {
   ConstStrBlobPtr operator++(int);
   ConstStrBlobPtr operator--(int);
 
- private:
+private:
   std::shared_ptr<std::vector<std::string>> Check(SizeType i,
                                                   const std::string &msg) const;
   std::weak_ptr<std::vector<std::string>> wptr_;
@@ -113,4 +113,4 @@ bool operator<=(const ConstStrBlobPtr &lhs, const ConstStrBlobPtr &rhs);
 bool operator>(const ConstStrBlobPtr &lhs, const ConstStrBlobPtr &rhs);
 bool operator>=(const ConstStrBlobPtr &lhs, const ConstStrBlobPtr &rhs);
 
-#endif  // CPP_PRIMER_EX_14_27_H
+#endif // CPP_PRIMER_EX_14_27_H

@@ -7,7 +7,7 @@
 #include <vector>
 
 class ReadString {
- public:
+public:
   explicit ReadString(std::istream &is) : is_{is} {}
   std::string operator()() {
     std::string ret;
@@ -18,7 +18,7 @@ class ReadString {
     }
   }
 
- private:
+private:
   std::istream &is_;
 };
 

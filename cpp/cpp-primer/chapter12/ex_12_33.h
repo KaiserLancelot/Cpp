@@ -19,11 +19,11 @@ class QueryResult;
 using LineNo = std::vector<std::string>::size_type;
 
 class TextQuery {
- public:
+public:
   explicit TextQuery(std::ifstream &input);
   QueryResult query(const std::string &s) const;
 
- private:
+private:
   StrBlob text_;
   std::map<std::string, std::shared_ptr<std::set<LineNo>>>
       words_and_line_number_;
@@ -34,7 +34,7 @@ class QueryResult {
   friend std::ostream &print(std::ostream &os, QueryResult qr,
                              std::size_t begin, std::size_t end);
 
- public:
+public:
   using ResultIterator = std::set<LineNo>::iterator;
   QueryResult(const std::string &word, const StrBlob &text,
               const std::shared_ptr<std::set<LineNo>> &line_number);
@@ -42,7 +42,7 @@ class QueryResult {
   ResultIterator end() const;
   StrBlob get_file() const;
 
- private:
+private:
   std::string word_;
   StrBlob text_;
   std::shared_ptr<std::set<LineNo>> line_number_;

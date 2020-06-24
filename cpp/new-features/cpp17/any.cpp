@@ -23,7 +23,7 @@ int main() {
   try {
     a = 1;
     std::cout << std::any_cast<float>(a) << '\n';
-  } catch (const std::bad_any_cast& e) {
+  } catch (const std::bad_any_cast &e) {
     std::cout << e.what() << '\n';
   }
 
@@ -41,10 +41,10 @@ int main() {
 
   // 指向所含数据的指针
   a = 1;
-  int* i = std::any_cast<int>(&a);
+  int *i = std::any_cast<int>(&a);
   std::cout << *i << "\n";
 
   // 可以设置为引用避免拷贝
   a = std::string("kaiser");
-  std::cout << std::any_cast<std::string&>(a) << '\n';
+  std::cout << std::any_cast<std::string &>(a) << '\n';
 }

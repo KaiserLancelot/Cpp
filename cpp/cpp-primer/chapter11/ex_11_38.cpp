@@ -9,8 +9,8 @@
 #include <string>
 #include <unordered_map>
 
-std::unordered_map<std::string, std::string> build_map(
-    std::ifstream &map_file) {
+std::unordered_map<std::string, std::string>
+build_map(std::ifstream &map_file) {
   std::unordered_map<std::string, std::string> trans_map;
   std::string key, value;
 
@@ -24,9 +24,9 @@ std::unordered_map<std::string, std::string> build_map(
   return trans_map;
 }
 
-std::string translation(
-    const std::string &s,
-    const std::unordered_map<std::string, std::string> &trans_map) {
+std::string
+translation(const std::string &s,
+            const std::unordered_map<std::string, std::string> &trans_map) {
   auto map_iter{trans_map.find(s)};
   if (map_iter != std::end(trans_map)) {
     return map_iter->second;

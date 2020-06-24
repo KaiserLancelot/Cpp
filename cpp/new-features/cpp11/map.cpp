@@ -12,10 +12,10 @@
 #include <unordered_map>
 
 class A {
- public:
+public:
   const std::string &get_string() const { return s_; }
 
- private:
+private:
   std::string s_;
 };
 
@@ -28,7 +28,7 @@ int main() {
   }};
 
   std::unordered_map<A, std::string, decltype(hasher), decltype(equal_op)>
-      a_map{42, hasher, equal_op};  // 42 是用于创建的最小桶数
+      a_map{42, hasher, equal_op}; // 42 是用于创建的最小桶数
   std::cout << a_map.bucket_count() << '\n';
 
   std::unordered_map<std::string, std::int32_t> map{
@@ -68,17 +68,17 @@ int main() {
   // 若 *this 中有元素, 其 key 等价于来自 source 中元素的 key, 则不从 source
   // 释出该元素.不复制或移动元素, 只会重指向容器结点的内部指针(C++17)
   map2.merge(map);
-  std::cout << std::size(map) << " vs " << std::size(map2) << '\n';  // 1 vs 3
+  std::cout << std::size(map) << " vs " << std::size(map2) << '\n'; // 1 vs 3
 
   // 若容器拥有元素而其 key 等于 x
   // 则从容器解链该元素并返回占有它的结点把柄.否则, 返回空结点把柄
   // 任何情况下, 均不复制或移动元素, 只重指向容器结点的内部指针(C++17)
   auto node{map.extract("a")};
-  std::cout << std::size(map) << '\n';  // 0
+  std::cout << std::size(map) << '\n'; // 0
   // extract 是更换 map 的 key 而不重分配的唯一方式
   node.key() = "aa";
   map.insert(std::move(node));
-  std::cout << std::size(map) << '\n';  // 1
+  std::cout << std::size(map) << '\n'; // 1
 
   // 若等价于 k 的键已存在于容器中, 则赋值给对应于键 k 的
   // mapped_type.若键不存在, 则插入(C++17)

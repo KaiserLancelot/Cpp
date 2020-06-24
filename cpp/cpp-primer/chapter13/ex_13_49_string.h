@@ -13,7 +13,7 @@
 class String {
   friend void swap(String &lhs, String &rhs);
 
- public:
+public:
   using SizeType = std::size_t;
   String() = default;
   String(const char *str);
@@ -33,7 +33,7 @@ class String {
   void Resize(SizeType size, char value);
   const char *CStr() const;
 
- private:
+private:
   void CheckAlloc();
   std::pair<char *, char *> AllocCopy(const char *begin, const char *end);
   void Free();
@@ -48,4 +48,4 @@ class String {
 
 void swap(String &lhs, String &rhs);
 
-#endif  // CPP_PRIMER_EX_13_49_STRING_H
+#endif // CPP_PRIMER_EX_13_49_STRING_H

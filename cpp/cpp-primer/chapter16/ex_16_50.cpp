@@ -4,25 +4,13 @@
 
 #include <iostream>
 
-template <typename T>
-void f(T) {
-  std::cout << "f(T)\n";
-}
+template <typename T> void f(T) { std::cout << "f(T)\n"; }
 
-template <typename T>
-void f(const T*) {
-  std::cout << "f(const T*)\n";
-}
+template <typename T> void f(const T *) { std::cout << "f(const T*)\n"; }
 
-template <typename T>
-void g(T) {
-  std::cout << "foo(T)\n";
-}
+template <typename T> void g(T) { std::cout << "foo(T)\n"; }
 
-template <typename T>
-void g(T*) {
-  std::cout << "foo(T*)\n";
-}
+template <typename T> void g(T *) { std::cout << "foo(T*)\n"; }
 
 int main() {
   int i = 42, *p = &i;

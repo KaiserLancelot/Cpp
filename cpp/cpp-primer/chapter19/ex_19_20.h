@@ -17,16 +17,16 @@
 using LineNo = std::vector<std::string>::size_type;
 
 class TextQuery {
- public:
+public:
   class QueryResult {
     friend std::ostream &Print(std::ostream &os, QueryResult qr);
 
-   public:
+  public:
     QueryResult(const std::string &word,
                 const std::shared_ptr<std::vector<std::string>> &text,
                 const std::shared_ptr<std::set<LineNo>> &line_number);
 
-   private:
+  private:
     std::string word_;
     std::shared_ptr<std::vector<std::string>> text_;
     std::shared_ptr<std::set<LineNo>> line_number_;
@@ -35,7 +35,7 @@ class TextQuery {
   explicit TextQuery(std::ifstream &input);
   QueryResult Query(const std::string &s);
 
- private:
+private:
   std::shared_ptr<std::vector<std::string>> text_;
   std::map<std::string, std::shared_ptr<std::set<LineNo>>>
       words_and_line_number_;
@@ -43,4 +43,4 @@ class TextQuery {
 
 std::ostream &Print(std::ostream &os, TextQuery::QueryResult qr);
 
-#endif  // CPP_PRIMER_EX_19_20_H
+#endif // CPP_PRIMER_EX_19_20_H

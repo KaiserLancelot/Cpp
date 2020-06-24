@@ -14,7 +14,7 @@
 #include "insertion_sort.h"
 
 class SortTest : public testing::Test {
- protected:
+protected:
   // 下面四个函数都可以删掉
   // 执行完一个测试, SortTest 就会析构
 

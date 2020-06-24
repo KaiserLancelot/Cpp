@@ -7,7 +7,7 @@
 #include <string>
 
 class Screen {
- public:
+public:
   using Pos = std::string::size_type;
 
   Screen() = default;
@@ -27,7 +27,7 @@ class Screen {
     return *this;
   }
 
- private:
+private:
   Pos cursor_{};
   Pos height_{}, width_{};
   std::string contents_;

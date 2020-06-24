@@ -10,14 +10,13 @@
 #include <stdexcept>
 #include <vector>
 
-template <typename T>
-class Array {
- public:
+template <typename T> class Array {
+public:
   explicit Array(std::size_t size) : p_{new T[size]} {}
   ~Array() { delete[] p_; }
   T &operator[](std::size_t index) { return p_[index]; }
 
- private:
+private:
   T *p_{};
 };
 

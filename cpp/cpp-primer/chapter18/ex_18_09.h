@@ -11,12 +11,12 @@
 #include <string>
 
 class OutOfStock : public std::runtime_error {
- public:
+public:
   explicit OutOfStock(const std::string &s) : std::runtime_error{s} {}
 };
 
 class IsbnMismatch : public std::logic_error {
- public:
+public:
   explicit IsbnMismatch(const std::string &s) : std::logic_error{s} {}
   IsbnMismatch(const std::string &s, const std::string &left,
                const std::string &right)
@@ -29,7 +29,7 @@ class SalesData {
   friend std::ostream &operator<<(std::ostream &os, const SalesData &item);
   friend std::istream &operator>>(std::istream &is, SalesData &item);
 
- public:
+public:
   SalesData() = default;
   explicit SalesData(const std::string &book_no);
   SalesData(const std::string &book_no, std::int32_t units_sold,
@@ -39,7 +39,7 @@ class SalesData {
   SalesData &operator+=(const SalesData &rhs);
   const std::string &Isbn() const;
 
- private:
+private:
   double AvgPrice() const;
 
   std::string book_no_;
@@ -51,4 +51,4 @@ std::ostream &operator<<(std::ostream &os, const SalesData &item);
 std::istream &operator>>(std::istream &is, SalesData &item);
 SalesData operator+(const SalesData &lhs, const SalesData &rhs);
 
-#endif  // CPP_PRIMER_EX_18_09_H
+#endif // CPP_PRIMER_EX_18_09_H

@@ -11,7 +11,7 @@
 class Date {
   friend std::ostream &print(std::ostream &os, const Date &item);
 
- public:
+public:
   Date() = default;
   explicit Date(const std::string &s) {
     if (s.find("Jan") != std::string::npos) {
@@ -50,7 +50,7 @@ class Date {
     }
   }
 
- private:
+private:
   std::int32_t year_{};
   std::int32_t month_{};
   std::int32_t day_{};

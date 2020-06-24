@@ -17,7 +17,7 @@ int main() {
     }
   }
 
-  for (const auto& [s, count] : word_count) {
+  for (const auto &[s, count] : word_count) {
     std::cout << s << ' ' << count << '\n';
   }
 }

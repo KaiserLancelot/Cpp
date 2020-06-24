@@ -10,7 +10,7 @@
 #include <string>
 
 class HasPtr {
- public:
+public:
   explicit HasPtr(const std::string &s = std::string())
       : ps_{new std::string(s)}, use_{new std::size_t{1}} {}
   HasPtr(const HasPtr &item) : ps_{item.ps_}, i_{item.i_}, use_{item.use_} {
@@ -35,10 +35,10 @@ class HasPtr {
     }
   }
 
- private:
+private:
   std::string *ps_;
   std::int32_t i_{};
   std::size_t *use_;
 };
 
-#endif  // CPP_PRIMER_EX_13_27_H
+#endif // CPP_PRIMER_EX_13_27_H

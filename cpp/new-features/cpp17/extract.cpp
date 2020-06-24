@@ -9,8 +9,7 @@
 #include <string>
 #include <utility>
 
-template <typename M>
-void print(const M &m) {
+template <typename M> void print(const M &m) {
   std::cout << "Race placement:\n";
   for (const auto &[placement, driver] : m) {
     std::cout << placement << ": " << driver << '\n';

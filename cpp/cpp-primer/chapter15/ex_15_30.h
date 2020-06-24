@@ -12,7 +12,7 @@
 #include "ex_15_30_quote.h"
 
 class Basket {
- public:
+public:
   void AddItem(const Quote &sale) {
     items_.insert(std::shared_ptr<Quote>{sale.clone()});
   }
@@ -21,7 +21,7 @@ class Basket {
   }
   double TotalReceipt(std::ostream &os) const;
 
- private:
+private:
   static bool less(const std::shared_ptr<Quote> &lhs,
                    const std::shared_ptr<Quote> &rhs) {
     return lhs->Isbn() < rhs->Isbn();
@@ -29,4 +29,4 @@ class Basket {
   std::multiset<std::shared_ptr<Quote>, decltype(less) *> items_{less};
 };
 
-#endif  // CPP_PRIMER_EX_15_30_H
+#endif // CPP_PRIMER_EX_15_30_H

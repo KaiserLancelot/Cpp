@@ -7,11 +7,11 @@
 #include <vector>
 
 class Equal {
- public:
+public:
   explicit Equal(const std::string &s) : s_{s} {}
   bool operator()(const std::string &s) { return s == s_; }
 
- private:
+private:
   std::string s_;
 };
 

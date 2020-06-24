@@ -11,8 +11,8 @@
 #include <string>
 #include <vector>
 
-std::map<std::string, std::vector<std::string>> BuildMap(
-    std::ifstream &map_file) {
+std::map<std::string, std::vector<std::string>>
+BuildMap(std::ifstream &map_file) {
   std::map<std::string, std::vector<std::string>> trans_map;
   std::string key, value;
 
@@ -32,9 +32,9 @@ std::map<std::string, std::vector<std::string>> BuildMap(
   return trans_map;
 }
 
-const std::string Translation(
-    const std::string &s,
-    const std::map<std::string, std::vector<std::string>> &trans_map) {
+const std::string
+Translation(const std::string &s,
+            const std::map<std::string, std::vector<std::string>> &trans_map) {
   auto map_iter{trans_map.find(s)};
   if (map_iter != std::end(trans_map)) {
     static std::default_random_engine e{std::random_device{}()};

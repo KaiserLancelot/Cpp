@@ -9,20 +9,20 @@
 #include <vector>
 
 class Cat {
- public:
+public:
   explicit Cat(const std::string &name) : name_{name} {}
   void meow() const { std::cout << name_ << " says Meow!\n"; }
 
- private:
+private:
   std::string name_;
 };
 
 class Dog {
- public:
+public:
   explicit Dog(const std::string &name) : name_{name} {}
   void woof() const { std::cout << name_ << " says Woof!\n"; }
 
- private:
+private:
   std::string name_;
 };
 
@@ -40,14 +40,14 @@ int main() {
   for (const auto &item : v) {
     // 返回 variant 所保有可选项的零基下标
     switch (item.index()) {
-      case 0:
-        std::get<Cat>(item).meow();
-        break;
-      case 1:
-        std::get<1>(item).woof();
-        break;
-      default: {
-      }
+    case 0:
+      std::get<Cat>(item).meow();
+      break;
+    case 1:
+      std::get<1>(item).woof();
+      break;
+    default: {
+    }
     }
   }
 

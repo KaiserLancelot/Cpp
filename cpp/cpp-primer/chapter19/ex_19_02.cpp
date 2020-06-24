@@ -76,11 +76,12 @@ void StrVec::Resize(StrVec::SizeType size, const std::string &value) {
 }
 
 void StrVec::CheckAlloc() {
-  if (Size() == Capacity()) Reallocate(Size() ? 2 * Size() : 1);
+  if (Size() == Capacity())
+    Reallocate(Size() ? 2 * Size() : 1);
 }
 
-std::pair<std::string *, std::string *> StrVec::AllocCopy(
-    const std::string *begin, const std::string *end) {
+std::pair<std::string *, std::string *>
+StrVec::AllocCopy(const std::string *begin, const std::string *end) {
   auto data{alloc_.allocate(end - begin)};
   return {data, std::uninitialized_copy(begin, end, data)};
 }

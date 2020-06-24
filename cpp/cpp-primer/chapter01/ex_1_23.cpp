@@ -16,7 +16,7 @@ int main() {
     ++data[item.isbn()];
   }
 
-  for (const auto& [isbn, cnt] : data) {
+  for (const auto &[isbn, cnt] : data) {
     std::cout << isbn << ' ' << cnt << '\n';
   }
 }

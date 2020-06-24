@@ -5,8 +5,7 @@
 #include <iostream>
 #include <string>
 
-template <typename T>
-void Print(const T &arr) {
+template <typename T> void Print(const T &arr) {
   for (const auto &ele : arr) {
     std::cout << ele << '\n';
   }

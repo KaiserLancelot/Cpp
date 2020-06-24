@@ -7,12 +7,12 @@
 #include <string>
 
 class Account {
- public:
+public:
   void calculate() { amount_ += amount_ * Account::interest_rate; }
   static double rate() { return Account::interest_rate; }
   static void rate(double new_rate) { Account::interest_rate = new_rate; }
 
- private:
+private:
   std::string owner_;
   double amount_{};
   inline static double interest_rate{42.42};

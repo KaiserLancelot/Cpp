@@ -13,7 +13,7 @@
 #include <boost/program_options/positional_options.hpp>
 #include <boost/program_options/variables_map.hpp>
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
   try {
     std::int32_t opt;
 
@@ -64,7 +64,7 @@ int main(int argc, char* argv[]) {
 
     if (vm.contains("include-path")) {
       std::cout << "include-path: " << '\n';
-      for (const auto& item :
+      for (const auto &item :
            vm["include-path"].as<std::vector<std::string>>()) {
         std::cout << item << '\n';
       }
@@ -72,11 +72,11 @@ int main(int argc, char* argv[]) {
 
     if (vm.contains("input-file")) {
       std::cout << "input-file: " << '\n';
-      for (const auto& item : vm["input-file"].as<std::vector<std::string>>()) {
+      for (const auto &item : vm["input-file"].as<std::vector<std::string>>()) {
         std::cout << item << '\n';
       }
     }
-  } catch (const std::exception& err) {
+  } catch (const std::exception &err) {
     std::cerr << err.what() << "\n";
     return EXIT_FAILURE;
   }

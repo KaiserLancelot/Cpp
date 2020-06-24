@@ -22,6 +22,6 @@ int main() {
   spdlog::info("Positional args are {1} {0}..", "too", "supported");
   spdlog::info("{:<30}", "left aligned");
 
-  spdlog::set_level(spdlog::level::debug);  // Set global log level to debug
+  spdlog::set_level(spdlog::level::debug); // Set global log level to debug
   spdlog::debug("This message should be displayed..");
 }

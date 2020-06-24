@@ -14,7 +14,7 @@
 #include <rocksdb/write_batch.h>
 
 int main() {
-  rocksdb::DB* p;
+  rocksdb::DB *p;
   rocksdb::Options options;
   options.create_if_missing = true;
   // options.error_if_exists = true;

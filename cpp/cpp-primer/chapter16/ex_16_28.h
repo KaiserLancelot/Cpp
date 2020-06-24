@@ -10,25 +10,20 @@
 #include <functional>
 
 class Delete {
- public:
-  template <typename T>
-  void operator()(T *ptr) const {
-    delete ptr;
-  }
+public:
+  template <typename T> void operator()(T *ptr) const { delete ptr; }
 };
 
-template <typename T>
-class SharedPtr;
+template <typename T> class SharedPtr;
 
 template <typename Type>
 void swap(SharedPtr<Type> &lhs, SharedPtr<Type> &rhs) noexcept;
 
-template <typename T>
-class SharedPtr {
+template <typename T> class SharedPtr {
   template <typename Type>
   friend void swap(SharedPtr<Type> &lhs, SharedPtr<Type> &rhs) noexcept;
 
- public:
+public:
   SharedPtr() : ref_count_{new std::int32_t{}} {}
   explicit SharedPtr(T *ptr) : ptr_{ptr}, ref_count_{new std::int32_t{1}} {}
 
@@ -41,9 +36,8 @@ class SharedPtr {
   }
 
   SharedPtr(SharedPtr &&item) noexcept
-      : ptr_{item.ptr_},
-        ref_count_{item.ref_count_},
-        deleter_{std::move(item.deleter_)} {
+      : ptr_{item.ptr_}, ref_count_{item.ref_count_}, deleter_{std::move(
+                                                          item.deleter_)} {
     item.ptr_ = nullptr;
     item.ref_count_ = nullptr;
   }
@@ -85,7 +79,7 @@ class SharedPtr {
     deleter_ = deleter;
   }
 
- private:
+private:
   T *ptr_{};
   std::int32_t *ref_count_{};
   std::function<void(T *)> deleter_{Delete{}};
@@ -99,18 +93,16 @@ void swap(SharedPtr<Type> &lhs, SharedPtr<Type> &rhs) noexcept {
   swap(lhs.deleter_, rhs.deleter_);
 }
 
-template <typename T, typename Deleter = Delete>
-class UniquePtr;
+template <typename T, typename Deleter = Delete> class UniquePtr;
 
 template <typename Type>
 void swap(UniquePtr<Type> &lhs, UniquePtr<Type> &rhs) noexcept;
 
-template <typename T, typename Deleter>
-class UniquePtr {
+template <typename T, typename Deleter> class UniquePtr {
   template <typename Type>
   friend void swap(UniquePtr<Type> &lhs, UniquePtr<Type> &rhs) noexcept;
 
- public:
+public:
   UniquePtr() = default;
   explicit UniquePtr(T *ptr) : ptr_{ptr} {}
   UniquePtr(const UniquePtr &) = delete;
@@ -158,7 +150,7 @@ class UniquePtr {
 
   void swap(UniquePtr &item) noexcept { swap(*this, item); }
 
- private:
+private:
   T *ptr_{};
   Deleter deleter_;
 };
@@ -170,4 +162,4 @@ void swap(UniquePtr<Type> &lhs, UniquePtr<Type> &rhs) noexcept {
   swap(lhs.deleter_, rhs.deleter_);
 }
 
-#endif  // CPP_PRIMER_EX_16_28_H
+#endif // CPP_PRIMER_EX_16_28_H

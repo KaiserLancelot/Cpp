@@ -6,15 +6,13 @@
 #include <sstream>
 #include <string>
 
-template <typename T>
-std::string debug_rep(const T &t) {
+template <typename T> std::string debug_rep(const T &t) {
   std::ostringstream ret;
   ret << t;
   return ret.str();
 }
 
-template <typename T>
-std::string debug_rep(T *p) {
+template <typename T> std::string debug_rep(T *p) {
   std::ostringstream ret;
   ret << "pointer: " << p;
   if (p) {
@@ -29,8 +27,7 @@ std::string debug_rep(const std::string &s) { return '"' + s + '"'; }
 
 std::string debug_rep(const char *s) { return debug_rep(std::string(s)); }
 
-template <typename T>
-std::ostream &print(std::ostream &os, const T &t) {
+template <typename T> std::ostream &print(std::ostream &os, const T &t) {
   return os << t;
 }
 

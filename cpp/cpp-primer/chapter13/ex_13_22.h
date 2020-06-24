@@ -9,7 +9,7 @@
 #include <string>
 
 class HasPtr {
- public:
+public:
   explicit HasPtr(const std::string &s = std::string())
       : ps_{new std::string(s)} {}
   HasPtr(const HasPtr &item) : ps_{new std::string(*item.ps_)}, i_{item.i_} {}
@@ -22,9 +22,9 @@ class HasPtr {
   }
   ~HasPtr() { delete ps_; }
 
- private:
+private:
   std::string *ps_;
   std::int32_t i_{};
 };
 
-#endif  // CPP_PRIMER_EX_13_22_H
+#endif // CPP_PRIMER_EX_13_22_H

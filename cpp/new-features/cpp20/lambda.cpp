@@ -8,7 +8,7 @@
 #include <iostream>
 
 class A {
- public:
+public:
   A(std::int32_t i) : a{i} {}
   std::int32_t fun() {
     // 引用捕获当前对象

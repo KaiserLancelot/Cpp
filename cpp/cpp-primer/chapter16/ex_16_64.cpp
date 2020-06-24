@@ -8,8 +8,7 @@
 #include <string>
 #include <vector>
 
-template <typename T>
-std::int32_t Count(const std::vector<T> &vec, T val) {
+template <typename T> std::int32_t Count(const std::vector<T> &vec, T val) {
   std::int32_t count{};
   for (const auto &item : vec) {
     if (item == val) {

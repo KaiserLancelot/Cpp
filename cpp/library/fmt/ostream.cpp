@@ -12,12 +12,12 @@
 class Date {
   friend std::ostream &operator<<(std::ostream &os, const Date &d);
 
- public:
+public:
   Date() = default;
   Date(std::int32_t year, std::int32_t month, std::int32_t day)
       : year_{year}, month_{month}, day_{day} {}
 
- private:
+private:
   std::int32_t year_{}, month_{}, day_{};
 };
 

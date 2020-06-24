@@ -10,7 +10,7 @@
 #include <vector>
 
 class StrBlob {
- public:
+public:
   using SizeType = std::vector<std::string>::size_type;
   StrBlob();
   StrBlob(std::initializer_list<std::string> il);
@@ -23,7 +23,7 @@ class StrBlob {
   std::string &back();
   std::string &back() const;
 
- private:
+private:
   void check(SizeType i, const std::string &msg) const;
   std::shared_ptr<std::vector<std::string>> data_;
 };

@@ -27,5 +27,5 @@ int main() {
 
   std::int32_t *p{};
 
-  f(p);  // F(void *)
+  f(p); // F(void *)
 }

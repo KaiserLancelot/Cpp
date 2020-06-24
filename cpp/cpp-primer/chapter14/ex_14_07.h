@@ -14,7 +14,7 @@
 class String {
   friend std::ostream &operator<<(std::ostream &os, const String &s);
 
- public:
+public:
   using SizeType = std::size_t;
   String() = default;
   String(const char *str);
@@ -33,7 +33,7 @@ class String {
   void Resize(SizeType size, char value);
   const char *CStr() const;
 
- private:
+private:
   void CheckAlloc();
   std::pair<char *, char *> AllocCopy(const char *begin, const char *end);
   void Free();
@@ -48,4 +48,4 @@ class String {
 
 std::ostream &operator<<(std::ostream &os, const String &s);
 
-#endif  // CPP_PRIMER_EX_14_07_H
+#endif // CPP_PRIMER_EX_14_07_H

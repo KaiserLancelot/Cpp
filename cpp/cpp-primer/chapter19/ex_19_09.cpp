@@ -8,7 +8,7 @@
 #include <typeinfo>
 
 class Base {
- public:
+public:
   virtual ~Base() = default;
 };
 

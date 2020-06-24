@@ -16,7 +16,7 @@ class StrBlob {
   friend class StrBlobPtr;
   friend class ConstStrBlobPtr;
 
- public:
+public:
   using SizeType = std::vector<std::string>::size_type;
   StrBlob();
   StrBlob(std::initializer_list<std::string> il);
@@ -35,13 +35,13 @@ class StrBlob {
   std::string &at(SizeType index);
   const std::string &at(SizeType index) const;
 
- private:
+private:
   void check(SizeType i, const std::string &msg) const;
   std::shared_ptr<std::vector<std::string>> data_;
 };
 
 class StrBlobPtr {
- public:
+public:
   using SizeType = StrBlob::SizeType;
   StrBlobPtr() = default;
   explicit StrBlobPtr(StrBlob &a, SizeType sz = 0);
@@ -49,7 +49,7 @@ class StrBlobPtr {
   StrBlobPtr &incr();
   bool not_equal(const StrBlobPtr &item) const;
 
- private:
+private:
   std::shared_ptr<std::vector<std::string>> check(SizeType i,
                                                   const std::string &msg) const;
   std::weak_ptr<std::vector<std::string>> wptr_;
@@ -57,7 +57,7 @@ class StrBlobPtr {
 };
 
 class ConstStrBlobPtr {
- public:
+public:
   using SizeType = StrBlob::SizeType;
   ConstStrBlobPtr() = default;
   explicit ConstStrBlobPtr(const StrBlob &a, SizeType sz = 0);
@@ -65,7 +65,7 @@ class ConstStrBlobPtr {
   ConstStrBlobPtr &incr();
   bool not_equal(const ConstStrBlobPtr &item) const;
 
- private:
+private:
   std::shared_ptr<std::vector<std::string>> check(SizeType i,
                                                   const std::string &msg) const;
   std::weak_ptr<std::vector<std::string>> wptr_;

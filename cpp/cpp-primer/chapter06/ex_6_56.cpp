@@ -13,7 +13,7 @@ std::int32_t sub(std::int32_t a, std::int32_t b) { return a - b; }
 std::int32_t mul(std::int32_t a, std::int32_t b) { return a * b; }
 std::int32_t div(std::int32_t a, std::int32_t b) { return a / b; }
 
-}  // namespace ex
+} // namespace ex
 
 int main() {
   using FuncPointer = std::int32_t (*)(std::int32_t, std::int32_t);

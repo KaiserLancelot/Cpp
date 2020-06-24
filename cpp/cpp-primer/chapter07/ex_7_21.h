@@ -16,7 +16,7 @@ class SalesData {
   friend std::ostream &print(std::ostream &os, const SalesData &item);
   friend SalesData add(const SalesData &lhs, const SalesData &rhs);
 
- public:
+public:
   SalesData() = default;
   explicit SalesData(const std::string &book_no) : book_no_(book_no) {}
 
@@ -33,7 +33,7 @@ class SalesData {
 
   const std::string &isbn() const { return book_no_; }
 
- private:
+private:
   double avg_price() const { return units_sold_ ? revenue_ / units_sold_ : 0; }
 
   std::string book_no_;

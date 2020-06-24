@@ -8,11 +8,11 @@
 #include <boost/pool/object_pool.hpp>
 
 class Test {
- public:
-  Test(const std::string& str) : str_{str} {}
-  const std::string& get_string() const { return str_; }
+public:
+  Test(const std::string &str) : str_{str} {}
+  const std::string &get_string() const { return str_; }
 
- private:
+private:
   std::string str_;
 };
 

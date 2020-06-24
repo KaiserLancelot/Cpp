@@ -15,7 +15,7 @@
 #include <boost/iostreams/filter/zstd.hpp>
 #include <boost/iostreams/filtering_streambuf.hpp>
 
-std::string compress(const std::string& data) {
+std::string compress(const std::string &data) {
   std::istringstream origin{data};
 
   boost::iostreams::filtering_streambuf<boost::iostreams::input> input;
@@ -29,7 +29,7 @@ std::string compress(const std::string& data) {
   return compressed.str();
 }
 
-std::string decompress(const std::string& data) {
+std::string decompress(const std::string &data) {
   std::istringstream compressed{data};
 
   boost::iostreams::filtering_streambuf<boost::iostreams::input> input;
@@ -43,7 +43,7 @@ std::string decompress(const std::string& data) {
   return origin.str();
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
   if (argc != 2) {
     std::cerr << "no file\n";
     return EXIT_FAILURE;

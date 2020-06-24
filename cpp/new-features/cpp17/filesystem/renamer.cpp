@@ -12,9 +12,9 @@
 
 namespace fs = std::filesystem;
 
-std::string replace(
-    std::string s,
-    const std::vector<std::pair<std::regex, std::string>> &replacements) {
+std::string
+replace(std::string s,
+        const std::vector<std::pair<std::regex, std::string>> &replacements) {
   for (const auto &[pattern, replace] : replacements) {
     s = std::regex_replace(s, pattern, replace);
   }

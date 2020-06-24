@@ -6,66 +6,33 @@
 #include <limits>
 #include <type_traits>
 
-template <typename T>
-struct promote;
+template <typename T> struct promote;
 
-template <>
-struct promote<short> {
-  using type = unsigned int;
-};
+template <> struct promote<short> { using type = unsigned int; };
 
-template <>
-struct promote<unsigned short> {
-  using type = unsigned int;
-};
+template <> struct promote<unsigned short> { using type = unsigned int; };
 
-template <>
-struct promote<int> {
+template <> struct promote<int> { using type = unsigned long long; };
+
+template <> struct promote<unsigned> { using type = unsigned long long; };
+
+template <> struct promote<long> { using type = unsigned long long; };
+
+template <> struct promote<unsigned long> { using type = unsigned long long; };
+
+template <> struct promote<long long> { using type = unsigned long long; };
+
+template <> struct promote<unsigned long long> {
   using type = unsigned long long;
 };
 
-template <>
-struct promote<unsigned> {
-  using type = unsigned long long;
-};
+template <> struct promote<float> { using type = double; };
 
-template <>
-struct promote<long> {
-  using type = unsigned long long;
-};
+template <> struct promote<double> { using type = long double; };
 
-template <>
-struct promote<unsigned long> {
-  using type = unsigned long long;
-};
+template <> struct promote<long double> { using type = long double; };
 
-template <>
-struct promote<long long> {
-  using type = unsigned long long;
-};
-
-template <>
-struct promote<unsigned long long> {
-  using type = unsigned long long;
-};
-
-template <>
-struct promote<float> {
-  using type = double;
-};
-
-template <>
-struct promote<double> {
-  using type = long double;
-};
-
-template <>
-struct promote<long double> {
-  using type = long double;
-};
-
-template <typename T>
-using promote_t = typename promote<T>::type;
+template <typename T> using promote_t = typename promote<T>::type;
 
 template <typename T1, typename T2>
 auto sum(T1 lhs, T2 rhs) -> std::common_type_t<promote_t<T1>, promote_t<T2>> {

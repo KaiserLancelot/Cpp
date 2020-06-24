@@ -13,9 +13,9 @@ int main() {
   // 注意 需要以空字符结尾
   char s[]{"aaa"};
   std::string_view ss{s};
-  std::cout << ss << '\n';  // aaa
+  std::cout << ss << '\n'; // aaa
   s[2] = 'b';
-  std::cout << ss << '\n';  // aab
+  std::cout << ss << '\n'; // aab
 
   // 可以由 C风格字符串, 以空字符结尾的字符数组, std::string, std::string_view
   // 构造, 并可以指定大小, 大部分用法与 std::string 一致

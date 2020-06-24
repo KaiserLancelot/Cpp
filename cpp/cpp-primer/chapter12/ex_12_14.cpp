@@ -8,14 +8,14 @@
 #include <string>
 
 class Destination {
- public:
+public:
   Destination(const std::string &ip, std::int32_t port) : ip{ip}, port{port} {}
   std::string ip;
   std::int32_t port;
 };
 
 class Connection {
- public:
+public:
   Connection(const std::string &ip, std::int32_t port) : ip{ip}, port{port} {}
   std::string ip;
   std::int32_t port;

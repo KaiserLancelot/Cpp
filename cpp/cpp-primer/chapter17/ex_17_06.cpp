@@ -12,7 +12,7 @@
 #include "sales_data.h"
 
 class Matches {
- public:
+public:
   Matches(std::vector<SalesData>::size_type index,
           std::vector<SalesData>::const_iterator begin,
           std::vector<SalesData>::const_iterator end)
@@ -23,14 +23,14 @@ class Matches {
   std::vector<SalesData>::const_iterator end_;
 };
 
-std::vector<Matches> FindBook(const std::vector<std::vector<SalesData>>& files,
-                              const std::string& book) {
+std::vector<Matches> FindBook(const std::vector<std::vector<SalesData>> &files,
+                              const std::string &book) {
   std::vector<Matches> ret;
 
   for (auto iter{std::cbegin(files)}; iter != std::cend(files); ++iter) {
     auto [begin, end]{std::equal_range(std::cbegin(*iter), std::cend(*iter),
                                        SalesData{book},
-                                       [](const auto& lhs, const auto& rhs) {
+                                       [](const auto &lhs, const auto &rhs) {
                                          return lhs.Isbn() < rhs.Isbn();
                                        })};
 
@@ -42,8 +42,8 @@ std::vector<Matches> FindBook(const std::vector<std::vector<SalesData>>& files,
   return ret;
 }
 
-void ReportResults(std::istream& is, std::ostream& os,
-                   const std::vector<std::vector<SalesData>>& files) {
+void ReportResults(std::istream &is, std::ostream &os,
+                   const std::vector<std::vector<SalesData>> &files) {
   std::string book;
 
   while (is >> book) {
@@ -52,7 +52,7 @@ void ReportResults(std::istream& is, std::ostream& os,
       os << book << " not found in any stores\n";
       continue;
     }
-    for (const auto& store : result) {
+    for (const auto &store : result) {
       os << "store " << store.index_ << " sales: "
          << std::accumulate(store.begin_, store.end_, SalesData{book}) << '\n';
     }

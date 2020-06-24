@@ -10,7 +10,7 @@
 #include "ex_15_03.h"
 
 class BulkQuote : public Quote {
- public:
+public:
   BulkQuote(const std::string &book_no, double price, std::int32_t min_qty,
             double discount)
       : Quote(book_no, price), min_qty_{min_qty}, discount_{discount} {}
@@ -22,9 +22,9 @@ class BulkQuote : public Quote {
       return n * price_;
   }
 
- private:
+private:
   std::int32_t min_qty_{};
   double discount_{};
 };
 
-#endif  // CPP_PRIMER_EX_15_05_H
+#endif // CPP_PRIMER_EX_15_05_H

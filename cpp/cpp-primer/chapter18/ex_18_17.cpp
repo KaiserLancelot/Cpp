@@ -8,7 +8,7 @@ namespace exercise {
 int ivar = 10;
 double dvar = 0;
 const int limit = 1000;
-}  // namespace exercise
+} // namespace exercise
 
 int ivar = 0;
 

@@ -16,7 +16,7 @@ class SalesData {
   friend std::ostream &print(std::ostream &os, const SalesData &item);
   friend SalesData add(const SalesData &lhs, const SalesData &rhs);
 
- public:
+public:
   SalesData(const std::string &book_no, std::int32_t units_sold, double revenue)
       : book_no_(book_no), units_sold_{units_sold}, revenue_{revenue} {
     std::cout << "const std::string &book_no, std::int32_t units_sold, double "
@@ -41,7 +41,7 @@ class SalesData {
 
   const std::string &isbn() const { return book_no_; }
 
- private:
+private:
   double avg_price() const {
     return units_sold_ == 0 ? revenue_ / units_sold_ : 0;
   }

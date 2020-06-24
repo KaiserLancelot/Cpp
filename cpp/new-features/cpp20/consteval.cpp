@@ -16,7 +16,7 @@
 consteval std::int32_t sqr(std::int32_t n) { return n * n; }
 
 consteval std::int32_t sqr_sqr(std::int32_t n) {
-  return sqr(sqr(n));  // OK
+  return sqr(sqr(n)); // OK
 }
 
 // constexpr std::int32_t DblSqr(std::int32_t n) {
@@ -24,7 +24,7 @@ consteval std::int32_t sqr_sqr(std::int32_t n) {
 // }
 
 int main() {
-  constexpr auto r{sqr(100)};  // OK
+  constexpr auto r{sqr(100)}; // OK
   (void)r;
   // std::int32_t x{100};
   // auto r2{Sqr(x)};  // 错误: 调用不产生常量

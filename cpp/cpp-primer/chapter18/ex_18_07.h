@@ -12,110 +12,100 @@
 #include <utility>
 #include <vector>
 
-template <typename T>
-class BlobPtr;
+template <typename T> class BlobPtr;
 
-template <typename T>
-class Blob {
+template <typename T> class Blob {
   friend BlobPtr<T>;
   //  template <typename T>
   //  friend class BlobPtr;
 
- public:
+public:
   using ValueType = T;
   using SizeType = typename std::vector<T>::size_type;
   Blob();
   Blob(std::initializer_list<T> il);
   SizeType size() const { return std::size(*data_); }
   bool empty() const { return std::empty(*data_); }
-  void PushBack(const T& t) { data_->push_back(t); }
-  void PushBack(T&& t) { data_->push_back(std::move(t)); }
+  void PushBack(const T &t) { data_->push_back(t); }
+  void PushBack(T &&t) { data_->push_back(std::move(t)); }
   void PopBack();
-  T& Back();
-  T& operator[](SizeType i);
+  T &Back();
+  T &operator[](SizeType i);
 
-  const T& Back() const;
-  const T& operator[](SizeType i) const;
+  const T &Back() const;
+  const T &operator[](SizeType i) const;
 
- private:
-  void Check(SizeType i, const std::string& msg) const;
+private:
+  void Check(SizeType i, const std::string &msg) const;
   std::shared_ptr<std::vector<T>> data_;
 };
 
-template <typename T>
-Blob<T>::Blob() try : data_ {
+template <typename T> Blob<T>::Blob() try : data_ {
   std::make_shared<std::vector<T>>()
 }
 {}
-catch (const std::bad_alloc& e) {
+catch (const std::bad_alloc &e) {
   std::cerr << e.what() << '\n';
 }
 
-template <typename T>
-Blob<T>::Blob(std::initializer_list<T> il) try : data_ {
+template <typename T> Blob<T>::Blob(std::initializer_list<T> il) try : data_ {
   std::make_shared<std::vector<T>>(il)
 }
 {}
-catch (const std::bad_alloc& e) {
+catch (const std::bad_alloc &e) {
   std::cerr << e.what() << '\n';
 }
 
-template <typename T>
-void Blob<T>::PopBack() {
+template <typename T> void Blob<T>::PopBack() {
   Check(0, "PopBack on empty blob");
   return data_->pop_back();
 }
 
-template <typename T>
-T& Blob<T>::Back() {
+template <typename T> T &Blob<T>::Back() {
   Check(0, "Back on empty blob");
   return data_->back();
 }
 
-template <typename T>
-T& Blob<T>::operator[](Blob::SizeType i) {
+template <typename T> T &Blob<T>::operator[](Blob::SizeType i) {
   Check(i, "subscript out of range");
   return (*data_)[i];
 }
 
 template <typename T>
-void Blob<T>::Check(Blob::SizeType i, const std::string& msg) const {
+void Blob<T>::Check(Blob::SizeType i, const std::string &msg) const {
   if (i >= size()) {
     throw std::out_of_range{msg};
   }
 }
 
-template <typename T>
-const T& Blob<T>::Back() const {
+template <typename T> const T &Blob<T>::Back() const {
   Check(0, "Back on empty blob");
   return data_->back();
 }
 
-template <typename T>
-const T& Blob<T>::operator[](Blob::SizeType i) const {
+template <typename T> const T &Blob<T>::operator[](Blob::SizeType i) const {
   Check(i, "subscript out of range");
   return (*data_)[i];
 }
 
-template <typename T>
-class BlobPtr {
- public:
+template <typename T> class BlobPtr {
+public:
   BlobPtr() = default;
-  explicit BlobPtr(Blob<T>& a, std::size_t sz = 0)
+  explicit BlobPtr(Blob<T> &a, std::size_t sz = 0)
       : wptr_{a.data_}, curr_{sz} {}
 
-  T& operator*() const {
+  T &operator*() const {
     auto p{Check(curr_, "dereference past end")};
     return (*p)[curr_];
   }
 
-  BlobPtr& operator++() {
+  BlobPtr &operator++() {
     Check(curr_, "inc out of range");
     ++curr_;
     return *this;
   }
 
-  BlobPtr& operator--() {
+  BlobPtr &operator--() {
     --curr_;
     Check(curr_, "dec out of range");
     return *this;
@@ -133,9 +123,9 @@ class BlobPtr {
     return ret;
   }
 
- private:
+private:
   std::weak_ptr<std::vector<T>> Check(std::size_t i,
-                                      const std::string& msg) const {
+                                      const std::string &msg) const {
     auto p{wptr_.lock()};
     if (!p) {
       throw std::runtime_error{"empty"};
@@ -149,4 +139,4 @@ class BlobPtr {
   std::size_t curr_{};
 };
 
-#endif  // CPP_PRIMER_EX_18_07_H
+#endif // CPP_PRIMER_EX_18_07_H

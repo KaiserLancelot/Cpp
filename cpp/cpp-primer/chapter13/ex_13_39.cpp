@@ -43,7 +43,8 @@ void StrVec::Resize(SizeType size) { Resize(size, std::string()); }
 
 void StrVec::Resize(StrVec::SizeType size, const std::string &value) {
   if (size > Size()) {
-    for (auto i{size}; i < Size(); ++i) PushBack(value);
+    for (auto i{size}; i < Size(); ++i)
+      PushBack(value);
   } else if (size < Size()) {
     auto old_end{end_};
     end_ = begin_ + size;
@@ -52,11 +53,12 @@ void StrVec::Resize(StrVec::SizeType size, const std::string &value) {
 }
 
 void StrVec::CheckAlloc() {
-  if (Size() == Capacity()) Reallocate(Size() ? 2 * Size() : 1);
+  if (Size() == Capacity())
+    Reallocate(Size() ? 2 * Size() : 1);
 }
 
-std::pair<std::string *, std::string *> StrVec::AllocCopy(
-    const std::string *begin, const std::string *end) {
+std::pair<std::string *, std::string *>
+StrVec::AllocCopy(const std::string *begin, const std::string *end) {
   auto data{alloc_.allocate(end - begin)};
   return {data, std::uninitialized_copy(begin, end, data)};
 }

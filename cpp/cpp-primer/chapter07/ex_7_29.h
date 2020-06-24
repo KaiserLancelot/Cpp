@@ -8,7 +8,7 @@
 #include <string>
 
 class Screen {
- public:
+public:
   using Pos = std::string::size_type;
 
   Screen() = default;
@@ -46,7 +46,7 @@ class Screen {
     return *this;
   }
 
- private:
+private:
   void do_display(std::ostream &os) const {
     (void)height_;
     os << contents_;

@@ -14,10 +14,10 @@
 class QueryBase {
   friend class Query;
 
- protected:
+protected:
   virtual ~QueryBase() = default;
 
- private:
+private:
   virtual QueryResult Eval(const TextQuery &text) const = 0;
   virtual std::string Rep() const = 0;
 };
@@ -25,7 +25,7 @@ class QueryBase {
 class WordQuery : public QueryBase {
   friend class Query;
 
- private:
+private:
   explicit WordQuery(const std::string &query_word) : query_word_{query_word} {}
   QueryResult Eval(const TextQuery &text) const override {
     return text.Query(query_word_);
@@ -38,7 +38,7 @@ class WordQuery : public QueryBase {
 class NotQuery : public QueryBase {
   friend Query operator~(const Query &operand);
 
- private:
+private:
   explicit NotQuery(const Query &query) : query_{query} {}
   QueryResult Eval(const TextQuery &text) const override;
   std::string Rep() const override { return "~(" + query_.Rep() + ")"; }
@@ -46,7 +46,7 @@ class NotQuery : public QueryBase {
 };
 
 class BinaryQuery : public QueryBase {
- protected:
+protected:
   BinaryQuery(const Query &lhs, const Query &rhs, const std::string &op)
       : lhs_(lhs), rhs_(rhs), op_(op) {}
   std::string Rep() const override {
@@ -59,7 +59,7 @@ class BinaryQuery : public QueryBase {
 class AndQuery : public BinaryQuery {
   friend Query operator&(const Query &, const Query &);
 
- private:
+private:
   AndQuery(const Query &lhs, const Query &rhs) : BinaryQuery(lhs, rhs, "&") {}
   QueryResult Eval(const TextQuery &text) const override;
 };
@@ -67,9 +67,9 @@ class AndQuery : public BinaryQuery {
 class OrQuery : public BinaryQuery {
   friend Query operator|(const Query &, const Query &);
 
- private:
+private:
   OrQuery(const Query &lhs, const Query &rhs) : BinaryQuery(lhs, rhs, "|") {}
   QueryResult Eval(const TextQuery &text) const override;
 };
 
-#endif  // CPP_PRIMER_EX_15_42_H
+#endif // CPP_PRIMER_EX_15_42_H

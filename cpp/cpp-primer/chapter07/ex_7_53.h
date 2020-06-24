@@ -5,7 +5,7 @@
 #pragma once
 
 class Debug {
- public:
+public:
   constexpr explicit Debug(bool b = true) : hw_{b}, io_{b}, other_{b} {}
   constexpr Debug(bool hw, bool io, bool other)
       : hw_{hw}, io_{io}, other_{other} {}
@@ -15,7 +15,7 @@ class Debug {
   void set_io(bool io) { io_ = io; }
   void set_other(bool other) { other_ = other; }
 
- private:
+private:
   bool hw_;
   bool io_;
   bool other_;

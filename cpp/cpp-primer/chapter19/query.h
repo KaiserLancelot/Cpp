@@ -18,12 +18,12 @@ class Query {
   friend Query operator|(const Query &lhs, const Query &rhs);
   friend Query operator&(const Query &lhs, const Query &rhs);
 
- public:
+public:
   explicit Query(const std::string &s);
   QueryResult Eval(const TextQuery &text) const;
   std::string Rep() const;
 
- private:
+private:
   Query(std::shared_ptr<QueryBase> query) : q_{std::move(query)} {}
   std::shared_ptr<QueryBase> q_;
 };
@@ -33,4 +33,4 @@ Query operator~(const Query &item);
 Query operator|(const Query &lhs, const Query &rhs);
 Query operator&(const Query &lhs, const Query &rhs);
 
-#endif  // CPP_PRIMER_QUERY_H
+#endif // CPP_PRIMER_QUERY_H

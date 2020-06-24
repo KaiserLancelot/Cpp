@@ -12,7 +12,7 @@ struct S {
   std::int32_t n;
   std::string s;
   float d;
-  bool operator<(const S& rhs) const {
+  bool operator<(const S &rhs) const {
     // C++11 std::tie
     // 创建到其参数或 std::ignore 实例的左值引用的 tuple
     // std::tie 能用于引入字典序比较到结构体, 或解包 tuple
@@ -25,7 +25,7 @@ struct S {
 };
 
 int main() {
-  std::set<S> set_of_s;  // S 为可比较小于 (LessThanComparable)
+  std::set<S> set_of_s; // S 为可比较小于 (LessThanComparable)
 
   S value{42, "Test", 3.14};
   std::set<S>::iterator iter;

@@ -11,7 +11,7 @@
 #include <string>
 
 class Quote {
- public:
+public:
   Quote() = default;
   Quote(const std::string &book_no, double price)
       : price_{price}, book_no_{book_no} {}
@@ -26,28 +26,28 @@ class Quote {
   virtual Quote *clone() const & { return new Quote{*this}; }
   virtual Quote *clone() && { return new Quote{std::move(*this)}; }
 
- protected:
+protected:
   double price_{};
 
- private:
+private:
   std::string book_no_;
 };
 
 class DiscQuote : public Quote {
- public:
+public:
   DiscQuote() = default;
   DiscQuote(const std::string &book_no, double price, int32_t quantity,
             double discount)
       : Quote(book_no, price), quantity_(quantity), discount_(discount) {}
   double NetPrice(std::int32_t n) const override = 0;
 
- protected:
+protected:
   std::int32_t quantity_{};
   double discount_{};
 };
 
 class BulkQuote : public DiscQuote {
- public:
+public:
   BulkQuote(const std::string &book_no, double price, int32_t quantity,
             double discount)
       : DiscQuote(book_no, price, quantity, discount) {}
@@ -70,7 +70,7 @@ class BulkQuote : public DiscQuote {
 };
 
 class LimitQuote : public DiscQuote {
- public:
+public:
   LimitQuote(const std::string &book_no, double price, int32_t quantity,
              double discount)
       : DiscQuote(book_no, price, quantity, discount) {}
@@ -89,4 +89,4 @@ class LimitQuote : public DiscQuote {
 
 double PrintTotal(std::ostream &os, const Quote &item, std::size_t n);
 
-#endif  // CPP_PRIMER_EX_15_30_QUOTE_H
+#endif // CPP_PRIMER_EX_15_30_QUOTE_H

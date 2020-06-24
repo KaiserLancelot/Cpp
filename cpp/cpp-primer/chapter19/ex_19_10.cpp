@@ -6,7 +6,7 @@
 #include <typeinfo>
 
 class A {
- public:
+public:
   virtual ~A() = default;
 };
 class B : public A {};

@@ -10,7 +10,7 @@
 #include "ex_15_03.h"
 
 class LimitQuote : public Quote {
- public:
+public:
   LimitQuote(const std::string &book_no, double price, std::int32_t max_qty,
              double discount_)
       : Quote(book_no, price), max_qty(max_qty), discount_(discount_) {}
@@ -22,9 +22,9 @@ class LimitQuote : public Quote {
       return n * price_;
   }
 
- private:
+private:
   std::int32_t max_qty{};
   double discount_{};
 };
 
-#endif  // CPP_PRIMER_EX_15_07_H
+#endif // CPP_PRIMER_EX_15_07_H

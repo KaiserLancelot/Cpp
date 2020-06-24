@@ -41,7 +41,7 @@ class Sales_data {
   friend std::ostream &print(std::ostream &, const Sales_data &);
   friend std::istream &read(std::istream &, Sales_data &);
 
- public:
+public:
   // constructors
   Sales_data() = default;
   Sales_data(const std::string &s) : bookNo(s) {}
@@ -52,7 +52,7 @@ class Sales_data {
   std::string isbn() const { return bookNo; }
   Sales_data &operator+=(const Sales_data &);
 
- private:
+private:
   double avg_price() const;
   std::string bookNo;
   unsigned units_sold = 0;
@@ -86,8 +86,7 @@ std::istream &operator>>(std::istream &, Sales_data &);
 // note : template specialization should be put in the header!
 namespace std {
 
-template <>
-struct hash<Sales_data> {
+template <> struct hash<Sales_data> {
   using result_type = std::size_t;
   using argument_type = Sales_data;
   std::size_t operator()(const Sales_data &item) const {
@@ -97,6 +96,6 @@ struct hash<Sales_data> {
   }
 };
 
-}  // namespace std
+} // namespace std
 
 #endif

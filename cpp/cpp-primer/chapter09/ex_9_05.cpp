@@ -6,9 +6,9 @@
 #include <iostream>
 #include <vector>
 
-std::vector<std::int32_t>::iterator find(
-    std::vector<std::int32_t>::iterator begin,
-    std::vector<std::int32_t>::iterator end, std::int32_t value) {
+std::vector<std::int32_t>::iterator
+find(std::vector<std::int32_t>::iterator begin,
+     std::vector<std::int32_t>::iterator end, std::int32_t value) {
   for (; begin != end; ++begin) {
     if (*begin == value) {
       return begin;

@@ -14,7 +14,7 @@ class SalesData {
   friend std::istream &operator>>(std::istream &is, SalesData &item);
   friend SalesData operator+(const SalesData &lhs, const SalesData &rhs);
 
- public:
+public:
   SalesData() = default;
   explicit SalesData(const std::string &book_no);
   SalesData(const std::string &book_no, std::int32_t units_sold,
@@ -23,7 +23,7 @@ class SalesData {
   SalesData &operator+=(const SalesData &rhs);
   const std::string &Isbn() const;
 
- private:
+private:
   double AvgPrice() const;
 
   std::string book_no_;
@@ -35,4 +35,4 @@ std::ostream &operator<<(std::ostream &os, const SalesData &item);
 std::istream &operator>>(std::istream &is, SalesData &item);
 SalesData operator+(const SalesData &lhs, const SalesData &rhs);
 
-#endif  // CPP_PRIMER_EX_14_21_H
+#endif // CPP_PRIMER_EX_14_21_H

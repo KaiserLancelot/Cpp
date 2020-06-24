@@ -14,7 +14,7 @@
 class StrVec {
   friend void swap(StrVec &lhs, StrVec &rhs);
 
- public:
+public:
   using SizeType = std::size_t;
   StrVec() = default;
   StrVec(std::initializer_list<std::string> il);
@@ -31,7 +31,7 @@ class StrVec {
   void Resize(SizeType size);
   void Resize(SizeType size, const std::string &value);
 
- private:
+private:
   void CheckAlloc();
   std::pair<std::string *, std::string *> AllocCopy(const std::string *begin,
                                                     const std::string *end);
@@ -47,4 +47,4 @@ class StrVec {
 
 void swap(StrVec &lhs, StrVec &rhs);
 
-#endif  // CPP_PRIMER_EX_13_49_STRVEC_H
+#endif // CPP_PRIMER_EX_13_49_STRVEC_H

@@ -10,11 +10,11 @@
 #include <vector>
 
 class Fun {
- public:
+public:
   explicit Fun(std::size_t sz) : sz_{sz} {}
   bool operator()(const std::string &s) { return std::size(s) == sz_; }
 
- private:
+private:
   std::size_t sz_{};
 };
 

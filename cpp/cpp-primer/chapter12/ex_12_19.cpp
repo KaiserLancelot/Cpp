@@ -69,8 +69,8 @@ bool StrBlobPtr::not_equal(const StrBlobPtr &item) const {
   return curr_ != item.curr_;
 }
 
-std::shared_ptr<std::vector<std::string>> StrBlobPtr::check(
-    StrBlobPtr::SizeType i, const std::string &msg) const {
+std::shared_ptr<std::vector<std::string>>
+StrBlobPtr::check(StrBlobPtr::SizeType i, const std::string &msg) const {
   auto ret{wptr_.lock()};
   if (!ret) {
     throw std::runtime_error{"unbound StrBlobPtr"};

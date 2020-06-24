@@ -6,7 +6,7 @@
 #include <iostream>
 
 class Numbered {
- public:
+public:
   Numbered() {
     static std::int32_t id{};
     mysn_ = id++;

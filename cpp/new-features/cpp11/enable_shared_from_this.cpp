@@ -29,7 +29,7 @@ int main() {
   try {
     Good not_so_good;
     auto gp1{not_so_good.get_ptr()};
-  } catch (std::bad_weak_ptr& e) {
+  } catch (std::bad_weak_ptr &e) {
     // C++17 起抛出 std::bad_weak_ptr 异常
     std::cout << e.what() << '\n';
   }

@@ -9,14 +9,14 @@
 #include <string>
 
 class HasPtr {
- public:
+public:
   HasPtr(const HasPtr &item) : ps_{new std::string(*item.ps_)}, i_{item.i_} {}
   explicit HasPtr(const std::string &s = std::string())
       : ps_{new std::string(s)} {}
 
- private:
+private:
   std::string *ps_;
   std::int32_t i_{};
 };
 
-#endif  // CPP_PRIMER_EX_13_05_H
+#endif // CPP_PRIMER_EX_13_05_H

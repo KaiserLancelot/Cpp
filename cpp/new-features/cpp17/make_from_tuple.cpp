@@ -7,11 +7,11 @@
 #include <tuple>
 
 class A {
- public:
-  A(const std::string& s1, const std::string& s2) : s1_{s1}, s2_{s2} {};
+public:
+  A(const std::string &s1, const std::string &s2) : s1_{s1}, s2_{s2} {};
   void show() const { std::cout << s1_ << ' ' << s2_ << '\n'; }
 
- private:
+private:
   std::string s1_;
   std::string s2_;
 };

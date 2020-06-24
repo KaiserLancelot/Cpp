@@ -10,7 +10,7 @@
 #include <string>
 
 class Quote {
- public:
+public:
   Quote() { std::cout << "Quote()\n"; }
   Quote(const std::string &book_no, double price)
       : price_{price}, book_no_{book_no} {
@@ -31,15 +31,15 @@ class Quote {
   virtual double NetPrice(std::int32_t n) const { return n * price_; }
   virtual void Debug() const { std::cout << book_no_ << ' ' << price_ << '\n'; }
 
- protected:
+protected:
   double price_{};
 
- private:
+private:
   std::string book_no_;
 };
 
 class BulkQuote : public Quote {
- public:
+public:
   BulkQuote() { std::cout << "BulkQuote()\n"; }
   BulkQuote(const std::string &book_no, double price, int32_t quantity,
             double discount)
@@ -75,9 +75,9 @@ class BulkQuote : public Quote {
               << '\n';
   }
 
- private:
+private:
   std::int32_t quantity_{};
   double discount_{};
 };
 
-#endif  // CPP_PRIMER_EX_15_26_H
+#endif // CPP_PRIMER_EX_15_26_H

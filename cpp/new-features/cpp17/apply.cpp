@@ -6,7 +6,7 @@
 #include <string>
 #include <tuple>
 
-void fun(const std::string& s1, const std::string& s2) {
+void fun(const std::string &s1, const std::string &s2) {
   std::cout << s1 << ' ' << s2 << '\n';
 }
 

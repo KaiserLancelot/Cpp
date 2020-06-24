@@ -11,28 +11,28 @@ int main() {
 
   while (std::cin >> ch) {
     switch (ch) {
-      case 'A':
-      case 'a':
-        ++a_count;
-        break;
-      case 'E':
-      case 'e':
-        ++e_count;
-        break;
-      case 'I':
-      case 'i':
-        ++i_count;
-        break;
-      case 'O':
-      case 'o':
-        ++o_count;
-        break;
-      case 'U':
-      case 'u':
-        ++u_count;
-        break;
-      default: {
-      }
+    case 'A':
+    case 'a':
+      ++a_count;
+      break;
+    case 'E':
+    case 'e':
+      ++e_count;
+      break;
+    case 'I':
+    case 'i':
+      ++i_count;
+      break;
+    case 'O':
+    case 'o':
+      ++o_count;
+      break;
+    case 'U':
+    case 'u':
+      ++u_count;
+      break;
+    default: {
+    }
     }
   }
 

@@ -11,9 +11,8 @@
 #include <string>
 #include <utility>
 
-template <typename T>
-class Vec {
- public:
+template <typename T> class Vec {
+public:
   using SizeType = std::size_t;
   Vec() = default;
   Vec(std::initializer_list<T> il);
@@ -29,7 +28,7 @@ class Vec {
   void Resize(SizeType new_size);
   void Resize(SizeType new_size, const T &value);
 
- private:
+private:
   void CheckAlloc();
   std::pair<T *, T *> AllocCopy(const T *begin, const T *end);
   void Free();
@@ -42,22 +41,19 @@ class Vec {
   inline static std::allocator<T> alloc_;
 };
 
-template <typename T>
-Vec<T>::Vec(std::initializer_list<T> il) {
+template <typename T> Vec<T>::Vec(std::initializer_list<T> il) {
   auto data{AllocCopy(std::begin(il), std::end(il))};
   begin_ = data.first;
   end_ = cap_ = data.second;
 }
 
-template <typename T>
-Vec<T>::Vec(const Vec &item) {
+template <typename T> Vec<T>::Vec(const Vec &item) {
   auto data{AllocCopy(std::begin(item), std::end(item))};
   begin_ = data.first;
   end_ = cap_ = data.second;
 }
 
-template <typename T>
-Vec<T> &Vec<T>::operator=(const Vec &item) {
+template <typename T> Vec<T> &Vec<T>::operator=(const Vec &item) {
   auto data{AllocCopy(std::begin(item), std::end(item))};
   Free();
   begin_ = data.first;
@@ -65,21 +61,18 @@ Vec<T> &Vec<T>::operator=(const Vec &item) {
   return *this;
 }
 
-template <typename T>
-void Vec<T>::PushBack(const T &s) {
+template <typename T> void Vec<T>::PushBack(const T &s) {
   CheckAlloc();
   std::allocator_traits<decltype(alloc_)>::construct(alloc_, end_++, s);
 }
 
-template <typename T>
-void Vec<T>::Reserve(Vec::SizeType new_cap) {
+template <typename T> void Vec<T>::Reserve(Vec::SizeType new_cap) {
   if (new_cap > Capacity()) {
     Reallocate(new_cap);
   }
 }
 
-template <typename T>
-void Vec<T>::Resize(Vec::SizeType new_size) {
+template <typename T> void Vec<T>::Resize(Vec::SizeType new_size) {
   Resize(new_size, T{});
 }
 
@@ -95,8 +88,7 @@ void Vec<T>::Resize(Vec::SizeType new_size, const T &value) {
   }
 }
 
-template <typename T>
-void Vec<T>::CheckAlloc() {
+template <typename T> void Vec<T>::CheckAlloc() {
   if (size() == Capacity()) {
     Reallocate(Capacity() ? 2 * Capacity() : 1);
   }
@@ -108,16 +100,14 @@ std::pair<T *, T *> Vec<T>::AllocCopy(const T *begin, const T *end) {
   return {data, std::uninitialized_copy(begin, end, data)};
 }
 
-template <typename T>
-void Vec<T>::Free() {
+template <typename T> void Vec<T>::Free() {
   if (begin_) {
     std::destroy(begin_, end_);
     alloc_.deallocate(begin_, cap_ - begin_);
   }
 }
 
-template <typename T>
-void Vec<T>::Reallocate(Vec::SizeType new_cap) {
+template <typename T> void Vec<T>::Reallocate(Vec::SizeType new_cap) {
   auto new_begin{alloc_.allocate(new_cap)};
   auto new_end{std::uninitialized_move(begin_, end_, new_begin)};
   Free();
@@ -126,4 +116,4 @@ void Vec<T>::Reallocate(Vec::SizeType new_cap) {
   cap_ = begin_ + new_cap;
 }
 
-#endif  // CPP_PRIMER_EX_16_16_H
+#endif // CPP_PRIMER_EX_16_16_H

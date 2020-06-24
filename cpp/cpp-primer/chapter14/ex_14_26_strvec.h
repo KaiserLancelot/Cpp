@@ -15,7 +15,7 @@ class StrVec {
   friend bool operator==(const StrVec &lhs, const StrVec &rhs);
   friend bool operator<(const StrVec &lhs, const StrVec &rhs);
 
- public:
+public:
   using SizeType = std::size_t;
   StrVec() = default;
   StrVec(std::initializer_list<std::string> il);
@@ -33,7 +33,7 @@ class StrVec {
   std::string &operator[](SizeType index);
   const std::string &operator[](SizeType index) const;
 
- private:
+private:
   void CheckAlloc();
   std::pair<std::string *, std::string *> AllocCopy(const std::string *begin,
                                                     const std::string *end);
@@ -54,4 +54,4 @@ bool operator<=(const StrVec &lhs, const StrVec &rhs);
 bool operator>(const StrVec &lhs, const StrVec &rhs);
 bool operator>=(const StrVec &lhs, const StrVec &rhs);
 
-#endif  // CPP_PRIMER_EX_14_26_STRVEC_H
+#endif // CPP_PRIMER_EX_14_26_STRVEC_H

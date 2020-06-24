@@ -19,7 +19,7 @@ class StrBlob {
   friend class StrBlobPtr;
   friend class ConstStrBlobPtr;
 
- public:
+public:
   using SizeType = std::vector<std::string>::size_type;
   StrBlob();
   StrBlob(std::initializer_list<std::string> il);
@@ -40,7 +40,7 @@ class StrBlob {
   std::string &operator[](SizeType index);
   const std::string &operator[](SizeType index) const;
 
- private:
+private:
   void Check(SizeType i, const std::string &msg) const;
   std::shared_ptr<std::vector<std::string>> data_;
 };
@@ -53,7 +53,7 @@ class StrBlobPtr {
   friend StrBlobPtr operator-(const StrBlobPtr &item, std::size_t i);
   friend StrBlobPtr operator-(std::size_t i, const StrBlobPtr &item);
 
- public:
+public:
   using SizeType = StrBlob::SizeType;
   StrBlobPtr() = default;
   explicit StrBlobPtr(StrBlob &a, SizeType sz = 0);
@@ -67,7 +67,7 @@ class StrBlobPtr {
   StrBlobPtr &operator+=(SizeType i);
   StrBlobPtr &operator-=(SizeType i);
 
- private:
+private:
   std::shared_ptr<std::vector<std::string>> Check(SizeType i,
                                                   const std::string &msg) const;
   std::weak_ptr<std::vector<std::string>> wptr_;
@@ -83,7 +83,7 @@ class ConstStrBlobPtr {
   friend ConstStrBlobPtr operator-(const ConstStrBlobPtr &item, std::size_t i);
   friend ConstStrBlobPtr operator-(std::size_t i, const ConstStrBlobPtr &item);
 
- public:
+public:
   using SizeType = StrBlob::SizeType;
   ConstStrBlobPtr() = default;
   explicit ConstStrBlobPtr(const StrBlob &a, SizeType sz = 0);
@@ -97,7 +97,7 @@ class ConstStrBlobPtr {
   ConstStrBlobPtr &operator+=(SizeType i);
   ConstStrBlobPtr &operator-=(SizeType i);
 
- private:
+private:
   std::shared_ptr<std::vector<std::string>> Check(SizeType i,
                                                   const std::string &msg) const;
   std::weak_ptr<std::vector<std::string>> wptr_;
@@ -133,4 +133,4 @@ ConstStrBlobPtr operator+(std::size_t i, const ConstStrBlobPtr &item);
 ConstStrBlobPtr operator-(const ConstStrBlobPtr &item, std::size_t i);
 ConstStrBlobPtr operator-(std::size_t i, const ConstStrBlobPtr &item);
 
-#endif  // CPP_PRIMER_EX_14_28_H
+#endif // CPP_PRIMER_EX_14_28_H

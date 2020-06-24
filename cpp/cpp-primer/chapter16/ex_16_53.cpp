@@ -4,8 +4,7 @@
 
 #include <iostream>
 
-template <typename T>
-std::ostream &print(std::ostream &os, const T &t) {
+template <typename T> std::ostream &print(std::ostream &os, const T &t) {
   return os << t;
 }
 
