@@ -33,9 +33,6 @@
 
 # Development files
 .clangd
-.idea
-# .vscode
 build
-cmake-build-*
 *.profraw
 compile_commands.json
