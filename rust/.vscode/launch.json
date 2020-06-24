@@ -116,6 +116,20 @@
     {
       "type": "lldb",
       "request": "launch",
+      "name": "Debug executable 'chapter10'",
+      "cargo": {
+        "args": ["build", "--bin=chapter10", "--package=chapter10"],
+        "filter": {
+          "name": "chapter10",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
       "name": "Debug executable 'chapter03_1'",
       "cargo": {
         "args": ["build", "--bin=chapter03_1", "--package=chapter03_1"],

@@ -33,9 +33,3 @@ Programming learning notes
   - https://github.com/xiaoweiChen/CPP-Concurrency-In-Action-2ed-2019
   - https://github.com/lynnboy/CppCoreGuidelines-zh-CN
   - https://zh.cppreference.com/w/cpp
-
-### Rust
-
-- https://kaisery.github.io/trpl-zh-cn
-- https://github.com/chinanf-boy/async-book-zh
-- https://doc.rust-lang.org/nightly/reference/
