@@ -1,4 +1,4 @@
-file(COPY ${CMAKE_SOURCE_DIR}/cpp-primer/data/story
+file(COPY ${CMAKE_SOURCE_DIR}/cpp_primer/data/story
         DESTINATION ${CMAKE_BINARY_DIR})
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
