@@ -5,6 +5,7 @@
     "llvm-vs-code-extensions.vscode-clangd",
     "twxs.cmake",
     "ms-vscode.cmake-tools",
+    "cheshirekow.cmake-format",
     "vadimcn.vscode-lldb",
     "ajshort.include-autocomplete"
   ]
