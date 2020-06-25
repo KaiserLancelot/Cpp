@@ -1,4 +1,4 @@
-# Programming-Learning
+# programming-learning
 
 [![Build](https://github.com/KaiserLancelot/Programming-Learning/workflows/Build/badge.svg)](https://github.com/KaiserLancelot/Programming-Learning/actions)
 [![License](https://img.shields.io/github/license/KaiserLancelot/Programming-Learning)](LICENSE)
