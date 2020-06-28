@@ -130,6 +130,34 @@
     {
       "type": "lldb",
       "request": "launch",
+      "name": "Debug executable 'chapter11'",
+      "cargo": {
+        "args": ["build", "--bin=chapter11", "--package=chapter11"],
+        "filter": {
+          "name": "chapter11",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'chapter12'",
+      "cargo": {
+        "args": ["build", "--bin=chapter12", "--package=chapter12"],
+        "filter": {
+          "name": "chapter12",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
       "name": "Debug executable 'chapter03_1'",
       "cargo": {
         "args": ["build", "--bin=chapter03_1", "--package=chapter03_1"],
