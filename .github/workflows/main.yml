@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: install
+      - name: Install libraries and tools
         run: |
           pacman -Syu --noconfirm
           pacman -S --noconfirm base-devel clang lld llvm cmake wget unzip git \
@@ -29,12 +29,12 @@ jobs:
           cmake --build . -j4
           make install
 
-      - name: cmake
+      - name: CMake
         env:
           CXX: ${{ matrix.compiler }}
         run: cd cpp && mkdir build && cd build && cmake -DCLANG_TIDY=TRUE ..
 
-      - name: build
+      - name: Build
         run: cd cpp && cmake --build build -j4 --target all
 
   rust:
