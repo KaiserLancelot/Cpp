@@ -27,6 +27,8 @@
 # cargo test -- --ignored
 # cargo test --test 文件名(无需扩展名) 运行某个特定集成测试文件中的所有测试
 
+# cargo run 后面可以传递命令行参数
+
 # Cargo.lock 文件记录项目依赖的实际版本
 
 # [package], 是一个片段(section)标题, 表明下面的语句用来配置一个包

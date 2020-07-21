@@ -78,7 +78,7 @@ mod tests {
     // 如此可以方便的编写任何运算符会返回 Err 成员的测试
     #[test]
     fn f() -> Result<(), String> {
-        if 2 + 2 == 4 {
+        if true {
             Ok(())
         } else {
             Err(String::from("two plus two does not equal four"))
