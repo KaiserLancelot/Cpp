@@ -34,9 +34,9 @@
 # [package], 是一个片段(section)标题, 表明下面的语句用来配置一个包
 # 标题以及之后的内容属同一个片段, 直到遇到下一个标题才开始新的片段
 [package]
-authors = [ "kaiser <1244713586@qq.com>" ]
+authors = ["kaiser <1244713586@qq.com>"]
 edition = "2018"
-name    = "chapter02"
+name = "chapter02"
 version = "0.1.0"
 
 # 项目依赖的片段
