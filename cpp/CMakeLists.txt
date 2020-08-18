@@ -36,6 +36,7 @@ add_subdirectory(cpp_primer/chapter12)
 # add_subdirectory(cpp_primer/chapter18)
 # add_subdirectory(cpp_primer/chapter19)
 
+add_subdirectory(library/benchmark)
 add_subdirectory(library/Boost)
 # add_subdirectory(library/database/mysql)
 add_subdirectory(library/database/rocksdb)

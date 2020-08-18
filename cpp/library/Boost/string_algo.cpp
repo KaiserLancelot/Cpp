@@ -36,7 +36,7 @@ int main() {
   for (const auto &string : boost::split(s, str, boost::is_any_of("|"))) {
     std::cout << string << '\n';
   }
-  std::cout << std::size(s) << '\n';
+  std::cout << std::size(s) << '\n'; // 3
 
   str = " aaa bbb ccc  ";
   s.clear();
@@ -44,5 +44,5 @@ int main() {
   for (const auto &string : boost::split(s, str, boost::is_space())) {
     std::cout << string << '\n';
   }
-  std::cout << std::size(s) << '\n';
+  std::cout << std::size(s) << '\n'; // 6
 }

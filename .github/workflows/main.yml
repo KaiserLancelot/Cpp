@@ -21,12 +21,12 @@ jobs:
         run: |
           pacman -Syu --noconfirm
           pacman -S --noconfirm base-devel clang lld llvm cmake wget unzip git \
-          intel-tbb boost fmt nlohmann-json gtest spdlog rocksdb protobuf
+          intel-tbb boost fmt nlohmann-json gtest spdlog rocksdb protobuf benchmark
           wget https://github.com/Neargye/magic_enum/archive/v0.6.6.zip
           unzip v0.6.6.zip
           cd magic_enum-0.6.6
-          mkdir build && cd build && cmake ..
-          cmake --build . -j4
+          mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release ..
+          cmake --build . -j$(nproc)
           make install
 
       - name: CMake
@@ -35,7 +35,7 @@ jobs:
         run: cd cpp && mkdir build && cd build && cmake -DCLANG_TIDY=TRUE ..
 
       - name: Build
-        run: cd cpp && cmake --build build -j4 --target all
+        run: cd cpp && cmake --build build -j$(nproc) --target all
 
   rust:
     runs-on: ${{ matrix.os }}

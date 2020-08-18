@@ -11,10 +11,8 @@
 #include <fmt/format.h>
 
 int main() {
-  // fmt 构造一个编译时格式字符串,默认此宏被禁用以防止名字冲突,
-  // 要使用它需要先将 FMT_STRING_ALIAS 定义为 1
-  // 如果说明符无效则编译错误
-  std::string s(fmt::format(FMT_STRING("{:s}"), "foo"));
+  // FMT_STRING 构造 compile-time 格式化字符串
+  std::string s{fmt::format(FMT_STRING("{:s}"), "foo")};
   fmt::print("{}\n", s);
 
   // 返回字符数
@@ -25,7 +23,9 @@ int main() {
 
   std::vector<int> v = {1, 2, 3};
   fmt::print("{}", fmt::join(v, ", "));
+  std::cout << '\n';
 
   fmt::memory_buffer buffer;
   fmt::format_to(buffer, "The answer is {}.", 42);
+  std::cout << buffer.data() << '\n';
 }

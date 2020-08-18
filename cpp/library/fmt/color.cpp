@@ -3,11 +3,13 @@
 //
 
 #include <fmt/color.h>
-#include <fmt/core.h>
 
 int main() {
-  fmt::print("Hello World\n");
-  // fg 指 foreground
-  fmt::print(fg(fmt::terminal_color::red), "Hello World\n");
-  fmt::print(fg(fmt::terminal_color::yellow), "Hello World\n");
+  fmt::print(fg(fmt::color::crimson) | fmt::emphasis::bold, "Hello, {}!\n",
+             "world");
+  fmt::print(fg(fmt::color::floral_white) | bg(fmt::color::slate_gray) |
+                 fmt::emphasis::underline,
+             "Hello, {}!\n", "мир");
+  fmt::print(fg(fmt::color::steel_blue) | fmt::emphasis::italic, "Hello, {}!\n",
+             "世界");
 }

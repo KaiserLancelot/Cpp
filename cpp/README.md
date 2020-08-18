@@ -8,7 +8,8 @@
 
 - Library
 
-  - https://www.boost.org/doc/libs/1_73_0
+  - https://github.com/google/benchmark
+  - https://www.boost.org/doc/libs/
   - https://dev.mysql.com/doc/x-devapi-userguide/en/
   - https://rocksdb.org/
   - https://github.com/Neargye/magic_enum
