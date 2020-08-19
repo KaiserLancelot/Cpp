@@ -3,7 +3,8 @@ Checks: '-*,boost-*,bugprone-*,clang-analyzer-*,cppcoreguidelines-*,
         -modernize-use-trailing-return-type,-readability-qualified-auto,
         -readability-else-after-return'
 WarningsAsErrors: 'clang-analyzer-*,-clang-analyzer-deadcode.*,
-        -clang-analyzer-security.insecureAPI.*,-clang-analyzer-cplusplus.NewDelete'
+        -clang-analyzer-security.insecureAPI.*,-clang-analyzer-cplusplus.NewDelete,
+        -clang-analyzer-core.CallAndMessage'
 CheckOptions:
   - key:             readability-identifier-naming.ClassCase
     value:           CamelCase
