@@ -44,6 +44,7 @@ add_subdirectory(library/database/rocksdb)
 add_subdirectory(library/enum)
 add_subdirectory(library/fmt)
 add_subdirectory(library/json)
+add_subdirectory(library/protobuf)
 add_subdirectory(library/spdlog)
 add_subdirectory(library/test)
 
