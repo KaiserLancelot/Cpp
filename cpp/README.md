@@ -8,17 +8,17 @@
 
 - Library
 
+  - https://think-async.com/Asio/asio-1.18.0/doc/
   - https://github.com/google/benchmark
   - https://www.boost.org/doc/libs/
   - https://dev.mysql.com/doc/x-devapi-userguide/en/
   - https://rocksdb.org/
-  - https://github.com/Neargye/magic_enum
   - http://fmtlib.net/latest/index.html
-  - https://github.com/nlohmann/json
-  - https://developers.google.com/protocol-buffers/docs/overview
-  - https://github.com/gabime/spdlog
   - https://github.com/google/googletest/blob/master/googletest/docs/primer.md
-  - https://cpp.libhunt.com/
+  - https://github.com/nlohmann/json
+  - https://github.com/Neargye/magic_enum
+  - https://developers.google.com/protocol-buffers/docs/cpptutorial
+  - https://github.com/gabime/spdlog
 
 - Other
   - https://github.com/wuye9036/CppTemplateTutorial
