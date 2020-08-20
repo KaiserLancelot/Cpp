@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <cstdint>
-#include <execution>
 #include <random>
 #include <vector>
 
@@ -34,13 +33,14 @@ static void sort_vector(benchmark::State &state) {
     }
 
     state.ResumeTiming();
-    std::sort(std::execution::par, std::begin(v), std::end(v));
+    std::sort(std::begin(v), std::end(v));
   }
   state.SetComplexityN(state.range(0));
 }
+
 BENCHMARK(sort_vector)
     ->RangeMultiplier(2)
-    ->Range(1 << 10, 1 << 24)
+    ->Range(1 << 10, 1 << 18)
     // 计算时间复杂度
     ->Complexity();
 

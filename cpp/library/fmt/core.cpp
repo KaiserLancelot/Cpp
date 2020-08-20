@@ -4,7 +4,8 @@
 
 #include <string>
 
-#include <fmt/core.h>
+// 在 header-only 模式下, 包含 fmt/format.h 而不是 fmt/core.h
+#include <fmt/format.h>
 
 int main() {
   // 返回格式化后的字符串

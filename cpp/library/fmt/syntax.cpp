@@ -2,7 +2,7 @@
 // Created by kaiser on 19-3-13.
 //
 
-#include <fmt/core.h>
+#include <fmt/format.h>
 
 int main() {
   // 按位置访问
