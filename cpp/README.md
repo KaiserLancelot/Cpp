@@ -20,6 +20,7 @@
   - https://github.com/Neargye/magic_enum
   - https://developers.google.com/protocol-buffers/docs/cpptutorial
   - https://github.com/gabime/spdlog
+  - http://facebook.github.io/zstd/zstd_manual.html
 
 - Other
   - https://github.com/wuye9036/CppTemplateTutorial

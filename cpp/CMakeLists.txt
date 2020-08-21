@@ -48,6 +48,7 @@ add_subdirectory(library/json)
 add_subdirectory(library/magic_enum)
 add_subdirectory(library/protobuf)
 add_subdirectory(library/spdlog)
+add_subdirectory(library/zstd)
 
 add_subdirectory(new_features/cpp11)
 add_subdirectory(new_features/cpp14)
