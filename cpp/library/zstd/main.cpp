@@ -66,9 +66,7 @@ void decompress(const std::string &filename) {
     std::exit(EXIT_FAILURE);
   }
 
-  auto copy{filename};
-  copy.erase(std::size(copy) - 4, 4);
-  write_file(copy, decompress_data);
+  write_file(filename.substr(0, std::size(filename) - 4), decompress_data);
 }
 
 int main(int argc, char *argv[]) {
