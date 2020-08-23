@@ -1,6 +1,7 @@
 #include <cstdint>
 #include <iostream>
 
+#include <unicode/schriter.h>
 #include <unicode/unistr.h>
 #include <unicode/ustream.h>
 
@@ -65,14 +66,22 @@ int main() {
   // 只读视图
   str.tempSubString(1);
 
-  str = "helLo wOrld!";
+  str = "helLo wOrld!你好 世界";
   std::cout << str.toTitle(nullptr) << '\n'; // Hello World!
 
-  str = "𐐷𐐷";
+  str = "𐐷𐐷22";
   auto length{str.length()};
   // 获取每一个字符
   for (std::int32_t idx{}; idx < length; idx = str.moveIndex32(idx, 1)) {
-    auto ch{str.char32At(idx)};
-    std::cout << static_cast<std::int32_t>(ch) << '\n';
+    std::cout << str.char32At(idx) << '\t';
   }
+  std::cout << '\n';
+
+  // 同上
+  str = "𐐷𐐷22";
+  icu::StringCharacterIterator iter{str};
+  while (iter.hasNext()) {
+    std::cout << iter.next32PostInc() << '\t';
+  }
+  std::cout << '\n';
 }

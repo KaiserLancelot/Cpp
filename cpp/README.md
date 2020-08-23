@@ -15,7 +15,7 @@
   - https://rocksdb.org/
   - http://fmtlib.net/latest/index.html
   - https://github.com/google/googletest/blob/master/googletest/docs/primer.md
-  - http://userguide.icu-project.org/
+  - https://unicode-org.github.io/icu/
   - https://github.com/nlohmann/json
   - https://github.com/Neargye/magic_enum
   - https://developers.google.com/protocol-buffers/docs/cpptutorial
