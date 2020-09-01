@@ -5,7 +5,7 @@
 
 #include <benchmark/benchmark.h>
 
-static void dense_range(benchmark::State &state) {
+void dense_range(benchmark::State &state) {
   for (auto _ : state) {
     std::vector<int> v(state.range(0), state.range(0));
     // 下面两个防止优化
@@ -20,7 +20,7 @@ BENCHMARK(dense_range)->Range(8, 512);
 // 对范围中每一个数运行 benchmark
 BENCHMARK(dense_range)->DenseRange(0, 256, 128);
 
-static void sort_vector(benchmark::State &state) {
+void sort_vector(benchmark::State &state) {
   std::default_random_engine e{std::random_device{}()};
   for (auto _ : state) {
     state.PauseTiming();
