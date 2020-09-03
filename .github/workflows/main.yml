@@ -28,9 +28,9 @@ jobs:
           mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release ..
           cmake --build . -j$(nproc)
           make install
-          wget https://github.com/gabime/spdlog/archive/v1.7.0.zip
-          unzip v1.7.0.zip
-          cd spdlog-1.7.0
+          wget https://github.com/gabime/spdlog/archive/v1.8.0.zip
+          unzip v1.8.0.zip
+          cd spdlog-1.8.0
           mkdir build && cd build && cmake -DSPDLOG_FMT_EXTERNAL_HO=TRUE ..
           cmake --build . -j$(nproc)
           make install
