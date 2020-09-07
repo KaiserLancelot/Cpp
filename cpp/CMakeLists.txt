@@ -6,6 +6,12 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 include(Check)
 include(CompilerOptions)
 
+set(SANITIZER
+    ""
+    CACHE STRING
+          "Compile with a sanitizer. Options are: Address, Thread, Undefined")
+include(Sanitizers)
+
 add_subdirectory(cpp_primer/chapter01)
 add_subdirectory(cpp_primer/chapter02)
 add_subdirectory(cpp_primer/chapter03)
@@ -18,12 +24,9 @@ add_subdirectory(cpp_primer/chapter09)
 add_subdirectory(cpp_primer/chapter10)
 add_subdirectory(cpp_primer/chapter11)
 add_subdirectory(cpp_primer/chapter12)
-# add_subdirectory(cpp_primer/chapter13)
-# add_subdirectory(cpp_primer/chapter14)
-# add_subdirectory(cpp_primer/chapter15)
-# add_subdirectory(cpp_primer/chapter16)
-# add_subdirectory(cpp_primer/chapter17)
-# add_subdirectory(cpp_primer/chapter18)
+# add_subdirectory(cpp_primer/chapter13) add_subdirectory(cpp_primer/chapter14)
+# add_subdirectory(cpp_primer/chapter15) add_subdirectory(cpp_primer/chapter16)
+# add_subdirectory(cpp_primer/chapter17) add_subdirectory(cpp_primer/chapter18)
 # add_subdirectory(cpp_primer/chapter19)
 
 add_subdirectory(library/asio)
