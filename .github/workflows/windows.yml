@@ -7,6 +7,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - uses: actions/checkout@v2
+
       - name: Install
         run: |
           vcpkg install `
@@ -16,8 +18,6 @@ jobs:
           protobuf:x64-windows zstd:x64-windows magic-enum:x64-windows `
           spdlog:x64-windows rocksdb:x64-windows
           vcpkg integrate install
-
-      - uses: actions/checkout@v2
 
       - name: Configure
         run: cd cpp ; cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake
