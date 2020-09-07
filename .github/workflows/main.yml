@@ -1,4 +1,4 @@
-name: ArchLinux
+name: CI
 
 on: [push, pull_request]
 
@@ -55,4 +55,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build
-        run: cd rust ; cargo build
+        run: cd rust ; cargo build --release
