@@ -40,12 +40,12 @@ jobs:
           cmake --build build --config Release --target install
 
       - name: Configure
-        run: cmake -S . -B build
+        run: cd cpp ; cmake -S . -B build
         env:
           CXX: ${{ matrix.compiler }}
 
       - name: Build
-        run: cmake --build build --config Release -j$(nproc)
+        run: cd cpp ; cmake --build build --config Release -j$(nproc)
 
   rust:
     runs-on: ubuntu-latest

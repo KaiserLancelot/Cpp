@@ -41,10 +41,10 @@ jobs:
           cmake --build build --config Release --target install
 
       - name: Configure
-        run: cmake -S . -B build
+        run: cd cpp ; cmake -S . -B build
 
       - name: Build
-        run: cmake --build build --config Release -j`sysctl -n hw.ncpu`
+        run: cd cpp ; cmake --build build --config Release -j`sysctl -n hw.ncpu`
         env:
           C_INCLUDE_PATH: /usr/local/include
           CPLUS_INCLUDE_PATH: /usr/local/include

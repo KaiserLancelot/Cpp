@@ -20,10 +20,10 @@ jobs:
           vcpkg integrate install
 
       - name: Configure
-        run: cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake
+        run: cd cpp ; cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake
 
       - name: Build
-        run: cmake --build build --config Release -j((wmic cpu get NumberOfLogicalProcessors/Format:List) -replace '\D+(\d+)','$1') -- /p:VcpkgEnabled=true
+        run: cd cpp ; cmake --build build --config Release -j((wmic cpu get NumberOfLogicalProcessors/Format:List) -replace '\D+(\d+)','$1') -- /p:VcpkgEnabled=true
 
   rust:
     runs-on: windows-latest
