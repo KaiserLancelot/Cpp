@@ -1,0 +1,2060 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="cpp" targetName="ex_5_09" />
+      <config projectName="cpp" targetName="core" />
+      <config projectName="cpp" targetName="ex_5_06" />
+      <config projectName="cpp" targetName="ex_11_13" />
+      <config projectName="cpp" targetName="ex_5_05" />
+      <config projectName="cpp" targetName="ex_11_12" />
+      <config projectName="cpp" targetName="ex_9_49" />
+      <config projectName="cpp" targetName="ex_5_03" />
+      <config projectName="cpp" targetName="ex_9_46" />
+      <config projectName="cpp" targetName="ex_9_45" />
+      <config projectName="cpp" targetName="ex_9_44" />
+      <config projectName="cpp" targetName="ex_9_43" />
+      <config projectName="cpp" targetName="file_size" />
+      <config projectName="cpp" targetName="ex_10_42" />
+      <config projectName="cpp" targetName="ex_5_17" />
+      <config projectName="cpp" targetName="ex_5_19" />
+      <config projectName="cpp" targetName="exchange" />
+      <config projectName="cpp" targetName="ex_5_12" />
+      <config projectName="cpp" targetName="map" />
+      <config projectName="cpp" targetName="ex_5_14" />
+      <config projectName="cpp" targetName="ex_5_11" />
+      <config projectName="cpp" targetName="ex_5_10" />
+      <config projectName="cpp" targetName="ex_9_52" />
+      <config projectName="cpp" targetName="ex_9_51" />
+      <config projectName="cpp" targetName="ex_9_47a" />
+      <config projectName="cpp" targetName="ex_9_47b" />
+      <config projectName="cpp" targetName="ex_11_20" />
+      <config projectName="cpp" targetName="consteval" />
+      <config projectName="cpp" targetName="three_way_comparison" />
+      <config projectName="cpp" targetName="format" />
+      <config projectName="cpp" targetName="ex_10_28" />
+      <config projectName="cpp" targetName="ex_10_27" />
+      <config projectName="cpp" targetName="ex_10_25" />
+      <config projectName="cpp" targetName="ex_10_24" />
+      <config projectName="cpp" targetName="ex_10_22" />
+      <config projectName="cpp" targetName="ex_10_21" />
+      <config projectName="cpp" targetName="not_fn" />
+      <config projectName="cpp" targetName="ex_5_24" />
+      <config projectName="cpp" targetName="ex_5_23" />
+      <config projectName="cpp" targetName="ex_5_25" />
+      <config projectName="cpp" targetName="ex_5_20" />
+      <config projectName="cpp" targetName="ex_5_22" />
+      <config projectName="cpp" targetName="ex_10_29" />
+      <config projectName="cpp" targetName="ex_5_21" />
+      <config projectName="cpp" targetName="ex_10_20" />
+      <config projectName="cpp" targetName="ex_12_23b" />
+      <config projectName="cpp" targetName="string_algo" />
+      <config projectName="cpp" targetName="ex_12_23a" />
+      <config projectName="cpp" targetName="ex_10_37" />
+      <config projectName="cpp" targetName="ex_10_36" />
+      <config projectName="cpp" targetName="span" />
+      <config projectName="cpp" targetName="ex_11_04" />
+      <config projectName="cpp" targetName="as_const" />
+      <config projectName="cpp" targetName="ex_10_35" />
+      <config projectName="cpp" targetName="ex_11_03" />
+      <config projectName="cpp" targetName="ex_10_34" />
+      <config projectName="cpp" targetName="ex_6_09" />
+      <config projectName="cpp" targetName="ex_10_33" />
+      <config projectName="cpp" targetName="ex_6_07" />
+      <config projectName="cpp" targetName="ex_6_04" />
+      <config projectName="cpp" targetName="ex_6_05" />
+      <config projectName="cpp" targetName="ls" />
+      <config projectName="cpp" targetName="ex_6_03" />
+      <config projectName="cpp" targetName="ex_11_08" />
+      <config projectName="cpp" targetName="copy" />
+      <config projectName="cpp" targetName="ex_2_41_1" />
+      <config projectName="cpp" targetName="ex_2_41_2" />
+      <config projectName="cpp" targetName="ex_2_41_3" />
+      <config projectName="cpp" targetName="ex_10_31" />
+      <config projectName="cpp" targetName="ex_10_30" />
+      <config projectName="cpp" targetName="transforms" />
+      <config projectName="cpp" targetName="ex_1_05" />
+      <config projectName="cpp" targetName="ex_10_06" />
+      <config projectName="cpp" targetName="lambda" />
+      <config projectName="cpp" targetName="ex_1_07" />
+      <config projectName="cpp" targetName="ex_1_08" />
+      <config projectName="cpp" targetName="ex_10_03" />
+      <config projectName="cpp" targetName="ex_1_01" />
+      <config projectName="cpp" targetName="ex_10_02" />
+      <config projectName="cpp" targetName="ex_1_02" />
+      <config projectName="cpp" targetName="ex_10_01" />
+      <config projectName="cpp" targetName="ex_1_03" />
+      <config projectName="cpp" targetName="ex_6_17" />
+      <config projectName="cpp" targetName="ex_1_04" />
+      <config projectName="cpp" targetName="logging" />
+      <config projectName="cpp" targetName="ex_6_11" />
+      <config projectName="cpp" targetName="ex_10_09" />
+      <config projectName="cpp" targetName="ex_6_12" />
+      <config projectName="cpp" targetName="os" />
+      <config projectName="cpp" targetName="ex_6_10" />
+      <config projectName="cpp" targetName="erase" />
+      <config projectName="cpp" targetName="invoke" />
+      <config projectName="cpp" targetName="any" />
+      <config projectName="cpp" targetName="bind_front" />
+      <config projectName="cpp" targetName="ex_10_17" />
+      <config projectName="cpp" targetName="ex_1_16" />
+      <config projectName="cpp" targetName="ex_10_16" />
+      <config projectName="cpp" targetName="ex_10_15" />
+      <config projectName="cpp" targetName="ex_1_18" />
+      <config projectName="cpp" targetName="ex_10_14" />
+      <config projectName="cpp" targetName="ex_1_19" />
+      <config projectName="cpp" targetName="ex_10_13" />
+      <config projectName="cpp" targetName="ex_10_12" />
+      <config projectName="cpp" targetName="ex_1_13" />
+      <config projectName="cpp" targetName="ex_10_11" />
+      <config projectName="cpp" targetName="ex_1_15" />
+      <config projectName="cpp" targetName="ex_6_26" />
+      <config projectName="cpp" targetName="ex_6_27" />
+      <config projectName="cpp" targetName="ex_1_10" />
+      <config projectName="cpp" targetName="ex_6_25" />
+      <config projectName="cpp" targetName="ex_1_11" />
+      <config projectName="cpp" targetName="ex_6_22" />
+      <config projectName="cpp" targetName="clamp" />
+      <config projectName="cpp" targetName="ex_6_23" />
+      <config projectName="cpp" targetName="ex_10_19" />
+      <config projectName="cpp" targetName="ex_10_18" />
+      <config projectName="cpp" targetName="ex_6_21" />
+      <config projectName="cpp" targetName="constinit" />
+      <config projectName="cpp" targetName="pool" />
+      <config projectName="cpp" targetName="ex_1_09" />
+      <config projectName="cpp" targetName="copy_on_write" />
+      <config projectName="cpp" targetName="ex_1_23" />
+      <config projectName="cpp" targetName="ex_7_07" />
+      <config projectName="cpp" targetName="ex_1_25" />
+      <config projectName="cpp" targetName="ex_6_37" />
+      <config projectName="cpp" targetName="ex_1_20" />
+      <config projectName="cpp" targetName="ex_7_03" />
+      <config projectName="cpp" targetName="ex_1_21" />
+      <config projectName="cpp" targetName="ex_6_36" />
+      <config projectName="cpp" targetName="ex_1_22" />
+      <config projectName="cpp" targetName="ex_7_01" />
+      <config projectName="cpp" targetName="ex_6_33" />
+      <config projectName="cpp" targetName="stl" />
+      <config projectName="cpp" targetName="range_for" />
+      <config projectName="cpp" targetName="ex_2_08" />
+      <config projectName="cpp" targetName="aggregate" />
+      <config projectName="cpp" targetName="ex_2_04" />
+      <config projectName="cpp" targetName="ex_6_47" />
+      <config projectName="cpp" targetName="ex_7_13" />
+      <config projectName="cpp" targetName="ex_6_42" />
+      <config projectName="cpp" targetName="string_view" />
+      <config projectName="cpp" targetName="renamer" />
+      <config projectName="cpp" targetName="constexpr_if" />
+      <config projectName="cpp" targetName="ex_2_18" />
+      <config projectName="cpp" targetName="try_emplace" />
+      <config projectName="cpp" targetName="ex_7_29" />
+      <config projectName="cpp" targetName="ex_7_27" />
+      <config projectName="cpp" targetName="variant" />
+      <config projectName="cpp" targetName="ex_9_50a" />
+      <config projectName="cpp" targetName="ex_6_56" />
+      <config projectName="cpp" targetName="ex_9_50b" />
+      <config projectName="cpp" targetName="ex_7_21" />
+      <config projectName="cpp" targetName="ex_6_51" />
+      <config projectName="cpp" targetName="fold_expression" />
+      <config projectName="cpp" targetName="ex_8_09" />
+      <config projectName="cpp" targetName="ex_8_08" />
+      <config projectName="cpp" targetName="ex_8_07" />
+      <config projectName="cpp" targetName="ex_8_06" />
+      <config projectName="cpp" targetName="ex_8_05" />
+      <config projectName="cpp" targetName="basic" />
+      <config projectName="cpp" targetName="test" />
+      <config projectName="cpp" targetName="ex_8_04" />
+      <config projectName="cpp" targetName="ex_8_02" />
+      <config projectName="cpp" targetName="rocksdb_test" />
+      <config projectName="cpp" targetName="remove" />
+      <config projectName="cpp" targetName="ex_2_39" />
+      <config projectName="cpp" targetName="ex_3_07" />
+      <config projectName="cpp" targetName="ex_3_08" />
+      <config projectName="cpp" targetName="ex_2_35" />
+      <config projectName="cpp" targetName="ex_3_04" />
+      <config projectName="cpp" targetName="ex_3_05" />
+      <config projectName="cpp" targetName="ex_3_06" />
+      <config projectName="cpp" targetName="ex_3_02" />
+      <config projectName="cpp" targetName="ex_2_34" />
+      <config projectName="cpp" targetName="ex_8_13" />
+      <config projectName="cpp" targetName="ex_8_11" />
+      <config projectName="cpp" targetName="ex_8_10" />
+      <config projectName="cpp" targetName="ex_7_41" />
+      <config projectName="cpp" targetName="extract" />
+      <config projectName="cpp" targetName="unicode-string" />
+      <config projectName="cpp" targetName="ex_3_14" />
+      <config projectName="cpp" targetName="optional" />
+      <config projectName="cpp" targetName="ex_3_15" />
+      <config projectName="cpp" targetName="ex_3_17" />
+      <config projectName="cpp" targetName="ex_3_10" />
+      <config projectName="cpp" targetName="protobuf" />
+      <config projectName="cpp" targetName="ex_7_53" />
+      <config projectName="cpp" targetName="tie" />
+      <config projectName="cpp" targetName="ex_3_25" />
+      <config projectName="cpp" targetName="ex_3_22" />
+      <config projectName="cpp" targetName="ex_12_24" />
+      <config projectName="cpp" targetName="ex_3_23" />
+      <config projectName="cpp" targetName="ex_3_24" />
+      <config projectName="cpp" targetName="ex_12_26" />
+      <config projectName="cpp" targetName="ex_9_05" />
+      <config projectName="cpp" targetName="ex_9_04" />
+      <config projectName="cpp" targetName="ex_12_27" />
+      <config projectName="cpp" targetName="ex_12_28" />
+      <config projectName="cpp" targetName="ex_12_29" />
+      <config projectName="cpp" targetName="ex_3_20" />
+      <config projectName="cpp" targetName="sample" />
+      <config projectName="cpp" targetName="apply" />
+      <config projectName="cpp" targetName="enable_shared_from_this" />
+      <config projectName="cpp" targetName="ex_12_20" />
+      <config projectName="cpp" targetName="ex_12_22" />
+      <config projectName="cpp" targetName="ex_3_36" />
+      <config projectName="cpp" targetName="ex_3_39" />
+      <config projectName="cpp" targetName="ex_3_32" />
+      <config projectName="cpp" targetName="ex_9_19" />
+      <config projectName="cpp" targetName="zstd-test" />
+      <config projectName="cpp" targetName="ex_9_18" />
+      <config projectName="cpp" targetName="ex_9_16" />
+      <config projectName="cpp" targetName="ex_3_35" />
+      <config projectName="cpp" targetName="ex_9_15" />
+      <config projectName="cpp" targetName="conv" />
+      <config projectName="cpp" targetName="ex_9_14" />
+      <config projectName="cpp" targetName="ex_9_13" />
+      <config projectName="cpp" targetName="ex_3_31" />
+      <config projectName="cpp" targetName="ex_9_31a" />
+      <config projectName="cpp" targetName="variable_template" />
+      <config projectName="cpp" targetName="ex_9_31b" />
+      <config projectName="cpp" targetName="ex_12_32" />
+      <config projectName="cpp" targetName="ex_12_33" />
+      <config projectName="cpp" targetName="benchmark" />
+      <config projectName="cpp" targetName="ostream" />
+      <config projectName="cpp" targetName="program_options" />
+      <config projectName="cpp" targetName="explicit" />
+      <config projectName="cpp" targetName="ex_11_38" />
+      <config projectName="cpp" targetName="ex_11_33" />
+      <config projectName="cpp" targetName="ex_3_43" />
+      <config projectName="cpp" targetName="ex_12_02" />
+      <config projectName="cpp" targetName="asio" />
+      <config projectName="cpp" targetName="ex_3_44" />
+      <config projectName="cpp" targetName="string" />
+      <config projectName="cpp" targetName="ex_3_45" />
+      <config projectName="cpp" targetName="ex_9_28" />
+      <config projectName="cpp" targetName="ex_9_27" />
+      <config projectName="cpp" targetName="grep" />
+      <config projectName="cpp" targetName="ex_9_26" />
+      <config projectName="cpp" targetName="ex_12_06" />
+      <config projectName="cpp" targetName="ex_3_40" />
+      <config projectName="cpp" targetName="ex_3_41" />
+      <config projectName="cpp" targetName="ex_12_07" />
+      <config projectName="cpp" targetName="ex_4_10" />
+      <config projectName="cpp" targetName="ex_9_24" />
+      <config projectName="cpp" targetName="ex_3_42" />
+      <config projectName="cpp" targetName="ex_9_22" />
+      <config projectName="cpp" targetName="ranges" />
+      <config projectName="cpp" targetName="ex_9_20" />
+      <config projectName="cpp" targetName="base" />
+      <config projectName="cpp" targetName="ex_11_32" />
+      <config projectName="cpp" targetName="ex_11_31" />
+      <config projectName="cpp" targetName="make_from_tuple" />
+      <config projectName="cpp" targetName="enum" />
+      <config projectName="cpp" targetName="to_array" />
+      <config projectName="cpp" targetName="ex_4_28" />
+      <config projectName="cpp" targetName="syntax" />
+      <config projectName="cpp" targetName="ex_4_22" />
+      <config projectName="cpp" targetName="ex_12_14" />
+      <config projectName="cpp" targetName="ex_12_15" />
+      <config projectName="cpp" targetName="ex_9_38" />
+      <config projectName="cpp" targetName="ex_4_21" />
+      <config projectName="cpp" targetName="ex_9_34" />
+      <config projectName="cpp" targetName="color" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug-gcc" CONFIG_NAME="Debug" TOOLCHAIN_NAME="gcc" GENERATION_OPTIONS="-G Ninja" />
+      <configuration PROFILE_NAME="Release-gcc" CONFIG_NAME="Release" TOOLCHAIN_NAME="gcc" GENERATION_OPTIONS="-G Ninja" />
+      <configuration PROFILE_NAME="Debug-clang" CONFIG_NAME="Debug" TOOLCHAIN_NAME="clang" GENERATION_OPTIONS="-G Ninja" />
+      <configuration PROFILE_NAME="Release-clang" CONFIG_NAME="Release" TOOLCHAIN_NAME="clang" GENERATION_OPTIONS="-G Ninja" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e3be9747-3db7-4bad-86ef-2d37e075a5b8" name="默认的" comment="2020.9.2">
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.clang-format" beforeDir="false" afterPath="$PROJECT_DIR$/.clang-format" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.clang-tidy" beforeDir="false" afterPath="$PROJECT_DIR$/.clang-tidy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake/Check.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake/Check.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake/ClangTidy.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake/CompilerOptions.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake/CompilerOptions.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake/Sanitizers.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/database/rocksdb/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/library/database/rocksdb/CMakeLists.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-gcc" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1gUjybLne41Ds05hMi45NfGBI3D" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.advertisement.text.overridden" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/library/icu" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake 应用程序.transforms">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="test" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="test" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="aggregate" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="aggregate" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="aggregate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="any" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="any" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="any">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="apply" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="apply" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="apply">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="as_const" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="as_const" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="as_const">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="asio" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="asio" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="asio">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="base" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="base" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="base">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="basic" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="basic" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="basic">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="benchmark" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="benchmark" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="benchmark">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bind_front" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="bind_front" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="bind_front">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="clamp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="clamp" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="clamp">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="color" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="color" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="color">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="consteval" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="consteval" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="consteval">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="constexpr_if" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="constexpr_if" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="constexpr_if">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="constinit" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="constinit" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="constinit">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="conv" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="conv" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="conv">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="copy" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="copy" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="copy">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="copy_on_write" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="copy_on_write" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="copy_on_write">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="core" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="core" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="core">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="enable_shared_from_this" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="enable_shared_from_this" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="enable_shared_from_this">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="enum" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="enum" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="enum">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="erase" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="erase" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="erase">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_01" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_01" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_01">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_02" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_02" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_02">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_03" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_03" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_03">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_06" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_06" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_06">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_09" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_09" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_09">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_11" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_11" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_11">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_12" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_12" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_12">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_13" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_13" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_13">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_14" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_14" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_14">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_15" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_15" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_15">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_16" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_16" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_16">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_17" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_17" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_17">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_18" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_18" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_18">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_19" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_19" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_19">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_20" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_20" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_20">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_21" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_21" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_21">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_22" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_22" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_22">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_24" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_24" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_24">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_25" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_25" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_25">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_27" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_27" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_27">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_28" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_28" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_28">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_29" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_29" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_29">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_30" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_30" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_30">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_31" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_31" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_31">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_33" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_33" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_33">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_34" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_34" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_34">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_35" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_35" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_35">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_36" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_36" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_36">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_37" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_37" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_37">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_10_42" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_10_42" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_10_42">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_11_03" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_11_03" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_11_03">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_11_04" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_11_04" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_11_04">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_11_08" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_11_08" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_11_08">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_11_12" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_11_12" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_11_12">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_11_13" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_11_13" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_11_13">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_11_20" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_11_20" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_11_20">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_11_31" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_11_31" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_11_31">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_11_32" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_11_32" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_11_32">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_11_33" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_11_33" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_11_33">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_11_38" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_11_38" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_11_38">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_02" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_02" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_02">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_06" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_06" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_06">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_07" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_07" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_07">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_14" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_14" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_14">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_15" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_15" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_15">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_20" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_20" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_20">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_22" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_22" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_22">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_23a" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_23a" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_23a">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_23b" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_23b" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_23b">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_24" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_24" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_24">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_26" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_26" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_26">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_27" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_27" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_27">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_28" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_28" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_28">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_29" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_29" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_29">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_32" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_32" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_32">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_12_33" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_12_33" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_12_33">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_01" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_01" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_01">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_02" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_02" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_02">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_03" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_03" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_03">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_04" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_04" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_04">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_05" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_05" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_05">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_07" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_07" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_07">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_08" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_08" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_08">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_09" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_09" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_09">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_10" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_10" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_10">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_11" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_11" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_11">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_13" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_13" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_13">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_15" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_15" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_15">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_16" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_16" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_16">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_18" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_18" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_18">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_19" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_19" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_19">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_20" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_20" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_20">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_21" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_21" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_21">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_22" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_22" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_22">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_23" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_23" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_23">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_1_25" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_1_25" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_1_25">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_2_04" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_2_04" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_2_04">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_2_08" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_2_08" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_2_08">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_2_18" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_2_18" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_2_18">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_2_34" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_2_34" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_2_34">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_2_35" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_2_35" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_2_35">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_2_39" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_2_39" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_2_39">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_2_41_1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_2_41_1" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_2_41_1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_2_41_2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_2_41_2" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_2_41_2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_2_41_3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_2_41_3" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_2_41_3">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_02" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_02" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_02">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_04" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_04" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_04">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_05" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_05" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_05">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_06" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_06" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_06">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_07" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_07" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_07">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_08" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_08" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_08">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_10" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_10" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_10">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_14" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_14" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_14">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_15" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_15" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_15">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_17" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_17" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_17">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_20" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_20" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_20">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_22" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_22" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_22">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_23" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_23" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_23">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_24" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_24" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_24">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_25" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_25" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_25">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_31" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_31" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_31">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_32" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_32" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_32">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_35" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_35" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_35">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_36" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_36" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_36">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_39" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_39" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_39">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_40" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_40" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_40">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_41" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_41" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_41">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_42" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_42" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_42">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_43" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_43" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_43">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_44" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_44" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_44">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_3_45" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_3_45" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_3_45">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_4_10" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_4_10" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_4_10">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_4_21" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_4_21" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_4_21">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_4_22" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_4_22" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_4_22">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_4_28" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_4_28" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_4_28">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_03" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_03" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_03">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_05" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_05" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_05">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_06" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_06" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_06">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_09" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_09" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_09">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_10" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_10" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_10">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_11" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_11" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_11">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_12" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_12" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_12">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_14" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_14" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_14">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_17" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_17" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_17">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_19" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_19" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_19">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_20" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_20" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_20">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_21" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_21" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_21">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_22" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_22" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_22">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_23" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_23" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_23">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_24" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_24" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_24">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_5_25" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_5_25" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_5_25">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_03" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_03" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_03">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_04" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_04" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_04">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_05" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_05" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_05">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_07" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_07" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_07">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_09" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_09" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_09">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_10" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_10" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_10">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_11" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_11" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_11">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_12" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_12" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_12">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_17" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_17" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_17">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_21" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_21" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_21">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_22" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_22" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_22">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_23" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_23" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_23">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_25" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_25" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_25">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_26" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_26" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_26">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_27" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_27" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_27">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_33" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_33" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_33">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_36" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_36" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_36">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_37" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_37" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_37">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_42" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_42" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_42">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_47" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_47" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_47">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_51" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_51" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_51">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_6_56" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_6_56" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_6_56">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_7_01" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_7_01" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_7_01">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_7_03" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_7_03" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_7_03">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_7_07" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_7_07" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_7_07">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_7_13" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_7_13" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_7_13">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_7_21" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_7_21" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_7_21">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_7_27" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_7_27" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_7_27">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_7_29" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_7_29" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_7_29">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_7_41" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_7_41" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_7_41">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_7_53" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_7_53" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_7_53">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_8_02" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_8_02" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_8_02">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_8_04" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_8_04" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_8_04">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_8_05" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_8_05" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_8_05">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_8_06" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_8_06" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_8_06">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_8_07" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_8_07" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_8_07">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_8_08" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_8_08" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_8_08">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_8_09" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_8_09" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_8_09">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_8_10" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_8_10" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_8_10">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_8_11" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_8_11" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_8_11">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_8_13" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_8_13" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_8_13">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_04" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_04" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_04">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_05" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_05" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_05">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_13" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_13" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_13">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_14" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_14" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_14">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_15" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_15" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_15">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_16" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_16" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_16">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_18" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_18" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_18">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_19" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_19" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_19">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_20" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_20" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_20">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_22" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_22" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_22">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_24" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_24" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_24">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_26" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_26" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_26">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_27" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_27" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_27">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_28" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_28" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_28">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_31a" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_31a" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_31a">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_31b" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_31b" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_31b">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_34" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_34" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_34">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_38" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_38" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_38">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_43" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_43" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_43">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_44" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_44" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_44">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_45" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_45" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_45">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_46" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_46" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_46">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_47a" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_47a" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_47a">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_47b" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_47b" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_47b">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_49" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_49" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_49">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_50a" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_50a" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_50a">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_50b" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_50b" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_50b">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_51" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_51" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_51">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ex_9_52" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ex_9_52" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ex_9_52">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exchange" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="exchange" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="exchange">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="explicit" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="explicit" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="explicit">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="extract" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="extract" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="extract">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="file_size" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="file_size" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="file_size">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fold_expression" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="fold_expression" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="fold_expression">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="format" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="format" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="format">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="grep" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="grep" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="grep">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="invoke" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="invoke" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="invoke">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lambda" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="lambda" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="lambda">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="logging" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="logging" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="logging">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ls" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ls" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ls">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="make_from_tuple" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="make_from_tuple" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="make_from_tuple">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="map" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="map" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="map">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="not_fn" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="not_fn" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="not_fn">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="optional" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="optional" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="optional">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="os" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="os" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="os">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ostream" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ostream" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ostream">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pool" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="pool" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="pool">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="program_options" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="program_options" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="program_options">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="protobuf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="protobuf" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="protobuf">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="range_for" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="range_for" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="range_for">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ranges" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="ranges" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="ranges">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="remove" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="remove" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="remove">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="renamer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="renamer" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="renamer">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rocksdb_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="rocksdb_test" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="rocksdb_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sample" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="sample" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="sample">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="span" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="span" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="span">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="stl" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="stl" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="stl">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="string" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="string" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="string">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="string_algo" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="string_algo" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="string_algo">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="string_view" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="string_view" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="string_view">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="syntax" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="syntax" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="syntax">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="three_way_comparison" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="three_way_comparison" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="three_way_comparison">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tie" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="tie" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="tie">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="to_array" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="to_array" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="to_array">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="transforms" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="transforms" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="transforms">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="try_emplace" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="try_emplace" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="try_emplace">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="unicode-string" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="unicode-string" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="unicode-string">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="variable_template" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="variable_template" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="variable_template">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="variant" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="variant" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="variant">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="zstd-test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="zstd-test" CONFIG_NAME="Debug-gcc" RUN_TARGET_PROJECT_NAME="cpp" RUN_TARGET_NAME="zstd-test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake 应用程序.aggregate" />
+      <item itemvalue="CMake 应用程序.any" />
+      <item itemvalue="CMake 应用程序.apply" />
+      <item itemvalue="CMake 应用程序.as_const" />
+      <item itemvalue="CMake 应用程序.asio" />
+      <item itemvalue="CMake 应用程序.base" />
+      <item itemvalue="CMake 应用程序.basic" />
+      <item itemvalue="CMake 应用程序.benchmark" />
+      <item itemvalue="CMake 应用程序.bind_front" />
+      <item itemvalue="CMake 应用程序.clamp" />
+      <item itemvalue="CMake 应用程序.color" />
+      <item itemvalue="CMake 应用程序.consteval" />
+      <item itemvalue="CMake 应用程序.constexpr_if" />
+      <item itemvalue="CMake 应用程序.constinit" />
+      <item itemvalue="CMake 应用程序.conv" />
+      <item itemvalue="CMake 应用程序.transforms" />
+      <item itemvalue="CMake 应用程序.copy" />
+      <item itemvalue="CMake 应用程序.copy_on_write" />
+      <item itemvalue="CMake 应用程序.core" />
+      <item itemvalue="CMake 应用程序.enable_shared_from_this" />
+      <item itemvalue="CMake 应用程序.enum" />
+      <item itemvalue="CMake 应用程序.erase" />
+      <item itemvalue="CMake 应用程序.ex_10_01" />
+      <item itemvalue="CMake 应用程序.ex_10_02" />
+      <item itemvalue="CMake 应用程序.ex_10_03" />
+      <item itemvalue="CMake 应用程序.ex_10_06" />
+      <item itemvalue="CMake 应用程序.ex_10_09" />
+      <item itemvalue="CMake 应用程序.ex_10_11" />
+      <item itemvalue="CMake 应用程序.ex_10_12" />
+      <item itemvalue="CMake 应用程序.ex_10_13" />
+      <item itemvalue="CMake 应用程序.ex_10_14" />
+      <item itemvalue="CMake 应用程序.ex_10_15" />
+      <item itemvalue="CMake 应用程序.ex_10_16" />
+      <item itemvalue="CMake 应用程序.ex_10_17" />
+      <item itemvalue="CMake 应用程序.ex_10_18" />
+      <item itemvalue="CMake 应用程序.ex_10_19" />
+      <item itemvalue="CMake 应用程序.ex_10_20" />
+      <item itemvalue="CMake 应用程序.ex_10_21" />
+      <item itemvalue="CMake 应用程序.ex_10_22" />
+      <item itemvalue="CMake 应用程序.ex_10_24" />
+      <item itemvalue="CMake 应用程序.ex_10_25" />
+      <item itemvalue="CMake 应用程序.ex_10_27" />
+      <item itemvalue="CMake 应用程序.ex_10_28" />
+      <item itemvalue="CMake 应用程序.ex_10_29" />
+      <item itemvalue="CMake 应用程序.ex_10_30" />
+      <item itemvalue="CMake 应用程序.ex_10_31" />
+      <item itemvalue="CMake 应用程序.ex_10_33" />
+      <item itemvalue="CMake 应用程序.ex_10_34" />
+      <item itemvalue="CMake 应用程序.ex_10_35" />
+      <item itemvalue="CMake 应用程序.ex_10_36" />
+      <item itemvalue="CMake 应用程序.ex_10_37" />
+      <item itemvalue="CMake 应用程序.ex_10_42" />
+      <item itemvalue="CMake 应用程序.ex_11_03" />
+      <item itemvalue="CMake 应用程序.ex_11_04" />
+      <item itemvalue="CMake 应用程序.ex_11_08" />
+      <item itemvalue="CMake 应用程序.ex_11_12" />
+      <item itemvalue="CMake 应用程序.ex_11_13" />
+      <item itemvalue="CMake 应用程序.ex_11_20" />
+      <item itemvalue="CMake 应用程序.ex_11_31" />
+      <item itemvalue="CMake 应用程序.ex_11_32" />
+      <item itemvalue="CMake 应用程序.ex_11_33" />
+      <item itemvalue="CMake 应用程序.ex_11_38" />
+      <item itemvalue="CMake 应用程序.ex_12_02" />
+      <item itemvalue="CMake 应用程序.ex_12_06" />
+      <item itemvalue="CMake 应用程序.ex_12_07" />
+      <item itemvalue="CMake 应用程序.ex_12_14" />
+      <item itemvalue="CMake 应用程序.ex_12_15" />
+      <item itemvalue="CMake 应用程序.ex_12_20" />
+      <item itemvalue="CMake 应用程序.ex_12_22" />
+      <item itemvalue="CMake 应用程序.ex_12_23a" />
+      <item itemvalue="CMake 应用程序.ex_12_23b" />
+      <item itemvalue="CMake 应用程序.ex_12_24" />
+      <item itemvalue="CMake 应用程序.ex_12_26" />
+      <item itemvalue="CMake 应用程序.ex_12_27" />
+      <item itemvalue="CMake 应用程序.ex_12_28" />
+      <item itemvalue="CMake 应用程序.ex_12_29" />
+      <item itemvalue="CMake 应用程序.ex_12_32" />
+      <item itemvalue="CMake 应用程序.ex_12_33" />
+      <item itemvalue="CMake 应用程序.ex_1_01" />
+      <item itemvalue="CMake 应用程序.ex_1_02" />
+      <item itemvalue="CMake 应用程序.ex_1_03" />
+      <item itemvalue="CMake 应用程序.ex_1_04" />
+      <item itemvalue="CMake 应用程序.ex_1_05" />
+      <item itemvalue="CMake 应用程序.ex_1_07" />
+      <item itemvalue="CMake 应用程序.ex_1_08" />
+      <item itemvalue="CMake 应用程序.ex_1_09" />
+      <item itemvalue="CMake 应用程序.ex_1_10" />
+      <item itemvalue="CMake 应用程序.ex_1_11" />
+      <item itemvalue="CMake 应用程序.ex_1_13" />
+      <item itemvalue="CMake 应用程序.ex_1_15" />
+      <item itemvalue="CMake 应用程序.ex_1_16" />
+      <item itemvalue="CMake 应用程序.ex_1_18" />
+      <item itemvalue="CMake 应用程序.ex_1_19" />
+      <item itemvalue="CMake 应用程序.ex_1_20" />
+      <item itemvalue="CMake 应用程序.ex_1_21" />
+      <item itemvalue="CMake 应用程序.ex_1_22" />
+      <item itemvalue="CMake 应用程序.ex_1_23" />
+      <item itemvalue="CMake 应用程序.ex_1_25" />
+      <item itemvalue="CMake 应用程序.ex_2_04" />
+      <item itemvalue="CMake 应用程序.ex_2_08" />
+      <item itemvalue="CMake 应用程序.ex_2_18" />
+      <item itemvalue="CMake 应用程序.ex_2_34" />
+      <item itemvalue="CMake 应用程序.ex_2_35" />
+      <item itemvalue="CMake 应用程序.ex_2_39" />
+      <item itemvalue="CMake 应用程序.ex_2_41_1" />
+      <item itemvalue="CMake 应用程序.ex_2_41_2" />
+      <item itemvalue="CMake 应用程序.ex_2_41_3" />
+      <item itemvalue="CMake 应用程序.ex_3_02" />
+      <item itemvalue="CMake 应用程序.ex_3_04" />
+      <item itemvalue="CMake 应用程序.ex_3_05" />
+      <item itemvalue="CMake 应用程序.ex_3_06" />
+      <item itemvalue="CMake 应用程序.ex_3_07" />
+      <item itemvalue="CMake 应用程序.ex_3_08" />
+      <item itemvalue="CMake 应用程序.ex_3_10" />
+      <item itemvalue="CMake 应用程序.ex_3_14" />
+      <item itemvalue="CMake 应用程序.ex_3_15" />
+      <item itemvalue="CMake 应用程序.ex_3_17" />
+      <item itemvalue="CMake 应用程序.ex_3_20" />
+      <item itemvalue="CMake 应用程序.ex_3_22" />
+      <item itemvalue="CMake 应用程序.ex_3_23" />
+      <item itemvalue="CMake 应用程序.ex_3_24" />
+      <item itemvalue="CMake 应用程序.ex_3_25" />
+      <item itemvalue="CMake 应用程序.ex_3_31" />
+      <item itemvalue="CMake 应用程序.ex_3_32" />
+      <item itemvalue="CMake 应用程序.ex_3_35" />
+      <item itemvalue="CMake 应用程序.ex_3_36" />
+      <item itemvalue="CMake 应用程序.ex_3_39" />
+      <item itemvalue="CMake 应用程序.ex_3_40" />
+      <item itemvalue="CMake 应用程序.ex_3_41" />
+      <item itemvalue="CMake 应用程序.ex_3_42" />
+      <item itemvalue="CMake 应用程序.ex_3_43" />
+      <item itemvalue="CMake 应用程序.ex_3_44" />
+      <item itemvalue="CMake 应用程序.ex_3_45" />
+      <item itemvalue="CMake 应用程序.ex_4_10" />
+      <item itemvalue="CMake 应用程序.ex_4_21" />
+      <item itemvalue="CMake 应用程序.ex_4_22" />
+      <item itemvalue="CMake 应用程序.ex_4_28" />
+      <item itemvalue="CMake 应用程序.ex_5_03" />
+      <item itemvalue="CMake 应用程序.ex_5_05" />
+      <item itemvalue="CMake 应用程序.ex_5_06" />
+      <item itemvalue="CMake 应用程序.ex_5_09" />
+      <item itemvalue="CMake 应用程序.ex_5_10" />
+      <item itemvalue="CMake 应用程序.ex_5_11" />
+      <item itemvalue="CMake 应用程序.ex_5_12" />
+      <item itemvalue="CMake 应用程序.ex_5_14" />
+      <item itemvalue="CMake 应用程序.ex_5_17" />
+      <item itemvalue="CMake 应用程序.ex_5_19" />
+      <item itemvalue="CMake 应用程序.ex_5_20" />
+      <item itemvalue="CMake 应用程序.ex_5_21" />
+      <item itemvalue="CMake 应用程序.ex_5_22" />
+      <item itemvalue="CMake 应用程序.ex_5_23" />
+      <item itemvalue="CMake 应用程序.ex_5_24" />
+      <item itemvalue="CMake 应用程序.ex_5_25" />
+      <item itemvalue="CMake 应用程序.ex_6_03" />
+      <item itemvalue="CMake 应用程序.ex_6_04" />
+      <item itemvalue="CMake 应用程序.ex_6_05" />
+      <item itemvalue="CMake 应用程序.ex_6_07" />
+      <item itemvalue="CMake 应用程序.ex_6_09" />
+      <item itemvalue="CMake 应用程序.ex_6_10" />
+      <item itemvalue="CMake 应用程序.ex_6_11" />
+      <item itemvalue="CMake 应用程序.ex_6_12" />
+      <item itemvalue="CMake 应用程序.ex_6_17" />
+      <item itemvalue="CMake 应用程序.ex_6_21" />
+      <item itemvalue="CMake 应用程序.ex_6_22" />
+      <item itemvalue="CMake 应用程序.ex_6_23" />
+      <item itemvalue="CMake 应用程序.ex_6_25" />
+      <item itemvalue="CMake 应用程序.ex_6_26" />
+      <item itemvalue="CMake 应用程序.ex_6_27" />
+      <item itemvalue="CMake 应用程序.ex_6_33" />
+      <item itemvalue="CMake 应用程序.ex_6_36" />
+      <item itemvalue="CMake 应用程序.ex_6_37" />
+      <item itemvalue="CMake 应用程序.ex_6_42" />
+      <item itemvalue="CMake 应用程序.ex_6_47" />
+      <item itemvalue="CMake 应用程序.ex_6_51" />
+      <item itemvalue="CMake 应用程序.ex_6_56" />
+      <item itemvalue="CMake 应用程序.ex_7_01" />
+      <item itemvalue="CMake 应用程序.ex_7_03" />
+      <item itemvalue="CMake 应用程序.ex_7_07" />
+      <item itemvalue="CMake 应用程序.ex_7_13" />
+      <item itemvalue="CMake 应用程序.ex_7_21" />
+      <item itemvalue="CMake 应用程序.ex_7_27" />
+      <item itemvalue="CMake 应用程序.ex_7_29" />
+      <item itemvalue="CMake 应用程序.ex_7_41" />
+      <item itemvalue="CMake 应用程序.ex_7_53" />
+      <item itemvalue="CMake 应用程序.ex_8_02" />
+      <item itemvalue="CMake 应用程序.ex_8_04" />
+      <item itemvalue="CMake 应用程序.ex_8_05" />
+      <item itemvalue="CMake 应用程序.ex_8_06" />
+      <item itemvalue="CMake 应用程序.ex_8_07" />
+      <item itemvalue="CMake 应用程序.ex_8_08" />
+      <item itemvalue="CMake 应用程序.ex_8_09" />
+      <item itemvalue="CMake 应用程序.ex_8_10" />
+      <item itemvalue="CMake 应用程序.ex_8_11" />
+      <item itemvalue="CMake 应用程序.ex_8_13" />
+      <item itemvalue="CMake 应用程序.ex_9_04" />
+      <item itemvalue="CMake 应用程序.ex_9_05" />
+      <item itemvalue="CMake 应用程序.ex_9_13" />
+      <item itemvalue="CMake 应用程序.ex_9_14" />
+      <item itemvalue="CMake 应用程序.ex_9_15" />
+      <item itemvalue="CMake 应用程序.ex_9_16" />
+      <item itemvalue="CMake 应用程序.ex_9_18" />
+      <item itemvalue="CMake 应用程序.ex_9_19" />
+      <item itemvalue="CMake 应用程序.ex_9_20" />
+      <item itemvalue="CMake 应用程序.ex_9_22" />
+      <item itemvalue="CMake 应用程序.ex_9_24" />
+      <item itemvalue="CMake 应用程序.ex_9_26" />
+      <item itemvalue="CMake 应用程序.ex_9_27" />
+      <item itemvalue="CMake 应用程序.ex_9_28" />
+      <item itemvalue="CMake 应用程序.ex_9_31a" />
+      <item itemvalue="CMake 应用程序.ex_9_31b" />
+      <item itemvalue="CMake 应用程序.ex_9_34" />
+      <item itemvalue="CMake 应用程序.ex_9_38" />
+      <item itemvalue="CMake 应用程序.ex_9_43" />
+      <item itemvalue="CMake 应用程序.ex_9_44" />
+      <item itemvalue="CMake 应用程序.ex_9_45" />
+      <item itemvalue="CMake 应用程序.ex_9_46" />
+      <item itemvalue="CMake 应用程序.ex_9_47a" />
+      <item itemvalue="CMake 应用程序.ex_9_47b" />
+      <item itemvalue="CMake 应用程序.ex_9_49" />
+      <item itemvalue="CMake 应用程序.ex_9_50a" />
+      <item itemvalue="CMake 应用程序.ex_9_50b" />
+      <item itemvalue="CMake 应用程序.ex_9_51" />
+      <item itemvalue="CMake 应用程序.ex_9_52" />
+      <item itemvalue="CMake 应用程序.exchange" />
+      <item itemvalue="CMake 应用程序.explicit" />
+      <item itemvalue="CMake 应用程序.extract" />
+      <item itemvalue="CMake 应用程序.file_size" />
+      <item itemvalue="CMake 应用程序.fold_expression" />
+      <item itemvalue="CMake 应用程序.format" />
+      <item itemvalue="CMake 应用程序.grep" />
+      <item itemvalue="CMake 应用程序.invoke" />
+      <item itemvalue="CMake 应用程序.lambda" />
+      <item itemvalue="CMake 应用程序.logging" />
+      <item itemvalue="CMake 应用程序.ls" />
+      <item itemvalue="CMake 应用程序.make_from_tuple" />
+      <item itemvalue="CMake 应用程序.map" />
+      <item itemvalue="CMake 应用程序.not_fn" />
+      <item itemvalue="CMake 应用程序.optional" />
+      <item itemvalue="CMake 应用程序.os" />
+      <item itemvalue="CMake 应用程序.ostream" />
+      <item itemvalue="CMake 应用程序.pool" />
+      <item itemvalue="CMake 应用程序.program_options" />
+      <item itemvalue="CMake 应用程序.protobuf" />
+      <item itemvalue="CMake 应用程序.range_for" />
+      <item itemvalue="CMake 应用程序.ranges" />
+      <item itemvalue="CMake 应用程序.remove" />
+      <item itemvalue="CMake 应用程序.renamer" />
+      <item itemvalue="CMake 应用程序.rocksdb_test" />
+      <item itemvalue="CMake 应用程序.sample" />
+      <item itemvalue="CMake 应用程序.span" />
+      <item itemvalue="CMake 应用程序.stl" />
+      <item itemvalue="CMake 应用程序.string" />
+      <item itemvalue="CMake 应用程序.string_algo" />
+      <item itemvalue="CMake 应用程序.string_view" />
+      <item itemvalue="CMake 应用程序.syntax" />
+      <item itemvalue="CMake 应用程序.three_way_comparison" />
+      <item itemvalue="CMake 应用程序.tie" />
+      <item itemvalue="CMake 应用程序.to_array" />
+      <item itemvalue="CMake 应用程序.try_emplace" />
+      <item itemvalue="CMake 应用程序.unicode-string" />
+      <item itemvalue="CMake 应用程序.variable_template" />
+      <item itemvalue="CMake 应用程序.variant" />
+      <item itemvalue="CMake 应用程序.zstd-test" />
+      <item itemvalue="Google Test.test" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3be9747-3db7-4bad-86ef-2d37e075a5b8" name="默认的" comment="" />
+      <created>1598176322636</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598176322636</updated>
+      <workItem from="1598176324594" duration="2277000" />
+      <workItem from="1598197192796" duration="107000" />
+      <workItem from="1598970856615" duration="7316000" />
+      <workItem from="1598989260050" duration="231000" />
+      <workItem from="1599507042797" duration="47000" />
+    </task>
+    <task id="LOCAL-00001" summary="2020.8.23">
+      <created>1598178554295</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598178554295</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2020.9.2">
+      <created>1598977768498</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598977768498</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2020.8.23" />
+    <MESSAGE value="2020.9.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.9.2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="420" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599507071322">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state x="420" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1036@0.0.1920.1036" timestamp="1599507071322" />
+    <state width="1864" height="299" key="GridCell.Tab.0.bottom" timestamp="1599507089242">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state width="1864" height="299" key="GridCell.Tab.0.bottom/0.0.1920.1036@0.0.1920.1036" timestamp="1599507089242" />
+    <state width="1864" height="299" key="GridCell.Tab.0.center" timestamp="1599507089241">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state width="1864" height="299" key="GridCell.Tab.0.center/0.0.1920.1036@0.0.1920.1036" timestamp="1599507089241" />
+    <state width="1864" height="299" key="GridCell.Tab.0.left" timestamp="1599507089241">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state width="1864" height="299" key="GridCell.Tab.0.left/0.0.1920.1036@0.0.1920.1036" timestamp="1599507089241" />
+    <state width="1864" height="299" key="GridCell.Tab.0.right" timestamp="1599507089242">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state width="1864" height="299" key="GridCell.Tab.0.right/0.0.1920.1036@0.0.1920.1036" timestamp="1599507089242" />
+    <state width="1864" height="299" key="GridCell.Tab.1.bottom" timestamp="1598989491985">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state width="1864" height="299" key="GridCell.Tab.1.bottom/0.0.1920.1036@0.0.1920.1036" timestamp="1598989491985" />
+    <state width="1864" height="299" key="GridCell.Tab.1.center" timestamp="1598989491985">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state width="1864" height="299" key="GridCell.Tab.1.center/0.0.1920.1036@0.0.1920.1036" timestamp="1598989491985" />
+    <state width="1864" height="299" key="GridCell.Tab.1.left" timestamp="1598989491985">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state width="1864" height="299" key="GridCell.Tab.1.left/0.0.1920.1036@0.0.1920.1036" timestamp="1598989491985" />
+    <state width="1864" height="299" key="GridCell.Tab.1.right" timestamp="1598989491985">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state width="1864" height="299" key="GridCell.Tab.1.right/0.0.1920.1036@0.0.1920.1036" timestamp="1598989491985" />
+    <state width="1864" height="319" key="GridCell.Tab.2.bottom" timestamp="1598978173472">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state width="1864" height="319" key="GridCell.Tab.2.bottom/0.0.1920.1036@0.0.1920.1036" timestamp="1598978173472" />
+    <state width="1864" height="319" key="GridCell.Tab.2.center" timestamp="1598978173472">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state width="1864" height="319" key="GridCell.Tab.2.center/0.0.1920.1036@0.0.1920.1036" timestamp="1598978173472" />
+    <state width="1864" height="319" key="GridCell.Tab.2.left" timestamp="1598978173471">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state width="1864" height="319" key="GridCell.Tab.2.left/0.0.1920.1036@0.0.1920.1036" timestamp="1598978173471" />
+    <state width="1864" height="319" key="GridCell.Tab.2.right" timestamp="1598978173472">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state width="1864" height="319" key="GridCell.Tab.2.right/0.0.1920.1036@0.0.1920.1036" timestamp="1598978173472" />
+    <state x="622" y="80" key="RollbackChangesDialog" timestamp="1598989470117">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state x="622" y="80" key="RollbackChangesDialog/0.0.1920.1036@0.0.1920.1036" timestamp="1598989470117" />
+    <state x="192" y="-28" width="1346" height="936" key="SettingsEditor" timestamp="1599507079364">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state x="192" y="-28" width="1346" height="936" key="SettingsEditor/0.0.1920.1036@0.0.1920.1036" timestamp="1599507079364" />
+    <state x="460" y="97" key="Vcs.Push.Dialog.v2" timestamp="1598977772271">
+      <screen x="0" y="0" width="1920" height="1036" />
+    </state>
+    <state x="460" y="97" key="Vcs.Push.Dialog.v2/0.0.1920.1036@0.0.1920.1036" timestamp="1598977772271" />
+  </component>
+</project>

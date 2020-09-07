@@ -1,0 +1,35 @@
+name: Windows
+
+on: [push, pull_request]
+
+jobs:
+  cpp:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install
+        run: |
+          vcpkg install \
+          asio:x64-windows benchmark:x64-windows boost-algorithm:x64-windows \
+          boost-pool:x64-windows boost-program-options:x64-windows \
+          fmt:x64-windows gtest:x64-windows icu:x64-windows nlohmann-json:x64-windows \
+          protobuf:x64-windows zstd:x64-windows magic-enum:x64-windows \
+          spdlog:x64-windows rocksdb:x64-windows
+          vcpkg integrate install
+
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake
+
+      - name: Build
+        run: cmake --build build --config Release -j((wmic cpu get NumberOfLogicalProcessors/Format:List) -replace '\D+(\d+)','$1') -- /p:VcpkgEnabled=true
+
+  rust:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build
+        run: cd rust ; cargo build
