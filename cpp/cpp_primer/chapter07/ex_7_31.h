@@ -7,9 +7,9 @@
 class Y;
 
 class X {
-  Y *py_;
+    Y* py_;
 };
 
 class Y {
-  X x_;
+    X x_;
 };

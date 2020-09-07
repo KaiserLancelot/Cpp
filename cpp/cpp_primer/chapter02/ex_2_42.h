@@ -8,7 +8,7 @@
 #include <string>
 
 struct SalesData {
-  std::string book_no;
-  std::int32_t units_sold{};
-  double revenue{};
+    std::string book_no;
+    std::int32_t units_sold{};
+    double revenue{};
 };

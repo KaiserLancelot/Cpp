@@ -15,11 +15,12 @@ std::int32_t div(std::int32_t a, std::int32_t b) { return a / b; }
 
 } // namespace ex
 
-int main() {
-  using FuncPointer = std::int32_t (*)(std::int32_t, std::int32_t);
+int main()
+{
+    using FuncPointer = std::int32_t (*)(std::int32_t, std::int32_t);
 
-  std::vector<FuncPointer> v{ex::add, ex::sub, ex::mul, ex::div};
-  for (const auto &item : v) {
-    std::cout << item(2, 3) << '\n';
-  }
+    std::vector<FuncPointer> v{ex::add, ex::sub, ex::mul, ex::div};
+    for (const auto& item : v) {
+        std::cout << item(2, 3) << '\n';
+    }
 }

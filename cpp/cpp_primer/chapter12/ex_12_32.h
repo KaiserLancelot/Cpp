@@ -20,26 +20,26 @@ using LineNo = std::vector<std::string>::size_type;
 
 class TextQuery {
 public:
-  explicit TextQuery(std::ifstream &input);
-  QueryResult query(const std::string &s);
+    explicit TextQuery(std::ifstream& input);
+    QueryResult query(const std::string& s);
 
 private:
-  StrBlob text_;
-  std::map<std::string, std::shared_ptr<std::set<LineNo>>>
-      words_and_line_number_;
+    StrBlob text_;
+    std::map<std::string, std::shared_ptr<std::set<LineNo>>>
+            words_and_line_number_;
 };
 
 class QueryResult {
-  friend std::ostream &print(std::ostream &os, QueryResult qr);
+    friend std::ostream& print(std::ostream& os, QueryResult qr);
 
 public:
-  QueryResult(const std::string &word, const StrBlob &text,
-              const std::shared_ptr<std::set<LineNo>> &line_number);
+    QueryResult(const std::string& word, const StrBlob& text,
+                const std::shared_ptr<std::set<LineNo>>& line_number);
 
 private:
-  std::string word_;
-  StrBlob text_;
-  std::shared_ptr<std::set<LineNo>> line_number_;
+    std::string word_;
+    StrBlob text_;
+    std::shared_ptr<std::set<LineNo>> line_number_;
 };
 
-std::ostream &print(std::ostream &os, QueryResult qr);
+std::ostream& print(std::ostream& os, QueryResult qr);

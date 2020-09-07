@@ -5,13 +5,14 @@
 #include <cstdint>
 #include <iostream>
 
-int main() {
-  std::int32_t i{42};
-  std::int32_t *p;
+int main()
+{
+    std::int32_t i{42};
+    std::int32_t* p;
 
-  p = &i;
-  *p = 100;
+    p = &i;
+    *p = 100;
 
-  std::cout << p << '\n';
-  std::cout << *p << '\n';
+    std::cout << p << '\n';
+    std::cout << *p << '\n';
 }

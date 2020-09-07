@@ -8,15 +8,16 @@
 
 #include "Sales_item.h"
 
-int main() {
-  SalesItem item;
-  std::unordered_map<std::string, std::int32_t> data;
+int main()
+{
+    SalesItem item;
+    std::unordered_map<std::string, std::int32_t> data;
 
-  while (std::cin >> item) {
-    ++data[item.isbn()];
-  }
+    while (std::cin >> item) {
+        ++data[item.isbn()];
+    }
 
-  for (const auto &[isbn, cnt] : data) {
-    std::cout << isbn << ' ' << cnt << '\n';
-  }
+    for (const auto& [isbn, cnt] : data) {
+        std::cout << isbn << ' ' << cnt << '\n';
+    }
 }

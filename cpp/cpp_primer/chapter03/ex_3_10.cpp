@@ -6,14 +6,15 @@
 #include <iostream>
 #include <string>
 
-int main() {
-  std::string s;
-  std::getline(std::cin, s);
+int main()
+{
+    std::string s;
+    std::getline(std::cin, s);
 
-  for (auto element : s) {
-    if (!std::ispunct(element)) {
-      std::cout << element;
+    for (auto element : s) {
+        if (!std::ispunct(element)) {
+            std::cout << element;
+        }
     }
-  }
-  std::cout << '\n';
+    std::cout << '\n';
 }

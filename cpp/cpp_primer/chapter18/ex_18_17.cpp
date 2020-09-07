@@ -14,10 +14,11 @@ int ivar = 0;
 
 // using exercise::ivar, exercise::dvar, exercise::limit;
 
-int main() {
-  using exercise::ivar, exercise::dvar, exercise::limit;
-  // double dvar = 3.1416;
-  int iobj = limit + 1;
-  std::cout << ivar << '\n';
-  std::cout << ::ivar << '\n';
+int main()
+{
+    using exercise::ivar, exercise::dvar, exercise::limit;
+    // double dvar = 3.1416;
+    int iobj = limit + 1;
+    std::cout << ivar << '\n';
+    std::cout << ::ivar << '\n';
 }

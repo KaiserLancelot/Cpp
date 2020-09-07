@@ -4,6 +4,7 @@
 
 #include <iostream>
 
-int main() {
-  std::cout << [](auto a, auto b) { return a + b; }(1, 2) << '\n';
+int main()
+{
+    std::cout << [](auto a, auto b) { return a + b; }(1, 2) << '\n';
 }

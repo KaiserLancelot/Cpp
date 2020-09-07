@@ -5,11 +5,12 @@
 #include <iostream>
 #include <string>
 
-int main() {
-  std::string s("hello world");
-  for (char element : s) {
-    element = 'X';
-    (void)element;
-  }
-  std::cout << s << '\n';
+int main()
+{
+    std::string s("hello world");
+    for (char element : s) {
+        element = 'X';
+        (void) element;
+    }
+    std::cout << s << '\n';
 }

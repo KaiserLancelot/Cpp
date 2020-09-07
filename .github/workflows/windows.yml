@@ -11,11 +11,11 @@ jobs:
 
       - name: Install
         run: |
-          vcpkg install \
-          asio:x64-windows benchmark:x64-windows boost-algorithm:x64-windows \
-          boost-pool:x64-windows boost-program-options:x64-windows \
-          fmt:x64-windows gtest:x64-windows icu:x64-windows nlohmann-json:x64-windows \
-          protobuf:x64-windows zstd:x64-windows magic-enum:x64-windows \
+          vcpkg install `
+          asio:x64-windows benchmark:x64-windows boost-algorithm:x64-windows `
+          boost-pool:x64-windows boost-program-options:x64-windows `
+          fmt:x64-windows gtest:x64-windows icu:x64-windows nlohmann-json:x64-windows `
+          protobuf:x64-windows zstd:x64-windows magic-enum:x64-windows `
           spdlog:x64-windows rocksdb:x64-windows
           vcpkg integrate install
 

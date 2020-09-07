@@ -2,8 +2,8 @@
 // Created by kaiser on 2020/5/5.
 //
 
-const char *g() { return "dynamic initialization"; }
-constexpr const char *f(bool p) { return p ? "constant initializer" : g(); }
+const char* g() { return "dynamic initialization"; }
+constexpr const char* f(bool p) { return p ? "constant initializer" : g(); }
 
 // TODO 需要时再看
 
@@ -18,7 +18,7 @@ constexpr const char *f(bool p) { return p ? "constant initializer" : g(); }
 // 不强制常量析构和 const 限定.结果是拥有 constexpr 构造函数且 无 constexpr
 // 析构函数的类型(例如 std::shared_ptr<T>)的对象可能可以用 constinit, 但不能用
 // constexpr 声明
-constinit const char *c{f(true)}; // OK
+constinit const char* c{f(true)}; // OK
 // constinit const char *d{F(false)};  // 错误
 
 // constinit 亦能用于非初始化声明, 以告知编译器 thread_local 变量已被初始化

@@ -15,17 +15,19 @@
 // constexpr 函数或 constexpr 构造函数的要求
 consteval std::int32_t sqr(std::int32_t n) { return n * n; }
 
-consteval std::int32_t sqr_sqr(std::int32_t n) {
-  return sqr(sqr(n)); // OK
+consteval std::int32_t sqr_sqr(std::int32_t n)
+{
+    return sqr(sqr(n)); // OK
 }
 
 // constexpr std::int32_t DblSqr(std::int32_t n) {
 //   return Sqr(Sqr(n));  // 错误: 'n' 不是一个常量表达式
 // }
 
-int main() {
-  constexpr auto r{sqr(100)}; // OK
-  (void)r;
-  // std::int32_t x{100};
-  // auto r2{Sqr(x)};  // 错误: 调用不产生常量
+int main()
+{
+    constexpr auto r{sqr(100)}; // OK
+    (void) r;
+    // std::int32_t x{100};
+    // auto r2{Sqr(x)};  // 错误: 调用不产生常量
 }

@@ -8,13 +8,14 @@
 
 #include "ex_15_42_query.h"
 
-int main() {
-  std::ifstream file{"story"};
-  TextQuery text{file};
-  std::size_t begin{}, end{};
+int main()
+{
+    std::ifstream file{"story"};
+    TextQuery text{file};
+    std::size_t begin{}, end{};
 
-  std::cin >> begin >> end;
+    std::cin >> begin >> end;
 
-  Query query{~Query("Alice")};
-  Print(std::cout, query.Eval(text), begin, end) << '\n';
+    Query query{~Query("Alice")};
+    Print(std::cout, query.Eval(text), begin, end) << '\n';
 }

@@ -8,11 +8,12 @@
 #include <string>
 #include <vector>
 
-int main() {
-  std::vector<std::string> v;
+int main()
+{
+    std::vector<std::string> v;
 
-  for (std::int32_t i{0}; i < 50; ++i) {
-    v.emplace_back("str");
-    std::cout << v.capacity() << '\n';
-  }
+    for (std::int32_t i{0}; i < 50; ++i) {
+        v.emplace_back("str");
+        std::cout << v.capacity() << '\n';
+    }
 }

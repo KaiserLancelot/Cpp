@@ -15,35 +15,41 @@ StrBlob::SizeType StrBlob::size() const { return std::size(*data_); }
 
 bool StrBlob::empty() const { return std::empty(*data_); }
 
-void StrBlob::push_back(const std::string &t) { data_->push_back(t); }
+void StrBlob::push_back(const std::string& t) { data_->push_back(t); }
 
-void StrBlob::pop_back() {
-  check(0, "PopBack on empty StrBlob");
-  data_->pop_back();
+void StrBlob::pop_back()
+{
+    check(0, "PopBack on empty StrBlob");
+    data_->pop_back();
 }
 
-std::string &StrBlob::front() {
-  check(0, "Front on empty StrBlob");
-  return data_->front();
+std::string& StrBlob::front()
+{
+    check(0, "Front on empty StrBlob");
+    return data_->front();
 }
 
-std::string &StrBlob::front() const {
-  check(0, "Front on empty StrBlob");
-  return data_->front();
+std::string& StrBlob::front() const
+{
+    check(0, "Front on empty StrBlob");
+    return data_->front();
 }
 
-std::string &StrBlob::back() {
-  check(0, "Back on empty StrBlob");
-  return data_->back();
+std::string& StrBlob::back()
+{
+    check(0, "Back on empty StrBlob");
+    return data_->back();
 }
 
-std::string &StrBlob::back() const {
-  check(0, "Back on empty StrBlob");
-  return data_->back();
+std::string& StrBlob::back() const
+{
+    check(0, "Back on empty StrBlob");
+    return data_->back();
 }
 
-void StrBlob::check(StrBlob::SizeType i, const std::string &msg) const {
-  if (i >= size()) {
-    throw std::out_of_range{msg};
-  }
+void StrBlob::check(StrBlob::SizeType i, const std::string& msg) const
+{
+    if (i >= size()) {
+        throw std::out_of_range{msg};
+    }
 }

@@ -11,15 +11,17 @@
 #include <iostream>
 #include <vector>
 
-bool check_size(const std::string &str, std::size_t size) {
-  return std::size(str) < size;
+bool check_size(const std::string& str, std::size_t size)
+{
+    return std::size(str) < size;
 }
 
-int main() {
-  using namespace std::placeholders;
-  std::vector<std::int32_t> v{1, 2, 3, 4, 5, 6};
-  std::string str{"aaa"};
-  std::cout << *std::find_if(std::begin(v), std::end(v),
-                             std::bind(&check_size, str, _1))
-            << '\n';
+int main()
+{
+    using namespace std::placeholders;
+    std::vector<std::int32_t> v{1, 2, 3, 4, 5, 6};
+    std::string str{"aaa"};
+    std::cout << *std::find_if(std::begin(v), std::end(v),
+                               std::bind(&check_size, str, _1))
+              << '\n';
 }

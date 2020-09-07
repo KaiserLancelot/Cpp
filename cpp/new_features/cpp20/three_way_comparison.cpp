@@ -35,9 +35,10 @@
 // 同一对象或数组之中时), 则为未指明的结果
 
 // 否则程序非良构
-int main() {
-  unsigned int i = 1;
-  // auto r = -1 < i;  // 既存陷阱: 返回 false
-  // auto r2 = -1 <=> i;  // 错误: 要求窄化转换
-  (void)i;
+int main()
+{
+    unsigned int i = 1;
+    // auto r = -1 < i;  // 既存陷阱: 返回 false
+    // auto r2 = -1 <=> i;  // 错误: 要求窄化转换
+    (void) i;
 }

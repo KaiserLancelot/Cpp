@@ -6,11 +6,12 @@
 
 #include <iostream>
 
-int main() {
-  StrVec s{"a", "b", "c"};
-  StrVec s2{"a", "b", "c"};
-  StrVec s3{"a", "d", "c"};
+int main()
+{
+    StrVec s{"a", "b", "c"};
+    StrVec s2{"a", "b", "c"};
+    StrVec s3{"a", "d", "c"};
 
-  std::cout << std::boolalpha << (s == s2) << '\n';
-  std::cout << (s == s3) << '\n';
+    std::cout << std::boolalpha << (s == s2) << '\n';
+    std::cout << (s == s3) << '\n';
 }

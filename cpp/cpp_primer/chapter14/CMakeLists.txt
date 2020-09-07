@@ -6,9 +6,9 @@ add_executable(ex_14_10 ex_14_02.h ex_14_02.cpp ex_14_10.cpp)
 add_executable(ex_14_13 ex_14_13.h ex_14_13.cpp)
 add_executable(ex_14_16_strblob ex_14_16_strblob.h ex_14_16_strblob.cpp)
 add_executable(ex_14_16_strvec ex_14_16_strvec.h ex_14_16_strvec.cpp
-                               ex_14_16_strvec_test.cpp)
+        ex_14_16_strvec_test.cpp)
 add_executable(ex_14_16_string ex_14_16_string.cpp ex_14_16_string.h
-                               ex_14_16_string_test.cpp)
+        ex_14_16_string_test.cpp)
 add_executable(ex_14_18_strblob ex_14_18_strblob.h ex_14_18_strblob.cpp)
 add_executable(ex_14_18_strvec ex_14_18_strvec.h ex_14_18_strvec.cpp)
 add_executable(ex_14_18_string ex_14_18_string.cpp ex_14_18_string.h)

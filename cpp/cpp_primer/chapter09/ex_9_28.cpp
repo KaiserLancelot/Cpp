@@ -5,16 +5,17 @@
 #include <forward_list>
 #include <string>
 
-void fun(std::forward_list<std::string> &forward_list, const std::string &s1,
-         const std::string &s2) {
-  auto cur{std::begin(forward_list)}, prv{forward_list.before_begin()};
-  for (; cur != std::end(forward_list); prv = cur, ++cur) {
-    if (*cur == s1) {
-      forward_list.insert_after(cur, s2);
-      return;
+void fun(std::forward_list<std::string>& forward_list, const std::string& s1,
+         const std::string& s2)
+{
+    auto cur{std::begin(forward_list)}, prv{forward_list.before_begin()};
+    for (; cur != std::end(forward_list); prv = cur, ++cur) {
+        if (*cur == s1) {
+            forward_list.insert_after(cur, s2);
+            return;
+        }
     }
-  }
-  forward_list.insert_after(prv, s2);
+    forward_list.insert_after(prv, s2);
 }
 
 int main() {}

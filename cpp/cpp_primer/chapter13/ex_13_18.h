@@ -10,13 +10,13 @@
 
 class Employee {
 public:
-  Employee() : id_{num++} {}
-  explicit Employee(const std::string &name) : name_{name}, id_{num++} {}
+    Employee() : id_{num++} {}
+    explicit Employee(const std::string& name) : name_{name}, id_{num++} {}
 
 private:
-  inline static std::int32_t num{};
-  std::string name_;
-  std::int32_t id_;
+    inline static std::int32_t num{};
+    std::string name_;
+    std::int32_t id_;
 };
 
 #endif // CPP_PRIMER_EX_13_18_H

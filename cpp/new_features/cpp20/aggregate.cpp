@@ -7,9 +7,9 @@
 #include <cstdint>
 
 struct A {
-  std::int32_t x;
-  std::int32_t y;
-  std::int32_t z;
+    std::int32_t x;
+    std::int32_t y;
+    std::int32_t z;
 };
 
 // TODO 编译器实现不完整

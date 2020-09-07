@@ -8,14 +8,15 @@
 #include <iostream>
 #include <vector>
 
-int main() {
-  std::vector<SalesData> vector{SalesData{"aa"}, SalesData{"aaaa"},
-                                SalesData{"aaa"}, SalesData{"z"}};
-  std::sort(
-      std::begin(vector), std::end(vector),
-      [](const auto &lhs, const auto &rhs) { return lhs.isbn() < rhs.isbn(); });
+int main()
+{
+    std::vector<SalesData> vector{SalesData{"aa"}, SalesData{"aaaa"},
+                                  SalesData{"aaa"}, SalesData{"z"}};
+    std::sort(
+            std::begin(vector), std::end(vector),
+            [](const auto& lhs, const auto& rhs) { return lhs.isbn() < rhs.isbn(); });
 
-  for (const auto &ele : vector) {
-    std::cout << ele.isbn() << '\n';
-  }
+    for (const auto& ele : vector) {
+        std::cout << ele.isbn() << '\n';
+    }
 }

@@ -8,20 +8,21 @@
 #include <iostream>
 #include <vector>
 
-int main() {
-  std::vector<std::int32_t> v{1, 2, 3, 4, 5};
+int main()
+{
+    std::vector<std::int32_t> v{1, 2, 3, 4, 5};
 
-  auto iter{std::begin(v)};
-  while (iter != std::end(v)) {
-    if (*iter % 2) {
-      iter = v.insert(iter, *iter);
-      // ++iter;
+    auto iter{std::begin(v)};
+    while (iter != std::end(v)) {
+        if (*iter % 2) {
+            iter = v.insert(iter, *iter);
+            // ++iter;
+        }
+        ++iter;
     }
-    ++iter;
-  }
 
-  for (auto i : v) {
-    std::cout << i << ' ';
-  }
-  std::cout << '\n';
+    for (auto i : v) {
+        std::cout << i << ' ';
+    }
+    std::cout << '\n';
 }

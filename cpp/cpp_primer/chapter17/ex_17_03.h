@@ -17,20 +17,20 @@
 
 using LineNo = std::vector<std::string>::size_type;
 using QueryResult =
-    std::tuple<std::string, std::shared_ptr<std::vector<std::string>>,
-               std::shared_ptr<std::set<LineNo>>>;
+        std::tuple<std::string, std::shared_ptr<std::vector<std::string>>,
+                   std::shared_ptr<std::set<LineNo>>>;
 
 class TextQuery {
 public:
-  explicit TextQuery(std::ifstream &input);
-  QueryResult Query(const std::string &s);
+    explicit TextQuery(std::ifstream& input);
+    QueryResult Query(const std::string& s);
 
 private:
-  std::shared_ptr<std::vector<std::string>> text_;
-  std::map<std::string, std::shared_ptr<std::set<LineNo>>>
-      words_and_line_number_;
+    std::shared_ptr<std::vector<std::string>> text_;
+    std::map<std::string, std::shared_ptr<std::set<LineNo>>>
+            words_and_line_number_;
 };
 
-std::ostream &Print(std::ostream &os, QueryResult qr);
+std::ostream& Print(std::ostream& os, QueryResult qr);
 
 #endif // CPP_PRIMER_EX_17_03_H

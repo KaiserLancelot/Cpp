@@ -8,13 +8,13 @@
 
 class NoDefault {
 public:
-  NoDefault(std::int32_t i);
+    NoDefault(std::int32_t i);
 };
 
 class C {
 public:
-  C() : no_default_{1} {}
+    C() : no_default_{1} {}
 
 private:
-  NoDefault no_default_;
+    NoDefault no_default_;
 };
