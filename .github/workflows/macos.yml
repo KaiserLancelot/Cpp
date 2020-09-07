@@ -49,6 +49,7 @@ jobs:
         env:
           C_INCLUDE_PATH: /usr/local/include
           CPLUS_INCLUDE_PATH: /usr/local/include
+          CMAKE_PREFIX_PATH: /usr/local/opt/icu4c
 
   rust:
     runs-on: macos-latest
