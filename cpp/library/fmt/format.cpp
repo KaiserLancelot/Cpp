@@ -2,7 +2,6 @@
 // Created by kaiser on 19-3-13.
 //
 
-#include <iostream>
 #include <iterator>
 #include <string>
 #include <vector>
@@ -22,10 +21,5 @@ int main()
     fmt::format_to(std::back_inserter(out), "{}", 42);
 
     std::vector<int> v = {1, 2, 3};
-    fmt::print("{}", fmt::join(v, ", "));
-    std::cout << '\n';
-
-    fmt::memory_buffer buffer;
-    fmt::format_to(buffer, "The answer is {}.", 42);
-    std::cout << buffer.data() << '\n';
+    fmt::print("{}\n", fmt::join(v, ", "));
 }
