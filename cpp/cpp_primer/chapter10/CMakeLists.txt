@@ -1,6 +1,6 @@
 include_directories(../chapter07)
-file(COPY ../data/str DESTINATION ${CMAKE_BINARY_DIR})
-file(COPY ../data/in DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ../data/str DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ../data/in DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(ex_10_01 ex_10_01.cpp)
 add_executable(ex_10_02 ex_10_02.cpp)

@@ -7,7 +7,7 @@
       "name": "Launch",
       "program": "${command:cmake.launchTargetPath}",
       "args": [],
-      "cwd": "${workspaceFolder}/build"
+      "cwd": "${command:cmake.launchTargetDirectory}"
     }
   ]
 }

@@ -1,4 +1,4 @@
-file(COPY data/in.json DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY data/in.json DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 find_package(nlohmann_json REQUIRED)
 

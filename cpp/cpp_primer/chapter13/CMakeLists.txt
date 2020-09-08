@@ -1,4 +1,4 @@
-file(COPY ../data/story DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ../data/story DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(ex_13_13 ex_13_13.cpp)
 add_executable(ex_13_14 ex_13_14.cpp)

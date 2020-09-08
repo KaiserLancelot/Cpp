@@ -1,4 +1,4 @@
-file(COPY ../data/letter DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ../data/letter DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(ex_9_04 ex_9_04.cpp)
 add_executable(ex_9_05 ex_9_05.cpp)

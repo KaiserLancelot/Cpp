@@ -1,4 +1,4 @@
-file(COPY data/data.txt DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY data/data.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 find_package(ICU REQUIRED COMPONENTS uc io i18n)
 

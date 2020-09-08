@@ -1,5 +1,5 @@
-file(COPY ../data/book DESTINATION ${CMAKE_BINARY_DIR})
-file(COPY ../data/story DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ../data/book DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ../data/story DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(ex_12_02 ex_12_02.cpp ex_12_02_test.cpp)
 add_executable(ex_12_06 ex_12_06.cpp)
