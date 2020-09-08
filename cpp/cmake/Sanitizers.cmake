@@ -7,13 +7,14 @@ if(SANITIZER)
     string(APPEND CMAKE_CXX_FLAGS " -fsanitize=thread")
   elseif(SANITIZER STREQUAL "Undefined")
     message(STATUS "Building with UndefinedSanitizer")
-    string(APPEND CMAKE_CXX_FLAGS " -fsanitize=undefined")
+    string(APPEND CMAKE_CXX_FLAGS
+           " -fsanitize=undefined -fno-sanitize-recover=all")
 
     if(CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?Clang")
       string(
         APPEND
         CMAKE_CXX_FLAGS
-        " -fsanitize=float-divide-by-zero -fsanitize=local-bounds -fsanitize=implicit-conversion -fsanitize=integer -fsanitize=nullability"
+        " -fsanitize=float-divide-by-zero -fsanitize=local-bounds -fsanitize=implicit-conversion -fsanitize=integer -fsanitize=nullability -fsanitize-recover=unsigned-integer-overflow"
       )
     endif()
   else()
