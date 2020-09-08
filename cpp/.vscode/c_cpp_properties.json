@@ -9,6 +9,7 @@
         "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include",
         "/usr/local/include",
         "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed",
+        "/usr/lib/clang/10.0.1/include",
         "/usr/include"
       ]
     }
