@@ -9,7 +9,7 @@ include(CompilerOptions)
 set(SANITIZER
     ""
     CACHE STRING
-          "Compile with a sanitizer. Options are: Address, Thread, Undefined")
+          "Build with a sanitizer. Options are: Address, Thread, Undefined")
 include(Sanitizers)
 
 add_subdirectory(cpp_primer/chapter01)
@@ -35,7 +35,7 @@ add_subdirectory(cpp_primer/chapter12)
 add_subdirectory(library/asio)
 add_subdirectory(library/benchmark)
 add_subdirectory(library/boost)
-# add_subdirectory(library/database/mysql)
+add_subdirectory(library/database/mysql)
 add_subdirectory(library/database/rocksdb)
 add_subdirectory(library/fmt)
 add_subdirectory(library/gtest)

@@ -18,7 +18,7 @@ jobs:
           sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
           sudo apt update
           sudo apt install g++-10 clang lld llvm libtbb-dev libasio-dev \
-          libbenchmark-dev libboost-dev libicu-dev libprotobuf-dev \
+          libbenchmark-dev libboost-all-dev libicu-dev libprotobuf-dev \
           libzstd-dev
           wget https://github.com/google/googletest/archive/release-1.10.0.zip
           unzip release-1.10.0.zip
@@ -57,6 +57,12 @@ jobs:
           -DWITH_BZ2=OFF -DWITH_LZ4=OFF -DWITH_SNAPPY=OFF -DWITH_ZLIB=OFF -DWITH_ZSTD=ON \
           -DUSE_RTTI=ON -DWITH_JEMALLOC=OFF -DWITH_GFLAGS=OFF -DFAIL_ON_WARNINGS=OFF -DPORTABLE=ON \
           -DWITH_BENCHMARK_TOOLS=OFF -S . -B build
+          cmake --build build --config Release -j$(nproc)
+          sudo cmake --build build --config Release --target install
+          wget https://github.com/mysql/mysql-connector-cpp/archive/8.0.21.zip
+          unzip 8.0.21.zip
+          cd mysql-connector-cpp-8.0.21
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
 
