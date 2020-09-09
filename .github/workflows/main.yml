@@ -43,13 +43,13 @@ jobs:
           cd magic_enum-0.6.6
           cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
           cmake --build build --config Release -j$(nproc)
-          cmake --build build --config Release --target install
+          sudo cmake --build build --config Release --target install
           wget https://github.com/gabime/spdlog/archive/v1.8.0.zip
           unzip v1.8.0.zip
           cd spdlog-1.8.0
           cmake -S . -B build -DSPDLOG_FMT_EXTERNAL_HO=ON
           cmake --build build --config Release -j$(nproc)
-          cmake --build build --config Release --target install
+          sudo cmake --build build --config Release --target install
           wget https://github.com/facebook/rocksdb/archive/v6.11.4.zip
           unzip v6.11.4.zip
           cd rocksdb-6.11.4
@@ -58,7 +58,7 @@ jobs:
           -DUSE_RTTI=ON -DWITH_JEMALLOC=OFF -DWITH_GFLAGS=OFF -DFAIL_ON_WARNINGS=OFF -DPORTABLE=ON \
           -DWITH_BENCHMARK_TOOLS=OFF -S . -B build
           cmake --build build --config Release -j$(nproc)
-          cmake --build build --config Release --target install
+          sudo cmake --build build --config Release --target install
 
       - name: Configure
         run: cd cpp ; cmake -S . -B build
