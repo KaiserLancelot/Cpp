@@ -4,8 +4,8 @@ on: [push, pull_request]
 
 jobs:
   cpp:
-    runs-on: ubuntu-latest
-    container: archlinux
+    # FIXME
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
         compiler: [g++, clang++]
@@ -15,9 +15,29 @@ jobs:
 
       - name: Install
         run: |
-          pacman -Syu --noconfirm
-          pacman -S --noconfirm base-devel clang lld llvm cmake wget unzip intel-tbb \
-          asio benchmark boost fmt gtest icu nlohmann-json protobuf zstd
+          sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
+          sudo apt update
+          sudo apt install g++-10 clang lld llvm libtbb-dev libasio-dev \
+          libbenchmark-dev libboost-dev libicu-dev libprotobuf-dev \
+          libzstd-dev
+          wget https://github.com/google/googletest/archive/release-1.10.0.zip
+          unzip release-1.10.0.zip
+          cd googletest-release-1.10.0
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build --config Release -j$(nproc)
+          sudo cmake --build build --config Release --target install
+          wget https://github.com/nlohmann/json/archive/v3.9.1.zip
+          unzip v3.9.1.zip
+          cd json-3.9.1
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build --config Release -j$(nproc)
+          sudo cmake --build build --config Release --target install
+          wget https://github.com/fmtlib/fmt/archive/7.0.3.zip
+          unzip 7.0.3.zip
+          cd fmt-7.0.3
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build --config Release -j$(nproc)
+          sudo cmake --build build --config Release --target install
           wget https://github.com/Neargye/magic_enum/archive/v0.6.6.zip
           unzip v0.6.6.zip
           cd magic_enum-0.6.6
