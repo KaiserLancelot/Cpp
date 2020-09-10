@@ -37,7 +37,6 @@ jobs:
           cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
-          sudo ln /usr/local/lib64/libmysqlcppconn8.so.2.8.0.21 /usr/local/lib/libmysqlcppconn8.so.2
           wget https://github.com/gabime/spdlog/archive/v1.8.0.zip
           unzip v1.8.0.zip
           cd spdlog-1.8.0
