@@ -70,6 +70,7 @@ jobs:
           ./configure
           make -j$(nproc)
           sudo make install
+          sudo ldconfig
 
       - name: Configure
         run: cd cpp ; cmake -S . -B build
