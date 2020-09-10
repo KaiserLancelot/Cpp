@@ -1,0 +1,81 @@
+name: Cpp
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    # FIXME
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        compiler: [g++-10, clang++-10]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install
+        run: |
+          sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
+          sudo apt update
+          sudo apt install g++-10 clang lld llvm libtbb-dev libbenchmark-dev \
+          libboost-all-dev libicu-dev libzstd-dev libgtest-dev
+          wget https://github.com/Neargye/magic_enum/archive/v0.6.6.zip
+          unzip v0.6.6.zip
+          cd magic_enum-0.6.6
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build --config Release -j$(nproc)
+          sudo cmake --build build --config Release --target install
+          wget https://github.com/fmtlib/fmt/archive/7.0.3.zip
+          unzip 7.0.3.zip
+          cd fmt-7.0.3
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build --config Release -j$(nproc)
+          sudo cmake --build build --config Release --target install
+          wget https://github.com/mysql/mysql-connector-cpp/archive/8.0.21.zip
+          unzip 8.0.21.zip
+          cd mysql-connector-cpp-8.0.21
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local
+          cmake --build build --config Release -j$(nproc)
+          sudo cmake --build build --config Release --target install
+          sudo ln /usr/local/lib64/libmysqlcppconn8.so.2.8.0.21 /usr/local/lib/libmysqlcppconn8.so.2
+          wget https://github.com/gabime/spdlog/archive/v1.8.0.zip
+          unzip v1.8.0.zip
+          cd spdlog-1.8.0
+          cmake -S . -B build -DSPDLOG_FMT_EXTERNAL_HO=ON
+          cmake --build build --config Release -j$(nproc)
+          sudo cmake --build build --config Release --target install
+          wget https://github.com/facebook/rocksdb/archive/v6.11.4.zip
+          unzip v6.11.4.zip
+          cd rocksdb-6.11.4
+          cmake -DCMAKE_BUILD_TYPE=Release \
+          -DWITH_BZ2=OFF -DWITH_LZ4=OFF -DWITH_SNAPPY=OFF -DWITH_ZLIB=OFF -DWITH_ZSTD=ON \
+          -DUSE_RTTI=ON -DWITH_JEMALLOC=OFF -DWITH_GFLAGS=OFF -DFAIL_ON_WARNINGS=OFF -DPORTABLE=ON \
+          -DWITH_BENCHMARK_TOOLS=OFF -S . -B build
+          cmake --build build --config Release -j$(nproc)
+          sudo cmake --build build --config Release --target install
+          wget https://github.com/nlohmann/json/archive/v3.9.1.zip
+          unzip v3.9.1.zip
+          cd json-3.9.1
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build --config Release -j$(nproc)
+          sudo cmake --build build --config Release --target install
+          wget https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protobuf-cpp-3.13.0.zip
+          unzip protobuf-cpp-3.13.0.zip
+          cd protobuf-3.13.0
+          ./configure
+          make -j$(nproc)
+          sudo make install
+          wget https://sourceforge.net/projects/asio/files/latest/download
+          unzip download
+          cd asio-1.18.0
+          ./configure
+          make -j$(nproc)
+          sudo make install
+
+      - name: Configure
+        run: cd cpp ; cmake -S . -B build
+        env:
+          CXX: ${{ matrix.compiler }}
+
+      - name: Build
+        run: cd cpp ; cmake --build build --config Release -j$(nproc)

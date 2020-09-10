@@ -3,14 +3,14 @@
     {
       "name": "Linux",
       "includePath": [
-        "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0",
-        "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu",
-        "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward",
-        "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include",
+        "/usr/include/c++/10",
+        "/usr/include/x86_64-linux-gnu/c++/10",
+        "/usr/include/c++/10/backward",
+        "/usr/lib/gcc/x86_64-linux-gnu/10/include",
         "/usr/local/include",
-        "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed",
-        "/usr/lib/clang/10.0.1/include",
-        "/usr/include"
+        "/usr/include/x86_64-linux-gnu",
+        "/usr/include",
+        "/usr/lib/llvm-10/lib/clang/10.0.0/include"
       ]
     }
   ]
