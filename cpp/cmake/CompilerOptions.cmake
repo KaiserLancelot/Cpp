@@ -11,10 +11,6 @@ else()
 endif()
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?Clang")
-  if(NOT APPLE)
-    add_link_options(-fuse-ld=lld)
-  endif()
-
   if((CMAKE_BUILD_TYPE STREQUAL "Debug") OR (CMAKE_BUILD_TYPE STREQUAL
                                              "RelWithDebInfo"))
     string(APPEND CMAKE_CXX_FLAGS " -fstandalone-debug")

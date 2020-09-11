@@ -58,7 +58,8 @@ jobs:
           unzip v1.5.2.zip
           cd benchmark-1.5.2
           cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBENCHMARK_ENABLE_TESTING=OFF \
-          -DBENCHMARK_ENABLE_LTO=ON -DBENCHMARK_ENABLE_GTEST_TESTS=OFF
+          -DBENCHMARK_ENABLE_LTO=ON -DBENCHMARK_ENABLE_GTEST_TESTS=OFF \
+          -DBUILD_SHARED_LIBS=ON
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
           wget https://github.com/google/googletest/archive/release-1.10.0.zip
@@ -72,7 +73,7 @@ jobs:
           unzip 8.0.21.zip
           cd mysql-connector-cpp-8.0.21
           cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local \
-          -DWITH_TESTS=FALSE
+          -DWITH_TESTS=FALSE -DCMAKE_INSTALL_LIBDIR=lib
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
           wget https://github.com/Neargye/magic_enum/archive/v0.6.6.zip
