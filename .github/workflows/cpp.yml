@@ -24,6 +24,7 @@ jobs:
           ./configure
           make -j$(nproc)
           sudo make install
+          cd ..
           wget https://github.com/facebook/rocksdb/archive/v6.11.4.zip
           unzip v6.11.4.zip
           cd rocksdb-6.11.4
@@ -33,12 +34,13 @@ jobs:
           -DWITH_BENCHMARK_TOOLS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local -S . -B build
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          cd ..
           wget https://github.com/facebook/zstd/archive/v1.4.5.zip
           unzip v1.4.5.zip
           cd zstd-1.4.5
-          ./configure
           make -j$(nproc)
           sudo make install
+          cd ..
           wget https://github.com/fmtlib/fmt/archive/7.0.3.zip
           unzip 7.0.3.zip
           cd fmt-7.0.3
@@ -46,6 +48,7 @@ jobs:
           -DBUILD_SHARED_LIBS=TRUE
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          cd ..
           wget https://github.com/gabime/spdlog/archive/v1.8.0.zip
           unzip v1.8.0.zip
           cd spdlog-1.8.0
@@ -54,6 +57,7 @@ jobs:
           -DSPDLOG_BUILD_TESTS_HO=OFF -DSPDLOG_BUILD_BENCH=OFF -DSPDLOG_BUILD_ALL=OFF
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          cd ..
           wget https://github.com/google/benchmark/archive/v1.5.2.zip
           unzip v1.5.2.zip
           cd benchmark-1.5.2
@@ -62,6 +66,7 @@ jobs:
           -DBUILD_SHARED_LIBS=ON
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          cd ..
           wget https://github.com/google/googletest/archive/release-1.10.0.zip
           unzip release-1.10.0.zip
           cd googletest-release-1.10.0
@@ -69,6 +74,7 @@ jobs:
           -DBUILD_SHARED_LIBS=ON -Dgtest_build_tests=OFF
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          cd ..
           wget https://github.com/mysql/mysql-connector-cpp/archive/8.0.21.zip
           unzip 8.0.21.zip
           cd mysql-connector-cpp-8.0.21
@@ -76,6 +82,7 @@ jobs:
           -DWITH_TESTS=FALSE -DCMAKE_INSTALL_LIBDIR=lib
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          cd ..
           wget https://github.com/Neargye/magic_enum/archive/v0.6.6.zip
           unzip v0.6.6.zip
           cd magic_enum-0.6.6
@@ -83,6 +90,7 @@ jobs:
           -DMAGIC_ENUM_OPT_BUILD_TESTS=OFF
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          cd ..
           wget https://github.com/nlohmann/json/archive/v3.9.1.zip
           unzip v3.9.1.zip
           cd json-3.9.1
@@ -90,12 +98,14 @@ jobs:
           -DJSON_MultipleHeaders=ON
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          cd ..
           wget https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protobuf-cpp-3.13.0.zip
           unzip protobuf-cpp-3.13.0.zip
           cd protobuf-3.13.0
           ./configure
           make -j$(nproc)
           sudo make install
+          cd ..
           sudo ldconfig
 
       - name: Configure
