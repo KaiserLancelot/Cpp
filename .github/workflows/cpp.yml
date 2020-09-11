@@ -16,8 +16,9 @@ jobs:
       - name: Install
         run: |
           sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
+          sudo add-apt-repository ppa:mhier/libboost-latest
           sudo apt update
-          sudo apt install g++-10 clang llvm libboost-all-dev libicu-dev
+          sudo apt install g++-10 clang llvm libboost1.74-dev libicu-dev
           wget https://sourceforge.net/projects/asio/files/latest/download
           unzip download
           cd asio-1.18.0
