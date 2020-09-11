@@ -3,10 +3,17 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-string(APPEND CMAKE_CXX_FLAGS " -Wall -Wextra -Wpedantic -Werror")
+if(MSVC)
+  string(APPEND CMAKE_CXX_FLAGS
+         " /nologo /EHsc /GF /errorReport:queue /FC /W4 /WX")
+else()
+  string(APPEND CMAKE_CXX_FLAGS " -Wall -Wextra -Wpedantic -Werror")
+endif()
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?Clang")
-  add_link_options(-fuse-ld=lld)
+  if(NOT APPLE)
+    add_link_options(-fuse-ld=lld)
+  endif()
 
   if((CMAKE_BUILD_TYPE STREQUAL "Debug") OR (CMAKE_BUILD_TYPE STREQUAL
                                              "RelWithDebInfo"))
