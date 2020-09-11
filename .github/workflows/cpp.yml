@@ -17,7 +17,7 @@ jobs:
         run: |
           sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
           sudo apt update
-          sudo apt install g++-10 clang llvm libtbb-dev libboost-all-dev libicu-dev
+          sudo apt install g++-10 clang llvm libboost-all-dev libicu-dev
           wget https://sourceforge.net/projects/asio/files/latest/download
           unzip download
           cd asio-1.18.0
