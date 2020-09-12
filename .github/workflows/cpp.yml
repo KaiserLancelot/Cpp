@@ -37,7 +37,7 @@ jobs:
           cd rocksdb-6.11.4
           cmake -DCMAKE_BUILD_TYPE=Release \
           -DWITH_BZ2=OFF -DWITH_LZ4=OFF -DWITH_SNAPPY=OFF -DWITH_ZLIB=OFF -DWITH_ZSTD=ON \
-          -DUSE_RTTI=OFF -DWITH_JEMALLOC=OFF -DWITH_GFLAGS=OFF -DFAIL_ON_WARNINGS=OFF -DPORTABLE=OFF \
+          -DUSE_RTTI=ON -DWITH_JEMALLOC=OFF -DWITH_GFLAGS=OFF -DFAIL_ON_WARNINGS=OFF -DPORTABLE=OFF \
           -DWITH_BENCHMARK_TOOLS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local -S . -B build
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
