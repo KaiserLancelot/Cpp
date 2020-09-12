@@ -26,21 +26,21 @@ jobs:
           make -j$(nproc)
           sudo make install
           cd ..
+          wget https://github.com/facebook/zstd/archive/v1.4.5.zip
+          unzip v1.4.5.zip
+          cd zstd-1.4.5
+          make lib -j$(nproc)
+          sudo make install
+          cd ..
           wget https://github.com/facebook/rocksdb/archive/v6.11.4.zip
           unzip v6.11.4.zip
           cd rocksdb-6.11.4
           cmake -DCMAKE_BUILD_TYPE=Release \
-          -DWITH_BZ2=OFF -DWITH_LZ4=OFF -DWITH_SNAPPY=OFF -DWITH_ZLIB=OFF -DWITH_ZSTD=OFF \
-          -DUSE_RTTI=ON -DWITH_JEMALLOC=OFF -DWITH_GFLAGS=OFF -DFAIL_ON_WARNINGS=OFF -DPORTABLE=ON \
+          -DWITH_BZ2=OFF -DWITH_LZ4=OFF -DWITH_SNAPPY=OFF -DWITH_ZLIB=OFF -DWITH_ZSTD=ON \
+          -DUSE_RTTI=OFF -DWITH_JEMALLOC=OFF -DWITH_GFLAGS=OFF -DFAIL_ON_WARNINGS=OFF -DPORTABLE=OFF \
           -DWITH_BENCHMARK_TOOLS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local -S . -B build
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
-          cd ..
-          wget https://github.com/facebook/zstd/archive/v1.4.5.zip
-          unzip v1.4.5.zip
-          cd zstd-1.4.5
-          make -j$(nproc)
-          sudo make install
           cd ..
           wget https://github.com/fmtlib/fmt/archive/7.0.3.zip
           unzip 7.0.3.zip
@@ -80,7 +80,7 @@ jobs:
           unzip 8.0.21.zip
           cd mysql-connector-cpp-8.0.21
           cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local \
-          -DWITH_TESTS=FALSE -DCMAKE_INSTALL_LIBDIR=lib
+          -DCMAKE_INSTALL_LIBDIR=lib -DWITH_TESTS=FALSE
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
           cd ..
