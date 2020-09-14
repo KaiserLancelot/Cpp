@@ -8,7 +8,6 @@
 
 - Library
 
-  - https://think-async.com/Asio/asio-1.18.0/doc/
   - https://github.com/google/benchmark
   - https://www.boost.org/doc/libs/
   - https://dev.mysql.com/doc/x-devapi-userguide/en/

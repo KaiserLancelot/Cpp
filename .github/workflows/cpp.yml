@@ -19,13 +19,6 @@ jobs:
           sudo add-apt-repository ppa:mhier/libboost-latest
           sudo apt update
           sudo apt install g++-10 clang llvm libboost1.74-dev libicu-dev
-          wget https://sourceforge.net/projects/asio/files/latest/download
-          unzip download
-          cd asio-1.18.0
-          ./configure
-          make -j$(nproc)
-          sudo make install
-          cd ..
           wget https://github.com/facebook/zstd/archive/v1.4.5.zip
           unzip v1.4.5.zip
           cd zstd-1.4.5
