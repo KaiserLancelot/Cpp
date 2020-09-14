@@ -16,6 +16,7 @@
   - https://github.com/google/googletest/blob/master/googletest/docs/primer.md
   - https://unicode-org.github.io/icu/
   - https://github.com/nlohmann/json
+  - https://github.com/libarchive/libarchive/wiki
   - https://github.com/Neargye/magic_enum
   - https://developers.google.com/protocol-buffers/docs/cpptutorial
   - https://github.com/gabime/spdlog
