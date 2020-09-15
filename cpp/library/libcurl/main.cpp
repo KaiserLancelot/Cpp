@@ -1,4 +1,5 @@
 #include <cstddef>
+#include <cstdlib>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -12,13 +13,18 @@ std::size_t callback_func_std_string(void* contents, std::size_t size,
     return size * nmemb;
 }
 
-int main()
+int main(int argc, char* argv[])
 {
+    if (argc != 2) {
+        std::cerr << "need a URL\n";
+        return EXIT_FAILURE;
+    }
+
     std::vector<std::string> result;
 
     curl_global_init(CURL_GLOBAL_DEFAULT);
     if (auto curl{curl_easy_init()}; curl) {
-        curl_easy_setopt(curl, CURLOPT_URL, "https://www.esjzone.cc/forum/1599125532/91871.html");
+        curl_easy_setopt(curl, CURLOPT_URL, argv[1]);
         curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 1);
         curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 2);
 
