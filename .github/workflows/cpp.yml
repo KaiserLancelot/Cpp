@@ -18,7 +18,7 @@ jobs:
           sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
           sudo add-apt-repository ppa:mhier/libboost-latest
           sudo apt update
-          sudo apt install g++-10 clang llvm libboost1.74-dev libicu-dev
+          sudo apt install g++-10 clang libjemalloc-dev libboost1.74-dev libicu-dev
           wget https://github.com/facebook/zstd/archive/v1.4.5.zip
           unzip v1.4.5.zip
           cd zstd-1.4.5
@@ -29,8 +29,8 @@ jobs:
           unzip v6.11.4.zip
           cd rocksdb-6.11.4
           cmake -DCMAKE_BUILD_TYPE=Release \
-          -DWITH_BZ2=OFF -DWITH_LZ4=OFF -DWITH_SNAPPY=OFF -DWITH_ZLIB=OFF -DWITH_ZSTD=ON \
-          -DUSE_RTTI=ON -DWITH_JEMALLOC=OFF -DWITH_GFLAGS=OFF -DFAIL_ON_WARNINGS=OFF -DPORTABLE=OFF \
+          -DWITH_BZ2=OFF -DWITH_LZ4=OFF -DWITH_SNAPPY=OFF -DWITH_ZLIB=OFF -DWITH_ZSTD=OFF \
+          -DUSE_RTTI=ON -DWITH_JEMALLOC=ON -DWITH_GFLAGS=OFF -DFAIL_ON_WARNINGS=OFF -DPORTABLE=OFF \
           -DWITH_BENCHMARK_TOOLS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local -S . -B build
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
@@ -112,6 +112,15 @@ jobs:
           -DENABLE_TAR=OFF -DENABLE_CPIO=OFF -DENABLE_CAT=OFF \
           -DENABLE_XATTR=OFF -DENABLE_ACL=OFF -DENABLE_ICONV=OFF \
           -DENABLE_TEST=OFF -DENABLE_COVERAGE=OFF
+          cmake --build build --config Release -j$(nproc)
+          sudo cmake --build build --config Release --target install
+          cd ..
+          wget https://github.com/curl/curl/archive/curl-7_72_0.zip
+          unzip curl-7_72_0.zip
+          cd curl-curl-7_72_0
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
+          -DBUILD_CURL_EXE=OFF -DCURL_LTO=ON -DHTTP_ONLY=ON \
+          -DCURL_ZLIB=OFF -DBUILD_TESTING=OFF
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
           cd ..

@@ -10,7 +10,8 @@ Checks: "-*,
   mpi-*,
   performance-*,
   portability-*,
-  readability-*"
+  readability-*,
+  -modernize-use-trailing-return-type"
 
 WarningsAsErrors: "clang-analyzer-*"
 
