@@ -6,11 +6,10 @@
 #include <iostream>
 #include <vector>
 
-int main()
-{
-    std::vector<std::int32_t> vi{1, 2, 3};
+int main() {
+  std::vector<std::int32_t> vi{1, 2, 3};
 
-    for (auto end{std::end(vi)}; end != std::begin(vi);) {
-        std::cout << *--end << '\n';
-    }
+  for (auto end{std::end(vi)}; end != std::begin(vi);) {
+    std::cout << *--end << '\n';
+  }
 }

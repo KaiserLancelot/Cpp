@@ -8,23 +8,22 @@
 #include <string>
 #include <vector>
 
-int main()
-{
-    std::ifstream ifs{"book"};
+int main() {
+  std::ifstream ifs{"book"};
 
-    if (!ifs) {
-        std::cerr << "can't open file\n";
-        return EXIT_FAILURE;
-    }
+  if (!ifs) {
+    std::cerr << "can't open file\n";
+    return EXIT_FAILURE;
+  }
 
-    std::string word;
-    std::vector<std::string> vs;
+  std::string word;
+  std::vector<std::string> vs;
 
-    while (ifs >> word) {
-        vs.push_back(word);
-    }
+  while (ifs >> word) {
+    vs.push_back(word);
+  }
 
-    for (const auto& s : vs) {
-        std::cout << s << '\n';
-    }
+  for (const auto& s : vs) {
+    std::cout << s << '\n';
+  }
 }

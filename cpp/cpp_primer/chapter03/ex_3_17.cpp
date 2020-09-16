@@ -7,19 +7,18 @@
 #include <string>
 #include <vector>
 
-int main()
-{
-    std::vector<std::string> vs;
-    std::string word;
+int main() {
+  std::vector<std::string> vs;
+  std::string word;
 
-    while (std::cin >> word) {
-        vs.push_back(word);
-    }
+  while (std::cin >> word) {
+    vs.push_back(word);
+  }
 
-    for (auto&& element : vs) {
-        for (auto&& c : element) {
-            c = static_cast<char>(std::toupper(c));
-        }
-        std::cout << element << '\n';
+  for (auto&& element : vs) {
+    for (auto&& c : element) {
+      c = static_cast<char>(std::toupper(c));
     }
+    std::cout << element << '\n';
+  }
 }

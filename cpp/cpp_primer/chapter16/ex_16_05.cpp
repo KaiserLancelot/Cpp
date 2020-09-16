@@ -5,16 +5,14 @@
 #include <iostream>
 #include <string>
 
-template<typename T>
-void Print(const T& arr)
-{
-    for (const auto& ele : arr) {
-        std::cout << ele << '\n';
-    }
+template <typename T>
+void Print(const T& arr) {
+  for (const auto& ele : arr) {
+    std::cout << ele << '\n';
+  }
 }
 
-int main()
-{
-    std::string s[]{"a", "b", "c"};
-    Print(s);
+int main() {
+  std::string s[]{"a", "b", "c"};
+  Print(s);
 }

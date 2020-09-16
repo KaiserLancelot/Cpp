@@ -7,11 +7,10 @@
 
 #include "ex_15_39_query.h"
 
-int main()
-{
-    std::ifstream file{"story"};
-    TextQuery text{file};
+int main() {
+  std::ifstream file{"story"};
+  TextQuery text{file};
 
-    Query query{~Query("Alice")};
-    Print(std::cout, query.Eval(text)) << '\n';
+  Query query{~Query("Alice")};
+  Print(std::cout, query.Eval(text)) << '\n';
 }

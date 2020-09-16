@@ -6,11 +6,10 @@
 #include <iostream>
 #include <vector>
 
-int main()
-{
-    std::vector<std::int32_t> vi{1, 2, 3};
+int main() {
+  std::vector<std::int32_t> vi{1, 2, 3};
 
-    for (auto begin{std::crbegin(vi)}; begin != std::crend(vi); ++begin) {
-        std::cout << *begin << '\n';
-    }
+  for (auto begin{std::crbegin(vi)}; begin != std::crend(vi); ++begin) {
+    std::cout << *begin << '\n';
+  }
 }

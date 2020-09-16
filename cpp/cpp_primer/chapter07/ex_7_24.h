@@ -7,29 +7,28 @@
 #include <string>
 
 class Screen {
-public:
-    using Pos = std::string::size_type;
+ public:
+  using Pos = std::string::size_type;
 
-    Screen() = default;
+  Screen() = default;
 
-    Screen(Pos ht, Pos wd) : height_{ht}, width_{wd}, contents_(ht * wd, ' ') {}
+  Screen(Pos ht, Pos wd) : height_{ht}, width_{wd}, contents_(ht * wd, ' ') {}
 
-    Screen(Pos ht, Pos wd, char c)
-        : height_{ht}, width_{wd}, contents_(ht * wd, c) {}
+  Screen(Pos ht, Pos wd, char c)
+      : height_{ht}, width_{wd}, contents_(ht * wd, c) {}
 
-    char get() const { return contents_[cursor_]; }
+  char get() const { return contents_[cursor_]; }
 
-    char get(Pos r, Pos c) const { return contents_[r * width_ + c]; }
+  char get(Pos r, Pos c) const { return contents_[r * width_ + c]; }
 
-    Screen& move(Pos r, Pos c)
-    {
-        (void) height_;
-        cursor_ = r * width_ + c;
-        return *this;
-    }
+  Screen& move(Pos r, Pos c) {
+    (void)height_;
+    cursor_ = r * width_ + c;
+    return *this;
+  }
 
-private:
-    Pos cursor_{};
-    Pos height_{}, width_{};
-    std::string contents_;
+ private:
+  Pos cursor_{};
+  Pos height_{}, width_{};
+  std::string contents_;
 };

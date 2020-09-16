@@ -8,11 +8,10 @@
 #include <iostream>
 #include <vector>
 
-int main()
-{
-    std::vector<std::int32_t> v;
+int main() {
+  std::vector<std::int32_t> v;
 
-    std::cout << v.at(0) << '\n';
-    std::cout << v.front() << '\n';
-    std::cout << *std::begin(v) << '\n';
+  std::cout << v.at(0) << '\n';
+  std::cout << v.front() << '\n';
+  std::cout << *std::begin(v) << '\n';
 }

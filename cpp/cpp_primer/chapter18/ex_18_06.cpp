@@ -4,31 +4,26 @@
 
 #include <iostream>
 
-class ExceptionType {
-};
+class ExceptionType {};
 
-int main()
-{
-    try {
-        ExceptionType e;
-        throw &e;
-    }
-    catch (ExceptionType* pet) {
-        std::cout << "ExceptionType *pet\n";
-    }
+int main() {
+  try {
+    ExceptionType e;
+    throw &e;
+  } catch (ExceptionType* pet) {
+    std::cout << "ExceptionType *pet\n";
+  }
 
-    try {
-        throw ExceptionType{};
-    }
-    catch (...) {
-        std::cout << "...\n";
-    }
+  try {
+    throw ExceptionType{};
+  } catch (...) {
+    std::cout << "...\n";
+  }
 
-    using Excptype = int;
-    try {
-        throw 1;
-    }
-    catch (Excptype) {
-        std::cout << "Excptype\n";
-    }
+  using Excptype = int;
+  try {
+    throw 1;
+  } catch (Excptype) {
+    std::cout << "Excptype\n";
+  }
 }

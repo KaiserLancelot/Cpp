@@ -6,8 +6,7 @@
 
 #include <iostream>
 
-int main()
-{
-    String s{"Hello World"};
-    std::cout << s << '\n';
+int main() {
+  String s{"Hello World"};
+  std::cout << s << '\n';
 }

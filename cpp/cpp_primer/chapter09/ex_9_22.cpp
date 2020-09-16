@@ -8,22 +8,21 @@
 #include <iostream>
 #include <vector>
 
-int main()
-{
-    std::vector<std::int32_t> v{1, 2, 3, 3, 5, 6, 7, 8, 9};
-    std::int32_t some_value{3};
+int main() {
+  std::vector<std::int32_t> v{1, 2, 3, 3, 5, 6, 7, 8, 9};
+  std::int32_t some_value{3};
 
-    auto mid{[&v] { return std::begin(v) + std::size(v) / 2; }};
-    // 这里使用 begin != mid() 会出错
-    for (auto begin{std::begin(v)}; begin < mid(); ++begin) {
-        if (*begin == some_value) {
-            begin = v.insert(begin, some_value * 2);
-            ++begin;
-        }
+  auto mid{[&v] { return std::begin(v) + std::size(v) / 2; }};
+  // 这里使用 begin != mid() 会出错
+  for (auto begin{std::begin(v)}; begin < mid(); ++begin) {
+    if (*begin == some_value) {
+      begin = v.insert(begin, some_value * 2);
+      ++begin;
     }
+  }
 
-    for (auto item : v) {
-        std::cout << item << ' ';
-    }
-    std::cout << '\n';
+  for (auto item : v) {
+    std::cout << item << ' ';
+  }
+  std::cout << '\n';
 }

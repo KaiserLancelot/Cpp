@@ -7,10 +7,10 @@
 #include <string>
 
 struct Person {
-    const std::string& get_name() const { return name; }
+  const std::string& get_name() const { return name; }
 
-    const std::string& get_address() const { return address; }
+  const std::string& get_address() const { return address; }
 
-    std::string name;
-    std::string address;
+  std::string name;
+  std::string address;
 };

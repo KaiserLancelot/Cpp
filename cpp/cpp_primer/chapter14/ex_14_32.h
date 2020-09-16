@@ -10,12 +10,12 @@
 #include <memory>
 
 class HasStrBlobPtr {
-public:
-    StrBlobPtr& operator*() const;
-    StrBlobPtr* operator->() const;
+ public:
+  StrBlobPtr& operator*() const;
+  StrBlobPtr* operator->() const;
 
-private:
-    std::shared_ptr<StrBlobPtr> p_;
+ private:
+  std::shared_ptr<StrBlobPtr> p_;
 };
 
-#endif // CPP_PRIMER_EX_14_32_H
+#endif  // CPP_PRIMER_EX_14_32_H

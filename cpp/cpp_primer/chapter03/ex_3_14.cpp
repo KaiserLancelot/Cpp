@@ -6,12 +6,11 @@
 #include <iostream>
 #include <vector>
 
-int main()
-{
-    std::vector<std::int32_t> vi;
-    std::int32_t value;
+int main() {
+  std::vector<std::int32_t> vi;
+  std::int32_t value;
 
-    while (std::cin >> value) {
-        vi.push_back(value);
-    }
+  while (std::cin >> value) {
+    vi.push_back(value);
+  }
 }

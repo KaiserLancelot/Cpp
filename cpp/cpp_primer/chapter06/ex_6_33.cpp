@@ -7,16 +7,14 @@
 #include <vector>
 
 void print_vector(std::vector<std::int32_t>::const_iterator begin,
-                  std::vector<std::int32_t>::const_iterator end)
-{
-    if (begin != end) {
-        std::cout << *begin++ << '\n';
-        print_vector(begin, end);
-    }
+                  std::vector<std::int32_t>::const_iterator end) {
+  if (begin != end) {
+    std::cout << *begin++ << '\n';
+    print_vector(begin, end);
+  }
 }
 
-int main()
-{
-    std::vector<std::int32_t> vi{1, 2, 3};
-    print_vector(std::begin(vi), std::end(vi));
+int main() {
+  std::vector<std::int32_t> vi{1, 2, 3};
+  print_vector(std::begin(vi), std::end(vi));
 }

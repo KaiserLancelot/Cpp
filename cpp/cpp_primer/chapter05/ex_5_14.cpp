@@ -7,31 +7,28 @@
 #include <string>
 #include <utility>
 
-int main()
-{
-    std::string curr, pre;
-    std::pair<std::string, std::int32_t> result;
-    std::int32_t count{};
+int main() {
+  std::string curr, pre;
+  std::pair<std::string, std::int32_t> result;
+  std::int32_t count{};
 
-    while (std::cin >> curr) {
-        if (curr == pre) {
-            ++count;
-        }
-        else {
-            count = 0;
-        }
-
-        if (count > result.second) {
-            result = {curr, count};
-        }
-
-        pre = curr;
+  while (std::cin >> curr) {
+    if (curr == pre) {
+      ++count;
+    } else {
+      count = 0;
     }
 
-    if (std::empty(result.first)) {
-        std::cout << "No consecutively repeated strings\n";
+    if (count > result.second) {
+      result = {curr, count};
     }
-    else {
-        std::cout << result.first << ' ' << result.second + 1 << " times\n";
-    }
+
+    pre = curr;
+  }
+
+  if (std::empty(result.first)) {
+    std::cout << "No consecutively repeated strings\n";
+  } else {
+    std::cout << result.first << ' ' << result.second + 1 << " times\n";
+  }
 }

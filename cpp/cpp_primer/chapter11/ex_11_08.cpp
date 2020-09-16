@@ -9,15 +9,14 @@
 #include <string>
 #include <vector>
 
-int main()
-{
-    std::vector<std::string> exclude = {"aa", "bb", "cc", "dd", "ee", "ff"};
+int main() {
+  std::vector<std::string> exclude = {"aa", "bb", "cc", "dd", "ee", "ff"};
 
-    std::string str;
-    std::cin >> str;
+  std::string str;
+  std::cin >> str;
 
-    std::cout << (std::binary_search(std::begin(exclude), std::end(exclude), str)
-                          ? "exclude"
-                          : "not exclude")
-              << '\n';
+  std::cout << (std::binary_search(std::begin(exclude), std::end(exclude), str)
+                    ? "exclude"
+                    : "not exclude")
+            << '\n';
 }

@@ -7,14 +7,14 @@
 #include <cstdint>
 
 class NoDefault {
-public:
-    NoDefault(std::int32_t i);
+ public:
+  NoDefault(std::int32_t i);
 };
 
 class C {
-public:
-    C() : no_default_{1} {}
+ public:
+  C() : no_default_{1} {}
 
-private:
-    NoDefault no_default_;
+ private:
+  NoDefault no_default_;
 };

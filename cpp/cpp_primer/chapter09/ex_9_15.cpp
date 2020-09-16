@@ -6,9 +6,8 @@
 #include <iostream>
 #include <vector>
 
-int main()
-{
-    std::vector<std::int32_t> vi1{1, 2, 3};
-    std::vector<std::int32_t> vi2{1, 2, 3, 4};
-    std::cout << (vi1 == vi2 ? "equal" : "not equal") << '\n';
+int main() {
+  std::vector<std::int32_t> vi1{1, 2, 3};
+  std::vector<std::int32_t> vi2{1, 2, 3, 4};
+  std::cout << (vi1 == vi2 ? "equal" : "not equal") << '\n';
 }

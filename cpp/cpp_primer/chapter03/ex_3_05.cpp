@@ -5,22 +5,21 @@
 #include <iostream>
 #include <string>
 
-int main()
-{
-    std::string total, s;
+int main() {
+  std::string total, s;
 
-    // a
-    while (std::cin >> s) {
-        total += s;
-    }
-    std::cout << total << '\n';
+  // a
+  while (std::cin >> s) {
+    total += s;
+  }
+  std::cout << total << '\n';
 
-    total.clear();
+  total.clear();
 
-    // b
-    while (std::cin >> s) {
-        total += s + ' ';
-    }
-    total.pop_back();
-    std::cout << total << '\n';
+  // b
+  while (std::cin >> s) {
+    total += s + ' ';
+  }
+  total.pop_back();
+  std::cout << total << '\n';
 }

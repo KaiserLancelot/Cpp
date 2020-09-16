@@ -41,42 +41,37 @@
 #include <type_traits>
 #include <vector>
 
-template<typename... T>
-std::ostream& print(std::ostream& os, const T&... args)
-{
-    return (os << ... << [&args] {
-        if constexpr (std::is_array_v<T>) {
-            return std::string(args) + ' ';
-        }
-        else {
-            return std::to_string(args) + ' ';
-        }
-    }());
-}
-
-template<typename T, typename... Args>
-auto matches(const T& range, Args... args)
-{
-    return (std::count(std::begin(range), std::end(range), args) + ... + 0);
-}
-
-template<typename T, typename... Args>
-void push_all(std::vector<T>& v, Args... args)
-{
-    (v.push_back(args), ...);
-}
-
-int main()
-{
-    print(std::cout, 1, 3.5, "fuck", -5) << '\n';
-
-    std::cout << matches(std::vector<std::string>{"a", "a", "b", "b"}, "a", "b")
-              << '\n';
-
-    std::vector<std::string> v;
-    push_all(v, "a", "b", "c");
-    for (const auto& item : v) {
-        std::cout << item << ' ';
+template <typename... T>
+std::ostream& print(std::ostream& os, const T&... args) {
+  return (os << ... << [&args] {
+    if constexpr (std::is_array_v<T>) {
+      return std::string(args) + ' ';
+    } else {
+      return std::to_string(args) + ' ';
     }
-    std::cout << '\n';
+  }());
+}
+
+template <typename T, typename... Args>
+auto matches(const T& range, Args... args) {
+  return (std::count(std::begin(range), std::end(range), args) + ... + 0);
+}
+
+template <typename T, typename... Args>
+void push_all(std::vector<T>& v, Args... args) {
+  (v.push_back(args), ...);
+}
+
+int main() {
+  print(std::cout, 1, 3.5, "fuck", -5) << '\n';
+
+  std::cout << matches(std::vector<std::string>{"a", "a", "b", "b"}, "a", "b")
+            << '\n';
+
+  std::vector<std::string> v;
+  push_all(v, "a", "b", "c");
+  for (const auto& item : v) {
+    std::cout << item << ' ';
+  }
+  std::cout << '\n';
 }

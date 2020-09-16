@@ -7,25 +7,22 @@
 
 #include "ex_7_06.h"
 
-int main()
-{
-    SalesData total;
+int main() {
+  SalesData total;
 
-    if (read(std::cin, total)) {
-        SalesData trans;
-        while (read(std::cin, trans)) {
-            if (total.isbn() == trans.isbn()) {
-                total.combine(trans);
-            }
-            else {
-                print(std::cout, total) << '\n';
-                total = trans;
-            }
-        }
+  if (read(std::cin, total)) {
+    SalesData trans;
+    while (read(std::cin, trans)) {
+      if (total.isbn() == trans.isbn()) {
+        total.combine(trans);
+      } else {
         print(std::cout, total) << '\n';
+        total = trans;
+      }
     }
-    else {
-        std::cerr << "no data" << std::endl;
-        return EXIT_FAILURE;
-    }
+    print(std::cout, total) << '\n';
+  } else {
+    std::cerr << "no data" << std::endl;
+    return EXIT_FAILURE;
+  }
 }

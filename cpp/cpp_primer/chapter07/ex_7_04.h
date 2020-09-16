@@ -7,6 +7,6 @@
 #include <string>
 
 struct Person {
-    std::string name;
-    std::string address;
+  std::string name;
+  std::string address;
 };

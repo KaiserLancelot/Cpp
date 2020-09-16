@@ -8,13 +8,12 @@
 #include <utility>
 #include <vector>
 
-int main()
-{
-    std::string s;
-    std::int32_t i;
-    std::vector<std::pair<std::string, std::int32_t>> v;
+int main() {
+  std::string s;
+  std::int32_t i;
+  std::vector<std::pair<std::string, std::int32_t>> v;
 
-    while (std::cin >> s >> i) {
-        v.emplace_back(s, i);
-    }
+  while (std::cin >> s >> i) {
+    v.emplace_back(s, i);
+  }
 }

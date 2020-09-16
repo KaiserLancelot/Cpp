@@ -6,11 +6,10 @@
 
 #include "Sales_item.h"
 
-int main()
-{
-    SalesItem item;
+int main() {
+  SalesItem item;
 
-    while (std::cin >> item) {
-        std::cout << item << '\n';
-    }
+  while (std::cin >> item) {
+    std::cout << item << '\n';
+  }
 }
