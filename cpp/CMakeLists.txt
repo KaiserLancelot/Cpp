@@ -10,7 +10,7 @@ set(SANITIZER
     ""
     CACHE STRING
           "Build with a sanitizer. Options are: Address, Thread, Undefined")
-include(Sanitizers)
+include(Sanitizer)
 
 add_subdirectory(cpp_primer/chapter01)
 add_subdirectory(cpp_primer/chapter02)
