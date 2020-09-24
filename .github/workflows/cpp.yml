@@ -22,7 +22,7 @@ jobs:
           sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
           sudo add-apt-repository ppa:mhier/libboost-latest
           sudo apt update
-          sudo apt install g++-10 clang libjemalloc-dev libboost1.74-dev libicu-dev
+          sudo apt install g++-10 libjemalloc-dev libboost1.74-dev libicu-dev
           wget https://github.com/facebook/zstd/archive/v1.4.5.zip
           unzip v1.4.5.zip
           cd zstd-1.4.5

@@ -8,6 +8,7 @@
     "cheshirekow.cmake-format",
     "vadimcn.vscode-lldb",
     "ajshort.include-autocomplete",
+    "surajbarkale.ninja",
     "zxh404.vscode-proto3"
   ]
 }
