@@ -16,6 +16,8 @@ Checks: "-*,
 
 WarningsAsErrors: "clang-analyzer-*"
 
+HeaderFilterRegex: ".*"
+
 CheckOptions:
   - key: readability-identifier-naming.ClassCase
     value: CamelCase

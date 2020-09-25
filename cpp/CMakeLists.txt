@@ -8,8 +8,10 @@ include(CompilerOptions)
 
 set(SANITIZER
     ""
-    CACHE STRING
-          "Build with a sanitizer. Options are: Address, Thread, Undefined")
+    CACHE
+      STRING
+      "Build with a sanitizer. Options are: Address, Thread, Memory, Undefined and Address;Undefined"
+)
 include(Sanitizer)
 
 add_subdirectory(cpp_primer/chapter01)
