@@ -20,9 +20,8 @@ jobs:
       - name: Install
         run: |
           sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
-          sudo add-apt-repository ppa:mhier/libboost-latest
           sudo apt update
-          sudo apt install g++-10 libjemalloc-dev libboost1.74-dev libicu-dev
+          sudo apt install g++-10 libjemalloc-dev
           wget -q https://github.com/facebook/zstd/archive/v1.4.5.zip
           unzip -q v1.4.5.zip
           cd zstd-1.4.5
@@ -33,7 +32,7 @@ jobs:
           unzip -q v6.11.4.zip
           cd rocksdb-6.11.4
           cmake -DCMAKE_BUILD_TYPE=Release \
-          -DWITH_BZ2=OFF -DWITH_LZ4=OFF -DWITH_SNAPPY=OFF -DWITH_ZLIB=OFF -DWITH_ZSTD=OFF \
+          -DWITH_BZ2=OFF -DWITH_LZ4=OFF -DWITH_SNAPPY=OFF -DWITH_ZLIB=OFF -DWITH_ZSTD=ON \
           -DUSE_RTTI=ON -DWITH_JEMALLOC=ON -DWITH_GFLAGS=OFF -DFAIL_ON_WARNINGS=OFF -DPORTABLE=OFF \
           -DWITH_BENCHMARK_TOOLS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local -S . -B build
           cmake --build build --config Release -j$(nproc)
@@ -127,6 +126,19 @@ jobs:
           -DCURL_ZLIB=OFF -DBUILD_TESTING=OFF
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          cd ..
+          wget https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz
+          tar -xf icu4c-67_1-src.tgz
+          cd icu/source
+          ./configure --prefix=/usr/local --enable-tests=no --enable-samples=no
+          make -j$(nproc)
+          sudo make install
+          cd ../..
+          wget https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz
+          tar -xf boost_1_74_0.tar.gz
+          cd boost_1_74_0
+          ./bootstrap.sh
+          sudo ./b2 --toolset=gcc-10 --with-program_options install
           cd ..
           sudo ldconfig
         env:
