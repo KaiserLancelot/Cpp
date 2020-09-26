@@ -127,14 +127,14 @@ jobs:
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
           cd ..
-          wget https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz
+          wget -q https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz
           tar -xf icu4c-67_1-src.tgz
           cd icu/source
           ./configure --prefix=/usr/local --enable-tests=no --enable-samples=no
           make -j$(nproc)
           sudo make install
           cd ../..
-          wget https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz
+          wget -q https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz
           tar -xf boost_1_74_0.tar.gz
           cd boost_1_74_0
           ./bootstrap.sh
