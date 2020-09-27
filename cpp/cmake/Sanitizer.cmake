@@ -1,6 +1,6 @@
 if(SANITIZER)
   if(NOT (SANITIZER STREQUAL "Thread"))
-    string(APPEND CMAKE_CXX_FLAGS " -fno-omit-frame-pointer")
+    add_required_compiler_flag("-fno-omit-frame-pointer")
   endif()
 
   include(AddCompilerFlag)
