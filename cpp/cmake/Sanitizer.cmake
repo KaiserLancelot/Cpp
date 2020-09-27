@@ -3,13 +3,25 @@ if(SANITIZER)
     string(APPEND CMAKE_CXX_FLAGS " -fno-omit-frame-pointer")
   endif()
 
-  macro(try_append_clang_undefined_sanitizer_flags)
+  include(AddCompilerFlag)
+
+  macro(append_address_sanitizer_flags)
+    add_required_compiler_flag("-fsanitize=address")
+    add_required_compiler_flag("-fsanitize-address-use-after-scope")
+    add_required_compiler_flag("-fno-optimize-sibling-calls")
+  endmacro()
+
+  macro(append_undefined_sanitizer_flags)
+    add_required_compiler_flag("-fsanitize=undefined")
+    add_required_compiler_flag("-fno-sanitize-recover=all")
+
     if(CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?Clang")
-      string(
-        APPEND
-        CMAKE_CXX_FLAGS
-        " -fsanitize=float-divide-by-zero,unsigned-integer-overflow,implicit-conversion,local-bounds,nullability -fsanitize-recover=unsigned-integer-overflow"
-      )
+      add_required_compiler_flag("-fsanitize=float-divide-by-zero")
+      add_required_compiler_flag("-fsanitize=unsigned-integer-overflow")
+      add_required_compiler_flag("-fsanitize=implicit-conversion")
+      add_required_compiler_flag("-fsanitize=local-bounds")
+      add_required_compiler_flag("-fsanitize=nullability")
+      add_required_compiler_flag("-fsanitize-recover=unsigned-integer-overflow")
     endif()
   endmacro()
 
@@ -20,14 +32,10 @@ if(SANITIZER)
       message(WARNING "AppleClang does not support LeakSanitizer")
     endif()
 
-    string(
-      APPEND
-      CMAKE_CXX_FLAGS
-      " -fsanitize=address -fsanitize-address-use-after-scope -fno-optimize-sibling-calls"
-    )
+    append_address_sanitizer_flags()
   elseif(SANITIZER STREQUAL "Thread")
     message(STATUS "Building with ThreadSanitizer")
-    string(APPEND CMAKE_CXX_FLAGS " -fsanitize=thread")
+    add_required_compiler_flag("-fsanitize=thread")
   elseif(SANITIZER STREQUAL "Memory")
     if(CMAKE_COMPILER_IS_GNUCXX)
       message(FATAL_ERROR "GCC does not support MemorySanitizer")
@@ -38,26 +46,16 @@ if(SANITIZER)
     endif()
 
     message(STATUS "Building with MemorySanitizer")
-    string(
-      APPEND
-      CMAKE_CXX_FLAGS
-      " -fsanitize=memory -fsanitize-memory-track-origins -fno-optimize-sibling-calls"
-    )
+    add_required_compiler_flag("-fsanitize=memory")
+    add_required_compiler_flag("-fsanitize-memory-track-origins")
+    add_required_compiler_flag("-fno-optimize-sibling-calls")
   elseif(SANITIZER STREQUAL "Undefined")
     message(STATUS "Building with UndefinedSanitizer")
-
-    string(APPEND CMAKE_CXX_FLAGS
-           " -fsanitize=undefined -fno-sanitize-recover=all")
-    try_append_clang_undefined_sanitizer_flags()
+    append_undefined_sanitizer_flags()
   elseif(SANITIZER STREQUAL "Address;Undefined")
     message(STATUS "Building with AddressSanitizer and UndefinedSanitizer")
-
-    string(
-      APPEND
-      CMAKE_CXX_FLAGS
-      " -fsanitize=address,undefined -fsanitize-address-use-after-scope -fno-sanitize-recover=all -fno-optimize-sibling-calls"
-    )
-    try_append_clang_undefined_sanitizer_flags()
+    append_address_sanitizer_flags()
+    append_undefined_sanitizer_flags()
   else()
     message(FATAL_ERROR "The Sanitizer is not supported: ${SANITIZER}")
   endif()

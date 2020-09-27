@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(cpp LANGUAGES CXX)
+project(cpp LANGUAGES C CXX)
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 include(Check)

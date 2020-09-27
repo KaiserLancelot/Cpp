@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        compiler: [g++-10, clang++-10]
+        config:
+          - { name: "GCC", cc: "gcc-10", cxx: "g++-10" }
+          - { name: "Clang", cc: "clang-10", cxx: "clang++-10" }
 
     steps:
       - uses: actions/checkout@v2
@@ -142,13 +144,14 @@ jobs:
           cd ..
           sudo ldconfig
         env:
-          CC: /usr/bin/gcc-10
-          CXX: /usr/bin/g++-10
+          CC: gcc-10
+          CXX: g++-10
 
       - name: Configure
         run: cd cpp ; cmake -S . -B build
         env:
-          CXX: ${{ matrix.compiler }}
+          CC: ${{ matrix.config.cc }}
+          CXX: ${{ matrix.config.cxx }}
 
       - name: Build
         run: cd cpp ; cmake --build build --config Release -j$(nproc)

@@ -3,13 +3,17 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-string(APPEND CMAKE_CXX_FLAGS " -Wall -Wextra -Wpedantic -Werror")
+include(AddCompilerFlag)
 
-if(CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?Clang")
-  if((CMAKE_BUILD_TYPE STREQUAL "Debug") OR (CMAKE_BUILD_TYPE STREQUAL
-                                             "RelWithDebInfo"))
-    string(APPEND CMAKE_CXX_FLAGS " -fstandalone-debug")
-  endif()
+add_required_compiler_flag("-Wall")
+add_required_compiler_flag("-Wextra")
+add_required_compiler_flag("-Wpedantic")
+add_required_compiler_flag("-Werror")
+
+if((CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?Clang")
+   AND ((CMAKE_BUILD_TYPE STREQUAL "Debug") OR (CMAKE_BUILD_TYPE STREQUAL
+                                                "RelWithDebInfo")))
+  add_required_compiler_flag("-fstandalone-debug")
 endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
