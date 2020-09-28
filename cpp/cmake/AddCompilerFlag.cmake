@@ -12,32 +12,6 @@ function(mangle_compiler_flag FLAG OUTPUT)
       PARENT_SCOPE)
 endfunction()
 
-function(add_compiler_flag FLAG)
-  mangle_compiler_flag("${FLAG}" MANGLED_FLAG)
-  set(OLD_CMAKE_REQUIRED_FLAGS "${CMAKE_REQUIRED_FLAGS}")
-  set(CMAKE_REQUIRED_FLAGS "${CMAKE_REQUIRED_FLAGS} ${FLAG}")
-  check_c_compiler_flag("${FLAG}" ${MANGLED_FLAG}_C)
-  check_cxx_compiler_flag("${FLAG}" ${MANGLED_FLAG}_CXX)
-  set(CMAKE_REQUIRED_FLAGS "${OLD_CMAKE_REQUIRED_FLAGS}")
-
-  set(VARIANT ${ARGV1})
-  if(ARGV1)
-    string(TOUPPER "_${VARIANT}" VARIANT)
-  endif()
-
-  if(${MANGLED_FLAG}_C)
-    set(CMAKE_C_FLAGS${VARIANT}
-        "${CMAKE_C_FLAGS${VARIANT}} ${FLAG}"
-        PARENT_SCOPE)
-  endif()
-
-  if(${MANGLED_FLAG}_CXX)
-    set(CMAKE_CXX_FLAGS${VARIANT}
-        "${CMAKE_CXX_FLAGS${VARIANT}} ${FLAG}"
-        PARENT_SCOPE)
-  endif()
-endfunction()
-
 function(add_required_compiler_flag FLAG)
   mangle_compiler_flag("${FLAG}" MANGLED_FLAG)
   set(OLD_CMAKE_REQUIRED_FLAGS "${CMAKE_REQUIRED_FLAGS}")

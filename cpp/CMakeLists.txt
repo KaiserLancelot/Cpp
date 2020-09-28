@@ -2,16 +2,17 @@ cmake_minimum_required(VERSION 3.10)
 
 project(cpp LANGUAGES C CXX)
 
-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
-include(Check)
-include(CompilerOptions)
-
 set(SANITIZER
     ""
     CACHE
       STRING
       "Build with a sanitizer. Options are: Address, Thread, Memory, Undefined and Address;Undefined"
 )
+
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+
+include(Check)
+include(CompilerOptions)
 include(Sanitizer)
 
 add_subdirectory(cpp_primer/chapter01)
@@ -54,3 +55,5 @@ add_subdirectory(new_features/cpp17/filesystem)
 add_subdirectory(new_features/cpp20)
 
 add_subdirectory(notes)
+
+include(Format)

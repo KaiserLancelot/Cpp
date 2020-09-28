@@ -16,6 +16,10 @@ if((CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?Clang")
   add_required_compiler_flag("-fstandalone-debug")
 endif()
 
+if(USE_LIBCXX)
+  add_required_compiler_flag("-stdlib=libc++")
+endif()
+
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
   include(CheckIPOSupported)
   check_ipo_supported(RESULT lto_supported OUTPUT error)

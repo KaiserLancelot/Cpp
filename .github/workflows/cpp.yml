@@ -23,7 +23,7 @@ jobs:
         run: |
           sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
           sudo apt update
-          sudo apt install g++-10 libjemalloc-dev
+          sudo apt install gcc-10 g++-10 libjemalloc-dev
           wget -q https://github.com/facebook/zstd/archive/v1.4.5.zip
           unzip -q v1.4.5.zip
           cd zstd-1.4.5

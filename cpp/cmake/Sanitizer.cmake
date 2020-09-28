@@ -46,6 +46,7 @@ if(SANITIZER)
     endif()
 
     message(STATUS "Building with MemorySanitizer")
+
     add_required_compiler_flag("-fsanitize=memory")
     add_required_compiler_flag("-fsanitize-memory-track-origins")
     add_required_compiler_flag("-fno-optimize-sibling-calls")

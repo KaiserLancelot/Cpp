@@ -11,10 +11,10 @@ int main() {
   std::cin >> grade;
 
   // a
-  std::string final_grade((grade > 90)   ? "high pass"
-                          : (grade > 75) ? "pass"
-                          : (grade > 60) ? "low pass"
-                                         : "fail");
+  std::string final_grade(
+      (grade > 90)
+          ? "high pass"
+          : (grade > 75) ? "pass" : (grade > 60) ? "low pass" : "fail");
 
   // b
   if (grade > 90) {
