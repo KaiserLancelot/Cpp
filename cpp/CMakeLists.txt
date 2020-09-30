@@ -16,7 +16,7 @@ set(SANITIZER
       "Build with a sanitizer. Options are: Address, Thread, Memory, Undefined and Address;Undefined"
 )
 
-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 include(Check)
 include(CompilerOptions)

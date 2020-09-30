@@ -44,7 +44,7 @@ else()
                       ${CMAKE_SYSTEM_NAME} " " ${CMAKE_CXX_COMPILER_ID})
 endif()
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
+if(${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_BINARY_DIR})
   message(FATAL_ERROR "In-source builds not allowed")
 endif()
 
