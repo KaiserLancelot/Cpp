@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.10)
 
 project(cpp LANGUAGES C CXX)
 
-option(LTO "Enable link time optimization(When CMAKE_BUILD_TYPE is Release)" ON)
 option(FORMAT "Format code" OFF)
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?Clang")
@@ -16,10 +15,11 @@ set(SANITIZER
       "Build with a sanitizer. Options are: Address, Thread, Memory, Undefined and Address;Undefined"
 )
 
-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 include(Check)
 include(CompilerOptions)
+include(LTO)
 include(Sanitizer)
 
 add_subdirectory(cpp_primer/chapter01)

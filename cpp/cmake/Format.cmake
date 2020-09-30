@@ -1,14 +1,14 @@
 if(FORMAT)
-  message(STATUS "Format code using clang-foramt and cmake-foramt")
+  message(STATUS "Formating code using clang-foramt and cmake-foramt")
 
-  find_program(CLANG_FORMAT_PATH clang-format)
-  find_program(CMAKE_FORMAT_PATH cmake-format)
+  find_program(CLANG_FORMAT_EXECUTABLE clang-format)
+  find_program(CMAKE_FORMAT_EXECUTABLE cmake-format)
 
-  if(NOT CLANG_FORMAT_PATH)
+  if(NOT CLANG_FORMAT_EXECUTABLE)
     message(FATAL_ERROR "Can not find clang-format")
   endif()
 
-  if(NOT CMAKE_FORMAT_PATH)
+  if(NOT CMAKE_FORMAT_EXECUTABLE)
     message(FATAL_ERROR "Can not find cmake-format")
   endif()
 
@@ -38,7 +38,7 @@ if(FORMAT)
 
   add_custom_target(
     code_format
-    COMMAND ${CLANG_FORMAT_PATH} -i ${CLANG_FORMAT_SOURCES}
-    COMMAND ${CMAKE_FORMAT_PATH} -i ${CMAKE_FORMAT_SOURCES}
+    COMMAND ${CLANG_FORMAT_EXECUTABLE} -i ${CLANG_FORMAT_SOURCES}
+    COMMAND ${CMAKE_FORMAT_EXECUTABLE} -i ${CMAKE_FORMAT_SOURCES}
     COMMENT "Format C++ and CMake files")
 endif()

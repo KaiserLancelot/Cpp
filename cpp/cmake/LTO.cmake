@@ -1,0 +1,11 @@
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+  include(CheckIPOSupported)
+  check_ipo_supported(RESULT lto_supported OUTPUT error)
+
+  if(lto_supported)
+    message(STATUS "IPO / LTO enabled")
+    set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
+  else()
+    message(FATAL_ERROR "IPO / LTO not supported: ${error}")
+  endif()
+endif()
