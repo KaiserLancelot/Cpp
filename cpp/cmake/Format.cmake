@@ -24,6 +24,7 @@ if(FORMAT)
     ${CMAKE_SOURCE_DIR}/new_features/*.cpp
     ${CMAKE_SOURCE_DIR}/notes/*.h
     ${CMAKE_SOURCE_DIR}/notes/*.cpp)
+    
   file(
     GLOB_RECURSE
     CMAKE_FORMAT_SOURCES

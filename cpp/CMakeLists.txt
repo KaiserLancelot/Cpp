@@ -2,6 +2,13 @@ cmake_minimum_required(VERSION 3.10)
 
 project(cpp LANGUAGES C CXX)
 
+option(LTO "Enable link time optimization(When CMAKE_BUILD_TYPE is Release)" ON)
+option(FORMAT "Format code" OFF)
+
+if(CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?Clang")
+  option(USE_LIBCXX "Use libc++" OFF)
+endif()
+
 set(SANITIZER
     ""
     CACHE

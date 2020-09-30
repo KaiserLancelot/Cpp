@@ -20,7 +20,7 @@ if(USE_LIBCXX)
   add_required_compiler_flag("-stdlib=libc++")
 endif()
 
-if(CMAKE_BUILD_TYPE STREQUAL "Release")
+if((CMAKE_BUILD_TYPE STREQUAL "Release") AND LTO)
   include(CheckIPOSupported)
   check_ipo_supported(RESULT lto_supported OUTPUT error)
 
