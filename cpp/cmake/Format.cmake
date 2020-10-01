@@ -1,5 +1,5 @@
-if(FORMAT)
-  message(STATUS "Formating code using clang-foramt and cmake-foramt")
+if(CPP_FORMAT)
+  message(STATUS "Format code using clang-format and cmake-format")
 
   find_program(CLANG_FORMAT_EXECUTABLE clang-format)
   find_program(CMAKE_FORMAT_EXECUTABLE cmake-format)
@@ -40,5 +40,5 @@ if(FORMAT)
     code_format
     COMMAND ${CLANG_FORMAT_EXECUTABLE} -i ${CLANG_FORMAT_SOURCES}
     COMMAND ${CMAKE_FORMAT_EXECUTABLE} -i ${CMAKE_FORMAT_SOURCES}
-    COMMENT "Format C++ and CMake files")
+    COMMENT "Code formatting completed")
 endif()

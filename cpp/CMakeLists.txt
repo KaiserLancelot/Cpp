@@ -1,22 +1,10 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.12)
 
 project(cpp LANGUAGES C CXX)
 
-option(FORMAT "Format code" OFF)
-
-if(CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?Clang")
-  option(USE_LIBCXX "Use libc++" OFF)
-endif()
-
-set(SANITIZER
-    ""
-    CACHE
-      STRING
-      "Build with a sanitizer. Options are: Address, Thread, Memory, Undefined and Address;Undefined"
-)
-
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
+include(Options)
 include(Check)
 include(CompilerOptions)
 include(LTO)

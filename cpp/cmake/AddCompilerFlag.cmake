@@ -1,6 +1,3 @@
-include(CheckCCompilerFlag)
-include(CheckCXXCompilerFlag)
-
 function(mangle_compiler_flag FLAG OUTPUT)
   string(TOUPPER "HAVE_FLAG_${FLAG}" SANITIZED_FLAG)
   string(REPLACE "+" "X" SANITIZED_FLAG ${SANITIZED_FLAG})
@@ -11,6 +8,9 @@ function(mangle_compiler_flag FLAG OUTPUT)
       "${SANITIZED_FLAG}"
       PARENT_SCOPE)
 endfunction()
+
+include(CheckCCompilerFlag)
+include(CheckCXXCompilerFlag)
 
 function(add_required_compiler_flag FLAG)
   mangle_compiler_flag("${FLAG}" MANGLED_FLAG)

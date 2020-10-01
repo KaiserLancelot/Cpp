@@ -1,3 +1,6 @@
 {
-  "cmake.configureArgs": ["-DSANITIZER=Address;Undefined", "-DFORMAT=ON"]
+  "cmake.configureArgs": [
+    "-DCPP_FORMAT=ON",
+    "-DCPP_SANITIZER=Address;Undefined"
+  ]
 }
