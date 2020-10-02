@@ -2,11 +2,12 @@ cmake_minimum_required(VERSION 3.12)
 
 project(cpp LANGUAGES C CXX)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 include(Options)
 include(Check)
 include(CompilerOptions)
+include(Format)
 include(LTO)
 include(Sanitizer)
 
@@ -50,5 +51,3 @@ add_subdirectory(new_features/cpp17/filesystem)
 add_subdirectory(new_features/cpp20)
 
 add_subdirectory(notes)
-
-include(Format)

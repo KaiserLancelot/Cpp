@@ -5,7 +5,7 @@ function(mangle_compiler_flag FLAG OUTPUT)
   string(REGEX REPLACE "_+" "_" SANITIZED_FLAG ${SANITIZED_FLAG})
 
   set(${OUTPUT}
-      "${SANITIZED_FLAG}"
+      ${SANITIZED_FLAG}
       PARENT_SCOPE)
 endfunction()
 
@@ -13,12 +13,12 @@ include(CheckCCompilerFlag)
 include(CheckCXXCompilerFlag)
 
 function(add_required_compiler_flag FLAG)
-  mangle_compiler_flag("${FLAG}" MANGLED_FLAG)
-  set(OLD_CMAKE_REQUIRED_FLAGS "${CMAKE_REQUIRED_FLAGS}")
+  mangle_compiler_flag(${FLAG} MANGLED_FLAG)
+  set(OLD_CMAKE_REQUIRED_FLAGS ${CMAKE_REQUIRED_FLAGS})
   set(CMAKE_REQUIRED_FLAGS "${CMAKE_REQUIRED_FLAGS} ${FLAG}")
-  check_c_compiler_flag("${FLAG}" ${MANGLED_FLAG}_C)
-  check_cxx_compiler_flag("${FLAG}" ${MANGLED_FLAG}_CXX)
-  set(CMAKE_REQUIRED_FLAGS "${OLD_CMAKE_REQUIRED_FLAGS}")
+  check_c_compiler_flag(${FLAG} ${MANGLED_FLAG}_C)
+  check_cxx_compiler_flag(${FLAG} ${MANGLED_FLAG}_CXX)
+  set(CMAKE_REQUIRED_FLAGS ${OLD_CMAKE_REQUIRED_FLAGS})
 
   set(VARIANT ${ARGV1})
   if(ARGV1)

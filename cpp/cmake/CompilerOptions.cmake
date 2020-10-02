@@ -20,6 +20,6 @@ if((CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?Clang")
   add_required_compiler_flag("-fstandalone-debug")
 endif()
 
-if(USE_LIBCXX)
+if(CPP_USE_LIBCXX)
   add_required_compiler_flag("-stdlib=libc++")
 endif()
