@@ -1,5 +1,7 @@
 if(CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL "x86_64")
   message(STATUS "x86_64 architecture detected")
+elseif(CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL "AMD64")
+  message(STATUS "AMD64 architecture detected")
 else()
   message(FATAL_ERROR "The architecture does not support: "
                       ${CMAKE_HOST_SYSTEM_PROCESSOR})
@@ -51,7 +53,7 @@ endif()
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE
       "Release"
-      CACHE STRING "Choose Release or Debug" FORCE)
+      CACHE STRING "Choose Release, Debug, MinSizeRel OR RelWithDebInfo" FORCE)
 endif()
 
 message(STATUS "Build type: " ${CMAKE_BUILD_TYPE})

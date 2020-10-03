@@ -14,12 +14,14 @@ add_required_compiler_flag("-Wextra")
 add_required_compiler_flag("-Wpedantic")
 add_required_compiler_flag("-Werror")
 
-if((CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?Clang")
-   AND ((CMAKE_BUILD_TYPE STREQUAL "Debug") OR (CMAKE_BUILD_TYPE STREQUAL
-                                                "RelWithDebInfo")))
-  add_required_compiler_flag("-fstandalone-debug")
-endif()
-
 if(CPP_USE_LIBCXX)
+  message(STATUS "Use libc++")
   add_required_compiler_flag("-stdlib=libc++")
+
+  # https://blog.jetbrains.com/clion/2019/10/clion-2019-3-eap-debugger-improvements/
+  if(((CMAKE_BUILD_TYPE STREQUAL "Debug") OR (CMAKE_BUILD_TYPE STREQUAL
+                                              "RelWithDebInfo"))
+     AND (CMAKE_SYSTEM_NAME STREQUAL "Linux"))
+    add_required_compiler_flag("-fstandalone-debug")
+  endif()
 endif()

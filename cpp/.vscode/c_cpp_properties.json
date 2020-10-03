@@ -1,7 +1,7 @@
 {
   "configurations": [
     {
-      "name": "Linux",
+      "name": "Ubuntu",
       "includePath": [
         "/usr/include/c++/10",
         "/usr/include/x86_64-linux-gnu/c++/10",
