@@ -53,7 +53,7 @@ endif()
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE
       "Release"
-      CACHE STRING "Choose Release, Debug, MinSizeRel OR RelWithDebInfo" FORCE)
+      CACHE STRING "Choose Release, Debug, MinSizeRel or RelWithDebInfo" FORCE)
 endif()
 
 message(STATUS "Build type: " ${CMAKE_BUILD_TYPE})
