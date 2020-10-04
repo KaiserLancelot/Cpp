@@ -9,8 +9,7 @@
         "/usr/lib/gcc/x86_64-linux-gnu/10/include",
         "/usr/local/include",
         "/usr/include/x86_64-linux-gnu",
-        "/usr/include",
-        "/usr/lib/llvm-10/lib/clang/10.0.0/include"
+        "/usr/include"
       ]
     }
   ]

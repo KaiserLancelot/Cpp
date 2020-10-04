@@ -15,6 +15,10 @@ add_compiler_flag("-Wpedantic")
 add_compiler_flag("-Werror")
 
 if(CPP_USE_LIBCXX)
+  if(CMAKE_COMPILER_IS_GNUCXX)
+    message(FATAL_ERROR "GCC does not support libc++")
+  endif()
+
   message(STATUS "Use libc++")
   add_cxx_compiler_flag("-stdlib=libc++")
 
