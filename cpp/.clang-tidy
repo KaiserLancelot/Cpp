@@ -10,6 +10,7 @@ Checks: "*,
   -hicpp-uppercase-literal-suffix,
   -llvm-header-guard,
   -llvm-include-order,
+  -llvmlibc-*,
   -modernize-use-trailing-return-type,
   -readability-magic-numbers"
 
