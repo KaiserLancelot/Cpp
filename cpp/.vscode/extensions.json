@@ -1,14 +1,12 @@
 {
   "recommendations": [
+    "ms-vscode.cpptools",
     "amiralizadeh9480.cpp-helper",
     "matepek.vscode-catch2-test-adapter",
-    "llvm-vs-code-extensions.vscode-clangd",
     "twxs.cmake",
     "ms-vscode.cmake-tools",
     "cheshirekow.cmake-format",
-    "vadimcn.vscode-lldb",
     "cschlosser.doxdocgen",
-    "ajshort.include-autocomplete",
     "surajbarkale.ninja",
     "zxh404.vscode-proto3"
   ]
