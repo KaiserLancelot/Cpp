@@ -1,20 +1,19 @@
-Checks: "-*,
-  boost-*,
-  bugprone-*,
-  cert-*,
-  clang-analyzer-*,
-  cppcoreguidelines-*,
-  google-*,
-  hicpp-*,
-  misc-*,
-  modernize-*,
-  mpi-*,
-  performance-*,
-  portability-*,
-  readability-*,
-  -modernize-use-trailing-return-type"
+Checks: "*,
+  -fuchsia-default-arguments-calls,
+  -fuchsia-default-arguments-declarations,
+  -fuchsia-overloaded-operator,
+  -google-runtime-references,
+  -hicpp-avoid-goto,
+  -hicpp-explicit-conversions,
+  -hicpp-no-array-decay,
+  -hicpp-special-member-functions,
+  -hicpp-uppercase-literal-suffix,
+  -llvm-header-guard,
+  -llvm-include-order,
+  -modernize-use-trailing-return-type,
+  -readability-magic-numbers"
 
-WarningsAsErrors: "clang-analyzer-*"
+WarningsAsErrors: "clang-analyzer-*,clang-diagnostic-*"
 
 HeaderFilterRegex: ".*"
 
