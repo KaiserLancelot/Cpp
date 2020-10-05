@@ -56,7 +56,7 @@ jobs:
           cd ..
           wget -q https://github.com/gabime/spdlog/archive/v1.8.1.zip
           unzip -q v1.8.1.zip
-          cd spdlog-1.8.0
+          cd spdlog-1.8.1
           cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
           -DSPDLOG_BUILD_EXAMPLE=OFF -DSPDLOG_FMT_EXTERNAL=ON \
           -DSPDLOG_BUILD_SHARED=ON

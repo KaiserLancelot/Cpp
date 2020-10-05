@@ -7,20 +7,6 @@ else()
                       ${CMAKE_HOST_SYSTEM_PROCESSOR})
 endif()
 
-if((NOT (CMAKE_C_COMPILER_ID STREQUAL CMAKE_CXX_COMPILER_ID))
-   OR (NOT (CMAKE_C_COMPILER_VERSION STREQUAL CMAKE_CXX_COMPILER_VERSION)))
-  message(
-    FATAL_ERROR
-      "C compiler and C++ compiler are different. C: "
-      ${CMAKE_C_COMPILER_ID}
-      " "
-      ${CMAKE_C_COMPILER_VERSION}
-      ", C++: "
-      ${CMAKE_CXX_COMPILER_ID}
-      " "
-      ${CMAKE_CXX_COMPILER_VERSION})
-endif()
-
 if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
   if(CMAKE_COMPILER_IS_GNUCXX)
     message(STATUS "Linux and GCC")

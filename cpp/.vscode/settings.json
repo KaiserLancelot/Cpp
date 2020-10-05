@@ -2,6 +2,5 @@
   "cmake.configureArgs": [
     "-DCPP_FORMAT=ON",
     "-DCPP_SANITIZER=Address;Undefined"
-  ],
-  "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json"
+  ]
 }

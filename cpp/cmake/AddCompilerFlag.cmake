@@ -10,7 +10,6 @@ function(mangle_compiler_flag FLAG OUTPUT)
       PARENT_SCOPE)
 endfunction()
 
-include(CheckCCompilerFlag)
 include(CheckCXXCompilerFlag)
 
 function(add_cxx_compiler_flag FLAG)
@@ -21,27 +20,6 @@ function(add_cxx_compiler_flag FLAG)
   set(CMAKE_REQUIRED_FLAGS ${OLD_CMAKE_REQUIRED_FLAGS})
 
   if(${MANGLED_FLAG}_CXX)
-    set(CMAKE_CXX_FLAGS
-        "${CMAKE_CXX_FLAGS} ${FLAG}"
-        PARENT_SCOPE)
-  else()
-    message(
-      FATAL_ERROR "Required flag '${FLAG}' is not supported by the compiler")
-  endif()
-endfunction()
-
-function(add_compiler_flag FLAG)
-  mangle_compiler_flag(${FLAG} MANGLED_FLAG)
-  set(OLD_CMAKE_REQUIRED_FLAGS ${CMAKE_REQUIRED_FLAGS})
-  set(CMAKE_REQUIRED_FLAGS "${CMAKE_REQUIRED_FLAGS} ${FLAG}")
-  check_c_compiler_flag(${FLAG} ${MANGLED_FLAG}_C)
-  check_cxx_compiler_flag(${FLAG} ${MANGLED_FLAG}_CXX)
-  set(CMAKE_REQUIRED_FLAGS ${OLD_CMAKE_REQUIRED_FLAGS})
-
-  if(${MANGLED_FLAG}_C AND ${MANGLED_FLAG}_CXX)
-    set(CMAKE_C_FLAGS
-        "${CMAKE_C_FLAGS} ${FLAG}"
-        PARENT_SCOPE)
     set(CMAKE_CXX_FLAGS
         "${CMAKE_CXX_FLAGS} ${FLAG}"
         PARENT_SCOPE)
