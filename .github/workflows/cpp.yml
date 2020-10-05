@@ -23,80 +23,94 @@ jobs:
         run: |
           sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
           sudo apt update
-          sudo apt install gcc-10 g++-10 libjemalloc-dev
+          sudo apt install gcc-10 g++-10 libjemalloc-dev zlib1g-dev
           wget -q https://github.com/facebook/zstd/archive/v1.4.5.zip
           unzip -q v1.4.5.zip
-          cd zstd-1.4.5
-          make lib -j$(nproc)
-          sudo make install
-          cd ..
+          cd zstd-1.4.5/build/cmake
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
+          -DZSTD_BUILD_PROGRAMS=OFF -DZSTD_BUILD_TESTS=OFF
+          cmake --build build --config Release -j$(nproc)
+          sudo cmake --build build --config Release --target install
+          sudo ldconfig
+          cd ../../..
           wget -q https://github.com/facebook/rocksdb/archive/v6.11.4.zip
           unzip -q v6.11.4.zip
           cd rocksdb-6.11.4
-          cmake -DCMAKE_BUILD_TYPE=Release \
-          -DWITH_BZ2=OFF -DWITH_LZ4=OFF -DWITH_SNAPPY=OFF -DWITH_ZLIB=OFF -DWITH_ZSTD=ON \
-          -DUSE_RTTI=ON -DWITH_JEMALLOC=ON -DWITH_GFLAGS=OFF -DFAIL_ON_WARNINGS=OFF -DPORTABLE=OFF \
-          -DWITH_BENCHMARK_TOOLS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local -S . -B build
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
+          -DWITH_JEMALLOC=ON -DWITH_ZSTD=ON -DWITH_GFLAGS=OFF \
+          -DUSE_RTTI=ON -DWITH_RUNTIME_DEBUG=OFF -DROCKSDB_BUILD_SHARED=ON \
+          -DWITH_TESTS=OFF -DWITH_BENCHMARK_TOOLS=OFF -DWITH_CORE_TOOLS=OFF \
+          -DWITH_TOOLS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          sudo ldconfig
           cd ..
           wget -q https://github.com/fmtlib/fmt/archive/7.0.3.zip
           unzip -q 7.0.3.zip
           cd fmt-7.0.3
-          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DFMT_TEST=OFF \
-          -DBUILD_SHARED_LIBS=TRUE
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
+          -DFMT_DOC=OFF -DFMT_TEST=OFF -DBUILD_SHARED_LIBS=TRUE
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          sudo ldconfig
           cd ..
-          wget -q https://github.com/gabime/spdlog/archive/v1.8.0.zip
-          unzip -q v1.8.0.zip
+          wget -q https://github.com/gabime/spdlog/archive/v1.8.1.zip
+          unzip -q v1.8.1.zip
           cd spdlog-1.8.0
-          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DSPDLOG_FMT_EXTERNAL=ON \
-          -DSPDLOG_BUILD_SHARED=ON -DSPDLOG_BUILD_EXAMPLE=OFF -DSPDLOG_BUILD_TESTS=OFF \
-          -DSPDLOG_BUILD_TESTS_HO=OFF -DSPDLOG_BUILD_BENCH=OFF -DSPDLOG_BUILD_ALL=OFF
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
+          -DSPDLOG_BUILD_EXAMPLE=OFF -DSPDLOG_FMT_EXTERNAL=ON \
+          -DSPDLOG_BUILD_SHARED=ON
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          sudo ldconfig
           cd ..
           wget -q https://github.com/google/benchmark/archive/v1.5.2.zip
           unzip -q v1.5.2.zip
           cd benchmark-1.5.2
-          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBENCHMARK_ENABLE_TESTING=OFF \
-          -DBENCHMARK_ENABLE_LTO=ON -DBENCHMARK_ENABLE_GTEST_TESTS=OFF \
-          -DBUILD_SHARED_LIBS=ON
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
+          -DBENCHMARK_ENABLE_TESTING=OFF -DBENCHMARK_ENABLE_LTO=ON \
+          -DBENCHMARK_USE_LIBCXX=OFF -DBENCHMARK_ENABLE_GTEST_TESTS=OFF \
+          -DBENCHMARK_ENABLE_ASSEMBLY_TESTS=OFF -DBUILD_SHARED_LIBS=ON
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          sudo ldconfig
           cd ..
           wget -q https://github.com/google/googletest/archive/release-1.10.0.zip
           unzip -q release-1.10.0.zip
           cd googletest-release-1.10.0
-          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_GMOCK=OFF \
-          -DBUILD_SHARED_LIBS=ON -Dgtest_build_tests=OFF
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
+          -DBUILD_GMOCK=OFF -DBUILD_SHARED_LIBS=ON
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          sudo ldconfig
           cd ..
           wget -q https://github.com/mysql/mysql-connector-cpp/archive/8.0.21.zip
           unzip -q 8.0.21.zip
           cd mysql-connector-cpp-8.0.21
-          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local \
-          -DCMAKE_INSTALL_LIBDIR=lib -DWITH_TESTS=FALSE
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
+          -DBUILD_STATIC=OFF -DWITH_TESTS=OFF \
+          -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_INSTALL_LIBDIR=lib
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          sudo ldconfig
           cd ..
           wget -q https://github.com/Neargye/magic_enum/archive/v0.6.6.zip
           unzip -q v0.6.6.zip
           cd magic_enum-0.6.6
-          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DMAGIC_ENUM_OPT_BUILD_EXAMPLES=OFF \
-          -DMAGIC_ENUM_OPT_BUILD_TESTS=OFF
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
+          -DMAGIC_ENUM_OPT_BUILD_EXAMPLES=OFF -DMAGIC_ENUM_OPT_BUILD_TESTS=OFF
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          sudo ldconfig
           cd ..
           wget -q https://github.com/nlohmann/json/archive/v3.9.1.zip
           unzip -q v3.9.1.zip
           cd json-3.9.1
-          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DJSON_BuildTests=OFF \
-          -DJSON_MultipleHeaders=ON
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
+          -DJSON_BuildTests=OFF -DJSON_MultipleHeaders=ON
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          sudo ldconfig
           cd ..
           wget -q https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protobuf-cpp-3.13.0.zip
           unzip -q protobuf-cpp-3.13.0.zip
@@ -104,44 +118,46 @@ jobs:
           ./configure
           make -j$(nproc)
           sudo make install
+          sudo ldconfig
           cd ..
           wget -q https://github.com/libarchive/libarchive/archive/v3.4.3.zip
           unzip -q v3.4.3.zip
           cd libarchive-3.4.3
           cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
-          -DENABLE_MBEDTLS=OFF -DENABLE_NETTLE=OFF -DENABLE_OPENSSL=OFF \
-          -DENABLE_LIBB2=OFF -DENABLE_LZ4=OFF -DENABLE_LZO=OFF \
-          -DENABLE_LZMA=OFF -DENABLE_ZSTD=ON -DENABLE_ZLIB=OFF \
-          -DENABLE_BZip2=OFF -DENABLE_LIBXML2=OFF -DENABLE_EXPAT=OFF \
-          -DENABLE_PCREPOSIX=ON -DENABLE_LibGCC=ON -DENABLE_CNG=OFF \
-          -DENABLE_TAR=OFF -DENABLE_CPIO=OFF -DENABLE_CAT=OFF \
-          -DENABLE_XATTR=OFF -DENABLE_ACL=OFF -DENABLE_ICONV=OFF \
-          -DENABLE_TEST=OFF -DENABLE_COVERAGE=OFF
+          -DENABLE_OPENSSL=OFF -DENABLE_LIBB2=OFF -DENABLE_LZ4=OFF \
+          -DENABLE_LZO=OFF -DENABLE_LZMA=OFF -DENABLE_ZSTD=ON \
+          -DENABLE_ZLIB=OFF -DENABLE_BZip2=OFF -DENABLE_LIBXML2=OFF \
+          -DENABLE_EXPAT=OFF -DENABLE_CNG=OFF -DENABLE_TAR=OFF \
+          -DENABLE_CPIO=OFF -DENABLE_CAT=OFF -DENABLE_XATTR=OFF \
+          -DENABLE_ACL=OFF -DENABLE_ICONV=OFF -DENABLE_TEST=OFF
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          sudo ldconfig
           cd ..
           wget -q https://github.com/curl/curl/archive/curl-7_72_0.zip
           unzip -q curl-7_72_0.zip
           cd curl-curl-7_72_0
           cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
-          -DBUILD_CURL_EXE=OFF -DCURL_LTO=ON -DHTTP_ONLY=ON \
-          -DCURL_ZLIB=OFF -DBUILD_TESTING=OFF
+          -DBUILD_CURL_EXE=OFF -DBUILD_SHARED_LIBS=ON \
+          -DCURL_LTO=ON -DHTTP_ONLY=ON -DENABLE_MANUAL=OFF \
+          -DCURL_ZLIB=OFF -DCURL_ZSTD=OFF -DBUILD_TESTING=OFF
           cmake --build build --config Release -j$(nproc)
           sudo cmake --build build --config Release --target install
+          sudo ldconfig
           cd ..
           wget -q https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz
           tar -xf icu4c-67_1-src.tgz
           cd icu/source
-          ./configure --prefix=/usr/local --enable-tests=no --enable-samples=no
+          ./configure --enable-tests=no --enable-samples=no
           make -j$(nproc)
           sudo make install
+          sudo ldconfig
           cd ../..
           wget -q https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz
           tar -xf boost_1_74_0.tar.gz
           cd boost_1_74_0
           ./bootstrap.sh
           sudo ./b2 --toolset=gcc-10 --with-program_options install
-          cd ..
           sudo ldconfig
         env:
           CC: gcc-10
