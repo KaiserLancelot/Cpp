@@ -34,11 +34,11 @@ jobs:
 
       - name: Build and install dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: sudo bash -e ./cpp/scripts/build-install-dependencies.sh
+        run: sudo bash ./cpp/scripts/build-install-dependencies.sh
 
       - name: Install dependencies
         if: steps.cache-dependencies.outputs.cache-hit == 'true'
-        run: sudo bash -e ./cpp/scripts/install-dependencies.sh
+        run: sudo bash ./cpp/scripts/install-dependencies.sh
 
       - name: Configure
         run: cd cpp ; cmake -S . -B build

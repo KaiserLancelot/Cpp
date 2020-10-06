@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/bin/bash
+
+set -e
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     export CC=gcc-10

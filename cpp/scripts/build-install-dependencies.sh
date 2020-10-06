@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/bin/bash
+
+set -e
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     export CC=gcc-10
@@ -22,7 +24,7 @@ cd dependencies
 
 # zlib
 if [ ! -f "zlib-1.2.11.zip" ]; then
-    wget -q https://github.com/madler/zlib/archi3ve/v1.2.11.zip -O zlib-1.2.11.zip
+    wget https://github.com/madler/zlib/archive/v1.2.11.zip -O zlib-1.2.11.zip
 else
     echo "Build zlib"
 fi
@@ -37,7 +39,7 @@ cd ..
 
 # jemalloc
 if [ ! -f "jemalloc-5.2.1.zip" ]; then
-    wget -q https://github.com/jemalloc/jemalloc/archive/5.2.1.zip -O jemalloc-5.2.1.zip
+    wget https://github.com/jemalloc/jemalloc/archive/5.2.1.zip -O jemalloc-5.2.1.zip
 else
     echo "Build jemalloc"
 fi
@@ -52,7 +54,7 @@ cd ..
 
 # zstd
 if [ ! -f "zstd-1.4.5.zip" ]; then
-    wget -q https://github.com/facebook/zstd/archive/v1.4.5.zip -O zstd-1.4.5.zip
+    wget https://github.com/facebook/zstd/archive/v1.4.5.zip -O zstd-1.4.5.zip
 else
     echo "Build Zstandard"
 fi
@@ -68,7 +70,7 @@ cd ../../..
 
 # rocksdb
 if [ ! -f "rocksdb-6.11.4.zip" ]; then
-    wget -q https://github.com/facebook/rocksdb/archive/v6.11.4.zip -O rocksdb-6.11.4.zip
+    wget https://github.com/facebook/rocksdb/archive/v6.11.4.zip -O rocksdb-6.11.4.zip
 else
     echo "Build RocksDB"
 fi
@@ -87,7 +89,7 @@ cd ..
 
 # fmt
 if [ ! -f "fmt-7.0.3.zip" ]; then
-    wget -q https://github.com/fmtlib/fmt/archive/7.0.3.zip -O fmt-7.0.3.zip
+    wget https://github.com/fmtlib/fmt/archive/7.0.3.zip -O fmt-7.0.3.zip
 else
     echo "Build fmt"
 fi
@@ -103,7 +105,7 @@ cd ..
 
 # spdlog
 if [ ! -f "spdlog-1.8.1.zip" ]; then
-    wget -q https://github.com/gabime/spdlog/archive/v1.8.1.zip -O spdlog-1.8.1.zip
+    wget https://github.com/gabime/spdlog/archive/v1.8.1.zip -O spdlog-1.8.1.zip
 else
     echo "Build spdlog"
 fi
@@ -120,7 +122,7 @@ cd ..
 
 # google benchmark
 if [ ! -f "benchmark-1.5.2.zip" ]; then
-    wget -q https://github.com/google/benchmark/archive/v1.5.2.zip -O benchmark-1.5.2.zip
+    wget https://github.com/google/benchmark/archive/v1.5.2.zip -O benchmark-1.5.2.zip
 else
     echo "Build google benchmark"
 fi
@@ -138,7 +140,7 @@ cd ..
 
 # google test
 if [ ! -f "googletest-release-1.10.0.zip" ]; then
-    wget -q https://github.com/google/googletest/archive/release-1.10.0.zip -O googletest-release-1.10.0.zip
+    wget https://github.com/google/googletest/archive/release-1.10.0.zip -O googletest-release-1.10.0.zip
 else
     echo "Build google test"
 fi
@@ -154,7 +156,7 @@ cd ..
 
 # mysql connector
 if [ ! -f "mysql-connector-cpp-8.0.21.zip" ]; then
-    wget -q https://github.com/mysql/mysql-connector-cpp/archive/8.0.21.zip -O mysql-connector-cpp-8.0.21.zip
+    wget https://github.com/mysql/mysql-connector-cpp/archive/8.0.21.zip -O mysql-connector-cpp-8.0.21.zip
 else
     echo "Build mysql connector"
 fi
@@ -171,7 +173,7 @@ cd ..
 
 # magic enum
 if [ ! -f "magic_enum-0.6.6.zip" ]; then
-    wget -q https://github.com/Neargye/magic_enum/archive/v0.6.6.zip -O magic_enum-0.6.6.zip
+    wget https://github.com/Neargye/magic_enum/archive/v0.6.6.zip -O magic_enum-0.6.6.zip
 else
     echo "Build magic enum"
 fi
@@ -187,7 +189,7 @@ cd ..
 
 # json
 if [ ! -f "json-3.9.1.zip" ]; then
-    wget -q https://github.com/nlohmann/json/archive/v3.9.1.zip -O json-3.9.1.zip
+    wget https://github.com/nlohmann/json/archive/v3.9.1.zip -O json-3.9.1.zip
 else
     echo "Build json"
 fi
@@ -203,7 +205,7 @@ cd ..
 
 # protobuf
 if [ ! -f "protobuf-cpp-3.13.0.zip" ]; then
-    wget -q https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protobuf-cpp-3.13.0.zip \
+    wget https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protobuf-cpp-3.13.0.zip \
         -O protobuf-cpp-3.13.0.zip
 else
     echo "Build protobuf"
@@ -219,7 +221,7 @@ cd ..
 
 # libarchive
 if [ ! -f "libarchive-3.4.3.zip" ]; then
-    wget -q https://github.com/libarchive/libarchive/archive/v3.4.3.zip -O libarchive-3.4.3.zip
+    wget https://github.com/libarchive/libarchive/archive/v3.4.3.zip -O libarchive-3.4.3.zip
 else
     echo "Build libarchive"
 fi
@@ -240,7 +242,7 @@ cd ..
 
 # curl
 if [ ! -f "curl-curl-7_72_0.zip" ]; then
-    wget -q https://github.com/curl/curl/archive/curl-7_72_0.zip -O curl-curl-7_72_0.zip
+    wget https://github.com/curl/curl/archive/curl-7_72_0.zip -O curl-curl-7_72_0.zip
 else
     echo "Build curl"
 fi
@@ -258,7 +260,7 @@ cd ..
 
 # icu
 if [ ! -f "icu4c-67_1-src.tgz" ]; then
-    wget -q https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz \
+    wget https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz \
         -O icu4c-67_1-src.tgz
 else
     echo "Build icu"
@@ -274,7 +276,7 @@ cd ../..
 
 # boost
 if [ ! -f "boost_1_74_0.tar.gz" ]; then
-    wget -q https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz \
+    wget https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz \
         -O boost_1_74_0.tar.gz
 else
     echo "Build boost"
