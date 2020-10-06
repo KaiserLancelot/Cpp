@@ -30,15 +30,15 @@ jobs:
         uses: actions/cache@v2
         with:
           path: dependencies
-          key: ${{ runner.os }}-dependencies
+          key: ${{ runner.os }}-gcc10-dependencies-20201006
 
       - name: Build and install dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: sudo bash ./cpp/scripts/build-install.sh
+        run: sudo bash -e ./cpp/scripts/build-install-dependencies.sh
 
       - name: Install dependencies
         if: steps.cache-dependencies.outputs.cache-hit == 'true'
-        run: sudo bash ./cpp/scripts/install.sh
+        run: sudo bash -e ./cpp/scripts/install-dependencies.sh
 
       - name: Configure
         run: cd cpp ; cmake -S . -B build

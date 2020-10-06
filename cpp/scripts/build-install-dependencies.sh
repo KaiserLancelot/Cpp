@@ -22,7 +22,7 @@ cd dependencies
 
 # zlib
 if [ ! -f "zlib-1.2.11.zip" ]; then
-    wget -q https://github.com/madler/zlib/archive/v1.2.11.zip -O zlib-1.2.11.zip
+    wget -q https://github.com/madler/zlib/archi3ve/v1.2.11.zip -O zlib-1.2.11.zip
 else
     echo "Build zlib"
 fi
@@ -258,7 +258,7 @@ cd ..
 
 # icu
 if [ ! -f "icu4c-67_1-src.tgz" ]; then
-    wget -q https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgzp \
+    wget -q https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz \
         -O icu4c-67_1-src.tgz
 else
     echo "Build icu"
@@ -274,7 +274,8 @@ cd ../..
 
 # boost
 if [ ! -f "boost_1_74_0.tar.gz" ]; then
-    wget -q https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz -O boost_1_74_0.tar.gz
+    wget -q https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz \
+        -O boost_1_74_0.tar.gz
 else
     echo "Build boost"
 fi
