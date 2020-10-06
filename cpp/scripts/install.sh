@@ -2,16 +2,7 @@
 
 set -e
 
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    export CC=gcc-10
-    export CXX=g++-10
-    echo "System: $OSTYPE"
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    echo "System: $OSTYPE"
-else
-    echo "The system does not support"
-    exit 1
-fi
+source install-system.sh
 
 if [ ! -d "dependencies" ]; then
     echo "The dependencies directory does not exist"
