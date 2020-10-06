@@ -2,7 +2,7 @@
 
 set -e
 
-source install-system.sh
+source $(dirname "$0")/install-system.sh
 
 if [ ! -d "dependencies" ]; then
     echo "The dependencies directory does not exist"
