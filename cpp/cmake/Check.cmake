@@ -21,12 +21,6 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
                           ${CMAKE_CXX_COMPILER_VERSION})
     endif()
   endif()
-elseif(APPLE AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
-  message(STATUS "macOS and AppleClang")
-  if(CMAKE_CXX_COMPILER_VERSION VERSION_LESS 11.0.3)
-    message(FATAL_ERROR "AppleClang version must be at least 11.0.3: "
-                        ${CMAKE_CXX_COMPILER_VERSION})
-  endif()
 else()
   message(FATAL_ERROR "The system and compiler combination does not support: "
                       ${CMAKE_SYSTEM_NAME} " " ${CMAKE_CXX_COMPILER_ID})

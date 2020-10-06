@@ -21,7 +21,7 @@ unzip -q zlib-*.zip
 rm zlib-*.zip
 cd zlib-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
-cmake --build build --config Release -j$PARALLEL
+cmake --build build --config Release -j$(nproc)
 sudo cmake --build build --config Release --target install
 
 cd ..
@@ -36,7 +36,7 @@ unzip -q jemalloc-*.zip
 rm jemalloc-*.zip
 cd jemalloc-*
 ./autogen.sh
-make -j$PARALLEL
+make -j$(nproc)
 sudo make install
 
 cd ..
@@ -52,7 +52,7 @@ rm zstd-*.zip
 cd zstd-*/build/cmake
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DZSTD_BUILD_PROGRAMS=OFF -DZSTD_BUILD_TESTS=OFF
-cmake --build build --config Release -j$PARALLEL
+cmake --build build --config Release -j$(nproc)
 sudo cmake --build build --config Release --target install
 
 cd ../../..
@@ -71,7 +71,7 @@ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DUSE_RTTI=ON -DWITH_RUNTIME_DEBUG=OFF -DROCKSDB_BUILD_SHARED=ON \
     -DWITH_TESTS=OFF -DWITH_BENCHMARK_TOOLS=OFF -DWITH_CORE_TOOLS=OFF \
     -DWITH_TOOLS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local
-cmake --build build --config Release -j$PARALLEL
+cmake --build build --config Release -j$(nproc)
 sudo cmake --build build --config Release --target install
 
 cd ..
@@ -87,7 +87,7 @@ rm fmt-*.zip
 cd fmt-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DFMT_DOC=OFF -DFMT_TEST=OFF -DBUILD_SHARED_LIBS=TRUE
-cmake --build build --config Release -j$PARALLEL
+cmake --build build --config Release -j$(nproc)
 sudo cmake --build build --config Release --target install
 
 cd ..
@@ -104,7 +104,7 @@ cd spdlog-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DSPDLOG_BUILD_EXAMPLE=OFF -DSPDLOG_FMT_EXTERNAL=ON \
     -DSPDLOG_BUILD_SHARED=ON
-cmake --build build --config Release -j$PARALLEL
+cmake --build build --config Release -j$(nproc)
 sudo cmake --build build --config Release --target install
 
 cd ..
@@ -122,7 +122,7 @@ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DBENCHMARK_ENABLE_TESTING=OFF -DBENCHMARK_ENABLE_LTO=ON \
     -DBENCHMARK_USE_LIBCXX=OFF -DBENCHMARK_ENABLE_GTEST_TESTS=OFF \
     -DBENCHMARK_ENABLE_ASSEMBLY_TESTS=OFF -DBUILD_SHARED_LIBS=ON
-cmake --build build --config Release -j$PARALLEL
+cmake --build build --config Release -j$(nproc)
 sudo cmake --build build --config Release --target install
 
 cd ..
@@ -138,7 +138,7 @@ rm googletest-release-*.zip
 cd googletest-release-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DBUILD_GMOCK=OFF -DBUILD_SHARED_LIBS=ON
-cmake --build build --config Release -j$PARALLEL
+cmake --build build --config Release -j$(nproc)
 sudo cmake --build build --config Release --target install
 
 cd ..
@@ -155,7 +155,7 @@ cd mysql-connector-cpp-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DBUILD_STATIC=OFF -DWITH_TESTS=OFF \
     -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_INSTALL_LIBDIR=lib
-cmake --build build --config Release -j$PARALLEL
+cmake --build build --config Release -j$(nproc)
 sudo cmake --build build --config Release --target install
 
 cd ..
@@ -171,7 +171,7 @@ rm magic_enum-*.zip
 cd magic_enum-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DMAGIC_ENUM_OPT_BUILD_EXAMPLES=OFF -DMAGIC_ENUM_OPT_BUILD_TESTS=OFF
-cmake --build build --config Release -j$PARALLEL
+cmake --build build --config Release -j$(nproc)
 sudo cmake --build build --config Release --target install
 
 cd ..
@@ -187,7 +187,7 @@ rm json-*.zip
 cd json-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DJSON_BuildTests=OFF -DJSON_MultipleHeaders=ON
-cmake --build build --config Release -j$PARALLEL
+cmake --build build --config Release -j$(nproc)
 sudo cmake --build build --config Release --target install
 
 cd ..
@@ -203,7 +203,7 @@ unzip -q protobuf-cpp-*.zip
 rm protobuf-cpp-*.zip
 cd protobuf-*
 ./configure
-make -j$PARALLEL
+make -j$(nproc)
 sudo make install
 
 cd ..
@@ -224,7 +224,7 @@ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DENABLE_EXPAT=OFF -DENABLE_CNG=OFF -DENABLE_TAR=OFF \
     -DENABLE_CPIO=OFF -DENABLE_CAT=OFF -DENABLE_XATTR=OFF \
     -DENABLE_ACL=OFF -DENABLE_ICONV=OFF -DENABLE_TEST=OFF
-cmake --build build --config Release -j$PARALLEL
+cmake --build build --config Release -j$(nproc)
 sudo cmake --build build --config Release --target install
 
 cd ..
@@ -242,7 +242,7 @@ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DBUILD_CURL_EXE=OFF -DBUILD_SHARED_LIBS=ON \
     -DCURL_LTO=ON -DHTTP_ONLY=ON -DENABLE_MANUAL=OFF \
     -DCURL_ZLIB=OFF -DCURL_ZSTD=OFF -DBUILD_TESTING=OFF
-cmake --build build --config Release -j$PARALLEL
+cmake --build build --config Release -j$(nproc)
 sudo cmake --build build --config Release --target install
 
 cd ..
@@ -258,7 +258,7 @@ tar -xf icu4c-*-src.tgz
 rm icu4c-*-src.tgz
 cd icu/source
 ./configure --enable-tests=no --enable-samples=no
-make -j$PARALLEL
+make -j$(nproc)
 sudo make install
 
 cd ../..
@@ -281,10 +281,6 @@ cd ..
 
 cd ..
 
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    sudo ldconfig
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    sudo update_dyld_shared_cache
-fi
+sudo ldconfig
 
 echo "Build and install completed"
