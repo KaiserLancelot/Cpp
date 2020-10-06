@@ -30,7 +30,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: dependencies
-          key: ${{ runner.os }}-gcc10-dependencies-20201006
+          key: ${{ runner.os }}-dependencies-20201006
 
       - name: Build and install dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
