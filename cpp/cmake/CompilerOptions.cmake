@@ -10,18 +10,15 @@ add_cxx_compiler_flag("-Wextra")
 add_cxx_compiler_flag("-Wpedantic")
 add_cxx_compiler_flag("-Werror")
 
-if(CPP_USE_LIBCXX)
-  if(CMAKE_COMPILER_IS_GNUCXX)
-    message(FATAL_ERROR "GCC does not support libc++")
-  endif()
+# https://github.com/ninja-build/ninja/blob/master/CMakeLists.txt
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+  include(CheckIPOSupported)
+  check_ipo_supported(RESULT LTO_SUPPORTED OUTPUT ERROR)
 
-  message(STATUS "Use libc++")
-  add_cxx_compiler_flag("-stdlib=libc++")
-
-  # https://blog.jetbrains.com/clion/2019/10/clion-2019-3-eap-debugger-improvements/
-  if(((CMAKE_BUILD_TYPE STREQUAL "Debug") OR (CMAKE_BUILD_TYPE STREQUAL
-                                              "RelWithDebInfo"))
-     AND (CMAKE_SYSTEM_NAME STREQUAL "Linux"))
-    add_cxx_compiler_flag("-fstandalone-debug")
+  if(LTO_SUPPORTED)
+    message(STATUS "IPO / LTO enabled")
+    set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
+  else()
+    message(FATAL_ERROR "IPO / LTO not supported: ${ERROR}")
   endif()
 endif()
