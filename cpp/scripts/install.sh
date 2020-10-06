@@ -1,98 +1,109 @@
-#!/bin/sh -e
+#!/bin/bash -e
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    export CC=gcc-10
+    export CXX=g++-10
+    echo "System: $OSTYPE"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    echo "System: $OSTYPE"
+else
+    echo "The system does not support"
+    exit 1
+fi
+
+if [ ! -d "dependencies" ]; then
+    echo "The dependencies directory does not exist"
+    exit 1
+fi
 
 cd dependencies
 
 cd zlib-*
 sudo cmake --build build --config Release --target install
-sudo ldconfig
 
 cd ..
 
 cd jemalloc-*
 sudo make install
-sudo ldconfig
 
 cd ..
 
 cd zstd-*/build/cmake
 sudo cmake --build build --config Release --target install
-sudo ldconfig
 
 cd ../../..
 
 cd rocksdb-*
 sudo cmake --build build --config Release --target install
-sudo ldconfig
 
 cd ..
 
 cd fmt-*
 sudo cmake --build build --config Release --target install
-sudo ldconfig
+
+cd ..
+
+cd spdlog-*
+sudo cmake --build build --config Release --target install
 
 cd ..
 
 cd benchmark-*
 sudo cmake --build build --config Release --target install
-sudo ldconfig
 
 cd ..
 
 cd googletest-release-*
 sudo cmake --build build --config Release --target install
-sudo ldconfig
 
 cd ..
 
 cd mysql-connector-cpp-*
 sudo cmake --build build --config Release --target install
-sudo ldconfig
 
 cd ..
 
 cd magic_enum-*
 sudo cmake --build build --config Release --target install
-sudo ldconfig
 
 cd ..
 
 cd json-*
 sudo cmake --build build --config Release --target install
-sudo ldconfig
 
 cd ..
 
 cd protobuf-*
 sudo make install
-sudo ldconfig
 
 cd ..
 
 cd libarchive-*
 sudo cmake --build build --config Release --target install
-sudo ldconfig
 
 cd ..
 
 cd curl-curl-*
 sudo cmake --build build --config Release --target install
-sudo ldconfig
 
 cd ..
 
 cd icu/source
 sudo make install
-sudo ldconfig
 
 cd ../..
 
 cd boost_*
-./b2 --toolset=gcc-10 --with-program_options build
-sudo ./b2 install
-sudo ldconfig
+sudo ./b2 --toolset=gcc-10 --with-program_options install
 
 cd ..
 
 cd ..
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    sudo ldconfig
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    sudo update_dyld_shared_cache
+fi
 
 echo "Install completed"

@@ -1,9 +1,19 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
-export CC=gcc-10
-export CXX=g++-10
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    export CC=gcc-10
+    export CXX=g++-10
+    PARALLEL=$(nproc)
+    echo "System: $OSTYPE"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    PARALLEL=$(sysctl -n hw.ncpu)
+    echo "System: $OSTYPE"
+else
+    echo "The system does not support"
+    exit 1
+fi
 
-if [ ! -d "dependencies"]; then
+if [ ! -d "dependencies" ]; then
     echo "mkdir dependencies"
     mkdir dependencies
 fi
@@ -17,9 +27,11 @@ else
     echo "Build zlib"
 fi
 unzip -q zlib-*.zip
+rm zlib-*.zip
 cd zlib-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
-cmake --build build --config Release -j$(nproc)
+cmake --build build --config Release -j$PARALLEL
+sudo cmake --build build --config Release --target install
 
 cd ..
 
@@ -30,9 +42,11 @@ else
     echo "Build jemalloc"
 fi
 unzip -q jemalloc-*.zip
+rm jemalloc-*.zip
 cd jemalloc-*
 ./autogen.sh
-make -j$(nproc)
+make -j$PARALLEL
+sudo make install
 
 cd ..
 
@@ -43,10 +57,12 @@ else
     echo "Build Zstandard"
 fi
 unzip -q zstd-*.zip
+rm zstd-*.zip
 cd zstd-*/build/cmake
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DZSTD_BUILD_PROGRAMS=OFF -DZSTD_BUILD_TESTS=OFF
-cmake --build build --config Release -j$(nproc)
+cmake --build build --config Release -j$PARALLEL
+sudo cmake --build build --config Release --target install
 
 cd ../../..
 
@@ -57,13 +73,15 @@ else
     echo "Build RocksDB"
 fi
 unzip -q rocksdb-*.zip
+rm rocksdb-*.zip
 cd rocksdb-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DWITH_JEMALLOC=ON -DWITH_ZSTD=ON -DWITH_GFLAGS=OFF \
     -DUSE_RTTI=ON -DWITH_RUNTIME_DEBUG=OFF -DROCKSDB_BUILD_SHARED=ON \
     -DWITH_TESTS=OFF -DWITH_BENCHMARK_TOOLS=OFF -DWITH_CORE_TOOLS=OFF \
     -DWITH_TOOLS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local
-cmake --build build --config Release -j$(nproc)
+cmake --build build --config Release -j$PARALLEL
+sudo cmake --build build --config Release --target install
 
 cd ..
 
@@ -74,10 +92,12 @@ else
     echo "Build fmt"
 fi
 unzip -q fmt-*.zip
+rm fmt-*.zip
 cd fmt-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DFMT_DOC=OFF -DFMT_TEST=OFF -DBUILD_SHARED_LIBS=TRUE
-cmake --build build --config Release -j$(nproc)
+cmake --build build --config Release -j$PARALLEL
+sudo cmake --build build --config Release --target install
 
 cd ..
 
@@ -88,11 +108,13 @@ else
     echo "Build spdlog"
 fi
 unzip -q spdlog-*.zip
+rm spdlog-*.zip
 cd spdlog-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DSPDLOG_BUILD_EXAMPLE=OFF -DSPDLOG_FMT_EXTERNAL=ON \
     -DSPDLOG_BUILD_SHARED=ON
-cmake --build build --config Release -j$(nproc)
+cmake --build build --config Release -j$PARALLEL
+sudo cmake --build build --config Release --target install
 
 cd ..
 
@@ -103,12 +125,14 @@ else
     echo "Build google benchmark"
 fi
 unzip -q benchmark*.zip
+rm benchmark*.zip
 cd benchmark-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DBENCHMARK_ENABLE_TESTING=OFF -DBENCHMARK_ENABLE_LTO=ON \
     -DBENCHMARK_USE_LIBCXX=OFF -DBENCHMARK_ENABLE_GTEST_TESTS=OFF \
     -DBENCHMARK_ENABLE_ASSEMBLY_TESTS=OFF -DBUILD_SHARED_LIBS=ON
-cmake --build build --config Release -j$(nproc)
+cmake --build build --config Release -j$PARALLEL
+sudo cmake --build build --config Release --target install
 
 cd ..
 
@@ -119,10 +143,12 @@ else
     echo "Build google test"
 fi
 unzip -q googletest-release-*.zip
+rm googletest-release-*.zip
 cd googletest-release-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DBUILD_GMOCK=OFF -DBUILD_SHARED_LIBS=ON
-cmake --build build --config Release -j$(nproc)
+cmake --build build --config Release -j$PARALLEL
+sudo cmake --build build --config Release --target install
 
 cd ..
 
@@ -133,11 +159,13 @@ else
     echo "Build mysql connector"
 fi
 unzip -q mysql-connector-cpp-*.zip
+rm mysql-connector-cpp-*.zip
 cd mysql-connector-cpp-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DBUILD_STATIC=OFF -DWITH_TESTS=OFF \
     -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_INSTALL_LIBDIR=lib
-cmake --build build --config Release -j$(nproc)
+cmake --build build --config Release -j$PARALLEL
+sudo cmake --build build --config Release --target install
 
 cd ..
 
@@ -148,10 +176,12 @@ else
     echo "Build magic enum"
 fi
 unzip -q magic_enum-*.zip
+rm magic_enum-*.zip
 cd magic_enum-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DMAGIC_ENUM_OPT_BUILD_EXAMPLES=OFF -DMAGIC_ENUM_OPT_BUILD_TESTS=OFF
-cmake --build build --config Release -j$(nproc)
+cmake --build build --config Release -j$PARALLEL
+sudo cmake --build build --config Release --target install
 
 cd ..
 
@@ -162,10 +192,12 @@ else
     echo "Build json"
 fi
 unzip -q json-*.zip
+rm json-*.zip
 cd json-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DJSON_BuildTests=OFF -DJSON_MultipleHeaders=ON
-cmake --build build --config Release -j$(nproc)
+cmake --build build --config Release -j$PARALLEL
+sudo cmake --build build --config Release --target install
 
 cd ..
 
@@ -177,9 +209,11 @@ else
     echo "Build protobuf"
 fi
 unzip -q protobuf-cpp-*.zip
+rm protobuf-cpp-*.zip
 cd protobuf-*
 ./configure
-make -j$(nproc)
+make -j$PARALLEL
+sudo make install
 
 cd ..
 
@@ -190,6 +224,7 @@ else
     echo "Build libarchive"
 fi
 unzip -q libarchive-*.zip
+rm libarchive-*.zip
 cd libarchive-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DENABLE_OPENSSL=OFF -DENABLE_LIBB2=OFF -DENABLE_LZ4=OFF \
@@ -198,7 +233,8 @@ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DENABLE_EXPAT=OFF -DENABLE_CNG=OFF -DENABLE_TAR=OFF \
     -DENABLE_CPIO=OFF -DENABLE_CAT=OFF -DENABLE_XATTR=OFF \
     -DENABLE_ACL=OFF -DENABLE_ICONV=OFF -DENABLE_TEST=OFF
-cmake --build build --config Release -j$(nproc)
+cmake --build build --config Release -j$PARALLEL
+sudo cmake --build build --config Release --target install
 
 cd ..
 
@@ -209,12 +245,14 @@ else
     echo "Build curl"
 fi
 unzip -q curl-curl-*.zip
+rm curl-curl-*.zip
 cd curl-curl-*
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     -DBUILD_CURL_EXE=OFF -DBUILD_SHARED_LIBS=ON \
     -DCURL_LTO=ON -DHTTP_ONLY=ON -DENABLE_MANUAL=OFF \
     -DCURL_ZLIB=OFF -DCURL_ZSTD=OFF -DBUILD_TESTING=OFF
-cmake --build build --config Release -j$(nproc)
+cmake --build build --config Release -j$PARALLEL
+sudo cmake --build build --config Release --target install
 
 cd ..
 
@@ -226,9 +264,11 @@ else
     echo "Build icu"
 fi
 tar -xf icu4c-*-src.tgz
+rm icu4c-*-src.tgz
 cd icu/source
 ./configure --enable-tests=no --enable-samples=no
-make -j$(nproc)
+make -j$PARALLEL
+sudo make install
 
 cd ../..
 
@@ -239,12 +279,20 @@ else
     echo "Build boost"
 fi
 tar -xf boost_*.tar.gz
+rm boost_*.tar.gz
 cd boost_*
 ./bootstrap.sh
-./b2 --toolset=gcc-10 --with-program_options build
+./b2 --toolset=gcc-10 --with-program_options
+sudo ./b2 --toolset=gcc-10 --with-program_options install
 
 cd ..
 
 cd ..
 
-echo "Build completed"
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    sudo ldconfig
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    sudo update_dyld_shared_cache
+fi
+
+echo "Build and install completed"

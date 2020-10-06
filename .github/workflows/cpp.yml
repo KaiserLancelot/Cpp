@@ -32,12 +32,13 @@ jobs:
           path: dependencies
           key: ${{ runner.os }}-dependencies
 
-      - name: Build dependencies
+      - name: Build and install dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: ./.github/build.sh
+        run: sudo bash ./cpp/scripts/build-install.sh
 
       - name: Install dependencies
-        run: sudo sh /.github/install.sh
+        if: steps.cache-dependencies.outputs.cache-hit == 'true'
+        run: sudo bash ./cpp/scripts/install.sh
 
       - name: Configure
         run: cd cpp ; cmake -S . -B build
