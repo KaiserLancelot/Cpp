@@ -40,5 +40,5 @@ if(CPP_FORMAT)
     code_format
     COMMAND ${CLANG_FORMAT_EXECUTABLE} -i ${CLANG_FORMAT_SRC}
     COMMAND ${CMAKE_FORMAT_EXECUTABLE} -i ${CMAKE_FORMAT_SRC}
-    COMMENT "Code formatting completed")
+    COMMENT "Start formatting code")
 endif()
