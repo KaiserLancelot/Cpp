@@ -1,4 +1,4 @@
-file(COPY ${CMAKE_SOURCE_DIR}/cpp_primer/data/book.txt
+file(COPY "${CMAKE_SOURCE_DIR}/cpp_primer/data/book.txt"
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(ex-01-01 ex_01_01.cpp)
