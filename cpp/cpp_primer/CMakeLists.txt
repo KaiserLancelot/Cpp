@@ -1,4 +1,4 @@
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+add_subdirectory(tools)
 
 add_subdirectory(chapter01)
 # add_subdirectory(chapter02) add_subdirectory(chapter03)

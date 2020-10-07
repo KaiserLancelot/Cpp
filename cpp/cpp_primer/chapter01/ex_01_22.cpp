@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 
-#include "Sales_item.h"
+#include "sales_item.h"
 
 int main() {
   SalesItem sum;
@@ -18,7 +18,7 @@ int main() {
     }
     std::cout << sum << '\n';
   } else {
-    std::cerr << "No data." << std::endl;
+    std::cerr << "No data\n";
     return EXIT_FAILURE;
   }
 }

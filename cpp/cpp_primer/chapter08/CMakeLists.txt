@@ -1,4 +1,4 @@
-file(COPY ../data/book DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ../data/book.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY ../data/person_info DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(ex_8_02 ex_8_02.cpp)

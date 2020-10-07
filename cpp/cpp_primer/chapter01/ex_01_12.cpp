@@ -3,11 +3,9 @@
 
 int main() {
   std::int32_t sum{};
-  std::int32_t val{50};
 
-  while (val <= 100) {
-    sum += val;
-    ++val;
+  for (std::int32_t i{-100}; i <= 100; ++i) {
+    sum += i;
   }
 
   std::cout << sum << '\n';

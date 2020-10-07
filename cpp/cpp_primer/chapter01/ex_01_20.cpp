@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Sales_item.h"
+#include "sales_item.h"
 
 int main() {
   SalesItem item;

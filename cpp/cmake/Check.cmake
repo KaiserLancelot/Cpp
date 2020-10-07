@@ -26,8 +26,12 @@ else()
                       ${CMAKE_SYSTEM_NAME} " " ${CMAKE_CXX_COMPILER_ID})
 endif()
 
-if(${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_BINARY_DIR})
+if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR)
   message(FATAL_ERROR "In-source builds not allowed")
+endif()
+
+if(NOT (CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR))
+  message(FATAL_ERROR "Cannot be used as a subproject")
 endif()
 
 if(NOT CMAKE_BUILD_TYPE)

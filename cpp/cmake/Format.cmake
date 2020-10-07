@@ -16,25 +16,24 @@ if(CPP_FORMAT)
     GLOB_RECURSE
     CLANG_FORMAT_SRC
     CONFIGURE_DEPENDS
-    ${CMAKE_CURRENT_SOURCE_DIR}/cpp_primer/*.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/cpp_primer/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/library/*.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/library/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/new_features/*.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/new_features/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/notes/*.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/notes/*.cpp)
+    "${CMAKE_SOURCE_DIR}/cpp_primer/*.h"
+    "${CMAKE_SOURCE_DIR}/cpp_primer/*.cpp"
+    "${CMAKE_SOURCE_DIR}/library/*.h"
+    "${CMAKE_SOURCE_DIR}/library/*.cpp"
+    "${CMAKE_SOURCE_DIR}/new_features/*.h"
+    "${CMAKE_SOURCE_DIR}/new_features/*.cpp"
+    "${CMAKE_SOURCE_DIR}/notes/*.h"
+    "${CMAKE_SOURCE_DIR}/notes/*.cpp")
 
   file(
     GLOB_RECURSE
     CMAKE_FORMAT_SRC
     CONFIGURE_DEPENDS
-    ${CMAKE_CURRENT_SOURCE_DIR}/cmake/*.cmake
-    ${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt
-    ${CMAKE_CURRENT_SOURCE_DIR}/cpp_primer/*.cmake
-    ${CMAKE_CURRENT_SOURCE_DIR}/library/*.cmake
-    ${CMAKE_CURRENT_SOURCE_DIR}/new_features/*.cmake
-    ${CMAKE_CURRENT_SOURCE_DIR}/notes/*.cmake)
+    "${CMAKE_SOURCE_DIR}/cmake/*.cmake"
+    "${CMAKE_SOURCE_DIR}/cpp_primer/*.cmake"
+    "${CMAKE_SOURCE_DIR}/library/*.cmake"
+    "${CMAKE_SOURCE_DIR}/new_features/*.cmake"
+    "${CMAKE_SOURCE_DIR}/notes/*.cmake")
 
   add_custom_target(
     code_format
