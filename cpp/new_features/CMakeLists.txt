@@ -1,0 +1,5 @@
+add_subdirectory(cpp11)
+add_subdirectory(cpp14)
+add_subdirectory(cpp17)
+add_subdirectory(cpp17/filesystem)
+add_subdirectory(cpp20)
