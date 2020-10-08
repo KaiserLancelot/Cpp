@@ -29,11 +29,12 @@ if(CPP_FORMAT)
     GLOB_RECURSE
     CMAKE_FORMAT_SRC
     CONFIGURE_DEPENDS
+    "${CMAKE_SOURCE_DIR}/CMakeLists.txt"
     "${CMAKE_SOURCE_DIR}/cmake/*.cmake"
-    "${CMAKE_SOURCE_DIR}/cpp_primer/*.cmake"
-    "${CMAKE_SOURCE_DIR}/library/*.cmake"
-    "${CMAKE_SOURCE_DIR}/new_features/*.cmake"
-    "${CMAKE_SOURCE_DIR}/notes/*.cmake")
+    "${CMAKE_SOURCE_DIR}/cpp_primer/CMakeLists.txt"
+    "${CMAKE_SOURCE_DIR}/library/CMakeLists.txt"
+    "${CMAKE_SOURCE_DIR}/new_features/CMakeLists.txt"
+    "${CMAKE_SOURCE_DIR}/notes/CMakeLists.txt")
 
   add_custom_target(
     code_format
