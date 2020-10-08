@@ -2,12 +2,12 @@
 
 set -e
 
+source $(dirname "$0")/install-system.sh
+
 if [ ! -d "dependencies" ]; then
     echo "The dependencies directory does not exist"
     exit 1
 fi
-
-source $(dirname "$0")/install-system.sh
 
 cd dependencies
 
