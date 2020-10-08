@@ -12,6 +12,8 @@ std::istream& operator>>(std::istream& in, SalesItem& s);
 std::ostream& operator<<(std::ostream& out, const SalesItem& s);
 bool operator==(const SalesItem& lhs, const SalesItem& rhs);
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpadded"
 class SalesItem {
   friend std::istream& operator>>(std::istream& in, SalesItem& s);
   friend std::ostream& operator<<(std::ostream& out, const SalesItem& s);
@@ -32,6 +34,7 @@ class SalesItem {
   double revenue_{};
   std::int32_t units_sold_{};
 };
+#pragma GCC diagnostic pop
 
 inline bool compare_isbn(const SalesItem& lhs, const SalesItem& rhs) {
   return lhs.isbn() == rhs.isbn();
