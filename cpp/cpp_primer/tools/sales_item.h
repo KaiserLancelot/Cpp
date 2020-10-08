@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 
+#include "float_point.h"
+
 class SalesItem;
 
 std::istream& operator>>(std::istream& in, SalesItem& s);
@@ -31,7 +33,51 @@ class SalesItem {
   std::int32_t units_sold_{};
 };
 
-SalesItem operator+(const SalesItem& lhs, const SalesItem& rhs);
-bool operator!=(const SalesItem& lhs, const SalesItem& rhs);
+inline bool compare_isbn(const SalesItem& lhs, const SalesItem& rhs) {
+  return lhs.isbn() == rhs.isbn();
+}
 
-bool compare_isbn(const SalesItem& lhs, const SalesItem& rhs);
+inline bool operator==(const SalesItem& lhs, const SalesItem& rhs) {
+  return lhs.units_sold_ == rhs.units_sold_ &&
+         float_point_equal(lhs.revenue_, rhs.revenue_) &&
+         lhs.isbn() == rhs.isbn();
+}
+
+inline bool operator!=(const SalesItem& lhs, const SalesItem& rhs) {
+  return !(lhs == rhs);
+}
+
+inline SalesItem& SalesItem::operator+=(const SalesItem& rhs) {
+  units_sold_ += rhs.units_sold_;
+  revenue_ += rhs.revenue_;
+  return *this;
+}
+
+inline SalesItem operator+(const SalesItem& lhs, const SalesItem& rhs) {
+  SalesItem ret(lhs);
+  ret += rhs;
+  return ret;
+}
+
+inline std::istream& operator>>(std::istream& in, SalesItem& s) {
+  double price;
+  in >> s.book_no_ >> s.units_sold_ >> price;
+
+  if (in) {
+    s.revenue_ = s.units_sold_ * price;
+  } else {
+    s = SalesItem();
+  }
+
+  return in;
+}
+
+inline std::ostream& operator<<(std::ostream& out, const SalesItem& s) {
+  out << s.isbn() << " " << s.units_sold_ << " " << s.revenue_ << " "
+      << s.avg_price();
+  return out;
+}
+
+inline double SalesItem::avg_price() const {
+  return units_sold_ == 0 ? 0 : revenue_ / units_sold_;
+}
