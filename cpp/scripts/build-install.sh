@@ -224,7 +224,7 @@ echo "Build and install curl completed"
 
 # icu
 if [ ! -f "icu4c-68_1-src.tgz" ]; then
-    wget -q https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-68_1-src.tgz \
+    wget -q https://github.com/unicode-org/icu/releases/download/release-68-1/icu4c-68_1-src.tgz \
         -O icu4c-68_1-src.tgz
 fi
 tar -xf icu4c-*-src.tgz

@@ -20,8 +20,9 @@ int main() {
   } else if (grade <= 100) {
     letter_grade = scores[(grade - 50) / 10];
     if (grade != 100) {
-      (grade % 10 > 7) ? letter_grade += '+'
-                       : (grade % 10 < 3) ? letter_grade += '-' : "";
+      (grade % 10 > 7)   ? letter_grade += '+'
+      : (grade % 10 < 3) ? letter_grade += '-'
+                         : "";
     }
   } else {
     std::cerr << "wrong grade\n";
