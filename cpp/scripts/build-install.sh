@@ -52,8 +52,8 @@ cd ../../..
 echo "Build and install zstd completed"
 
 # rocksdb
-if [ ! -f "rocksdb-6.11.4.zip" ]; then
-    wget -q https://github.com/facebook/rocksdb/archive/v6.11.4.zip -O rocksdb-6.11.4.zip
+if [ ! -f "rocksdb-6.13.3.zip" ]; then
+    wget -q https://github.com/facebook/rocksdb/archive/v6.13.3.zip -O rocksdb-6.13.3.zip
 fi
 unzip -q rocksdb-*.zip
 rm rocksdb-*.zip
@@ -69,8 +69,8 @@ cd ..
 echo "Build and install rocksdb completed"
 
 # fmt
-if [ ! -f "fmt-7.0.3.zip" ]; then
-    wget -q https://github.com/fmtlib/fmt/archive/7.0.3.zip -O fmt-7.0.3.zip
+if [ ! -f "fmt-7.1.0.zip" ]; then
+    wget -q https://github.com/fmtlib/fmt/archive/7.1.0.zip -O fmt-7.1.0.zip
 fi
 unzip -q fmt-*.zip
 rm fmt-*.zip
@@ -129,9 +129,9 @@ cd ..
 echo "Build and install google test completed"
 
 # mysql connector
-if [ ! -f "mysql-connector-cpp-8.0.21.zip" ]; then
-    wget -q https://github.com/mysql/mysql-connector-cpp/archive/8.0.21.zip \
-        -O mysql-connector-cpp-8.0.21.zip
+if [ ! -f "mysql-connector-cpp-8.0.22.zip" ]; then
+    wget -q https://github.com/mysql/mysql-connector-cpp/archive/8.0.22.zip \
+        -O mysql-connector-cpp-8.0.22.zip
 fi
 unzip -q mysql-connector-cpp-*.zip
 rm mysql-connector-cpp-*.zip
@@ -145,8 +145,8 @@ cd ..
 echo "Build and install mysql connector completed"
 
 # magic enum
-if [ ! -f "magic_enum-0.6.6.zip" ]; then
-    wget -q https://github.com/Neargye/magic_enum/archive/v0.6.6.zip -O magic_enum-0.6.6.zip
+if [ ! -f "magic_enum-0.7.0.zip" ]; then
+    wget -q https://github.com/Neargye/magic_enum/archive/v0.7.0.zip -O magic_enum-0.7.0.zip
 fi
 unzip -q magic_enum-*.zip
 rm magic_enum-*.zip
@@ -207,8 +207,8 @@ cd ..
 echo "Build and install libarchive completed"
 
 # curl
-if [ ! -f "curl-curl-7_72_0.zip" ]; then
-    wget -q https://github.com/curl/curl/archive/curl-7_72_0.zip -O curl-curl-7_72_0.zip
+if [ ! -f "curl-curl-7_73_0.zip" ]; then
+    wget -q https://github.com/curl/curl/archive/curl-7_73_0.zip -O curl-curl-7_73_0.zip
 fi
 unzip -q curl-curl-*.zip
 rm curl-curl-*.zip
@@ -223,9 +223,9 @@ cd ..
 echo "Build and install curl completed"
 
 # icu
-if [ ! -f "icu4c-67_1-src.tgz" ]; then
-    wget -q https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-67_1-src.tgz \
-        -O icu4c-67_1-src.tgz
+if [ ! -f "icu4c-68_1-src.tgz" ]; then
+    wget -q https://github.com/unicode-org/icu/releases/download/release-67-1/icu4c-68_1-src.tgz \
+        -O icu4c-68_1-src.tgz
 fi
 tar -xf icu4c-*-src.tgz
 rm icu4c-*-src.tgz

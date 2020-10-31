@@ -14,7 +14,7 @@ jobs:
       matrix:
         config:
           - { cc: "gcc-10", cxx: "g++-10" }
-          - { cc: "clang-10", cxx: "clang++-10" }
+          - { cc: "clang-11", cxx: "clang++-11" }
 
     steps:
       - uses: actions/checkout@v2
@@ -24,7 +24,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: dependencies
-          key: ${{ runner.os }}-dependencies-20201009
+          key: ${{ runner.os }}-dependencies-20201031
 
       - name: Build and install dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
